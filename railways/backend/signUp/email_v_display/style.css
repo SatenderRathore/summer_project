@@ -1,0 +1,35 @@
+body{
+	background: #00ff33;
+}
+
+img
+{
+	float: center; 
+}
+a{
+	text-decoration: none;
+	color: #191919;
+	font-size: 20px;
+}
+
+
+#display-success
+{
+	width: 1000px;
+	background: ##00ff33; 
+	padding: 8px;
+	border-radius: 5px;
+	font-family: Arial;
+	font-size: 25px;
+	text-transform: uppercase;
+	color: #191919;
+	text-align: center;
+	margin-top: 290px;
+	margin-left:150px;
+}
+
+#display-success img
+{
+	position: relative;
+	bottom: -3px;
+}

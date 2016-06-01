@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(isset($_SESSION['userid']))
+{
+  header('Location:user_account.php');
+}
+?>
+
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -45,12 +54,12 @@
                                <div class="modal-head">
                                     <h3>Signin with your Seat Jugaad account</h3>
                                     <h5>Welcome back! Enter your password to signin</h5>
-                                    <button type="button" class="close modal-close" data-dismiss="modal">&times;</button>    
+                                    <button type="button" class="close modal-close" data-dismiss="modal">&times;</button>
                                 </div>
-                                <form>
-                                    <input type="text" name="user" placeholder="Username">
-                                    <input type="password" name="pass" placeholder="Password">
-                                    <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+                                <form action="../backend/login/login.php" method="post">
+                                    <input type="text" name="userid" placeholder="email id OR contact no...">
+                                    <input type="password" name="password" placeholder="Password">
+                                    <input type="submit" name="submit" class="login loginmodal-submit" value="Login">
                                 </form>
 
                                 <div class="login-help">
@@ -59,20 +68,20 @@
                            </div>
                         </div>
 		          </div>
-                    
+
                     <div class="modal fade" id="signupbox" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                        <div class="modal-dialog">
                            <div class="loginmodal-container">
                                <div class="modal-head">
                                     <h3>Create a Seat Jugaad account</h3>
-                                    <h5>Enter your details and we will create a freecharge account for you!</h5>
-                                    <button type="button" class="close modal-close" data-dismiss="modal">&times;</button>    
+                                    <h5>Enter your details and we will create an account for you!</h5>
+                                    <button type="button" class="close modal-close" data-dismiss="modal">&times;</button>
                                 </div>
-                                <form>
+                                <form action = "../backend/signUp/signup.php" method="post">
                                     <input type="email" name="email" placeholder="Enter your email address">
-                                    <input type="text" name="name" placeholder="Your Name">
-                                    <input type="password" name="pass" placeholder="Password">
-                                    <input type="submit" name="login" class="login loginmodal-submit" value="Create an account">
+                                    <input type="text" name="contact" placeholder="Your contact no...">
+                                    <input type="password" name="password" placeholder="Password">
+                                    <input type="submit" name="submit" class="login loginmodal-submit" value="Create an account">
                                 </form>
 
                                 <div class="login-help">
@@ -81,17 +90,17 @@
                            </div>
                         </div>
 		          </div>
-                    
+
                     <div class="modal fade" id="forgotpassbox" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                        <div class="modal-dialog">
                            <div class="loginmodal-container">
                                <div class="modal-head">
                                     <h5>Enter your E-Mail address and we will send you a confirmation code</h5>
-                                    <button type="button" class="close modal-close" data-dismiss="modal">&times;</button>    
+                                    <button type="button" class="close modal-close" data-dismiss="modal">&times;</button>
                                 </div>
-                                <form>
+                                <form action="../backend/forgot_password/forgot_password.php" method="post">
                                     <input type="email" name="email" placeholder="Enter your email address">
-                                    <input type="submit" name="code" class="login loginmodal-submit" value="Send Confirmation Code">
+                                    <input type="submit" name="submit" class="login loginmodal-submit" value="Send Confirmation Code">
                                 </form>
 
                                 <div class="login-help">
@@ -103,7 +112,7 @@
                 </div>
 			</div>
 
-            
+
 			<div class="middle ">
 				<div class="mid-first">
 					<div class="mid-first-icon">
