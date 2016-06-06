@@ -121,21 +121,21 @@ if(isset($_SESSION['userid']))
 
 				</div>
 				<div class="mid-second">
-					<div class="form-top">
+					<!-- <div class="form-top">
 						<div class="steps"><b>1/4</b></div>
-					</div>
-					<form id="pnrcheckform">
+					</div> -->
+					<form id="pnrcheckform" action="../backend/algo/algo.php" method="POST">
 						<div class="mid-content">
 							<div class="details">
 								<fieldset data-form-name="pnrno" data-step="1" class="current">
 									<legend> Enter your pnr number</legend>
-									<input class="" name="pnr-number" type="text" id="" maxlength="10" data-type="digits" data-required="true" data-error-container=".number-error">
+									<input class="" name="pnr" type="text" id="" maxlength="10" data-type="digits" data-required="true" data-error-container=".number-error">
 									<label class="number-error error-msg"></label>
 
 								</fieldset>
 							</div>
 							<div class="submit">
-							<input type="image" src="../images/tick.png" alt="Submit" width="40" height="40" >
+							<input type="submit" src="../images/tick.png" alt="Submit" width="40" height="40" >
 							</div>
 						</div>
 					</form>
