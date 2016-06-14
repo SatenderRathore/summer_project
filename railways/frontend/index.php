@@ -124,7 +124,7 @@ if(isset($_SESSION['userid']))
 					<!-- <div class="form-top">
 						<div class="steps"><b>1/4</b></div>
 					</div> -->
-					<form id="pnrcheckform" action="../backend/algo/algo.php" method="POST">
+					<form id="pnrcheckform" action="../backend/algo/check_pnr_status.php" method="POST">
 						<div class="mid-content">
 							<div class="details">
 								<fieldset data-form-name="pnrno" data-step="1" class="current">
