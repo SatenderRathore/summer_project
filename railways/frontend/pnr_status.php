@@ -15,8 +15,24 @@ $train_num        = $_SESSION['train_num'];
 $chart_prepared   = $_SESSION['chart_prepared'];
 $train_start_date = $_SESSION['train_start_date'];
 $pnr              = $_SESSION['pnr'];
+$current_status   = "W/L";
+?>
 
-
+<html>
+    <head>
+        <script type="text/javascript">
+            current_status = "<?php echo $current_status; ?>";
+        </script>
+        
+    </head>
+    <body>
+    <button id="button">button</button>
+    <script type="text/javascript" src="../js/script.js"></script>
+    </body>
+    
+</html>
+    
+<?php    
 print_r($from_station);
 print_r($to_station);
 
