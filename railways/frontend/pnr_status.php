@@ -17,9 +17,18 @@ $train_start_date = $_SESSION['train_start_date'];
 $pnr              = $_SESSION['pnr'];
 
 
-print_r($from_station);
-print_r($to_station);
+print_r($from_station['code']);
+print_r($to_station['code']);
 
 print_r($current_status);
 print_r($train_start_date);
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<a href="../backend/algo/check_alternet.php"> alternet</a>
+</body>
+</html>
