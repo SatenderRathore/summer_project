@@ -17,7 +17,8 @@
           $(function() {
             $( "#datepicker" ).datepicker( {
                 numberOfMonths: 2,
-                showButtonPanel: true
+                showButtonPanel: true,
+                dateFormat:'dd-mm-yy'
             });
           });
         </script>
@@ -38,20 +39,20 @@
                         <li>LIVE TRAIN STATUS</li>
                         <li>CANCELLED TRAINS</li>
                     </ul>
-                    
+
                 <div class="middle">
                     <div class="mid-second">
-                        <form id="availability" action="#" method="POST">
+                        <form id="availability" action="../backend/algo/check_seat_availability.php" method="POST">
                             <div class="mid-content">
                                 <div class="details">
                                     <legend>From:</legend>
-                                    <input class="" name="src" type="text" id="" maxlength="10" data-type="text" data-required="true"/>
+                                    <input class="" name="source" type="text" id="" maxlength="10" data-type="text" data-required="true"/>
                                     <legend>To:</legend>
-                                    <input class="" name="dest" type="text" id="" maxlength="10" data-type="text" data-required="true"/>
+                                    <input class="" name="destination" type="text" id="" maxlength="10" data-type="text" data-required="true"/>
                                     <legend>Date:</legend>
-                                    <input id="datepicker" type="text" class="date-picker form-control" />
+                                    <input id="datepicker" name='doj' type="text" class="date-picker form-control" />
                                     <legend>Preferred Class:</legend>
-                                    <select class="drop-down" name="travel_class" id='travel_class'>
+                                    <select class="drop-down" name="class" id='travel_class'>
                                         <option value=ALL  selected  >All Classes</option>
                                         <option value=1A  >First AC</option>
                                         <option value=2A  >Second AC</option>
