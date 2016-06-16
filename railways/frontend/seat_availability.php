@@ -5,22 +5,31 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Seat Availability</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!--        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <script src="../js/datepicker.js"></script>
         <script src="../js/bootstrap.js"></script>
+        <script src="../js/nice_select.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/nice_select.min.css" />
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="../css/seat_availability.css">
         <script>
           $(function() {
             $( "#datepicker" ).datepicker( {
                 numberOfMonths: 2,
-                showButtonPanel: true
+                showButtonPanel: true,
+                dateFormat: 'dd-mm-yy'
             });
           });
         </script>
+        <script type="text/javascript" >
+					$('document').ready(function(){
+						$('.drop-down').niceselect();
+					})
+				</script>
 	</head>
 
 	<body >
@@ -49,7 +58,7 @@
                                     <legend>To:</legend>
                                     <input class="" name="dest" type="text" id="" maxlength="10" data-type="text" data-required="true"/>
                                     <legend>Date:</legend>
-                                    <input id="datepicker" type="text" class="date-picker form-control" />
+                                    <input id="datepicker" type="text" class="date-picker" />
                                     <legend>Preferred Class:</legend>
                                     <select class="drop-down" name="travel_class" id='travel_class'>
                                         <option value=ALL  selected  >All Classes</option>
