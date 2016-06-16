@@ -1,8 +1,8 @@
 <?php
     include("db.php");
     session_start();
-    $apikey = "uucxi9379";//satenderjpr@gmail.com
-    //$apikey = "ttemb6830";//singhpalarashakti@gmail.com
+//    $apikey = "uucxi9379";//satenderjpr@gmail.com
+    $apikey = "ttemb6830";//singhpalarashakti@gmail.com
     //$apikey = "ootzm7275";//satendersvnit@gmail.com
     //$apikey = "eumbm2216";//singhrathoresatender@gmail.com
     //$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
@@ -142,10 +142,10 @@
     //     $check_seat_api_data = json_decode($check_seat_api_call, true);
 
     // }
-//session_start();
-//$_SESSION['avail_source'] = $avail_source;
-//$_SESSION['avail_dest'] = $avail_dest;
+session_start();
+$_SESSION['avail_source'] = $avail_source;
+$_SESSION['avail_dest'] = $avail_dest;
 
-//header("Location:../../frontend/show_alternet.php");
+header("Location:../../frontend/show_alternet.php");
     ?>
 
