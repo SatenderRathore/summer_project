@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Seat Availability</title>
-<!--        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
@@ -47,20 +47,20 @@
                         <li>LIVE TRAIN STATUS</li>
                         <li>CANCELLED TRAINS</li>
                     </ul>
-                    
+
                 <div class="middle">
                     <div class="mid-second">
-                        <form id="availability" action="#" method="POST">
+                        <form id="availability" action="../backend/algo/check_seat_availability.php" method="POST">
                             <div class="mid-content">
                                 <div class="details">
                                     <legend>From:</legend>
-                                    <input class="" name="src" type="text" id="" maxlength="10" data-type="text" data-required="true"/>
+                                    <input class="" name="source" type="text" id="" maxlength="10" data-type="text" data-required="true"/>
                                     <legend>To:</legend>
-                                    <input class="" name="dest" type="text" id="" maxlength="10" data-type="text" data-required="true"/>
+                                    <input class="" name="destination" type="text" id="" maxlength="10" data-type="text" data-required="true"/>
                                     <legend>Date:</legend>
-                                    <input id="datepicker" type="text" class="date-picker" />
+                                    <input id="datepicker" name='doj' type="text" class="date-picker form-control" />
                                     <legend>Preferred Class:</legend>
-                                    <select class="drop-down" name="travel_class" id='travel_class'>
+                                    <select class="drop-down" name="class" id='travel_class'>
                                         <option value=ALL  selected  >All Classes</option>
                                         <option value=1A  >First AC</option>
                                         <option value=2A  >Second AC</option>

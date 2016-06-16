@@ -17,7 +17,7 @@
     if(!$is_numeric)
     {
         //
-        $query = "SELECT email ,email_active FROM user_detais WHERE email = '$userid' AND password = '$password'";
+        $query = "SELECT email ,active_email FROM user_details WHERE email = '$userid' AND password = '$password'";
         $exec = mysqli_query($conn, $query);
         //$count = mysqli_num_rows($exec);
         $output = mysqli_fetch_array($exec, MYSQLI_ASSOC);
