@@ -30,7 +30,7 @@ print_r($to_station['code']);
 
     </head>
     <body>
-    <button id="button">button</button>
+    <a id="button" href="../backend/algo/check_alternet.php">button</a>
     <script type="text/javascript" src="../js/script.js"></script>
     </body>
 

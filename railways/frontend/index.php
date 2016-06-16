@@ -37,9 +37,9 @@ if(isset($_SESSION['userid']))
 				</div>
 				<div class="mid-head col-md-8">
 					<ul class="features">
-                        <li>PNR STATUS</li>
-                        <li>FAIR ENQUIRY</li>
                         <li>SEAT AVAILABILITY</li>
+                        <li>FAIR ENQUIRY</li>
+                        <li></li>
                         <li>LIVE TRAIN STATUS</li>
                         <li>CANCELLED TRAINS</li>
                     </ul>
