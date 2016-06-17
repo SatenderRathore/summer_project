@@ -40,7 +40,7 @@ include('db.php');
     //print_r($trains[0]['name']);
     //print_r($trains[0]['days'][0]['runs']);
     //print_r(count($all_trains));
-print_r($trains_bw_stations_api_data['train'][0]['classes']);
+//print_r($trains_bw_stations_api_data['train'][0]['classes']);
     for($i = 0; $i < count($all_trains); $i++)
     {
         $train_name = $all_trains[$i]['name'];
