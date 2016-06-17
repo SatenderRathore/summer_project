@@ -4,8 +4,8 @@ include("db.php");
 
 $pnr = $_POST['pnr'];
 ////$pnr = "2418566933";
-//$apikey = "uucxi9379";//satenderjpr@gmail.com
-$apikey = "ttemb6830";//singhpalarashakti@gmail.com
+$apikey = "uucxi9379";//satenderjpr@gmail.com
+//$apikey = "ttemb6830";//singhpalarashakti@gmail.com
 //$apikey = "ootzm7275";//satendersvnit@gmail.com
 //$apikey = "eumbm2216";//singhrathoresatender@gmail.com
 //$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
@@ -23,6 +23,7 @@ $to_station = $pnr_status_api_data['to_station'];
 $train_num = $pnr_status_api_data['train_num'];
 $doj = $pnr_status_api_data['doj'];
 $class = $pnr_status_api_data['class'];
+
 $current_status = $pnr_status_api_data['passengers'][0]['current_status'];
 
 
@@ -52,12 +53,6 @@ if($current_status == 'CNF')
 ///////////////////to check root of train //////////////////////////////
 else
 {
-?>
-     <script>
-          var message = "your ticket is not confirmed yet we are trying to find alternet options";
-          alert(message);//window.location.href = "../../frontend/main.php";
-    </script>
-<?php
     $train_route_api = "http://api.railwayapi.com/route/train/" . $train_num . "/apikey/" . $apikey ;
     $train_route_api_call = file_get_contents("$train_route_api");
     $train_route_api_data = json_decode($train_route_api_call,true);
