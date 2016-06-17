@@ -2,11 +2,13 @@
 
 echo '<head>';
 echo '<link rel="stylesheet" type="text/css" href="../../css/check_seat_availability.css">';
+//echo '<script src="../../js/test.js"></script>';
 echo '</head>';
+echo '<body>';
 include('db.php');
 
-    $apikey = "uucxi9379";//satenderjpr@gmail.com
-//$apikey = "ttemb6830";//singhpalarashakti@gmail.com
+    //$apikey = "uucxi9379";//satenderjpr@gmail.com
+$apikey = "ttemb6830";//singhpalarashakti@gmail.com
 //$apikey = "ootzm7275";//satendersvnit@gmail.com
 //$apikey = "eumbm2216";//singhrathoresatender@gmail.com
 //$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
@@ -85,7 +87,27 @@ echo '<div class="container">';
             }
         }
         echo '</p>';
+
+        echo '<button type="button" onclick="loadDoc(\'' . $train_name . '\')">Change Content</button>';
+        echo '<div id="demo"><h2>Let AJAX change this text</h2></div>';
         echo '</div>';
+
+
     }
 echo '</div>';
+echo '</body>';
 ?>
+
+<script>
+function loadDoc(str) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("demo").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "test.php?q=" + str, true);
+  xhttp.send();
+}
+</script>
+
