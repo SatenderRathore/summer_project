@@ -12,16 +12,24 @@
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <script src="../js/datepicker.js"></script>
         <script src="../js/bootstrap.js"></script>
+        <script src="../js/nice_select.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/nice_select.min.css" />
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="../css/seat_availability.css">
         <script>
           $(function() {
             $( "#datepicker" ).datepicker( {
                 numberOfMonths: 2,
                 showButtonPanel: true,
-                dateFormat:'dd-mm-yy'
+                dateFormat: 'dd-mm-yy'
             });
           });
         </script>
+        <script type="text/javascript" >
+					$('document').ready(function(){
+						$('.drop-down').niceselect();
+					})
+				</script>
 	</head>
 
 	<body >
