@@ -11,10 +11,10 @@
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <script src="../js/datepicker.js"></script>
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/base/jquery-ui.css" />
+        <link rel="stylesheet" href="http://gregfranko.com/jquery.selectBoxIt.js/css/jquery.selectBoxIt.css" />
         <script src="../js/bootstrap.js"></script>
         <script src="../js/nice_select.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="../css/nice_select.min.css" />
-        <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="../css/seat_availability.css">
         <script>
           $(function() {
@@ -96,4 +96,12 @@
                 </div>
             </div>
         </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+        <script src="http://gregfranko.com/jquery.selectBoxIt.js/js/jquery.selectBoxIt.min.js"></script>
+        <script>
+        $(function() {
+            var selectBox = $("select").selectBoxIt();
+        });
+        </script>
     </body>
