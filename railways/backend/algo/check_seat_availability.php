@@ -1,4 +1,8 @@
 <?php
+
+echo '<head>';
+echo '<link rel="stylesheet" type="text/css" href="../../css/check_seat_availability.css">';
+echo '</head>';
 include('db.php');
 
     $apikey = "uucxi9379";//satenderjpr@gmail.com
@@ -41,8 +45,11 @@ include('db.php');
     //print_r($trains[0]['days'][0]['runs']);
     //print_r(count($all_trains));
 //print_r($trains_bw_stations_api_data['train'][0]['classes']);
+echo '<div class="container">';
+
     for($i = 0; $i < count($all_trains); $i++)
     {
+
         $train_name = $all_trains[$i]['name'];
         $train_num = $all_trains[$i]['number'];
         $days_of_run = $all_trains[$i]['days'];
@@ -52,7 +59,33 @@ include('db.php');
         $source = $all_trains[$i]['from'];
         $destination =$all_trains[$i]['to'];
         $class = $all_trains[$i]['classes'];
-        // print_r($class);
-        // print_r($class[1]['class-code']);
+
+        echo '<div class="details">';
+        echo '<p>' . $train_name .'</p>';
+        echo '<p>' . $train_num .'</p>';
+        echo '<p class="available">';
+        foreach($days_of_run as $days) {
+            if($days['runs'] === 'Y') {
+                echo $days['day-code'].' ';
+            }
+        }
+        echo '</p>';
+
+//        echo '<p>' . $days_of_run .'</p>';
+        echo '<p class=">' . $departure_time .'</p>';
+        echo '<p>' . $arrival_time .'</p>';
+        echo '<p>' . $travel_time .'</p>';
+        echo '<p>' . $source['code'] .'</p>';
+        echo '<p>' . $destination['code'] .'</p>';
+//        echo '<p>' . $class .'</p>';
+        echo '<p class="available">';
+        foreach($class as $code) {
+            if($code['available'] == 'Y') {
+                echo $code['class-code'].' ';
+            }
+        }
+        echo '</p>';
+        echo '</div>';
     }
+echo '</div>';
 ?>
