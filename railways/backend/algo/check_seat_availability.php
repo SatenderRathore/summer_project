@@ -108,6 +108,7 @@ echo '<div class="container">';
 
         echo '<button type="button" onclick="loadDoc(\'' . $train_num . '\'' . ',' . '\'' . $source['code'] . '\'' . ',' . '\'' . $destination['code'] . '\'' . ',' . '\'' . $doj . '\'' . ',' . '\'' . $user_class . '\'' . ',' . '\'' . $user_quota . '\'' . ',' . '\'' . $i . '\''. ')">Change Content</button>';
         echo '<div id="'.$i.'"><h2>Let AJAX change this text</h2></div>';
+
         echo '</ul>';
 
         echo '</div>';
