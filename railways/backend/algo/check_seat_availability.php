@@ -19,8 +19,8 @@ $apikey = "ttemb6830";//singhpalarashakti@gmail.com
     $source = $_POST['source'];
     $destination = $_POST['destination'];
     $doj = $_POST['doj'];
-    $class = $_POST['class'];
-    $quota = $_POST['quota'];
+    $user_class = $_POST['class'];
+    $user_quota = $_POST['quota'];
 
     //print_r($source);
     // print_r($destination);
@@ -106,8 +106,8 @@ echo '<div class="container">';
         }
         echo '</p>';
 
-        echo '<button type="button" onclick="loadDoc(\'' . $train_name . '\')">Change Content</button>';
-        echo '<div id="demo"><h2>Let AJAX change this text</h2></div>';
+        echo '<button type="button" onclick="loadDoc(\'' . $train_num . '\'' . ',' . '\'' . $source['code'] . '\'' . ',' . '\'' . $destination['code'] . '\'' . ',' . '\'' . $doj . '\'' . ',' . '\'' . $user_class . '\'' . ',' . '\'' . $user_quota . '\'' . ',' . '\'' . $i . '\''. ')">Change Content</button>';
+        echo '<div id="'.$i.'"><h2>Let AJAX change this text</h2></div>';
         echo '</ul>';
 
         echo '</div>';
@@ -120,16 +120,16 @@ echo '</body>';
 ?>
 
 <script>
-function loadDoc(str) {
+function loadDoc(train_num,source,destination,doj,user_class,quota,id) {
+    "use strict";
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
-      document.getElementById("demo").innerHTML = xhttp.responseText;
+      document.getElementById(id).innerHTML = xhttp.responseText;
     }
   };
-  xhttp.open("GET", "test.php?q=" + str, true);
+  xhttp.open("GET", "test.php?q=" + train_num , true);
   xhttp.send();
 }
-</script>
+</script>-
 
-?>
