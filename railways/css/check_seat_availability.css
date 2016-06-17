@@ -1,4 +1,10 @@
+body {
+    font-family: arial, sans-serif;
+    background-color: #f2f2f4;
+}
+
 .container {
+    background: #fafafa;
     width: 785px;
     height: 100%;
     margin: auto;
@@ -10,9 +16,11 @@
 }
 
 .details {
+    background: white;
+    display: block;
     float: left;
     width: 330px;
-    height: 330px;
+    height: 400px;
     margin: 30px;
     display: table-row;
     border: 1px solid #f0f0f0;
@@ -22,4 +30,18 @@
     -moz-box-shadow: 0px 0px 10px #dadada;
     -webkit-box-shadow: 0px 0px 10px #dadada;
     box-shadow: 0px 0px 10px #dadada;
+}
+
+.available, .not-available {
+    display: inline-block;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.not-available {
+    color: grey;
+}
+
+.details p {
+    padding-left: 10px;
 }

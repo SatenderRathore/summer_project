@@ -63,12 +63,15 @@ echo '<div class="container">';
         $class = $all_trains[$i]['classes'];
 
         echo '<div class="details">';
-        echo '<p>' . $train_name .'</p>';
-        echo '<p>' . $train_num .'</p>';
-        echo '<p class="available">';
+        echo '<p><strong>Train Name:</strong> ' . $train_name .' ('.$train_num.')'.'</p>';
+        echo '<p><strong>Days of Run:</strong></p>';
+        echo '<ul>';
         foreach($days_of_run as $days) {
             if($days['runs'] === 'Y') {
-                echo $days['day-code'].' ';
+                echo '<li class="available"><strong>'.$days['day-code'].' </strong></li>';
+            }
+            else {
+                echo '<li class="not-available">'.$days['day-code'].' </li>';
             }
         }
         echo '</p>';
@@ -81,21 +84,39 @@ echo '<div class="container">';
         echo '<p>' . $destination['code'] .'</p>';
 //        echo '<p>' . $class .'</p>';
         echo '<p class="available">';
+
+        echo '</ul>';
+
+        echo '<p><strong>Arrival Time:</strong> ' . $departure_time .'</p>';
+        echo '<p><strong>Departure Time:</strong> ' . $arrival_time .'</p>';
+        echo '<p><strong>Travel Time:</strong> ' . $travel_time .' Hr</p>';
+        echo '<p><strong>Source Station:</strong> ' . $source['code'] .'</p>';
+        echo '<p><strong>Destination Station:</strong> ' . $destination['code'] .'</p>';
+
+        echo '<p><strong>Available Classes:</strong></p>';
+        echo '<ul>';
+
         foreach($class as $code) {
             if($code['available'] == 'Y') {
-                echo $code['class-code'].' ';
+                echo '<li class="available"><strong>'.$code['class-code'].' '.'</strong></li>';
+            }
+            else {
+                echo '<li class="not-available">'.$code['class-code'].' '.'</li>';
             }
         }
         echo '</p>';
 
         echo '<button type="button" onclick="loadDoc(\'' . $train_name . '\')">Change Content</button>';
         echo '<div id="demo"><h2>Let AJAX change this text</h2></div>';
+        echo '</ul>';
+
         echo '</div>';
 
 
     }
 echo '</div>';
 echo '</body>';
+
 ?>
 
 <script>
@@ -111,3 +132,4 @@ function loadDoc(str) {
 }
 </script>
 
+?>
