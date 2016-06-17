@@ -8,8 +8,8 @@ echo '<body>';
 include('db.php');
 
     //$apikey = "uucxi9379";//satenderjpr@gmail.com
-$apikey = "ttemb6830";//singhpalarashakti@gmail.com
-//$apikey = "ootzm7275";//satendersvnit@gmail.com
+//$apikey = "ttemb6830";//singhpalarashakti@gmail.com
+$apikey = "ootzm7275";//satendersvnit@gmail.com
 //$apikey = "eumbm2216";//singhrathoresatender@gmail.com
 //$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
 //$apikey = "budyl6423";//yashagarwaljpr@gmail.com
@@ -128,7 +128,7 @@ function loadDoc(train_num,source,destination,doj,user_class,quota,id) {
       document.getElementById(id).innerHTML = xhttp.responseText;
     }
   };
-  xhttp.open("GET", "test.php?q=" + train_num , true);
+  xhttp.open("GET", "test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj + "&user_class=" + user_class + "&quota=" + quota, true);
   xhttp.send();
 }
 </script>-
