@@ -107,7 +107,7 @@ echo '<div class="container">';
         echo '</p>';
 
         echo '<button type="button" onclick="loadDoc(\'' . $train_name . '\')">Change Content</button>';
-        echo '<div id="demo"><h2>Let AJAX change this text</h2></div>';
+        echo '<div id="'.$i.'"><p>Let AJAX change this text</p></div>';
         echo '</ul>';
 
         echo '</div>';
