@@ -1,0 +1,25 @@
+.container {
+    width: 785px;
+    height: 100%;
+    margin: auto;
+    display: table;
+    padding: 30px 0;
+    -moz-box-shadow: 0px 0px 10px #dadada;
+    -webkit-box-shadow: 0px 0px 10px #dadada;
+    box-shadow: 0px 0px 10px #dadada;
+}
+
+.details {
+    float: left;
+    width: 330px;
+    height: 330px;
+    margin: 30px;
+    display: table-row;
+    border: 1px solid #f0f0f0;
+}
+
+.details:hover {
+    -moz-box-shadow: 0px 0px 10px #dadada;
+    -webkit-box-shadow: 0px 0px 10px #dadada;
+    box-shadow: 0px 0px 10px #dadada;
+}
