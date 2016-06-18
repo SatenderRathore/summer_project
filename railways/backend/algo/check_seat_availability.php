@@ -22,10 +22,26 @@ $apikey = "ootzm7275";//satendersvnit@gmail.com
     $user_class = $_POST['class'];
     $user_quota = $_POST['quota'];
 
+
+
+/////////////////////function for default class/////////////////
+    function default_class($classes)
+    {
+        foreach ($classes as $class)
+        {
+            if($class['available'] == "Y")
+            {
+                $default_class = $class['class-code'];
+                break;
+            }
+        }
+        return $default_class;
+    }
+///////////////////////////////////////////////////////////
     //print_r($source);
     // print_r($destination);
     // print_r($doj);
-    // print_r($class);
+    print_r($user_class);
     // print_r($quota);
 
     //http://api.railwayapi.com/between/source/jp/dest/st/date/15-07-2016/apikey/uucxi9379/
@@ -61,6 +77,14 @@ echo '<div class="container">';
         $source = $all_trains[$i]['from'];
         $destination =$all_trains[$i]['to'];
         $class = $all_trains[$i]['classes'];
+
+///////////////////if user select all class then default class will be given///////////////
+        if($user_class == "ALL")
+        {
+            $user_class = default_class($class);
+        }
+
+        //print_r($class);
 
         echo '<div class="details">';
         echo '<p><strong>Train Name:</strong> ' . $train_name .' ('.$train_num.')'.'</p>';
