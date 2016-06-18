@@ -59,3 +59,10 @@ body {
     cursor: pointer;
     background: #ff1a29;
 }
+
+.loading {
+    background: url('../images/loading.gif');
+    width: 10px;
+    height: 10px;
+    background-size: contain;
+}

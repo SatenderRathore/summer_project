@@ -2,6 +2,8 @@
 
 echo '<head>';
 echo '<link rel="stylesheet" type="text/css" href="../../css/check_seat_availability.css">';
+echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>';
+
 //echo '<script src="../../js/test.js"></script>';
 echo '</head>';
 echo '<body>';
@@ -9,8 +11,8 @@ include('db.php');
 
     //$apikey = "uucxi9379";//satenderjpr@gmail.com
 //$apikey = "ttemb6830";//singhpalarashakti@gmail.com
-$apikey = "ootzm7275";//satendersvnit@gmail.com
-//$apikey = "eumbm2216";//singhrathoresatender@gmail.com
+//$apikey = "ootzm7275";//satendersvnit@gmail.com
+$apikey = "eumbm2216";//singhrathoresatender@gmail.com
 //$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
 //$apikey = "budyl6423";//yashagarwaljpr@gmail.com
 //$apikey = "zlzou2003";//satendersinghpalara@gmail.com
@@ -95,8 +97,10 @@ echo '<div class="container">';
         }
         echo '</ul>';
 
-        echo '<div class="button" onclick="loadDoc(\'' . $train_num . '\'' . ',' . '\'' . $source['code'] . '\'' . ',' . '\'' . $destination['code'] . '\'' . ',' . '\'' . $doj . '\'' . ',' . '\'' . $user_class . '\'' . ',' . '\'' . $user_quota . '\'' . ',' . '\'' . $i . '\''. ')">Change Content</div>';
-        echo '<div id="'.$i.'"><h2>Let AJAX change this text</h2></div>';
+        $loading_id = "loading" . $i;
+        echo '<div class="button" onclick="loadDoc(\'' . $train_num . '\'' . ',' . '\'' . $source['code'] . '\'' . ',' . '\'' . $destination['code'] . '\'' . ',' . '\'' . $doj . '\'' . ',' . '\'' . $user_class . '\'' . ',' . '\'' . $user_quota . '\'' . ',' . '\'' . $i . '\''. ')">Check Status</div>';
+        echo '<div id="'.$loading_id.'" class="loading" style="display:none;"></div>';
+        echo '<div id="'.$i.'"><h2></h2></div>';
 
         
 
@@ -111,15 +115,30 @@ echo '</body>';
 
 <script>
 function loadDoc(train_num,source,destination,doj,user_class,quota,id) {
-    "use strict";
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-      document.getElementById(id).innerHTML = xhttp.responseText;
-    }
-  };
-  xhttp.open("GET", "test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj + "&user_class=" + user_class + "&quota=" + quota, true);
-  xhttp.send();
+    var loading = $('#loading' + id);
+    loading.show();
+    $.ajax( {
+        async: true,
+        url: "test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj + "&user_class=" + user_class + "&quota=" + quota,
+        type: "GET",
+        dataType: "html",
+        success:function(data){
+            loading.hide();
+            $('#' + id).text(data);
+        }
+    });
 }
+//    "use strict";
+//  var xhttp = new XMLHttpRequest();
+////var loading = document.getElementById("loading");
+////    loading.style.display = 'inline-block';
+//  xhttp.onreadystatechange = function() {
+//    if (xhttp.readyState == 4 && xhttp.status == 200) {
+////        loading.style.display = 'none';
+//      document.getElementById(id).innerHTML = xhttp.responseText;
+//    }
+//  };
+//      xhttp.open("GET", "test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj + "&user_class=" + user_class + "&quota=" + quota, true);
+//      xhttp.send();
 </script>-
 
