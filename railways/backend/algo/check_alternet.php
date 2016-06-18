@@ -3,9 +3,15 @@
     session_start();
 
 //    $apikey = "uucxi9379";//satenderjpr@gmail.com
+<<<<<<< HEAD
    $apikey = "ttemb6830";//singhpalarashakti@gmail.com
     // $apikey = "ootzm7275";//satendersvnit@gmail.com
     //$apikey = "eumbm2216";//singhrathoresatender@gmail.com
+=======
+//    $apikey = "ttemb6830";//singhpalarashakti@gmail.com
+//    $apikey = "ootzm7275";//satendersvnit@gmail.com
+    $apikey = "eumbm2216";//singhrathoresatender@gmail.com
+>>>>>>> 0e83042a53f51c8555459bdde8938418b4a32801
     //$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
     //$apikey = "budyl6423";//yashagarwaljpr@gmail.com
     //$apikey = "zlzou2003";//satendersinghpalara@gmail.com

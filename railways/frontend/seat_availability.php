@@ -14,7 +14,6 @@
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/base/jquery-ui.css" />
         <link rel="stylesheet" href="http://gregfranko.com/jquery.selectBoxIt.js/css/jquery.selectBoxIt.css" />
         <script src="../js/bootstrap.js"></script>
-        <script src="../js/nice_select.min.js"></script>
         <link rel="stylesheet" type="text/css" href="../css/seat_availability.css">
         <script>
           $(function() {
@@ -25,11 +24,6 @@
             });
           });
         </script>
-        <script type="text/javascript" >
-					$('document').ready(function(){
-						$('.drop-down').niceselect();
-					})
-				</script>
 	</head>
 
 	<body >
