@@ -20,7 +20,7 @@ body {
     display: block;
     float: left;
     width: 330px;
-    height: 400px;
+    height: 500px;
     margin: 30px;
     display: table-row;
     border: 1px solid #f0f0f0;
@@ -44,4 +44,18 @@ body {
 
 .details p {
     padding-left: 10px;
+}
+
+.button {
+    margin-left: 80px;
+    font-size: 1.3em;
+    padding: 3px 6px;
+    border: 1px solid #dadada;
+    display: inline-block;
+    background: #d0d0d0;
+}
+
+.button:hover {
+    cursor: pointer;
+    background: #ff1a29;
 }
