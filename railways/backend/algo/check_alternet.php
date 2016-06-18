@@ -3,15 +3,9 @@
     session_start();
 
 //    $apikey = "uucxi9379";//satenderjpr@gmail.com
-<<<<<<< HEAD
    $apikey = "ttemb6830";//singhpalarashakti@gmail.com
     // $apikey = "ootzm7275";//satendersvnit@gmail.com
     //$apikey = "eumbm2216";//singhrathoresatender@gmail.com
-=======
-//    $apikey = "ttemb6830";//singhpalarashakti@gmail.com
-//    $apikey = "ootzm7275";//satendersvnit@gmail.com
-    $apikey = "eumbm2216";//singhrathoresatender@gmail.com
->>>>>>> 0e83042a53f51c8555459bdde8938418b4a32801
     //$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
     //$apikey = "budyl6423";//yashagarwaljpr@gmail.com
     //$apikey = "zlzou2003";//satendersinghpalara@gmail.com
@@ -22,6 +16,12 @@
     $to_station = $_SESSION['to_station'];
     $doj = $_SESSION['doj'];
     $class = $_SESSION['class'];
+
+    print_r($train_num);
+    print_r($from_station);
+    print_r($to_station);
+    print_r($doj);
+    print_r($class);
 
 
     $train_route_api = "http://api.railwayapi.com/route/train/" . $train_num . "/apikey/" . $apikey ;
@@ -149,7 +149,7 @@
     //     $check_seat_api_data = json_decode($check_seat_api_call, true);
 
     // }
-session_start();
+//session_start();
 $_SESSION['avail_source'] = $avail_source;
 $_SESSION['avail_dest'] = $avail_dest;
 
