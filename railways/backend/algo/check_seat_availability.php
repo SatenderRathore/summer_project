@@ -98,17 +98,6 @@ echo '<div class="container">';
                 echo '<li class="not-available">'.$days['day-code'].' </li>';
             }
         }
-        echo '</p>';
-
-//        echo '<p>' . $days_of_run .'</p>';
-        echo '<p class=">' . $departure_time .'</p>';
-        echo '<p>' . $arrival_time .'</p>';
-        echo '<p>' . $travel_time .'</p>';
-        echo '<p>' . $source['code'] .'</p>';
-        echo '<p>' . $destination['code'] .'</p>';
-//        echo '<p>' . $class .'</p>';
-        echo '<p class="available">';
-
         echo '</ul>';
 
         echo '<p><strong>Arrival Time:</strong> ' . $departure_time .'</p>';
@@ -128,12 +117,12 @@ echo '<div class="container">';
                 echo '<li class="not-available">'.$code['class-code'].' '.'</li>';
             }
         }
-        echo '</p>';
+        echo '</ul>';
 
-        echo '<button type="button" onclick="loadDoc(\'' . $train_num . '\'' . ',' . '\'' . $source['code'] . '\'' . ',' . '\'' . $destination['code'] . '\'' . ',' . '\'' . $doj . '\'' . ',' . '\'' . $user_class . '\'' . ',' . '\'' . $user_quota . '\'' . ',' . '\'' . $i . '\''. ')">Change Content</button>';
+        echo '<div class="button" onclick="loadDoc(\'' . $train_num . '\'' . ',' . '\'' . $source['code'] . '\'' . ',' . '\'' . $destination['code'] . '\'' . ',' . '\'' . $doj . '\'' . ',' . '\'' . $user_class . '\'' . ',' . '\'' . $user_quota . '\'' . ',' . '\'' . $i . '\''. ')">Change Content</div>';
         echo '<div id="'.$i.'"><h2>Let AJAX change this text</h2></div>';
 
-        echo '</ul>';
+        
 
         echo '</div>';
 
