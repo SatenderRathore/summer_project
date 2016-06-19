@@ -2,11 +2,11 @@
 include("db.php");
 session_start();
 
-//$avail_source = $_SESSION['avail_source'];
-//$avail_dest = $_SESSION['avail_dest'];
+$avail_source = $_SESSION['avail_source'];
+$avail_dest = $_SESSION['avail_dest'];
 
-$avail_source = array("JP", "KOTA", "ST", "BOMBAY", "MADGAON", "CALICUT");
-$avail_dest = array("JP1", "KOTA1", "ST1", "BOMBAY1", "MADGAO1N", "CALICUT1");
+//$avail_source = array("JP", "KOTA", "ST", "BOMBAY", "MADGAON", "CALICUT");
+//$avail_dest = array("JP1", "KOTA1", "ST1", "BOMBAY1", "MADGAO1N", "CALICUT1");
 ?>
 
 <html>
@@ -19,5 +19,5 @@ $avail_dest = array("JP1", "KOTA1", "ST1", "BOMBAY1", "MADGAO1N", "CALICUT1");
         echo '<br>';
     }
 ?>
-    
+
 </html>

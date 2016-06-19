@@ -43,7 +43,7 @@ $apikey = "eumbm2216";//singhrathoresatender@gmail.com
     //print_r($source);
     // print_r($destination);
     // print_r($doj);
-//    print_r($user_class);
+    //print_r($user_class);
     // print_r($quota);
 
     //http://api.railwayapi.com/between/source/jp/dest/st/date/15-07-2016/apikey/uucxi9379/
@@ -67,6 +67,7 @@ $apikey = "eumbm2216";//singhrathoresatender@gmail.com
 //print_r($trains_bw_stations_api_data['train'][0]['classes']);
 echo '<div class="container">';
 
+    session_start();
     for($i = 0; $i < count($all_trains); $i++)
     {
 
@@ -100,6 +101,17 @@ echo '<div class="container">';
                 echo '<li class="not-available">'.$days['day-code'].' </li>';
             }
         }
+        echo '</p>';
+
+//        echo '<p>' . $days_of_run .'</p>';
+        echo '<p class=">' . $departure_time .'</p>';
+        echo '<p>' . $arrival_time .'</p>';
+        echo '<p>' . $travel_time .'</p>';
+        echo '<p>' . $source['code'] .'</p>';
+        echo '<p>' . $destination['code'] .'</p>';
+//        echo '<p>' . $class .'</p>';
+        echo '<p class="available">';
+
         echo '</ul>';
 
         echo '<p><strong>Arrival Time:</strong> ' . $departure_time .'</p>';
@@ -119,14 +131,27 @@ echo '<div class="container">';
                 echo '<li class="not-available">'.$code['class-code'].' '.'</li>';
             }
         }
-        echo '</ul>';
+        echo '</p>';
+
 
         $loading_id = "loading" . $i;
         echo '<div class="button" onclick="loadDoc(\'' . $train_num . '\'' . ',' . '\'' . $source['code'] . '\'' . ',' . '\'' . $destination['code'] . '\'' . ',' . '\'' . $doj . '\'' . ',' . '\'' . $user_class . '\'' . ',' . '\'' . $user_quota . '\'' . ',' . '\'' . $i . '\''. ')">Check Status</div>';
         echo '<div id="'.$loading_id.'" class="loading" style="display:none;"></div>';
         echo '<div id="'.$i.'"><h2></h2></div>';
+        /////////////////code for alternet options
+        //session_start();
+        $_SESSION['train_num'] = $train_num;
+        $_SESSION['from_station'] = $source;
+        $_SESSION['to_station'] = $destination;
+        $_SESSION['doj'] = $doj;
+        $_SESSION['class'] = $user_class;
+        echo "hello";
+        print_r($_SESSION['train_num']);
 
-        
+        echo '<div><h2><a href = "check_alternet.php">link</a></h2></div>';
+
+        /////////////////
+        echo '</ul>';
 
         echo '</div>';
 
