@@ -9,14 +9,15 @@ echo '</head>';
 echo '<body>';
 include('db.php');
 
-    //$apikey = "uucxi9379";//satenderjpr@gmail.com
+//$apikey = "uucxi9379";//satenderjpr@gmail.com
 //$apikey = "ttemb6830";//singhpalarashakti@gmail.com
 //$apikey = "ootzm7275";//satendersvnit@gmail.com
-$apikey = "eumbm2216";//singhrathoresatender@gmail.com
+// $apikey = "eumbm2216";//singhrathoresatender@gmail.com
 //$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
 //$apikey = "budyl6423";//yashagarwaljpr@gmail.com
 //$apikey = "zlzou2003";//satendersinghpalara@gmail.com
 //$apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
+  $apikey = "okogk2695";//theyashagarwal21@gmail.com 
 
     $source = $_POST['source'];
     $destination = $_POST['destination'];
@@ -67,10 +68,24 @@ $apikey = "eumbm2216";//singhrathoresatender@gmail.com
 //print_r($trains_bw_stations_api_data['train'][0]['classes']);
 echo '<div class="container">';
 
+echo '<table class="table">';
+echo '<thead>';
+echo '<tr class=heading>';
+echo '<th class="first-col">Train Details</th>';
+echo '<th>Departure</th>';
+echo '<th>Arrival</th>';
+echo '<th>Travel Time</th>';
+echo '<th>Days of Run</th>';
+echo '<th>Classes</th>';
+echo '<th>Current Status</th>';
+echo '<th>Alternate Options</th>';
+echo '</tr>';
+echo '</thead>';
+echo '<tbody>';
     session_start();
     for($i = 0; $i < count($all_trains); $i++)
     {
-
+        echo '<tr>';
         $train_name = $all_trains[$i]['name'];
         $train_num = $all_trains[$i]['number'];
         $days_of_run = $all_trains[$i]['days'];
@@ -89,55 +104,43 @@ echo '<div class="container">';
 
         //print_r($class);
 
-        echo '<div class="details">';
-        echo '<p><strong>Train Name:</strong> ' . $train_name .' ('.$train_num.')'.'</p>';
-        echo '<p><strong>Days of Run:</strong></p>';
+        echo '<td class="first-col">' . $train_name . ' (' . $train_num . ')' . '</td>';
+        echo '<td>' . $departure_time . ' (' . $source['code'] . ')' . '</td>';
+        echo '<td>' . $arrival_time . ' (' . $destination['code'] . ')' . '</td>';
+        echo '<td>' . $travel_time . '</td>';
+        echo '<td>';
         echo '<ul>';
         foreach($days_of_run as $days) {
             if($days['runs'] === 'Y') {
-                echo '<li class="available"><strong>'.$days['day-code'].' </strong></li>';
+                echo '<li class="available"><strong>'.$days['day-code'][0].' </strong></li>';
             }
             else {
-                echo '<li class="not-available">'.$days['day-code'].' </li>';
+                echo '<li class="not-available">'.$days['day-code'][0].' </li>';
             }
         }
-        echo '</p>';
-
-//        echo '<p>' . $days_of_run .'</p>';
-        echo '<p class=">' . $departure_time .'</p>';
-        echo '<p>' . $arrival_time .'</p>';
-        echo '<p>' . $travel_time .'</p>';
-        echo '<p>' . $source['code'] .'</p>';
-        echo '<p>' . $destination['code'] .'</p>';
-//        echo '<p>' . $class .'</p>';
-        echo '<p class="available">';
-
         echo '</ul>';
+        echo '</td>';
 
-        echo '<p><strong>Arrival Time:</strong> ' . $departure_time .'</p>';
-        echo '<p><strong>Departure Time:</strong> ' . $arrival_time .'</p>';
-        echo '<p><strong>Travel Time:</strong> ' . $travel_time .' Hr</p>';
-        echo '<p><strong>Source Station:</strong> ' . $source['code'] .'</p>';
-        echo '<p><strong>Destination Station:</strong> ' . $destination['code'] .'</p>';
-
-        echo '<p><strong>Available Classes:</strong></p>';
+        echo '<td>';
         echo '<ul>';
-
         foreach($class as $code) {
             if($code['available'] == 'Y') {
                 echo '<li class="available"><strong>'.$code['class-code'].' '.'</strong></li>';
             }
-            else {
-                echo '<li class="not-available">'.$code['class-code'].' '.'</li>';
-            }
+            // else {
+            //     echo '<li class="not-available">'.$code['class-code'].' '.'</li>';
+            // }
         }
-        echo '</p>';
+        echo '</ul>';
+        echo '</td>';
 
-
+        echo '<td>';
         $loading_id = "loading" . $i;
         echo '<div class="button" onclick="loadDoc(\'' . $train_num . '\'' . ',' . '\'' . $source['code'] . '\'' . ',' . '\'' . $destination['code'] . '\'' . ',' . '\'' . $doj . '\'' . ',' . '\'' . $user_class . '\'' . ',' . '\'' . $user_quota . '\'' . ',' . '\'' . $i . '\''. ')">Check Status</div>';
         echo '<div id="'.$loading_id.'" class="loading" style="display:none;"></div>';
         echo '<div id="'.$i.'"><h2></h2></div>';
+        echo '</td>';
+
         /////////////////code for alternet options
         //session_start();
         $_SESSION['train_num'] = $train_num;
@@ -145,18 +148,14 @@ echo '<div class="container">';
         $_SESSION['to_station'] = $destination;
         $_SESSION['doj'] = $doj;
         $_SESSION['class'] = $user_class;
-        echo "hello";
-        print_r($_SESSION['train_num']);
+        // print_r($_SESSION['train_num']);
 
+        echo '<td>';
         echo '<div><h2><a href = "check_alternet.php">link</a></h2></div>';
-
-        /////////////////
-        echo '</ul>';
-
-        echo '</div>';
-
-
+        echo '</td>';
     }
+echo '</tbody>';
+echo '</table>';
 echo '</div>';
 echo '</body>';
 
@@ -177,17 +176,5 @@ function loadDoc(train_num,source,destination,doj,user_class,quota,id) {
         }
     });
 }
-//    "use strict";
-//  var xhttp = new XMLHttpRequest();
-////var loading = document.getElementById("loading");
-////    loading.style.display = 'inline-block';
-//  xhttp.onreadystatechange = function() {
-//    if (xhttp.readyState == 4 && xhttp.status == 200) {
-////        loading.style.display = 'none';
-//      document.getElementById(id).innerHTML = xhttp.responseText;
-//    }
-//  };
-//      xhttp.open("GET", "test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj + "&user_class=" + user_class + "&quota=" + quota, true);
-//      xhttp.send();
 </script>-
 
