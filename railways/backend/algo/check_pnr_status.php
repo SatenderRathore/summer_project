@@ -12,6 +12,9 @@
     //$apikey = "budyl6423";//yashagarwaljpr@gmail.com
     //$apikey = "zlzou2003";//satendersinghpalara@gmail.com
     //$apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
+
+    $apikey = "okogk2695";//theyashagarwal21@gmail.com
+    
     $pnr_status_api = "http://api.railwayapi.com/pnr_status/pnr/" . $pnr . "/apikey/" . $apikey ;
     $pnr_status_api_call = file_get_contents($pnr_status_api);
 
