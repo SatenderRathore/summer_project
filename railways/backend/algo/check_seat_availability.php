@@ -43,7 +43,7 @@ $apikey = "eumbm2216";//singhrathoresatender@gmail.com
     //print_r($source);
     // print_r($destination);
     // print_r($doj);
-    print_r($user_class);
+//    print_r($user_class);
     // print_r($quota);
 
     //http://api.railwayapi.com/between/source/jp/dest/st/date/15-07-2016/apikey/uucxi9379/
