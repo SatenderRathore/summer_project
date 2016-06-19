@@ -15,6 +15,12 @@
         <link rel="stylesheet" href="http://gregfranko.com/jquery.selectBoxIt.js/css/jquery.selectBoxIt.css" />
         <script src="../js/bootstrap.js"></script>
         <link rel="stylesheet" type="text/css" href="../css/seat_availability.css">
+
+          <link rel="stylesheet" href="/resources/demos/style.css">
+          <!-- some problem is their in above line -->
+
+
+
         <script>
           $(function() {
             $( "#datepicker" ).datepicker( {
@@ -48,9 +54,9 @@
                             <div class="mid-content">
                                 <div class="details">
                                     <legend>From:</legend>
-                                    <input class="" name="source" type="text" id="" maxlength="10" data-type="text" data-required="true"/>
+                                    <input class="" name="source" type="text" id="src" maxlength="10" data-type="text" data-required="true"/>
                                     <legend>To:</legend>
-                                    <input class="" name="destination" type="text" id="" maxlength="10" data-type="text" data-required="true"/>
+                                    <input class="" name="destination" type="text" id="dest" maxlength="10" data-type="text" data-required="true"/>
                                     <legend>Date:</legend>
                                     <input id="datepicker" name='doj' type="text" class="date-picker form-control" />
                                     <legend>Preferred Class:</legend>
@@ -99,3 +105,30 @@
         });
         </script>
     </body>
+
+
+
+<!-- php code starts here -->
+
+<?php
+$json = file_get_contents('station_list.json');
+$data = json_decode($json,true);
+$new = array();
+for($i=0;$i<count($data);$i++)
+{
+    array_push($new, strtoupper($data[$i]['station'] . " - " . $data[$i]['station_code']));
+}
+?>
+
+<script>
+  <?php
+  $js_array = json_encode($new);
+  ?>
+  $(function() {
+    $( "#src, #dest" ).autocomplete({
+        source: <?php echo $js_array ?>
+    });
+  });
+  </script>
+
+
