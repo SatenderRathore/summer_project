@@ -10,8 +10,10 @@ $avail_dest = $_SESSION['avail_dest'];
 ?>
 
 <html>
-<div>COntainer</div>
-<?php for ($k = 0; $k < count($avail_source); $k++)
+
+<?php
+
+    for ($k = 0; $k < count($avail_source); $k++)
     {
         echo "<div class='src' style='background: red'>$avail_source[$k]</div>";
         echo " to ";
