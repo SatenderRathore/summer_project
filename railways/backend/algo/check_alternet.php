@@ -2,14 +2,17 @@
     include("db.php");
     session_start();
 
-//    $apikey = "uucxi9379";//satenderjpr@gmail.com
-   $apikey = "ttemb6830";//singhpalarashakti@gmail.com
-    // $apikey = "ootzm7275";//satendersvnit@gmail.com
+     //$apikey = "uucxi9379";//satenderjpr@gmail.com
+   //$apikey = "ttemb6830";//singhpalarashakti@gmail.com
+     //$apikey = "ootzm7275";//satendersvnit@gmail.com
     //$apikey = "eumbm2216";//singhrathoresatender@gmail.com
     //$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
     //$apikey = "budyl6423";//yashagarwaljpr@gmail.com
     //$apikey = "zlzou2003";//satendersinghpalara@gmail.com
     //$apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
+    $apikey = "okogk2695";//theyashagarwal21@gmail.com
+    // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
+    // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
 
     $train_num = $_SESSION['train_num'];
     $from_station = $_SESSION['from_station'];
@@ -27,6 +30,14 @@
     $train_route_api = "http://api.railwayapi.com/route/train/" . $train_num . "/apikey/" . $apikey ;
     $train_route_api_call = file_get_contents("$train_route_api");
     $train_route_api_data = json_decode($train_route_api_call,true);
+    // echo"response code 1 :";
+    // print_r($train_route_api_data['response_code']);
+    if($train_route_api_data['response_code'] !== '200')
+    {
+?>
+        <script>alert("some error occured");//redirect to some page</script>
+<?php
+    }
     $stations = $train_route_api_data['route'];
     /////////////////////////////////////////////////////////////////////////
     //echo $stations ;
@@ -80,49 +91,61 @@
 
         //echo "hello" . '<br>';
         //print_r($check_seat_api_data);
+        // echo "response code:";
+        // print_r($check_seat_api_data['response_code']);
 
         if($check_seat_api_data['response_code'] == "200")
         {
             $status = $check_seat_api_data['availability'][0]['status'];
-        }
-        // else
-        // {
-        //     continue;
-        // }
-        //echo "status " . '<br>' ;
-        //print_r($status);
 
-        if(strpos($status, 'AVAILABLE') !== false)
-        {
-            if($j == $dest_index)
+            // else
+            // {
+            //     continue;
+            // }
+            //echo "status " . '<br>' ;
+            //print_r($status);
+
+            if(strpos($status, 'AVAILABLE') !== false)
             {
-                array_push($avail_source, $station_codes[$i]);
-                array_push($avail_dest, $station_codes[$j]);
+                if($j == $dest_index)
+                {
+                    array_push($avail_source, $station_codes[$i]);
+                    array_push($avail_dest, $station_codes[$j]);
+                }
+
+                $j = $j + 1 ;
+
+            }
+            else
+            {
+                //$j = $j-1;
+                if($check_seat_api_data['response_code'] == "200" && $i != $j - 1)///////////remove 200 condition form this line
+                {
+                    array_push($avail_source, $station_codes[$i]);
+                    array_push($avail_dest, $station_codes[$j-1]);
+                }
+
+                if($k == $j)
+                {
+                    $j = $j +1;
+                }
+                $i = $j - 1 ;
+                $k = $j;
+                //$j = $j + 1 ;
+                //break;
             }
 
-            $j = $j + 1 ;
-
-        }
-        else
-        {
-            //$j = $j-1;
-            if($check_seat_api_data['response_code'] == "200" && $i != $j - 1)
-            {
-                array_push($avail_source, $station_codes[$i]);
-                array_push($avail_dest, $station_codes[$j-1]);
             }
 
-            if($k == $j)
+            else ////////////if status is not 200
             {
-                $j = $j +1;
+?>
+                <script>
+                alert("some error occured");//redirect to some page
+                </script>
+<?php
             }
-            $i = $j - 1 ;
-            $k = $j;
-            //$j = $j + 1 ;
-            //break;
 
-
-        }
         // echo "i = ";
         //     print_r($i);
         //     echo "<br>";
@@ -130,7 +153,7 @@
         //     print_r($j);
         //     echo "<br>";
 
-    }
+        }
     //print_r($avail_source);
     //echo "hello" ;
     //print_r($avail_dest);
@@ -153,6 +176,6 @@
 $_SESSION['avail_source'] = $avail_source;
 $_SESSION['avail_dest'] = $avail_dest;
 
-header("Location:../../frontend/show_alternet.php");
+//header("Location:../../frontend/show_alternet.php");
     ?>
 

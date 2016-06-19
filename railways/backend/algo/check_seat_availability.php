@@ -12,11 +12,14 @@ include('db.php');
     //$apikey = "uucxi9379";//satenderjpr@gmail.com
 //$apikey = "ttemb6830";//singhpalarashakti@gmail.com
 //$apikey = "ootzm7275";//satendersvnit@gmail.com
-$apikey = "eumbm2216";//singhrathoresatender@gmail.com
+//$apikey = "eumbm2216";//singhrathoresatender@gmail.com
 //$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
 //$apikey = "budyl6423";//yashagarwaljpr@gmail.com
 //$apikey = "zlzou2003";//satendersinghpalara@gmail.com
 //$apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
+$apikey = "okogk2695";//theyashagarwal21@gmail.com
+    // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
+    // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
 
     $source = $_POST['source'];
     $destination = $_POST['destination'];
@@ -50,6 +53,14 @@ $apikey = "eumbm2216";//singhrathoresatender@gmail.com
     $trains_bw_stations_api = "http://api.railwayapi.com/between/source/" . $source . "/dest/" . $destination . "/date/" . $doj . "/apikey/" . $apikey ;
     $trains_bw_stations_api_call = file_get_contents($trains_bw_stations_api);
     $trains_bw_stations_api_data = json_decode($trains_bw_stations_api_call, true);
+
+
+    if($trains_bw_stations_api_data['response_code'] != '200')
+    {
+?>
+        <script>alert("some error occured");//redirect to some page</script>
+<?php
+    }
     //print_r($trains_bw_stations_api_data['train'][0]['name']);
 
     $all_trains = array();
@@ -145,8 +156,8 @@ echo '<div class="container">';
         $_SESSION['to_station'] = $destination;
         $_SESSION['doj'] = $doj;
         $_SESSION['class'] = $user_class;
-        echo "hello";
-        print_r($_SESSION['train_num']);
+        //echo "hello";
+        //print_r($_SESSION['train_num']);
 
         echo '<div><h2><a href = "check_alternet.php">link</a></h2></div>';
 
