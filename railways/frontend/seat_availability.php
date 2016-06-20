@@ -5,18 +5,22 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Seat Availability</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-        <script src="../js/datepicker.js"></script>
-        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/base/jquery-ui.css" />
-        <link rel="stylesheet" href="http://gregfranko.com/jquery.selectBoxIt.js/css/jquery.selectBoxIt.css" />
-        <script src="../js/bootstrap.js"></script>
-        <link rel="stylesheet" type="text/css" href="../css/seat_availability.css">
 
-          <link rel="stylesheet" href="/resources/demos/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://gregfranko.com/jquery.selectBoxIt.js/css/jquery.selectBoxIt.css" />
+        <link rel="stylesheet" type="text/css" href="../css/seat_availability.css">
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/base/jquery-ui.css" />
+        <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="../js/datepicker.js"></script>
+        <script src="../js/bootstrap.js"></script>
+        <!-- // <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
+
+          <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+        <!-- <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /> -->
+
           <!-- some problem is their in above line -->
 
 
@@ -126,7 +130,8 @@ for($i=0;$i<count($data);$i++)
   ?>
   $(function() {
     $( "#src, #dest" ).autocomplete({
-        source: <?php echo $js_array ?>
+        source: <?php echo $js_array ?>,
+         minLength: 3
     });
   });
   </script>
