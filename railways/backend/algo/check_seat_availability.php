@@ -28,19 +28,21 @@ $apikey = "okogk2695";//theyashagarwal21@gmail.com
     $destination = strtoupper($_POST['destination']);
     $doj = $_POST['doj'];
     $user_class = $_POST['class'];
+    $user_class_for_if = $user_class;
     $user_quota = $_POST['quota'];
     $source = station_code($source);
     $destination = station_code($destination);
-    print_r($source);
-    print_r($destination);
-
-
 
 /////////////////////function for default class/////////////////
     function default_class($classes)
     {
         foreach ($classes as $class)
         {
+            if($class['available'] == "-")
+            {
+                $default_class = "null";
+                break;
+            }
             if($class['available'] == "Y")
             {
                 $default_class = $class['class-code'];
@@ -112,15 +114,16 @@ echo '<tbody>';
         $source = $all_trains[$i]['from'];
         $destination =$all_trains[$i]['to'];
         $class = $all_trains[$i]['classes'];
-
+        //print_r($class);
 ///////////////////if user select all class then default class will be given///////////////
-        if($user_class == "ALL")
+        if($user_class_for_if == "ALL")
         {
             $user_class = default_class($class);
         }
-
-        //print_r($class);
-
+        if($user_class=="null")
+        {
+            continue;
+        }
         echo '<td class="first-col">' . $train_name . ' (' . $train_num . ')' . '</td>';
         echo '<td>' . $departure_time . ' (' . $source['code'] . ')' . '</td>';
         echo '<td>' . $arrival_time . ' (' . $destination['code'] . ')' . '</td>';
@@ -140,8 +143,10 @@ echo '<tbody>';
 
         echo '<td>';
         echo '<ul>';
-        foreach($class as $code) {
-            if($code['available'] == 'Y') {
+        foreach($class as $code)
+        {
+            if($code['available'] == 'Y')
+            {
                 echo '<li class="available"><strong>'.$code['class-code'].' '.'</strong></li>';
             }
             // else {
