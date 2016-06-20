@@ -18,10 +18,10 @@
         <script src="../js/bootstrap.js"></script>
         <!-- // <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
 
-          <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+
         <!-- <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /> -->
 
-          <!-- some problem is their in above line -->
+
 
 
 

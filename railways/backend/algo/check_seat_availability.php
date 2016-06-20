@@ -24,11 +24,15 @@ $apikey = "okogk2695";//theyashagarwal21@gmail.com
     // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
     // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
 
-    $source = $_POST['source'];
-    $destination = $_POST['destination'];
+    $source = strtoupper($_POST['source']);
+    $destination = strtoupper($_POST['destination']);
     $doj = $_POST['doj'];
     $user_class = $_POST['class'];
     $user_quota = $_POST['quota'];
+    $source = station_code($source);
+    $destination = station_code($destination);
+    print_r($source);
+    print_r($destination);
 
 
 
@@ -193,3 +197,27 @@ function loadDoc(train_num,source,destination,doj,user_class,quota,id) {
 }
 </script>-
 
+<?php
+////////////////code to convert station name to station code/////////////////////////////////
+function station_code($station_name)
+{
+    $json = file_get_contents('station_list.json');
+    $data = json_decode($json, true);
+    $new = array();
+    for($i=0;$i<count($data);$i++)
+    {
+        array_push($new, strtoupper($data[$i]['station'] . " - " . $data[$i]['station_code']));
+    }
+    $count = 0;
+    foreach ($new as $station)
+    {
+        if($station_name == $station)
+        {
+            break;
+        }
+        $count++;
+    }
+    return $data[$count]['station_code'];
+}
+
+?>
