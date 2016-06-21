@@ -110,7 +110,7 @@ echo '<tbody>';
         $destination =$all_trains[$i]['to'];
         $class = $all_trains[$i]['classes'];
         //print_r($class);
-///////////////////if user select all class then default class will be given///////////////
+///////////////////if user select all class then default class will be given and check for unreserved train also///////////////
         if($class[0]['available'] == "-")
         {
             continue;
