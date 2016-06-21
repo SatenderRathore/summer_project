@@ -9,7 +9,7 @@ echo '</head>';
 echo '<body>';
 include('db.php');
 
-//$apikey = "uucxi9379";//satenderjpr@gmail.com
+$apikey = "uucxi9379";//satenderjpr@gmail.com
 //$apikey = "ttemb6830";//singhpalarashakti@gmail.com
 //$apikey = "ootzm7275";//satendersvnit@gmail.com
 
@@ -20,7 +20,8 @@ $apikey = "budyl6423";//yashagarwaljpr@gmail.com
 //$apikey = "zlzou2003";//satendersinghpalara@gmail.com
 //$apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
 
-// $apikey = "okogk2695";//theyashagarwal21@gmail.com
+//$apikey = "okogk2695";//theyashagarwal21@gmail.com
+
     // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
     // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
 
@@ -28,7 +29,7 @@ $apikey = "budyl6423";//yashagarwaljpr@gmail.com
     $destination = strtoupper($_POST['destination']);
     $doj = $_POST['doj'];
     $user_class = $_POST['class'];
-    $user_class_for_if = $user_class;
+    $user_class_copy = $user_class;
     $user_quota = $_POST['quota'];
     $source = station_code($source);
     $destination = station_code($destination);
@@ -38,11 +39,6 @@ $apikey = "budyl6423";//yashagarwaljpr@gmail.com
     {
         foreach ($classes as $class)
         {
-            if($class['available'] == "-")
-            {
-                $default_class = "null";
-                break;
-            }
             if($class['available'] == "Y")
             {
                 $default_class = $class['class-code'];
@@ -115,15 +111,17 @@ echo '<tbody>';
         $destination =$all_trains[$i]['to'];
         $class = $all_trains[$i]['classes'];
         //print_r($class);
-///////////////////if user select all class then default class will be given///////////////
-        if($user_class_for_if == "ALL")
-        {
-            $user_class = default_class($class);
-        }
-        if($user_class=="null")
+///////////////////if user select all class then default class will be given and check for unreserved train also///////////////
+        if($class[0]['available'] == "-")
         {
             continue;
         }
+
+        if($user_class_copy == "ALL")
+        {
+            $user_class = default_class($class);
+        }
+
         echo '<td class="first-col">' . $train_name . ' (' . $train_num . ')' . '</td>';
         echo '<td>' . $departure_time . ' (' . $source['code'] . ')' . '</td>';
         echo '<td>' . $arrival_time . ' (' . $destination['code'] . ')' . '</td>';
