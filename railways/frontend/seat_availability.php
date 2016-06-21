@@ -9,21 +9,11 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="http://gregfranko.com/jquery.selectBoxIt.js/css/jquery.selectBoxIt.css" />
         <link rel="stylesheet" type="text/css" href="../css/seat_availability.css">
-        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/base/jquery-ui.css" />
-        <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="../js/datepicker.js"></script>
         <script src="../js/bootstrap.js"></script>
-        <!-- // <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
-
-
-        <!-- <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /> -->
-
-
-
-
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
         <script>
           $(function() {
@@ -115,25 +105,25 @@
 <!-- php code starts here -->
 
 <?php
-$json = file_get_contents('station_list.json');
-$data = json_decode($json,true);
-$new = array();
-for($i=0;$i<count($data);$i++)
-{
-    array_push($new, strtoupper($data[$i]['station'] . " - " . $data[$i]['station_code']));
-}
+    $json = file_get_contents('station_list.json');
+    $data = json_decode($json,true);
+    $new = array();
+    for($i=0;$i<count($data);$i++)
+    {
+        array_push($new, strtoupper($data[$i]['station'] . " - " . $data[$i]['station_code']));
+    }
 ?>
 
 <script>
-  <?php
-  $js_array = json_encode($new);
-  ?>
-  $(function() {
+    <?php
+    $js_array = json_encode($new);
+    ?>
+    $(function() {
     $( "#src, #dest" ).autocomplete({
         source: <?php echo $js_array ?>,
-         minLength: 3
+            minLength: 3
+        });
     });
-  });
-  </script>
+</script>
 
 

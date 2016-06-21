@@ -100,7 +100,7 @@ echo '<tbody>';
     session_start();
     for($i = 0; $i < count($all_trains); $i++)
     {
-        echo '<tr>';
+        
         $train_name = $all_trains[$i]['name'];
         $train_num = $all_trains[$i]['number'];
         $days_of_run = $all_trains[$i]['days'];
@@ -122,6 +122,7 @@ echo '<tbody>';
             $user_class = default_class($class);
         }
 
+        echo '<tr>';
         echo '<td class="first-col">' . $train_name . ' (' . $train_num . ')' . '</td>';
         echo '<td>' . $departure_time . ' (' . $source['code'] . ')' . '</td>';
         echo '<td>' . $arrival_time . ' (' . $destination['code'] . ')' . '</td>';
