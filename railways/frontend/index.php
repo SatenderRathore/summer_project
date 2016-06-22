@@ -39,7 +39,7 @@ if(isset($_SESSION['userid']))
 					<ul class="features">
 
                         <li><a href="./seat_availability.php">SEAT AVAILABILITY</a></li>
-                        <li><a href="./pnr_status.php">PNR STATUS</a></li>
+                        <li><a href="#"></a></li>
                         <li>FAIR ENQUIRY</li>
 
                         <li>LIVE TRAIN STATUS</li>
