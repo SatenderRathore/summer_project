@@ -5,7 +5,7 @@ function update_passenger_list(){
 	var booking_status=[2,3,4,5];
 	var current_status=[3,4,5,6];
 	var seatjugaad_status=[4,5,6,7];
-	for(i=0;i<srno.length;i++)  
+	for(i=0;i<srno.length;i++)
 	{
 		var row=table.insertRow(i+1);
 		var cell1=row.insertCell(0);
@@ -22,9 +22,13 @@ function update_passenger_list(){
 
 update_passenger_list();
 
+<?php
+$train_num = 12980;
+?>
 function update_pnr_details(){
 	var table = document.getElementById("pnr_detail");
-	var trainno=19482;
+	var train_num=19482;
+	// var train_num = '<?php echo $trainnum ?>';
 	var train_name="seat batao express";
 	var boarding_date="13-11-2016";
 	var from="svnit";
@@ -41,7 +45,7 @@ function update_pnr_details(){
 	var cell6=row.insertCell(5);
 	var cell7=row.insertCell(6);
 	var cell8=row.insertCell(7);
-	cell1.innerHTML=trainno;
+	cell1.innerHTML=train_num;
 	cell2.innerHTML=train_name;
 	cell3.innerHTML=boarding_date;
 	cell4.innerHTML=from;
@@ -49,6 +53,6 @@ function update_pnr_details(){
 	cell6.innerHTML=reserved_upto;
 	cell7.innerHTML=boarding_point;
 	cell8.innerHTML=clas;
-	
+
 }
 update_pnr_details();

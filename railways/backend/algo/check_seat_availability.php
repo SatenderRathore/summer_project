@@ -16,7 +16,7 @@ $apikey = "uucxi9379";//satenderjpr@gmail.com
 //$apikey = "eumbm2216";//singhrathoresatender@gmail.com
 
 //$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
-$apikey = "budyl6423";//yashagarwaljpr@gmail.com
+//$apikey = "budyl6423";//yashagarwaljpr@gmail.com
 //$apikey = "zlzou2003";//satendersinghpalara@gmail.com
 //$apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
 
@@ -100,7 +100,7 @@ echo '<tbody>';
     session_start();
     for($i = 0; $i < count($all_trains); $i++)
     {
-        
+
         $train_name = $all_trains[$i]['name'];
         $train_num = $all_trains[$i]['number'];
         $days_of_run = $all_trains[$i]['days'];
@@ -199,7 +199,7 @@ function loadDoc(train_num,source,destination,doj,user_class,quota,id) {
         }
     });
 }
-</script>-
+</script>
 
 <?php
 ////////////////code to convert station name to station code/////////////////////////////////
