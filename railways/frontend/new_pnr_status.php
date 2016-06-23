@@ -20,6 +20,7 @@ $booking_status   = $_SESSION["booking_status"];
 $coach_position   = $_SESSION["coach_position"];
 $current_status   = $_SESSION["current_status"];
 // $train_num = 12980;
+echo count($passengers);
 // $current_status   = "W/L";
 
 // print_r($from_station['code']);
@@ -136,19 +137,20 @@ $current_status   = $_SESSION["current_status"];
 	var table = document.getElementById("passengers");
 	var i=0;
 	var srno=[1,2,3,4];
+	var totalPassengers = '<?php echo count($passengers)?>'
 	var booking_status=[2,3,4,5];
 	var current_status=[3,4,5,6];
 	var seatjugaad_status=[4,5,6,7];
-	for(i=0;i<srno.length;i++)
+	for(i=0;i<totalPassengers;i++)
 	{
 		var row=table.insertRow(i+1);
 		var cell1=row.insertCell(0);
 		var cell2=row.insertCell(1);
 		var cell3=row.insertCell(2);
 		var cell4=row.insertCell(3);
-		cell1.innerHTML=srno[i];
-		cell2.innerHTML=booking_status[i];
-		cell3.innerHTML=current_status[i];
+		cell1.innerHTML=i+1;
+		cell2.innerHTML='<?php echo $passengers[0]['booking_status'] ?>';
+		cell3.innerHTML='<?php echo $passengers[0]['current_status'] ?>';
 		cell4.innerHTML=seatjugaad_status[i];
 		console.log(cell1.innerHTML);
 	}
@@ -165,7 +167,7 @@ function update_pnr_details(){
 	var from='<?php echo $from_station['name'] . ' ( ' . $from_station['code'] . ' )' ?>';
 	var to='<?php echo $to_station['name'] . ' ( '. $to_station['code'] . ' )'?>';
 	var reserved_upto='<?php echo $reservation_upto['name'] . ' ( ' . $reservation_upto['code'].' )' ?>';
-	var boarding_point='<?php echo $boarding_point['name'] . ' ( '. $boarding_point['code'] . ' )' ?>';
+	var boarding_point='<?php echo $boarding_point['name'] . ' ( ' . $boarding_point['code']. ' )' ?>';
 	var clas='<?php echo $class ?>';
 	var row=table.insertRow(1);
 	var cell1=row.insertCell(0);
