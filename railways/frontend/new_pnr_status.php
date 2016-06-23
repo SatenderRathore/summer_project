@@ -162,10 +162,10 @@ function update_pnr_details(){
 	var train_num = '<?php echo $train_num ?>';
 	var train_name='<?php echo $train_name ?>';
 	var boarding_date='<?php echo $doj ?>';
-	var from='<?php echo $from_station['name'] ?>';
-	var to='<?php echo $to_station['name'] ?>';
-	var reserved_upto='<?php echo $reservation_upto['name'] ?>';
-	var boarding_point='<?php echo $boarding_point['name'] ?>';
+	var from='<?php echo $from_station['name'] . ' ( ' . $from_station['code'] . ' )' ?>';
+	var to='<?php echo $to_station['name'] . ' ( '. $to_station['code'] . ' )'?>';
+	var reserved_upto='<?php echo $reservation_upto['name'] . ' ( ' . $reservation_upto['code'].' )' ?>';
+	var boarding_point='<?php echo $boarding_point['name'] . ' ( '. $boarding_point['code'] . ' )' ?>';
 	var clas='<?php echo $class ?>';
 	var row=table.insertRow(1);
 	var cell1=row.insertCell(0);
