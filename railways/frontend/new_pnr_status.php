@@ -135,13 +135,12 @@ echo count($passengers);
 <script>
 	function update_passenger_list(){
 	var table = document.getElementById("passengers");
-	var i=0;
 	var srno=[1,2,3,4];
 	var totalPassengers = '<?php echo count($passengers)?>'
-	var booking_status=[2,3,4,5];
-	var current_status=[3,4,5,6];
 	var seatjugaad_status=[4,5,6,7];
-	for(i=0;i<totalPassengers;i++)
+	<?php $i = 0;?>
+
+	for(var i=0;i<totalPassengers;i++)
 	{
 		var row=table.insertRow(i+1);
 		var cell1=row.insertCell(0);
@@ -149,10 +148,11 @@ echo count($passengers);
 		var cell3=row.insertCell(2);
 		var cell4=row.insertCell(3);
 		cell1.innerHTML=i+1;
-		cell2.innerHTML='<?php echo $passengers[0]['booking_status'] ?>';
-		cell3.innerHTML='<?php echo $passengers[0]['current_status'] ?>';
+		cell2.innerHTML='<?php echo $passengers[$i]['booking_status'] ?>';
+		cell3.innerHTML='<?php echo $passengers[$i]['current_status'] ?>';
 		cell4.innerHTML=seatjugaad_status[i];
 		console.log(cell1.innerHTML);
+		<?php $i++;?>
 	}
 }
 
