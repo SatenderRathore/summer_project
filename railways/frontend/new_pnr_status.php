@@ -114,6 +114,12 @@ $current_status   = $_SESSION["current_status"];
 								<th class="col-md-2">SeatJugaad Status</th>
 							</tr>
 						</thead>
+						<tbody>
+							<tr>
+								<td colspan="2" class="chart">Charting Status</td>
+								<td colspan="2" class="chart-status" id="c-status">NO MESSAGE RECEIVED</td>
+							</tr>
+						</tbody>
 					</table>
 				</div>
 			    <div class="notify">
@@ -132,7 +138,7 @@ $current_status   = $_SESSION["current_status"];
 
 
 <script>
-//------------------------------dode to display alternate option button in any of current status in not confirm------------
+//------------------------------code to display alternate option button in any of current status in not confirm------------
 		var current_status;
         var totalPassengers = '<?php echo count($passengers)?>';
         <?php $i = 0;?>
@@ -153,7 +159,7 @@ $current_status   = $_SESSION["current_status"];
 //-----------------------------------------------------------------------------------------------------------
 
 
-
+//----------------------------code to display the passengers list--------------------------------
 	function update_passenger_list(){
 	var table = document.getElementById("passengers");
 	var srno=[1,2,3,4];
@@ -178,6 +184,10 @@ $current_status   = $_SESSION["current_status"];
 }
 
 update_passenger_list();
+//-------------------------------------------------------------------------------------
+
+
+//------------------------code to display the pnr details of journey-------------------------------
 
 function update_pnr_details(){
 	var table = document.getElementById("pnr_detail");
@@ -210,7 +220,31 @@ function update_pnr_details(){
 
 }
 update_pnr_details();
+//---------------------------------------------------
 
+
+
+//----------------------------code to show the charting status-----------------------------
+
+function charting_status(msg)
+{
+	if(msg===1)
+	{
+		document.getElementById("c-status").className="chart-prepared";
+		document.getElementById("c-status").innerHTML="CHART PREPARED";
+	}
+	else if(msg===0)
+	{
+		document.getElementById("c-status").className="chart-not-prepared";
+		document.getElementById("c-status").innerHTML="CHART NOT PREPARED";
+	}
+	else
+	{
+		document.getElementById("c-status").className="chart-status";
+		document.getElementById("c-status").innerHTML="NO MESSAGE RECEIVED";
+	}
+}
+charting_status(0); //send the message here.. 0->chart is not prepared and 1->chart is prepared
 
 
 

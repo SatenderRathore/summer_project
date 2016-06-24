@@ -139,6 +139,10 @@ table{
   text-align: center;
 }
 
+.chart-status{
+  text-align: center;
+  color: blue;
+}
 .chart-not-prepared{
   text-align: center;
   color: red;
