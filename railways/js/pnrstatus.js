@@ -22,9 +22,7 @@ function update_passenger_list(){
 
 update_passenger_list();
 
-<?php
-$train_num = 12980;
-?>
+
 function update_pnr_details(){
 	var table = document.getElementById("pnr_detail");
 	var train_num=19482;

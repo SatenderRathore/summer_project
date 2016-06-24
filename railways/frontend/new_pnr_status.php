@@ -20,7 +20,6 @@ $booking_status   = $_SESSION["booking_status"];
 $coach_position   = $_SESSION["coach_position"];
 $current_status   = $_SESSION["current_status"];
 // $train_num = 12980;
-echo count($passengers);
 // $current_status   = "W/L";
 
 // print_r($from_station['code']);
@@ -54,7 +53,6 @@ echo count($passengers);
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>PNR-STATUS</title>
-
         <script src="../js/jquery-2.1.1.js"></script>
         <script src="../js/bootstrap.js"></script>
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
@@ -122,6 +120,7 @@ echo count($passengers);
 					<input type="email" class="mail" id="email" placeholder="Email Address">
 					<button type="submit" class="btn btn-default confirm-mail" onclick="sendmail()">Notify On Confirm</button>
 				</div>
+				<a id="buttonn" href="../backend/algo/check_alternet.php">Show Alternate</a>
 			</div>
 
 		</div>
@@ -133,10 +132,32 @@ echo count($passengers);
 
 
 <script>
+//------------------------------dode to display alternate option button in any of current status in not confirm------------
+		var current_status;
+        var totalPassengers = '<?php echo count($passengers)?>';
+        <?php $i = 0;?>
+        for(var i=0;i<totalPassengers;i++)
+        {
+        	current_status = '<?php echo $passengers[$i]['current_status']?>';
+        	if(current_status !== "CNF")
+        	{
+        		break;
+        	}
+        		<?php $i++; ?>
+        }
+		if (current_status === "CNF")
+		{
+    		var button = document.getElementById("buttonn");
+    		button.style.display = "none";
+		}
+//-----------------------------------------------------------------------------------------------------------
+
+
+
 	function update_passenger_list(){
 	var table = document.getElementById("passengers");
 	var srno=[1,2,3,4];
-	var totalPassengers = '<?php echo count($passengers)?>'
+	var totalPassengers = '<?php echo count($passengers)?>';
 	var seatjugaad_status=[4,5,6,7];
 	<?php $i = 0;?>
 
