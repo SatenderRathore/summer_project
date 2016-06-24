@@ -19,6 +19,15 @@ $reservation_upto = $_SESSION['reservation_upto'];
 $booking_status   = $_SESSION["booking_status"];
 $coach_position   = $_SESSION["coach_position"];
 $current_status   = $_SESSION["current_status"];
+
+if($chart_prepared == "Y")
+{
+	$chart = 1;
+}
+if($chart_prepared=="N")
+{
+	$chart = 0;
+}
 // $train_num = 12980;
 // $current_status   = "W/L";
 
@@ -195,8 +204,8 @@ function update_pnr_details(){
 	var train_num = '<?php echo $train_num ?>';
 	var train_name='<?php echo $train_name ?>';
 	var boarding_date='<?php echo $doj ?>';
-	var from='<?php echo $from_station['name'] . ' ( ' . $from_station['code'] . ' )' ?>';
-	var to='<?php echo $to_station['name'] . ' ( '. $to_station['code'] . ' )'?>';
+	var from='<?php echo $from_station['code'] ?>';
+	var to='<?php echo $to_station['code'] ?>';
 	var reserved_upto='<?php echo $reservation_upto['name'] . ' ( ' . $reservation_upto['code'].' )' ?>';
 	var boarding_point='<?php echo $boarding_point['name'] . ' ( ' . $boarding_point['code']. ' )' ?>';
 	var clas='<?php echo $class ?>';
@@ -244,7 +253,7 @@ function charting_status(msg)
 		document.getElementById("c-status").innerHTML="NO MESSAGE RECEIVED";
 	}
 }
-charting_status(0); //send the message here.. 0->chart is not prepared and 1->chart is prepared
+charting_status(<?php echo $chart ?>); //send the message here.. 0->chart is not prepared and 1->chart is prepared
 
 
 
