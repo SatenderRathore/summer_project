@@ -4,6 +4,7 @@ session_start();
 $train_name       = $_SESSION['train_name'];
 $chart_prepared   = $_SESSION['chart_prepared'];
 $to_station       = $_SESSION["to_station"];
+$to_station_code  = $to_station['code'];
 $passengers       = $_SESSION['passengers'];
 $boarding_point   = $_SESSION["boarding_point"];
 $pnr              = $_SESSION['pnr'];
@@ -12,11 +13,13 @@ $train_start_date = $_SESSION['train_start_date'];
 $total_passengers = $_SESSION['total_passengers'];
 $train_num        = $_SESSION['train_num'];
 $from_station     = $_SESSION["from_station"];
+$from_station_code= $from_station['code'];
 $class            = $_SESSION['class'];
 $error            = $_SESSION['error'];
 $doj              = $_SESSION['doj'];
 $reservation_upto = $_SESSION['reservation_upto'];
 $passengers[0]['current_status'] = "w/L";
+
 ?>
 
 
@@ -119,7 +122,7 @@ $passengers[0]['current_status'] = "w/L";
 					<input type="email" class="mail" id="email" placeholder="Email Address">
 					<button type="submit" class="btn btn-default confirm-mail" onclick="sendmail()">Notify On Confirm</button>
 				</div>
-				<a id="buttonn" onclick = "loadDoc('<?php echo $train_num ?>','<?php echo $from_station?>','<?Php echo $to_station?>','<?php echo $doj?>','<?php echo $class?>')">Show Alternate</a>
+				<button type = "submit" id="buttonn" onclick = "loadDoc('<?php echo $train_num ?>','<?php echo $from_station_code?>','<?Php echo $to_station_code?>','<?php echo $doj?>','<?php echo $class?>')">Show Alternate</button>
 			</div>
 			<div id="alternate"></div>
 		</div>
@@ -241,7 +244,7 @@ charting_status(<?php printf("%d",$chart_prepared == "Y"); ?>); //send the messa
 //-----------------------------------------------------------------------------------------------------------------------//
 
 //-------------------------function to call alternate options php file-----------------------//
-	function loadDoc(train_num, from_station, to_station, doj, class)
+	function loadDoc(train_num, from_station, to_station, doj, classs)
 	{
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function(){
@@ -249,7 +252,7 @@ charting_status(<?php printf("%d",$chart_prepared == "Y"); ?>); //send the messa
 				document.getElementById("alternate").innerHTML = xhttp.responseText;
 			}
 		};
-		xhttp.open("GET", "chack_alternate.php?q=" + str, true);
+		xhttp.open("GET", "../backend/algo/new_check_alternate.php?train_num=" + train_num + "&from_station_code=" + from_station + "&to_station_code=" + to_station + "&doj=" + doj +"&class=" + classs, true);
 		xhttp.send();
 	}
 

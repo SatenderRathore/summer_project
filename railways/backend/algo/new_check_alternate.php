@@ -1,7 +1,7 @@
 <?php
     include("db.php");
     // session_start();
-
+echo "hello";
      // $apikey = "uucxi9379";//satenderjpr@gmail.com
      $apikey = "ttemb6830";//singhpalarashakti@gmail.com
      //$apikey = "ootzm7275";//satendersvnit@gmail.com
@@ -16,8 +16,8 @@
 
 
      $train_num = $_REQUEST['train_num'];
-     $from_station = $_REQUEST['from_station'];
-     $to_station = $_REQUEST['to_station'];
+     $from_station_code = $_REQUEST['from_station_code'];
+     $to_station_code = $_REQUEST['to_station_code'];
      $doj = $_REQUEST['doj'];
      $class = $_REQUEST['class'];
 
@@ -32,7 +32,7 @@
      {
         array_push($station_codes, $code['code']);
      }
-     //function to find index of particular station stored in $station_codes array/////////////////////
+//     function to find index of particular station stored in $station_codes array/////////////////////
      function index_of($code,$station_codes)
      {
         $i = 0;
@@ -47,11 +47,11 @@
         }
     }
 
-    $source_index = index_of($from_station['code'],$station_codes);
-    $dest_index = index_of($to_station['code'],$station_codes);
+     $source_index = index_of($from_station_code,$station_codes);
+     $dest_index = index_of($to_station_code,$station_codes);
 
-    $i = $source_index;
-    $j = $source_index + 1 ;
+     $i = $source_index;
+     $j = $source_index + 1 ;
     $avail_source = array();
     $avail_dest = array();
 
@@ -98,14 +98,6 @@
 
         }
 
-            else ////////////if status is not 200
-            {
-?>
-                <script>
-                alert("some error occured");//redirect to some page
-                </script>
-<?php
-            }
 
 
         }
@@ -118,10 +110,10 @@
     }
 
 
-//session_start();
-$_SESSION['avail_source'] = $avail_source;
-$_SESSION['avail_dest'] = $avail_dest;
+// session_start();
+// $_SESSION['avail_source'] = $avail_source;
+// $_SESSION['avail_dest'] = $avail_dest;
 
-//header("Location:../../frontend/show_alternet.php");
+// //header("Location:../../frontend/show_alternet.php");
 
 ?>
