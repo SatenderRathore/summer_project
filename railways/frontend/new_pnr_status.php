@@ -19,20 +19,6 @@ $reservation_upto = $_SESSION['reservation_upto'];
 $booking_status   = $_SESSION["booking_status"];
 $coach_position   = $_SESSION["coach_position"];
 $current_status   = $_SESSION["current_status"];
-
-if($chart_prepared == "Y")
-{
-	$chart = 1;
-}
-if($chart_prepared=="N")
-{
-	$chart = 0;
-}
-// $train_num = 12980;
-// $current_status   = "W/L";
-
-// print_r($from_station['code']);
-// print_r($to_station['code']);
 ?>
 
 
@@ -253,7 +239,7 @@ function charting_status(msg)
 		document.getElementById("c-status").innerHTML="NO MESSAGE RECEIVED";
 	}
 }
-charting_status(<?php echo $chart ?>); //send the message here.. 0->chart is not prepared and 1->chart is prepared
+charting_status(<?php printf("%d",$chart_prepared == "Y"); ?>); //send the message here.. 0->chart is not prepared and 1->chart is prepared
 
 
 
