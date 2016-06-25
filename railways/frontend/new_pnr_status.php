@@ -122,6 +122,7 @@ $passengers[0]['current_status'] = "w/L";
 					<input type="email" class="mail" id="email" placeholder="Email Address">
 					<button type="submit" class="btn btn-default confirm-mail" onclick="sendmail()">Notify On Confirm</button>
 				</div>
+				<div id="loading" class="loading" style="display:none;"></div>
 				<button type = "submit" id="buttonn" onclick = "loadDoc('<?php echo $train_num ?>','<?php echo $from_station_code?>','<?Php echo $to_station_code?>','<?php echo $doj?>','<?php echo $class?>')">Show Alternate</button>
 			</div>
 			<div id="alternate"></div>
@@ -244,20 +245,35 @@ charting_status(<?php printf("%d",$chart_prepared == "Y"); ?>); //send the messa
 //-----------------------------------------------------------------------------------------------------------------------//
 
 //-------------------------function to call alternate options php file-----------------------//
-	function loadDoc(train_num, from_station, to_station, doj, classs)
-	{
-		var xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function(){
-			if(xhttp.readyState == 4 && xhttp.status == 200){
-				document.getElementById("alternate").innerHTML = xhttp.responseText;
-			}
-		};
-		xhttp.open("GET", "../backend/algo/new_check_alternate.php?train_num=" + train_num + "&from_station_code=" + from_station + "&to_station_code=" + to_station + "&doj=" + doj +"&class=" + classs, true);
-		xhttp.send();
-	}
+	// function loadDoc(train_num, from_station, to_station, doj, classs)
+	// {
+	// 	var xhttp = new XMLHttpRequest();
+	// 	xhttp.onreadystatechange = function(){
+	// 		if(xhttp.readyState == 4 && xhttp.status == 200){
+	// 			document.getElementById("alternate").innerHTML = xhttp.responseText;
+	// 		}
+	// 	};
+	// 	xhttp.open("GET", "../backend/algo/new_check_alternate.php?train_num=" + train_num + "&from_station_code=" + from_station + "&to_station_code=" + to_station + "&doj=" + doj +"&classs=" + classs, true);
+	// 	xhttp.send();
+	// }
 
 //--------------------------------------------------------------------------------------------//
 
+
+function loadDoc(train_num,from_station,to_station,doj,classs) {
+    var loading = $('#loading');
+    loading.show();
+    $.ajax( {
+        async: true,
+        url: "../backend/algo/new_check_alternate.php?train_num=" + train_num + "&from_station_code=" + from_station + "&to_station_code=" + to_station + "&doj=" + doj +"&class=" + classs,
+        type: "GET",
+        dataType: "html",
+        success:function(data){
+            loading.hide();
+            $('#alternate').text(data);
+        }
+    });
+}
 
 
 </script>

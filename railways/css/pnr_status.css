@@ -41,7 +41,7 @@ a:hover {
     text-transform: uppercase;
     width: 100%;
     margin: 20px;
-    
+
 }
 
 .logo a {
@@ -86,7 +86,7 @@ a:hover {
   background-color: #c3daea;
   height: 40px;
   display: inline-block;
-  
+
 }
 
 .mid-heading img{
@@ -128,7 +128,7 @@ table{
   width: 65%;
   margin-left: 20px;
   display: inline-block;
-  position: relative; 
+  position: relative;
   border: 1px solid;
   border-color: #c3daea;
   margin-bottom: 10px;
@@ -173,4 +173,11 @@ table{
   margin-top: 15px;
   color: white;
   margin-left: 15%;
+}
+
+.loading {
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+    background: url('../images/loading.gif');
 }
