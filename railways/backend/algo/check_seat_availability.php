@@ -9,9 +9,9 @@ echo '</head>';
 echo '<body>';
 include('db.php');
 
-$apikey = "uucxi9379";//satenderjpr@gmail.com
+// $apikey = "uucxi9379";//satenderjpr@gmail.com
 //$apikey = "ttemb6830";//singhpalarashakti@gmail.com
-//$apikey = "ootzm7275";//satendersvnit@gmail.com
+$apikey = "ootzm7275";//satendersvnit@gmail.com
 
 //$apikey = "eumbm2216";//singhrathoresatender@gmail.com
 
