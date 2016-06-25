@@ -2,17 +2,17 @@
     include("db.php");
     session_start();
 
-     //$apikey = "uucxi9379";//satenderjpr@gmail.com
-   //$apikey = "ttemb6830";//singhpalarashakti@gmail.com
+     $apikey = "uucxi9379";//satenderjpr@gmail.com
+     //$apikey = "ttemb6830";//singhpalarashakti@gmail.com
      //$apikey = "ootzm7275";//satendersvnit@gmail.com
-    //$apikey = "eumbm2216";//singhrathoresatender@gmail.com
-    //$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
-    $apikey = "budyl6423";//yashagarwaljpr@gmail.com
-    //$apikey = "zlzou2003";//satendersinghpalara@gmail.com
-    //$apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
-    // $apikey = "okogk2695";//theyashagarwal21@gmail.com
-    // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
-    // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
+     //$apikey = "eumbm2216";//singhrathoresatender@gmail.com
+     //$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
+     // $apikey = "budyl6423";//yashagarwaljpr@gmail.com
+     //$apikey = "zlzou2003";//satendersinghpalara@gmail.com
+     //$apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
+     // $apikey = "okogk2695";//theyashagarwal21@gmail.com
+     // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
+     // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
 
     $train_num = $_SESSION['train_num'];
     $from_station = $_SESSION['from_station'];
@@ -32,25 +32,25 @@
     $train_route_api_data = json_decode($train_route_api_call,true);
     // echo"response code 1 :";
     // print_r($train_route_api_data['response_code']);
-    if($train_route_api_data['response_code'] !== '200')
-    {
+     if($train_route_api_data['response_code'] !== '200')
+     {
 ?>
-        <script>alert("some error occured");//redirect to some page</script>
+            <script>alert("some error occured");//redirect to some page</script>
 <?php
-    }
-    $stations = $train_route_api_data['route'];
-    /////////////////////////////////////////////////////////////////////////
-    //echo $stations ;
-                 //roots of train will be stored in $station_codes array for further use
-    $station_codes = array();
-    foreach($stations as $code)
-    {
+     }
+     $stations = $train_route_api_data['route'];
+     /////////////////////////////////////////////////////////////////////////
+     //echo $stations ;
+     //roots of train will be stored in $station_codes array for further use
+     $station_codes = array();
+     foreach($stations as $code)
+     {
         //echo $code['code'];
         array_push($station_codes, $code['code']);
-    }
-    /////////////////function to find index of particular station stored in $station_codes array/////////////////////
-    function index_of($code,$station_codes)
-    {
+     }
+     /////////////////function to find index of particular station stored in $station_codes array/////////////////////
+     function index_of($code,$station_codes)
+     {
         $i = 0;
         foreach($station_codes as $value)
         {

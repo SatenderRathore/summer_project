@@ -6,14 +6,14 @@
 
 //    $apikey = "uucxi9379";//satenderjpr@gmail.com
 //    $apikey = "ttemb6830";//singhpalarashakti@gmail.com
-//    $apikey = "ootzm7275";//satendersvnit@gmail.com
+   $apikey = "ootzm7275";//satendersvnit@gmail.com
     // $apikey = "eumbm2216";//singhrathoresatender@gmail.com
     //$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
-    $apikey = "budyl6423";//yashagarwaljpr@gmail.com
+    // $apikey = "budyl6423";//yashagarwaljpr@gmail.com
     //$apikey = "zlzou2003";//satendersinghpalara@gmail.com
     //$apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
 
-    $apikey = "okogk2695";//theyashagarwal21@gmail.com
+    // $apikey = "okogk2695";//theyashagarwal21@gmail.com
 
     $pnr_status_api = "http://api.railwayapi.com/pnr_status/pnr/" . $pnr . "/apikey/" . $apikey ;
     $pnr_status_api_call = file_get_contents($pnr_status_api);
@@ -36,8 +36,5 @@
     $_SESSION['error']            = $pnr_status_api_data['error'];
     $_SESSION['doj']              = $pnr_status_api_data['doj'];
     $_SESSION['reservation_upto'] = $pnr_status_api_data['reservation_upto'];
-    $_SESSION["booking_status"]   = $pnr_status_api_data['passengers'][0]['booking_status'];
-    $_SESSION["coach_position"]   = $pnr_status_api_data['passengers'][0]['coach_position'];
-    $_SESSION["current_status"]   = $pnr_status_api_data['passengers'][0]['current_status'];
 
     header("Location:../../frontend/new_pnr_status.php");

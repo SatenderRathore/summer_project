@@ -16,9 +16,7 @@ $class            = $_SESSION['class'];
 $error            = $_SESSION['error'];
 $doj              = $_SESSION['doj'];
 $reservation_upto = $_SESSION['reservation_upto'];
-$booking_status   = $_SESSION["booking_status"];
-$coach_position   = $_SESSION["coach_position"];
-$current_status   = $_SESSION["current_status"];
+$passengers[0]['current_status'] = "w/L";
 ?>
 
 
@@ -121,9 +119,9 @@ $current_status   = $_SESSION["current_status"];
 					<input type="email" class="mail" id="email" placeholder="Email Address">
 					<button type="submit" class="btn btn-default confirm-mail" onclick="sendmail()">Notify On Confirm</button>
 				</div>
-				<a id="buttonn" href="../backend/algo/check_alternet.php">Show Alternate</a>
+				<a id="buttonn" onclick = "loadDoc('<?php echo $train_num ?>','<?php echo $from_station?>','<?Php echo $to_station?>','<?php echo $doj?>','<?php echo $class?>')">Show Alternate</a>
 			</div>
-
+			<div id="alternate"></div>
 		</div>
 	</body>
     <!-- // <script src="../js/pnrstatus.js"></script> -->
@@ -240,7 +238,22 @@ function charting_status(msg)
 	}
 }
 charting_status(<?php printf("%d",$chart_prepared == "Y"); ?>); //send the message here.. 0->chart is not prepared and 1->chart is prepared
+//-----------------------------------------------------------------------------------------------------------------------//
 
+//-------------------------function to call alternate options php file-----------------------//
+	function loadDoc(train_num, from_station, to_station, doj, class)
+	{
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+			if(xhttp.readyState == 4 && xhttp.status == 200){
+				document.getElementById("alternate").innerHTML = xhttp.responseText;
+			}
+		};
+		xhttp.open("GET", "chack_alternate.php?q=" + str, true);
+		xhttp.send();
+	}
+
+//--------------------------------------------------------------------------------------------//
 
 
 
