@@ -336,6 +336,9 @@ login-link:hover {
 .logo a {
     color: white;
 }
+a{
+  color: green;
+}
 
 .logo a:hover {
     text-decoration: none;

@@ -4,7 +4,10 @@ session_start();
 $train_name       = $_SESSION['train_name'];
 $chart_prepared   = $_SESSION['chart_prepared'];
 $to_station       = $_SESSION["to_station"];
+<<<<<<< HEAD
 $to_station_code  = $to_station['code'];
+=======
+>>>>>>> bde4edcaf19768d3b462875ed0fd6314e49ce7ab
 $passengers       = $_SESSION['passengers'];
 $boarding_point   = $_SESSION["boarding_point"];
 $pnr              = $_SESSION['pnr'];
@@ -13,13 +16,36 @@ $train_start_date = $_SESSION['train_start_date'];
 $total_passengers = $_SESSION['total_passengers'];
 $train_num        = $_SESSION['train_num'];
 $from_station     = $_SESSION["from_station"];
+<<<<<<< HEAD
 $from_station_code= $from_station['code'];
+=======
+>>>>>>> bde4edcaf19768d3b462875ed0fd6314e49ce7ab
 $class            = $_SESSION['class'];
 $error            = $_SESSION['error'];
 $doj              = $_SESSION['doj'];
 $reservation_upto = $_SESSION['reservation_upto'];
+<<<<<<< HEAD
 $passengers[0]['current_status'] = "w/L";
 
+=======
+$booking_status   = $_SESSION["booking_status"];
+$coach_position   = $_SESSION["coach_position"];
+$current_status   = $_SESSION["current_status"];
+
+if($chart_prepared == "Y")
+{
+	$chart = 1;
+}
+if($chart_prepared=="N")
+{
+	$chart = 0;
+}
+// $train_num = 12980;
+// $current_status   = "W/L";
+
+// print_r($from_station['code']);
+// print_r($to_station['code']);
+>>>>>>> bde4edcaf19768d3b462875ed0fd6314e49ce7ab
 ?>
 
 
@@ -60,15 +86,26 @@ $passengers[0]['current_status'] = "w/L";
 			<div class="main-header">
 				<div class="left-head col-md-2">
 	                <div class="logo">
+<<<<<<< HEAD
 	                    <a href="#">Seat Jugaad</a>
+=======
+	                    <a href="index.php">Seat Jugaad</a>
+>>>>>>> bde4edcaf19768d3b462875ed0fd6314e49ce7ab
 	                </div>
 				</div>
 				<div class="mid-head col-md-8">
 					<ul class="features">
+<<<<<<< HEAD
                         <li>PNR STATUS</li>
                         <li>FAIR ENQUIRY</li>
                         <li>SEAT AVAILABILITY</li>
                         <li>LIVE TRAIN STATUS</li>
+=======
+                        <li><a href="index.php">PNR STATUS</a></li>
+                        <li>FAIR ENQUIRY</li>
+                        <li><a href="./seat_availability.php">SEAT AVAILABILITY</a></li>
+                        <li><a href="train_live_status.html">LIVE TRAIN STATUS</a></li>
+>>>>>>> bde4edcaf19768d3b462875ed0fd6314e49ce7ab
                         <li>CANCELLED TRAINS</li>
                     </ul>
 
@@ -122,10 +159,16 @@ $passengers[0]['current_status'] = "w/L";
 					<input type="email" class="mail" id="email" placeholder="Email Address">
 					<button type="submit" class="btn btn-default confirm-mail" onclick="sendmail()">Notify On Confirm</button>
 				</div>
+<<<<<<< HEAD
 				<div id="loading" class="loading" style="display:none;"></div>
 				<button type = "submit" id="buttonn" onclick = "loadDoc('<?php echo $train_num ?>','<?php echo $from_station_code?>','<?Php echo $to_station_code?>','<?php echo $doj?>','<?php echo $class?>')">Show Alternate</button>
 			</div>
 			<div id="alternate"></div>
+=======
+				<a id="buttonn" href="../backend/algo/check_alternet.php">Show Alternate</a>
+			</div>
+
+>>>>>>> bde4edcaf19768d3b462875ed0fd6314e49ce7ab
 		</div>
 	</body>
     <!-- // <script src="../js/pnrstatus.js"></script> -->
@@ -241,6 +284,7 @@ function charting_status(msg)
 		document.getElementById("c-status").innerHTML="NO MESSAGE RECEIVED";
 	}
 }
+<<<<<<< HEAD
 charting_status(<?php printf("%d",$chart_prepared == "Y"); ?>); //send the message here.. 0->chart is not prepared and 1->chart is prepared
 //-----------------------------------------------------------------------------------------------------------------------//
 
@@ -274,6 +318,11 @@ function loadDoc(train_num,from_station,to_station,doj,classs) {
         }
     });
 }
+=======
+charting_status(<?php echo $chart ?>); //send the message here.. 0->chart is not prepared and 1->chart is prepared
+
+
+>>>>>>> bde4edcaf19768d3b462875ed0fd6314e49ce7ab
 
 
 </script>

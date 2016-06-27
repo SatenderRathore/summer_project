@@ -15,6 +15,7 @@
 
     // $apikey = "okogk2695";//theyashagarwal21@gmail.com
 
+
     $pnr_status_api = "http://api.railwayapi.com/pnr_status/pnr/" . $pnr . "/apikey/" . $apikey ;
     $pnr_status_api_call = file_get_contents($pnr_status_api);
 
@@ -36,5 +37,6 @@
     $_SESSION['error']            = $pnr_status_api_data['error'];
     $_SESSION['doj']              = $pnr_status_api_data['doj'];
     $_SESSION['reservation_upto'] = $pnr_status_api_data['reservation_upto'];
+
 
     header("Location:../../frontend/new_pnr_status.php");

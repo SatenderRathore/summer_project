@@ -5,7 +5,9 @@ body{
 }
 
 /*................top part ...................*/
-
+a {
+  color: #36d8f4;
+}
 a:hover {
     text-decoration: none;
 }

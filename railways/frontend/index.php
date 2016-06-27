@@ -32,17 +32,16 @@ if(isset($_SESSION['userid']))
 		<div class="top">
 			<div class="main-header">
 				<div class="left-head col-md-2">
-                    <div class="logo"><a href="#">Seat Jugaad</a></div>
+                    <div class="logo"><a href="index.php">Seat Jugaad</a></div>
 
 				</div>
 				<div class="mid-head col-md-8">
 					<ul class="features">
 
                         <li><a href="./seat_availability.php">SEAT AVAILABILITY</a></li>
-                        <li><a href="#"></a></li>
+                        <li><a href="index.php">PNR STATUS</a></li>
                         <li>FAIR ENQUIRY</li>
-
-                        <li>LIVE TRAIN STATUS</li>
+                        <li><a href="train_live_status.html">LIVE TRAIN STATUS</a></li>
                         <li>CANCELLED TRAINS</li>
                     </ul>
 
