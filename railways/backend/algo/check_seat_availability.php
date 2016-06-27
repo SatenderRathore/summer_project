@@ -174,7 +174,7 @@ echo '<tbody>';
 
 
         echo '<td>';
-        echo '<div><h2><a href = "check_alternet.php">link</a></h2></div>';
+        echo '<div><h2><a href = "check_alternate.php">link</a></h2></div>';
         echo '</td>';
     }
 echo '</tbody>';
