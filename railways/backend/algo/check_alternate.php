@@ -2,8 +2,8 @@
     include("db.php");
     session_start();
 
-     $apikey = "uucxi9379";//satenderjpr@gmail.com
-     //$apikey = "ttemb6830";//singhpalarashakti@gmail.com
+     // $apikey = "uucxi9379";//satenderjpr@gmail.com
+     $apikey = "ttemb6830";//singhpalarashakti@gmail.com
      // $apikey = "ootzm7275";//satendersvnit@gmail.com
      //$apikey = "eumbm2216";//singhrathoresatender@gmail.com
      //$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
@@ -32,12 +32,6 @@
     $train_route_api_data = json_decode($train_route_api_call,true);
     // echo"response code 1 :";
     // print_r($train_route_api_data['response_code']);
-     if($train_route_api_data['response_code'] !== '200')
-     {
-?>
-            <script>alert("some error occured");//redirect to some page</script>
-<?php
-     }
      $stations = $train_route_api_data['route'];
      /////////////////////////////////////////////////////////////////////////
      //echo $stations ;
@@ -137,14 +131,7 @@
 
         }
 
-            else ////////////if status is not 200
-            {
-?>
-                <script>
-                alert("some error occured");//redirect to some page
-                </script>
-<?php
-            }
+
 
         // echo "i = ";
         //     print_r($i);
