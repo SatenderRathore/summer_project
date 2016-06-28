@@ -28,7 +28,7 @@
 				</div>
 			</div>
 		</div>
-		<form method="post" name="FormView" id="FormView" class="train-details" >
+		<form method="post" action="train_live_status_redirect.php" name="FormView" id="FormView" class="train-details" >
 			<div class="row">
 				<div class="searchTitle" id="title">
 					<h2 style="margin-top:0px;">Check Train Status</h2>
@@ -66,12 +66,13 @@
 </html>
 
 <?php
-
-if(isset($_POST['submit']))
+session_start();
+if(isset($_SESSION['submit']))
 {
 	?>
 	<script>submitForm();</script>
 	<?php
 	// unset($_POST['submit']);
+	unset($_SESSION['submit']);
 }
 ?>
