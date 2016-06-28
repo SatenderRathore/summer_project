@@ -28,9 +28,9 @@
 				</div>
 			</div>
 		</div>
-		<form method="post" name="FormView" id="FormView" class="train-details" onsubmit="return submitForm();">
+		<form method="post" action="train_live_status.php" name="FormView" id="FormView" class="train-details" >
 			<div class="row">
-				<div class="searchTitle" id="Title">
+				<div class="searchTitle" id="title">
 					<h2 style="margin-top:0px;">Check Train Status</h2>
 					Enter the Train Name or Number
 
@@ -42,9 +42,9 @@
 							TRAIN</label>
 						<input type="text" name="trainno" id="train" placeholder="Enter Train No./ Name" style="margin-left:5px; margin-top:0px; font-size:14px;height: 28px; border:none;width:80%;" required>
 					</div>
-					
+
 					<div class="rightform">
-						<button id="search_train_button" class="booking" type="submit">Search</button>
+						<button id="search_train_button" name = "submit" class="booking" type="submit">Search</button>
 					</div>
 				</div>
 			</div>
@@ -64,3 +64,13 @@
 	        <script src="../js/train_live_status.js"></script>
 
 </html>
+
+<?php
+
+if(isset($_POST['submit']))
+{
+	?>
+	<script>submitForm();</script>
+	<?php
+}
+?>
