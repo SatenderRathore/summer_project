@@ -65,10 +65,10 @@ $passengers[0]['current_status'] = "w/L";
 				</div>
 				<div class="mid-head col-md-8">
 					<ul class="features">
-                        <li>PNR STATUS</li>
+                        <li><a href="index.php">PNR STATUS</a></li>
                         <li>FAIR ENQUIRY</li>
-                        <li>SEAT AVAILABILITY</li>
-                        <li>LIVE TRAIN STATUS</li>
+                        <li><a href="./seat_availability.php">SEAT AVAILABILITY</a></li>
+                        <li><a href="train_live_status.php">LIVE TRAIN STATUS</a></li>
                         <li>CANCELLED TRAINS</li>
                     </ul>
 
