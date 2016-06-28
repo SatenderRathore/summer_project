@@ -28,7 +28,7 @@
 				</div>
 			</div>
 		</div>
-		<form method="post" action="train_live_status.php" name="FormView" id="FormView" class="train-details" >
+		<form method="post" name="FormView" id="FormView" class="train-details" >
 			<div class="row">
 				<div class="searchTitle" id="title">
 					<h2 style="margin-top:0px;">Check Train Status</h2>
@@ -72,5 +72,6 @@ if(isset($_POST['submit']))
 	?>
 	<script>submitForm();</script>
 	<?php
+	// unset($_POST['submit']);
 }
 ?>
