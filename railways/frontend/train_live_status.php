@@ -7,8 +7,6 @@
 		<title>LIVE-TRAIN-STATUS</title>
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="../css/train_live_status.css">
-		<script src="../js/jquery-2.1.1.js"></script>
-        <script src="../js/bootstrap.js"></script>
 
 	</head>
 	<body>
@@ -42,31 +40,96 @@
 						<label class="icon-placed">
 							<img src="../images/train.png">
 							TRAIN</label>
-						<input type="text" name="train_num" id="train" placeholder="Enter Train No./ Name" style="margin-left:5px; margin-top:0px; font-size:14px;height: 28px; border:none;width:80%;" required>
+						<input type="text" name="trainno" id="train" placeholder="Enter Train No./ Name" style="margin-left:5px; margin-top:0px; font-size:14px;height: 28px; border:none;width:80%;" required>
 					</div>
 
 					<div class="rightform">
 						<button id="search_train_button" name = "submit" class="booking" type="submit">Search</button>
-
-					<div id="loading" class="loading" style="display:none;"></div>
-
 					</div>
 				</div>
 			</div>
 
 		</form>
-		<div class="results" id="results" style="max-height:265px;display:none;">
+		<div class="results" id="results" style="max-height:473px;display:none;">
+			<div class="traindetails" id="traindetail">
+				<div class="toppart">
+					<span class="trainno">12345</span>
+					<select id="selectday" class="selectday" onchange="dayofstart"();>
+						<option value="0">2 days ago</option>
+						<option value="1">Yesterday</option>
+						<option value="2">Today</option>
+					</select>
+				</div>
+				<div class="trainname">Seat Jugaad Express</div>
+				<div class="sourcedest">Surat → Jaipur Jn</div>
+				<div class="traindesc">24 Stations,1057 kms,16h 24m</div>
 
+			</div>
+			<div class="livestatus" id="livestatus" >
+				<div class="currentsummary">
+					<img src="../images/train.png" style="opacity:0.5;">
+					<span class="currentposition">In between Vadodara and Surat</span>
+					<div class="currenttime">On Time</div>
+				</div>
+				<div class="runningstatus">
+					<div class="station">
+						<div class="metre"></div>
+						<div class="stationdetails" style="margin:10px 0 0 10px;">
+							<div class="station-name">BRC-Vadodara Jn</div>
+							<div class="desc">
+								<span class="status">Departed @ </span>
+								<span class="time">22:50 yesterday</span>
+							</div>
 
+						</div>
 
+					</div>
+					<div class="station">
+						<div class="metre"></div>
+						<div class="stationdetails">
+							<div class="station-name">BRC-Vadodara Jn</div>
+							<div class="desc">
+								<span class="status">Departed @ </span>
+								<span class="time">22:50 yesterday</span>
+							</div>
 
+						</div>
+
+					</div>
+					<div class="station">
+						<div class="metre"></div>
+						<div class="stationdetails">
+							<div class="station-name">BRC-Vadodara Jn</div>
+							<div class="desc">
+								<span class="status">Departed @ </span>
+								<span class="time">22:50 yesterday</span>
+							</div>
+
+						</div>
+
+					</div>
+					<div class="station">
+						<div class="metre"></div>
+						<div class="stationdetails">
+							<div class="station-name">BRC-Vadodara Jn</div>
+							<div class="desc">
+								<span class="status">Departed @ </span>
+								<span class="time">22:50 yesterday</span>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
 		</div>
-
 
 	</body>
 	        <script src="../js/train_live_status.js"></script>
 
 </html>
+
 
 <?php
 session_start();
