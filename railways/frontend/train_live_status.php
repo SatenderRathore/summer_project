@@ -40,11 +40,14 @@
 						<label class="icon-placed">
 							<img src="../images/train.png">
 							TRAIN</label>
-						<input type="text" name="trainno" id="train" placeholder="Enter Train No./ Name" style="margin-left:5px; margin-top:0px; font-size:14px;height: 28px; border:none;width:80%;" required>
+						<input type="text" name="train_num" id="train" placeholder="Enter Train No./ Name" style="margin-left:5px; margin-top:0px; font-size:14px;height: 28px; border:none;width:80%;" required>
 					</div>
 
 					<div class="rightform">
 						<button id="search_train_button" name = "submit" class="booking" type="submit">Search</button>
+
+					<div id="loading" class="loading" style="display:none;"></div>
+
 					</div>
 				</div>
 			</div>
@@ -78,6 +81,7 @@
 
 		</div>
 
+
 	</body>
 	        <script src="../js/train_live_status.js"></script>
 
@@ -88,7 +92,29 @@ session_start();
 if(isset($_SESSION['submit']))
 {
 	?>
-	<script>submitForm();</script>
+	<script>
+	submitForm();
+
+	// var trainNum = '<?php echo $_SESSION['train_num'] ?>';
+	// alert(trainNum);
+	// function getData(trainNum, doj)
+	// {
+	// 	var loading = $('#loading');
+	// 	loading.show();
+	// 	$.ajax({
+	// 		async : true,
+	// 		url : "";
+	// 		type :"GET",
+	// 		dataType : "html",
+	// 		success:function(data){
+	// 			loading.hide();
+	// 			$('#liveStatus').text(data);
+	// 		}
+	// 	});
+	// 	}
+
+	// getData();
+	</script>
 	<?php
 	// unset($_POST['submit']);
 	unset($_SESSION['submit']);

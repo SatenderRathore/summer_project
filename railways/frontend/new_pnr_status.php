@@ -22,26 +22,6 @@ $passengers[0]['current_status'] = "w/L";
 
 ?>
 
-
-<!-- <html>
-    <head>
-        <script type="text/javascript">
-            current_status = "<?php //echo $current_status; ?>";
-        </script>
-
-    </head>
-    <body>
-
-    <a id="button" href="../backend/algo/check_alternet.php">Show Alternate</a>
-
-    <script type="text/javascript" src="../js/script.js"></script>
-    </body>
-
-</html>
- -->
-
-
-
 <!doctype html>
 <html lang="en">
 	<head>
