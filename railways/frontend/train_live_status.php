@@ -95,25 +95,25 @@ if(isset($_SESSION['submit']))
 	<script>
 	submitForm();
 
-	// var trainNum = '<?php echo $_SESSION['train_num'] ?>';
-	// alert(trainNum);
-	// function getData(trainNum, doj)
-	// {
-	// 	var loading = $('#loading');
-	// 	loading.show();
-	// 	$.ajax({
-	// 		async : true,
-	// 		url : "";
-	// 		type :"GET",
-	// 		dataType : "html",
-	// 		success:function(data){
-	// 			loading.hide();
-	// 			$('#liveStatus').text(data);
-	// 		}
-	// 	});
-	// 	}
+	var trainNum = '<?php echo $_SESSION['train_num'] ?>';
+	alert(trainNum);
+	function getData(trainNum)
+	{
+		var loading = $('#loading');
+		loading.show();
+		$.ajax({
+			async : true,
+			url : "train_live_get_data.php?";
+			type :"GET",
+			dataType : "html",
+			success:function(data){
+				loading.hide();
+				$('#liveStatus').text(data);
+			}
+		});
+		}
 
-	// getData();
+	getData();
 	</script>
 	<?php
 	// unset($_POST['submit']);
