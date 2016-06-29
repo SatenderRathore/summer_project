@@ -50,9 +50,27 @@
 			</div>
 
 		</form>
-		<div class="results" style="max-height:265px;display:none;">
-			<div class="trainidentifier" id="trainidentifierdiv">
+		<div class="results" id="results" style="max-height:265px;display:none;">
+			<div class="traindetails" id="traindetail">
+				<div class="toppart">
+					<span class="trainno">12345</span>
+					<select id="selectday" class="selectday" onchange="dayofstart"();>
+						<option value="0">2 days ago</option>
+						<option value="1">Yesterday</option>
+						<option value="2">Today</option>
+					</select>
+				</div>
+				<div class="trainname">Seat Jugaad Express</div>
+				<div class="sourcedest">Surat → Jaipur Jn</div>
+				<div class="traindesc">24 Stations,1057 kms,16h 24m</div>
 
+			</div>
+			<div class="livestatus" id="livestatus" >
+				<div class="currentsummary">
+					<img src="../images/train.png" style="opacity:0.5;">
+					<span class="currentposition">In between Vadodara and Surat</span>
+					<div class="currenttime">On Time</div>
+				</div>
 
 			</div>
 
