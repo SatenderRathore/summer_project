@@ -1,6 +1,6 @@
 <?php
 include("db.php");
-
+// echo "hello ";
      // $apikey = "uucxi9379";//satenderjpr@gmail.com
      // $apikey = "ttemb6830";//singhpalarashakti@gmail.com
      //$apikey = "ootzm7275";//satendersvnit@gmail.com
@@ -16,3 +16,41 @@ include("db.php");
      $train_num = $_REQUEST['train_num'];
 
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/train_live_status.css">
+
+</head>
+<body>
+
+
+<div class="traindetails" id="traindetail">
+                <div class="toppart">
+                    <span class="trainno">12345</span>
+                    <select id="selectday" class="selectday" onchange="dayofstart"();>
+                        <option value="0">2 days ago</option>
+                        <option value="1">Yesterday</option>
+                        <option value="2">Today</option>
+                    </select>
+                </div>
+                <div class="trainname">Seat Jugaad Express</div>
+                <div class="sourcedest">Surat → Jaipur Jn</div>
+                <div class="traindesc">24 Stations,1057 kms,16h 24m</div>
+
+            </div>
+            <div class="livestatus" id="livestatus" >
+                <div class="currentsummary">
+                    <img src="../images/train.png" style="opacity:0.5;">
+                    <span class="currentposition">In between Vadodara and Surat</span>
+                    <div class="currenttime">On Time</div>
+                </div>
+
+            </div>
+
+
+</body>
+</html>

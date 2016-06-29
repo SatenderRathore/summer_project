@@ -7,6 +7,8 @@
 		<title>LIVE-TRAIN-STATUS</title>
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="../css/train_live_status.css">
+		<script src="../js/jquery-2.1.1.js"></script>
+        <script src="../js/bootstrap.js"></script>
 
 	</head>
 	<body>
@@ -54,28 +56,7 @@
 
 		</form>
 		<div class="results" id="results" style="max-height:265px;display:none;">
-			<div class="traindetails" id="traindetail">
-				<div class="toppart">
-					<span class="trainno">12345</span>
-					<select id="selectday" class="selectday" onchange="dayofstart"();>
-						<option value="0">2 days ago</option>
-						<option value="1">Yesterday</option>
-						<option value="2">Today</option>
-					</select>
-				</div>
-				<div class="trainname">Seat Jugaad Express</div>
-				<div class="sourcedest">Surat → Jaipur Jn</div>
-				<div class="traindesc">24 Stations,1057 kms,16h 24m</div>
 
-			</div>
-			<div class="livestatus" id="livestatus" >
-				<div class="currentsummary">
-					<img src="../images/train.png" style="opacity:0.5;">
-					<span class="currentposition">In between Vadodara and Surat</span>
-					<div class="currenttime">On Time</div>
-				</div>
-
-			</div>
 
 
 
@@ -96,19 +77,33 @@ if(isset($_SESSION['submit']))
 	submitForm();
 
 	var trainNum = '<?php echo $_SESSION['train_num'] ?>';
-	alert(trainNum);
+
+
+// function loadDoc(trainNum)
+// 	{
+// 		var xhttp = new XMLHttpRequest();
+// 		xhttp.onreadystatechange = function(){
+// 			if(xhttp.readyState == 4 && xhttp.status == 200){
+// 				document.getElementById("results").innerHTML = xhttp.responseText;
+// 			}
+// 		};
+// 		xhttp.open("GET", "train_live_get_data.php?train_num=" + trainNum, true);
+// 		xhttp.send();
+// 	}
+// loadDoc();
+
 	function getData(trainNum)
 	{
 		var loading = $('#loading');
 		loading.show();
 		$.ajax({
 			async : true,
-			url : "train_live_get_data.php?";
+			url : "train_live_get_data.php?train_num=" + trainNum,
 			type :"GET",
 			dataType : "html",
 			success:function(data){
 				loading.hide();
-				$('#liveStatus').text(data);
+				$('#results').html(data);
 			}
 		});
 		}
