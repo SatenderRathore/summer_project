@@ -231,6 +231,7 @@ input:focus{
   position: relative;
   overflow: scroll;
   /*overflow-x:auto; */
+  height: 317px;
 }
 
 .metre{

@@ -120,6 +120,43 @@
 						</div>
 
 					</div>
+					<div class="station">
+						<div class="metre"></div>
+						<div class="stationdetails">
+							<div class="station-name">BRC-Vadodara Jn</div>
+							<div class="desc">
+								<span class="status">Departed @ </span>
+								<span class="time">22:50 yesterday</span>
+							</div>
+
+						</div>
+
+					</div>
+					<div class="station">
+						<div class="metre"></div>
+						<div class="stationdetails">
+							<div class="station-name">BRC-Vadodara Jn</div>
+							<div class="desc">
+								<span class="status">Departed @ </span>
+								<span class="time">22:50 yesterday</span>
+							</div>
+
+						</div>
+
+					</div>
+					<div class="station" style="opacity:0.5;">
+						<div class="metre"></div>
+						<div class="stationdetails">
+							<div class="station-name">BRC-Vadodara Jn</div>
+							<div class="desc">
+								<span class="status">Departed @ </span>
+								<span class="time">22:50 yesterday</span>
+							</div>
+
+						</div>
+
+					</div>
+
 
 				</div>
 			</div>
