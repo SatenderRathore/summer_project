@@ -48,7 +48,94 @@ include("db.php");
                     <span class="currentposition">In between Vadodara and Surat</span>
                     <div class="currenttime">On Time</div>
                 </div>
+                <div class="runningstatus">
+                    <div class="station">
+                        <div class="metre"></div>
+                        <div class="stationdetails" style="margin:10px 0 0 10px;">
+                            <div class="station-name">BRC-Vadodara Jn</div>
+                            <div class="desc">
+                                <span class="status">Departed @ </span>
+                                <span class="time">22:50 yesterday</span>
+                            </div>
 
+                        </div>
+
+                    </div>
+                    <div class="station">
+                        <div class="metre"></div>
+                        <div class="stationdetails">
+                            <div class="station-name">BRC-Vadodara Jn</div>
+                            <div class="desc">
+                                <span class="status">Departed @ </span>
+                                <span class="time">22:50 yesterday</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="station">
+                        <div class="metre"></div>
+                        <div class="stationdetails">
+                            <div class="station-name">BRC-Vadodara Jn</div>
+                            <div class="desc">
+                                <span class="status">Departed @ </span>
+                                <span class="time">22:50 yesterday</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="station">
+                        <div class="metre"></div>
+                        <div class="stationdetails">
+                            <div class="station-name">BRC-Vadodara Jn</div>
+                            <div class="desc">
+                                <span class="status">Departed @ </span>
+                                <span class="time">22:50 yesterday</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="station">
+                        <div class="metre"></div>
+                        <div class="stationdetails">
+                            <div class="station-name">BRC-Vadodara Jn</div>
+                            <div class="desc">
+                                <span class="status">Departed @ </span>
+                                <span class="time">22:50 yesterday</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="station">
+                        <div class="metre"></div>
+                        <div class="stationdetails">
+                            <div class="station-name">BRC-Vadodara Jn</div>
+                            <div class="desc">
+                                <span class="status">Departed @ </span>
+                                <span class="time">22:50 yesterday</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="station" style="opacity:0.5;">
+                        <div class="metre"></div>
+                        <div class="stationdetails">
+                            <div class="station-name">BRC-Vadodara Jn</div>
+                            <div class="desc">
+                                <span class="status">Departed @ </span>
+                                <span class="time">22:50 yesterday</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
             </div>
 
 

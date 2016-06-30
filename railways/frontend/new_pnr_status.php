@@ -102,7 +102,7 @@ $passengers[0]['current_status'] = "w/L";
 					<input type="email" class="mail" id="email" placeholder="Email Address">
 					<button type="submit" class="btn btn-default confirm-mail" onclick="sendmail()">Notify On Confirm</button>
 				</div>
-				<div id="loading" class="loading" style="display:none;"></div>
+				<div id="loading" class="loading" ></div>
 				<button type = "submit" id="buttonn" onclick = "loadDoc('<?php echo $train_num ?>','<?php echo $from_station_code?>','<?Php echo $to_station_code?>','<?php echo $doj?>','<?php echo $class?>')">Show Alternate</button>
 			</div>
 			<div id="alternate"></div>
