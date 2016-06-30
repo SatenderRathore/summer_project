@@ -21,16 +21,21 @@ include("db.php");
      $train_live_status_api_call = file_get_contents($train_live_status_api);
      $train_live_status_api_data = json_decode($train_live_status_api_call,true);
 
-     $status = $train_live_status_api_data['position'];
-     $response_code = $train_live_status_api_data['response_code'];
-
      $start_station = $train_live_status_api_data['route'][0]['station_']['name'];
      $total_stations = 0;
-     foreach ($train_live_status_api_data['route'] as $station) {
+     foreach ($train_live_status_api_data['route'] as $station)
+     {
         $total_stations ++;
      }
      $end_station = $train_live_status_api_data['route'][$total_stations-1]['station_']['name'];
-     print_r($end_station);
+
+     $train_name_api = 'http://api.railwayapi.com/name_number/train/' . $train_num. '/apikey/' . $apikey ;
+     $train_name_api_call = file_get_contents($train_name_api);
+     $train_name_api_data = json_decode($train_name_api_call, true);
+
+     $train_name = $train_live_status_api_data['name'];
+     print_r($train_name);
+
 
 ?>
 
