@@ -32,8 +32,8 @@ include("db.php");
      $train_name_api = 'http://api.railwayapi.com/name_number/train/' . $train_num. '/apikey/' . $apikey ;
      $train_name_api_call = file_get_contents($train_name_api);
      $train_name_api_data = json_decode($train_name_api_call, true);
-
-     $train_name = $train_live_status_api_data['name'];
+// print_r($train_name_api_data);
+     $train_name = $train_name_api_data['train']['name'];
      print_r($train_name);
 
 
@@ -59,7 +59,7 @@ include("db.php");
                         <option value="2">Today</option>
                     </select>
                 </div>
-                <div class="trainname">Seat Jugaad Express</div>
+                <div class="trainname"><?php echo $train_name ?></div>
                 <div class="sourcedest"><?php echo $start_station ?> → <?php echo $end_station ?></div>
                 <div class="traindesc"><?php echo $total_stations." Stations,1057 kms,16h 24m"?></div>
 
