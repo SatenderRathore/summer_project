@@ -1,6 +1,6 @@
 <?php
 include("db.php");
-// echo "hello ";
+
      // $apikey = "uucxi9379";//satenderjpr@gmail.com
      // $apikey = "ttemb6830";//singhpalarashakti@gmail.com
      //$apikey = "ootzm7275";//satendersvnit@gmail.com
@@ -14,6 +14,15 @@ include("db.php");
      // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
 
      $train_num = $_REQUEST['train_num'];
+print_r($_REQUEST['train_num']);
+     $doj = "20" . date('ymd');
+
+     $train_live_status_api = 'http://api.railwayapi.com/live/train/' . $train_num . '/doj/' . $doj . '/apikey/' . $apikey;
+     $train_live_status_api_call = file_get_contents($train_live_status_api);
+     $train_live_status_api_data = json_decode($train_live_status_api_call,true);
+// print_r($train_live_status_api_data);
+     $status = $train_live_status_api_data['position'];
+     $response_code = $train_live_status_api_data['response_code'];
 
 ?>
 

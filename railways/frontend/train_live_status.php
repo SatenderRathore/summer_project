@@ -42,7 +42,7 @@
 						<label class="icon-placed">
 							<img src="../images/train.png">
 							TRAIN</label>
-						<input type="text" name="trainno" id="train" placeholder="Enter Train No./ Name" style="margin-left:5px; margin-top:0px; font-size:14px;height: 28px; border:none;width:80%;" required>
+						<input type="text" name="train_num" id="train" placeholder="Enter Train No./ Name" style="margin-left:5px; margin-top:0px; font-size:14px;height: 28px; border:none;width:80%;" required>
 					</div>
 
 					<div class="rightform">
@@ -68,11 +68,12 @@
 session_start();
 if(isset($_SESSION['submit']))
 {
+	$train_num = $_SESSION['train_num'];
 	?>
 	<script>
 	submitForm();
 
-	var trainNum = '<?php echo $_SESSION['train_num'] ?>';
+	var trainNum = '<?php echo $train_num ?>';
 
 ////////////////////////ajax////////////////////////////////////////////////////////
 // function loadDoc(trainNum)
@@ -90,6 +91,7 @@ if(isset($_SESSION['submit']))
 /////////////////////////////////////////////////////////////////////////////////////
 
 /////////////////////////////jquery and ajax///////////////////////
+
 	function getData(trainNum)
 	{
 		var loading = $('#loading');
@@ -106,11 +108,11 @@ if(isset($_SESSION['submit']))
 		});
 		}
 
-	getData();
+	getData(trainNum);
 	///////////////////////////////////////////////////////////////////
 	</script>
 	<?php
 	// unset($_POST['submit']);
-	// unset($_SESSION['submit']);
+	unset($_SESSION['submit']);
 }
 ?>
