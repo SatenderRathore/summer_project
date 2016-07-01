@@ -34,8 +34,9 @@ include("db.php");
      $train_name_api_data = json_decode($train_name_api_call, true);
 // print_r($train_name_api_data);
      $train_name = $train_name_api_data['train']['name'];
-     print_r($train_name);
 
+     $train_status = $train_live_status_api_data['position'];
+     $total_distance = $train_live_status_api_data['route'][$total_stations-1]['distance'];
 
 ?>
 
@@ -61,14 +62,14 @@ include("db.php");
                 </div>
                 <div class="trainname"><?php echo $train_name ?></div>
                 <div class="sourcedest"><?php echo $start_station ?> → <?php echo $end_station ?></div>
-                <div class="traindesc"><?php echo $total_stations." Stations,1057 kms,16h 24m"?></div>
+                <div class="traindesc"><?php echo $total_stations." Stations," . $total_distance . " kms,16h 24m"?></div>
 
             </div>
             <div class="livestatus" id="livestatus" >
                 <div class="currentsummary">
                     <img src="../images/train.png" style="opacity:0.5;">
-                    <span class="currentposition">In between Vadodara and Surat</span>
-                    <div class="currenttime">On Time</div>
+                    <span class="currentposition"><?Php echo $train_status ?></span>
+                    <!-- <div class="currenttime">On Time</div> -->
                 </div>
                 <div class="runningstatus">
                     <div class="station">
