@@ -1,11 +1,6 @@
 <?php
 include("db.php");
-echo date("d M Y");
-echo substr(date("d M Y"),1,2);
-if(substr(date("d M Y"),1,2)==3)
-{
-    print_r("hello");
-}
+
      // $apikey = "uucxi9379";//satenderjpr@gmail.com
      // $apikey = "ttemb6830";//singhpalarashakti@gmail.com
      //$apikey = "ootzm7275";//satendersvnit@gmail.com
@@ -83,11 +78,11 @@ if(substr(date("d M Y"),1,2)==3)
                 {
                     $has_departed = $station['has_departed'];
                     // printf("has dept = %d",$has_departed);
-                    if((int)substr($station['scharr_date'],0,2) > (int)substr(date("d M Y"),0,2))
+                        if((int)substr($station['scharr_date'],0,2) == (int)substr(date("d M Y"),0,2) + 1)
                         {
                             $day = "TOMORROW";
                         }
-                        else if((int)substr($station['scharr_date'],0,2) < (int)substr(date("d M Y"),0,2))
+                        else if((int)substr($station['scharr_date'],0,2) + 1 == (int)substr(date("d M Y"),0,2))
                         {
                             $day = "YESTERDAY";
                         }
