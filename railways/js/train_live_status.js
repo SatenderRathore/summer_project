@@ -8,10 +8,17 @@ function submitForm()
 	// live.style.display='block';
 }
 
-function opacity()
+function opacityHalf()
 {
     var column = document.getElementById('station');
     column.style.opacity = "0.5";
+    // console.log("hello opacity");
 }
 
+function opacityOne()
+{
+    var column = document.getElementById('station');
+    column.style.opacity = "1";
+    // console.log("hello opacity");
+}
 

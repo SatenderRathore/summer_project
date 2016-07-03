@@ -77,24 +77,44 @@ include("db.php");
                 foreach ($train_live_status_api_data['route'] as $station)
                 {
                     $has_departed = $station['has_departed'];
-                    echo '<div id="station" class="station">';
+                    // printf("has dept = %d",$has_departed);
+                    if(!$has_departed)
+                    {
+                    echo '<div id="station" class="station" style="opacity:0.5;">';
                         echo'<div class="metre"></div>';
                         echo'<div class="stationdetails" style="margin:10px 0 0 10px;">';
-                            echo'<div class="station-name">BRC-Vadodara Jn</div>';
+                            echo'<div class="station-name">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</div>';
                             echo'<div class="desc">';
-                                echo'<span class="status">Departed @ </span>';
-                                echo'<span class="time">22:50 yesterday</span>';
+                                echo'<span class="status">Est. on time arrival : </span>';
+                                echo'<span class="time">' . $station['scharr'] .'</span>';
                             echo'</div>';
 
                         echo'</div>';
 
                     echo'</div>';
+                    }
+                    else
+                    {
+                        echo '<div id="station" class="station">';
+                        echo'<div class="metre"></div>';
+                        echo'<div class="stationdetails" style="margin:10px 0 0 10px;">';
+                            echo'<div class="station-name">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</div>';
+                            echo'<div class="desc">';
+                                echo'<span class="status">Departed @ </span>';
+                                echo'<span class="time">' . $station['actdep'] .'</span>';
+                            echo'</div>';
+
+                        echo'</div>';
+
+                    echo'</div>';
+                    }
                     // <!--  -->
                  }
                     ?>
                 </div>
             </div>
 
+    <script type="text/javascript" src="../js/train_live_status.js"></script>
 
 </body>
 </html>
