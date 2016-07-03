@@ -1,14 +1,14 @@
 <?php
 include("db.php");
 
-     // $apikey = "uucxi9379";//satenderjpr@gmail.com
+     $apikey = "uucxi9379";//satenderjpr@gmail.com
      // $apikey = "ttemb6830";//singhpalarashakti@gmail.com
      //$apikey = "ootzm7275";//satendersvnit@gmail.com
      // $apikey = "eumbm2216";//singhrathoresatender@gmail.com
      // $apikey = "wqyoc1399"; //renurathorejpr@gmail.com
      // $apikey = "budyl6423";//yashagarwaljpr@gmail.com
      // $apikey = "zlzou2003";//satendersinghpalara@gmail.com
-     $apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
+     // $apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
      // $apikey = "okogk2695";//theyashagarwal21@gmail.com
      // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
      // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
@@ -72,92 +72,26 @@ include("db.php");
                     <!-- <div class="currenttime">On Time</div> -->
                 </div>
                 <div class="runningstatus">
-                    <div class="station">
-                        <div class="metre"></div>
-                        <div class="stationdetails" style="margin:10px 0 0 10px;">
-                            <div class="station-name">BRC-Vadodara Jn</div>
-                            <div class="desc">
-                                <span class="status">Departed @ </span>
-                                <span class="time">22:50 yesterday</span>
-                            </div>
 
-                        </div>
+                <?php
+                foreach ($train_live_status_api_data['route'] as $station)
+                {
+                    $has_departed = $station['has_departed'];
+                    echo '<div id="station" class="station">';
+                        echo'<div class="metre"></div>';
+                        echo'<div class="stationdetails" style="margin:10px 0 0 10px;">';
+                            echo'<div class="station-name">BRC-Vadodara Jn</div>';
+                            echo'<div class="desc">';
+                                echo'<span class="status">Departed @ </span>';
+                                echo'<span class="time">22:50 yesterday</span>';
+                            echo'</div>';
 
-                    </div>
-                    <div class="station">
-                        <div class="metre"></div>
-                        <div class="stationdetails">
-                            <div class="station-name">BRC-Vadodara Jn</div>
-                            <div class="desc">
-                                <span class="status">Departed @ </span>
-                                <span class="time">22:50 yesterday</span>
-                            </div>
+                        echo'</div>';
 
-                        </div>
-
-                    </div>
-                    <div class="station">
-                        <div class="metre"></div>
-                        <div class="stationdetails">
-                            <div class="station-name">BRC-Vadodara Jn</div>
-                            <div class="desc">
-                                <span class="status">Departed @ </span>
-                                <span class="time">22:50 yesterday</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="station">
-                        <div class="metre"></div>
-                        <div class="stationdetails">
-                            <div class="station-name">BRC-Vadodara Jn</div>
-                            <div class="desc">
-                                <span class="status">Departed @ </span>
-                                <span class="time">22:50 yesterday</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="station">
-                        <div class="metre"></div>
-                        <div class="stationdetails">
-                            <div class="station-name">BRC-Vadodara Jn</div>
-                            <div class="desc">
-                                <span class="status">Departed @ </span>
-                                <span class="time">22:50 yesterday</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="station">
-                        <div class="metre"></div>
-                        <div class="stationdetails">
-                            <div class="station-name">BRC-Vadodara Jn</div>
-                            <div class="desc">
-                                <span class="status">Departed @ </span>
-                                <span class="time">22:50 yesterday</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="station" style="opacity:0.5;">
-                        <div class="metre"></div>
-                        <div class="stationdetails">
-                            <div class="station-name">BRC-Vadodara Jn</div>
-                            <div class="desc">
-                                <span class="status">Departed @ </span>
-                                <span class="time">22:50 yesterday</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
+                    echo'</div>';
+                    // <!--  -->
+                 }
+                    ?>
                 </div>
             </div>
 
