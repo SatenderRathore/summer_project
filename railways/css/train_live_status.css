@@ -8,6 +8,7 @@ body{
 a {
   color: #36d8f4;
 }
+
 a:hover {
     text-decoration: none;
 }
@@ -230,8 +231,8 @@ input:focus{
 .runningstatus{
   position: relative;
   overflow: scroll;
-  /*overflow-x:auto; */
-  height: 317px;
+  overflow-x:auto;
+  max-height: 222px;
 }
 
 .metre{
@@ -241,7 +242,7 @@ input:focus{
   height: 16px;
   width: 16px;
   left: 4px;
-  background: green;
+  background: #FF4500;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
@@ -250,7 +251,7 @@ input:focus{
 }
 
 .stationdetails{
-  border-left: 3px solid #339933;
+  border-left: 3px solid #FF4500;
   padding: 0px 10px 10px 20px;
   margin: 0 0 0 10px;
 }
@@ -266,12 +267,12 @@ input:focus{
 
 .status{
   font-size: 12px;
-  color: green;
+  color: red;
   font-weight: 300;
 }
 
 .time{
-  color: green;
+  color: red;
   font-weight: 400;
 }
 

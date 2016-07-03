@@ -28,20 +28,23 @@
 
 	<body >
 		<div class="top">
-			<div class="main-header">
-				<div class="left-head col-md-2">
-                    <div class="logo"><a href="index.php">Seat Jugaad</a></div>
-
-				</div>
-				<div class="mid-head col-md-8">
-					<ul class="features">
-                        <li><a href="./seat_availability.php">SEAT AVAILABILITY</a></li>
-                        <li><a href="./index.php">PNR STATUS</a></li>
+            <div class="main-header">
+                <div class="left-head col-md-2">
+                    <div class="logo">
+                        <a href="index.php">Seat Jugaad</a>
+                    </div>
+                </div>
+                <div class="mid-head col-md-8">
+                    <ul class="features">
+                        <li><a href="index.php">PNR STATUS</a></li>
                         <li>FAIR ENQUIRY</li>
+                        <li><a href="./seat_availability.php">SEAT AVAILABILITY</a></li>
                         <li><a href="train_live_status.php">LIVE TRAIN STATUS</a></li>
                         <li>CANCELLED TRAINS</li>
                     </ul>
-
+                </div>
+            </div>
+        </div>
                 <div class="middle">
                     <div class="mid-second">
                         <form id="availability" action="../backend/algo/check_seat_availability.php" method="POST">
@@ -89,7 +92,6 @@
                 </div>
                 </div>
             </div>
-        </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
         <script src="http://gregfranko.com/jquery.selectBoxIt.js/js/jquery.selectBoxIt.min.js"></script>
