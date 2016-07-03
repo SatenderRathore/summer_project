@@ -53,7 +53,7 @@
 			</div>
 
 		</form>
-		<div class="results" id="results" style="max-height:473px;display:none;">
+		<div class="results" id="results" style="max-height:600px;display:none;">
 
 		</div>
 <!-- <div>hello</div> -->

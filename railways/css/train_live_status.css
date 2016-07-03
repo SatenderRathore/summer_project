@@ -43,7 +43,7 @@ a:hover {
     text-transform: uppercase;
     width: 100%;
     margin: 20px;
-    
+
 }
 
 .logo a {
@@ -114,13 +114,13 @@ input:focus{
 
 .formContainer{
   font-size: 12px;
-  
+
 }
 
 .leftform{
   border: 1px solid #d7d7d7;
   box-shadow:0 0px 4px rgba(0,0,0,0.25);
-  width:78.85416667%; 
+  width:78.85416667%;
   float: left;
 }
 
@@ -155,7 +155,7 @@ input:focus{
 }
 
 .traindetails{
-  
+
   border-bottom: 1px solid #ccc;
   padding: 5px 15px;
  /* background: rgba(135, 121, 245, 0.23);*/
@@ -236,7 +236,7 @@ input:focus{
 
 .metre{
   display: inline-block;
-  
+
   position: absolute;
   height: 16px;
   width: 16px;
