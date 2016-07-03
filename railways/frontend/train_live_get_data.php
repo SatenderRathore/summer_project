@@ -1,6 +1,11 @@
 <?php
 include("db.php");
 echo date("d M Y");
+echo substr(date("d M Y"),1,2);
+if(substr(date("d M Y"),1,2)==3)
+{
+    print_r("hello");
+}
      // $apikey = "uucxi9379";//satenderjpr@gmail.com
      $apikey = "ttemb6830";//singhpalarashakti@gmail.com
      //$apikey = "ootzm7275";//satendersvnit@gmail.com
@@ -16,7 +21,6 @@ echo date("d M Y");
      $train_num = $_REQUEST['train_num'];
 
      $doj = "20" . date('ymd');
-     echo $doj;
 
      $train_live_status_api = 'http://api.railwayapi.com/live/train/' . $train_num . '/doj/' . $doj . '/apikey/' . $apikey;
      $train_live_status_api_call = file_get_contents($train_live_status_api);
@@ -79,6 +83,19 @@ echo date("d M Y");
                 {
                     $has_departed = $station['has_departed'];
                     // printf("has dept = %d",$has_departed);
+                    if((int)substr($station['scharr_date'],0,2) > (int)substr(date("d M Y"),0,2))
+                        {
+                            $day = "TOMORROW";
+                        }
+                        else if((int)substr($station['scharr_date'],0,2) < (int)substr(date("d M Y"),0,2))
+                        {
+                            $day = "YESTERDAY";
+                        }
+                        else
+                        {
+                            $day = "TODAY";
+                        }
+
                     if(!$has_departed)
                     {
                     echo '<div id="station" class="station" style="opacity:0.5;">';
@@ -87,7 +104,7 @@ echo date("d M Y");
                             echo'<div class="station-name">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</div>';
                             echo'<div class="desc">';
                                 echo'<span class="status">Est. on time arrival : </span>';
-                                echo'<span class="time">' . $station['scharr'] .'</span>';
+                                echo'<span class="time">' . $station['scharr'] . ' (' . $day . ')' . '</span>';
                             echo'</div>';
 
                         echo'</div>';
@@ -95,14 +112,14 @@ echo date("d M Y");
                     echo'</div>';
                     }
                     else
-                    {echo substr($station['scharr_date'],0,4);
+                    {
                         echo '<div id="station" class="station">';
                         echo'<div class="metre"></div>';
                         echo'<div class="stationdetails" style="margin:10px 0 0 10px;">';
                             echo'<div class="station-name">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</div>';
                             echo'<div class="desc">';
                                 echo'<span class="status">Departed @ </span>';
-                                echo'<span class="time">' . $station['actdep'] .'</span>';
+                                echo'<span class="time">' . $station['actdep'] . ' (' . $day . ')' . '</span>';
                             echo'</div>';
 
                         echo'</div>';
