@@ -1,8 +1,8 @@
 <?php
 include("db.php");
-
-     $apikey = "uucxi9379";//satenderjpr@gmail.com
-     // $apikey = "ttemb6830";//singhpalarashakti@gmail.com
+echo date("d M Y");
+     // $apikey = "uucxi9379";//satenderjpr@gmail.com
+     $apikey = "ttemb6830";//singhpalarashakti@gmail.com
      //$apikey = "ootzm7275";//satendersvnit@gmail.com
      // $apikey = "eumbm2216";//singhrathoresatender@gmail.com
      // $apikey = "wqyoc1399"; //renurathorejpr@gmail.com
@@ -16,6 +16,7 @@ include("db.php");
      $train_num = $_REQUEST['train_num'];
 
      $doj = "20" . date('ymd');
+     echo $doj;
 
      $train_live_status_api = 'http://api.railwayapi.com/live/train/' . $train_num . '/doj/' . $doj . '/apikey/' . $apikey;
      $train_live_status_api_call = file_get_contents($train_live_status_api);
@@ -94,7 +95,7 @@ include("db.php");
                     echo'</div>';
                     }
                     else
-                    {
+                    {echo substr($station['scharr_date'],0,4);
                         echo '<div id="station" class="station">';
                         echo'<div class="metre"></div>';
                         echo'<div class="stationdetails" style="margin:10px 0 0 10px;">';
