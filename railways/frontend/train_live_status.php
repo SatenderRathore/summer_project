@@ -47,14 +47,24 @@
 
 					<div class="rightform">
 						<button id="search_train_button" name = "submit" class="booking" type="submit">Search</button>
-					<div id="loading" class="loading" style="display:none;"></div>
+					
 					</div>
+
 				</div>
 			</div>
 
 		</form>
-		<div class="results" id="results" style="max-height:473px;display:none;">
-
+		<div class="results" id="results" style="max-height:600px;display:none;">
+			<div id="fountainG" style="margin:20px auto;">
+				<div id="fountainG_1" class="fountainG"></div>
+				<div id="fountainG_2" class="fountainG"></div>
+				<div id="fountainG_3" class="fountainG"></div>
+				<div id="fountainG_4" class="fountainG"></div>
+				<div id="fountainG_5" class="fountainG"></div>
+				<div id="fountainG_6" class="fountainG"></div>
+				<div id="fountainG_7" class="fountainG"></div>
+				<div id="fountainG_8" class="fountainG"></div>
+			</div>
 		</div>
 <!-- <div>hello</div> -->
 
