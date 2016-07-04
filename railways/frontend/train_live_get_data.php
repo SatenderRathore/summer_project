@@ -2,10 +2,10 @@
 include("db.php");
 
      // $apikey = "uucxi9379";//satenderjpr@gmail.com
-     $apikey = "ttemb6830";//singhpalarashakti@gmail.com
+     // $apikey = "ttemb6830";//singhpalarashakti@gmail.com
      //$apikey = "ootzm7275";//satendersvnit@gmail.com
      // $apikey = "eumbm2216";//singhrathoresatender@gmail.com
-     // $apikey = "wqyoc1399"; //renurathorejpr@gmail.com
+      $apikey = "wqyoc1399"; //renurathorejpr@gmail.com
      // $apikey = "budyl6423";//yashagarwaljpr@gmail.com
      // $apikey = "zlzou2003";//satendersinghpalara@gmail.com
      // $apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
@@ -55,9 +55,9 @@ include("db.php");
                 <div class="toppart">
                     <span class="trainno"><?php echo $train_num?></span>
                     <select id="selectday" class="selectday" onchange="dayofstart"();>
-                        <option value="0">2 days ago</option>
+                        <option value="0">Today</option>
                         <option value="1">Yesterday</option>
-                        <option value="2">Today</option>
+                        <option value="2">2 days ago</option>
                     </select>
                 </div>
                 <div class="trainname"><?php echo $train_name ?></div>
@@ -93,33 +93,99 @@ include("db.php");
 
                     if(!$has_departed)
                     {
-                    echo '<div id="station" class="station" style="opacity:0.5;">';
-                        echo'<div class="metre"></div>';
-                        echo'<div class="stationdetails" style="margin:10px 0 0 10px;">';
-                            echo'<div class="station-name">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</div>';
-                            echo'<div class="desc">';
-                                echo'<span class="status">Est. on time arrival : </span>';
-                                echo'<span class="time">' . $station['scharr'] . ' (' . $day . ')' . '</span>';
+                        if($station['station_']['name'] == $start_station)
+                        {
+                            echo '<div id="station" class="station" ">';
+                                echo'<div class="metre" ></div>';
+                                echo'<div class="stationdetails" style="margin:10px 0 0 10px;">';
+                                    echo'<div class="station-name">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</div>';
+                                    echo'<div class="desc">';
+                                        echo'<span class="status">Est. on time arrival : </span>';
+                                        echo'<span class="time">' . $station['scharr'] . ' (' . $day . ')' . '</span>';
+                                    echo'</div>';
+
+                                echo'</div>';
+
                             echo'</div>';
+                        }
+                        elseif ($station['station_']['name'] == $end_station)
+                        {
+                            echo '<div id="station" class="station" ">';
+                                echo'<div class="metre"></div>';
+                                echo'<div class="stationdetails" style="border-left:none;">';
+                                    echo'<div class="station-name">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</div>';
+                                    echo'<div class="desc">';
+                                        echo'<span class="status">Est. on time arrival : </span>';
+                                        echo'<span class="time">' . $station['scharr'] . ' (' . $day . ')' . '</span>';
+                                    echo'</div>';
 
-                        echo'</div>';
+                                echo'</div>';
 
-                    echo'</div>';
+                            echo'</div>';
+                        }
+                        else
+                        {
+                            echo '<div id="station" class="station" ">';
+                                echo'<div class="metre"></div>';
+                                echo'<div class="stationdetails">';
+                                    echo'<div class="station-name">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</div>';
+                                    echo'<div class="desc">';
+                                        echo'<span class="status">Est. on time arrival : </span>';
+                                        echo'<span class="time">' . $station['scharr'] . ' (' . $day . ')' . '</span>';
+                                    echo'</div>';
+
+                                echo'</div>';
+
+                            echo'</div>';
+                        }
                     }
                     else
                     {
-                        echo '<div id="station" class="station">';
-                        echo'<div class="metre"></div>';
-                        echo'<div class="stationdetails" style="margin:10px 0 0 10px;">';
-                            echo'<div class="station-name">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</div>';
-                            echo'<div class="desc">';
-                                echo'<span class="status">Departed @ </span>';
-                                echo'<span class="time">' . $station['actdep'] . ' (' . $day . ')' . '</span>';
+                        if($station['station_']['name'] == $start_station)
+                        {
+                            echo '<div id="station" class="station">';
+                            echo'<div class="metre" style="background-color:#32CD32"></div>';
+                            echo'<div class="stationdetails" style="margin:10px 0 0 10px;border-left:3px solid #32CD32";>';
+                                echo'<div class="station-name">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</div>';
+                                echo'<div class="desc">';
+                                    echo'<span class="status" style="color:#32CD32">Departed @ </span>';
+                                    echo'<span class="time" style="color:#32CD32">' . $station['actdep'] . ' (' . $day . ')' . '</span>';
+                                echo'</div>';
+
+                            echo'</div>';
+
+                        echo'</div>';
+                        }
+                        elseif ($station['station_']['name'] == $end_station)
+                        {
+                            echo '<div id="station" class="station">';
+                            echo'<div class="metre" style="background-color:#32CD32"></div>';
+                            echo'<div class="stationdetails" style="border-left:none;">';
+                                echo'<div class="station-name">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</div>';
+                                echo'<div class="desc">';
+                                    echo'<span class="status" style="color:#32CD32">Departed @ </span>';
+                                    echo'<span class="time" style="color:#32CD32">' . $station['actdep'] . ' (' . $day . ')' . '</span>';
+                                echo'</div>';
+
                             echo'</div>';
 
                         echo'</div>';
 
-                    echo'</div>';
+
+                        }
+                        else
+                        {
+                            echo '<div id="station" class="station">';
+                            echo'<div class="metre" style="background-color:#32CD32"></div>';
+                            echo'<div class="stationdetails" style="border-left:3px solid #32CD32";>';
+                                echo'<div class="station-name">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</div>';
+                                echo'<div class="desc">';
+                                    echo'<span class="status" style="color:#32CD32">Departed @ </span>';
+                                    echo'<span class="time" style="color:#32CD32">' . $station['actdep'] . ' (' . $day . ')' . '</span>';
+                                echo'</div>';
+
+                            echo'</div>';
+                        }
                     }
                     // <!--  -->
                  }
