@@ -94,8 +94,8 @@ include("db.php");
                     if(!$has_departed)
                     {
                         if($station['station_']['name'] == $start_station)
-                        { 
-                            echo '<div id="station" class="station" ">';
+                        {
+                            echo '<div id="station" class="station">';
                                 echo'<div class="metre" ></div>';
                                 echo'<div class="stationdetails" style="margin:10px 0 0 10px;">';
                                     echo'<div class="station-name">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</div>';
@@ -142,7 +142,7 @@ include("db.php");
                     else
                     {
                         if($station['station_']['name'] == $start_station)
-                        {  
+                        {
                             echo '<div id="station" class="station">';
                             echo'<div class="metre" style="background-color:#32CD32"></div>';
                             echo'<div class="stationdetails" style="margin:10px 0 0 10px;border-left:3px solid #32CD32";>';
@@ -156,7 +156,7 @@ include("db.php");
 
                         echo'</div>';
                         }
-                        elseif ($station['station_']['name'] == $end_station) 
+                        elseif ($station['station_']['name'] == $end_station)
                         {
                             echo '<div id="station" class="station">';
                             echo'<div class="metre" style="background-color:#32CD32"></div>';
@@ -171,7 +171,7 @@ include("db.php");
 
                         echo'</div>';
 
-                            
+
                         }
                         else
                         {
