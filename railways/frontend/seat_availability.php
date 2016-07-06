@@ -84,7 +84,7 @@
                                     </select>
                                 </div>
                                 <div class="submit">
-                                <input type="submit" value="Find Trains" src="../images/tick.png" alt="Submit" width="40" height="40" >
+                                <input type="submit" alt="Submit" width="40" height="40" >
                                 </div>
                             </div>
                         </form>
