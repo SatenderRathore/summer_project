@@ -105,7 +105,9 @@ include("db.php");
                             echo'<div class="metre" ></div>';
                             echo'<div class="stationdetails" style="margin:10px 0 0 10px;">';
 
-                                echo'<span class="station-name">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</span>';
+
+                                echo'<span class="station-name" style="opacity:0.6;">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</span>';
+
                                 echo'<div class="desc">';
                                     echo'<span class="status">Est. on time arrival : </span>';
                                     echo'<span class="time">' . $station['scharr'] . ' (' . $day . ')' . '</span>';
@@ -120,7 +122,7 @@ include("db.php");
                         echo '<div id="station" class="station" ">';
                             echo'<div class="metre"></div>';
                             echo'<div class="stationdetails" style="border-left:none;">';
-                                echo'<span class="station-name">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</span>';
+                                echo'<span class="station-name" style="opacity:0.6;">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</span>';
                                 echo'<div class="desc">';
                                     echo'<span class="status">Est. on time arrival : </span>';
                                     echo'<span class="time">' . $station['scharr'] . ' (' . $day . ')' . '</span>';
@@ -135,7 +137,7 @@ include("db.php");
                         echo '<div id="station" class="station" ">';
                             echo'<div class="metre"></div>';
                             echo'<div class="stationdetails">';
-                                echo'<span class="station-name">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</span>';
+                                echo'<span class="station-name" style="opacity:0.6;">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</span>';
                                 echo'<span class="halt">2m stop</span>';
                                 echo'<div class="desc">';
                                     echo'<span class="status">Est. on time arrival : </span>';

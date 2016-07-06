@@ -297,6 +297,7 @@ input:focus{
   text-align: center;
   background: rgba(135, 121, 245, 0.76);
   border: none;
+  margin-bottom: 10px;
 }
 
 
