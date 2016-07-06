@@ -104,7 +104,7 @@ include("db.php");
                         echo '<div id="station" class="station" ">';
                             echo'<div class="metre" ></div>';
                             echo'<div class="stationdetails" style="margin:10px 0 0 10px;">';
-                            
+
                                 echo'<span class="station-name">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</span>';
                                 echo'<div class="desc">';
                                     echo'<span class="status">Est. on time arrival : </span>';
@@ -154,9 +154,9 @@ include("db.php");
                         echo '<div id="station" class="station">';
                         echo'<div class="metre" style="background-color:#32CD32"></div>';
                         echo'<div class="stationdetails" style="margin:10px 0 0 10px;border-left:3px solid #32CD32";>';
-                        
+
                             echo'<div class="station-name">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</div>';
-                            
+
                             echo'<div class="desc">';
                                 echo'<span class="status" style="color:#32CD32">Departed @ </span>';
                                 echo'<span class="time" style="color:#32CD32">' . $station['actdep'] . ' (' . $day . ')' . '</span>';
