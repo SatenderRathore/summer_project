@@ -141,7 +141,6 @@ if(isset($_SESSION['submit']))
     {
         array_push($new, strtoupper($data[$i]['station'] . " - " . $data[$i]['station_code']));
     }
-
 ?>
 
 <script>
@@ -150,8 +149,7 @@ if(isset($_SESSION['submit']))
     ?>
     $(function() {
     $( "#train" ).autocomplete({
-        // source: <?php echo $js_array ?>,
-        source: <?Php echo trian_name($train_num)?>
+        source: <?php echo $js_array ?>,
             minLength: 3
         });
     });
@@ -159,22 +157,7 @@ if(isset($_SESSION['submit']))
 
 
 
-<?php
-function train_name($number)
-{
-    $train_num_api = 'api.railwayapi.com/suggest_train/trains/' . $number . '/apikey/' . $apikey;
-    $train_num_api_call = file_get_contents($train_num_api);
-    $train_num_api_data = json_decode($train_num_api_call, true);
 
-    // $new = array();
-    // $total_trains = $train_num_api_data['trains'];
-    // for(i=0;i<count($total_trains);i++)
-    // {
-
-    // }
-    return $train_num_api_data['train'];
-}
-?>
 
 
 
