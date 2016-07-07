@@ -9,8 +9,8 @@ function rotate(el){
 	
 	if(el=="next2")
 	{
-		res[0]=document.getElementById("src").value;
-		if(res[0]=='')
+		res[0]=document.getElementById("src").value+'  →  ';
+		if(res[0]=='  →  ')
 		{
 			$(".errsrc").text("Please enter proper source !").fadeIn();
 			return ;
@@ -20,7 +20,7 @@ function rotate(el){
 		document.getElementById("source").style.display="none";
 		document.getElementById("destn").style.display="block";
 		//res[0]=document.getElementById("src").value + '<img src=' + img.src + '/>'    // add image instead of →
-		document.getElementById("summary").innerHTML=res.join('  →  ');
+		document.getElementById("summary").innerHTML=res.join('');
 		ctr++;
 	}
 	else if(el=="prev1")
@@ -33,8 +33,8 @@ function rotate(el){
 	}
 	else if(el=="next3")
 	{
-		res[1]=document.getElementById("dest").value;
-		if(res[1]=='')
+		res[1]=document.getElementById("dest").value+'  →  ';
+		if(res[1]=='  →  ')
 		{
 			$(".errdestn").text("Please enter proper destination !").fadeIn();
 			return ;
@@ -43,7 +43,7 @@ function rotate(el){
 
 		document.getElementById("destn").style.display="none";
 		document.getElementById("date").style.display="block";					
-		document.getElementById("summary").innerHTML=res.join('  →  ');
+		document.getElementById("summary").innerHTML=res.join('');
 		ctr++;
 	}
 	else if(el=="prev2")
@@ -56,8 +56,8 @@ function rotate(el){
 	}
 	else if(el=="next4")
 	{
-		res[2]=document.getElementById("datepicker").value;
-		if(res[2]=='')
+		res[2]=document.getElementById("datepicker").value+'  →  ';
+		if(res[2]=='  →  ')
 		{
 			$(".errdate").text("Please enter proper date !").fadeIn();
 			return ;
@@ -66,7 +66,7 @@ function rotate(el){
 		document.getElementById("date").style.display="none";
 		document.getElementById("selclass").style.display="block";	
 		
-		document.getElementById("summary").innerHTML=res.join('  →  ');
+		document.getElementById("summary").innerHTML=res.join('');
 		flag=1;
 		ctr++;
 		
@@ -81,8 +81,8 @@ function rotate(el){
 	{
 		document.getElementById("selclass").style.display="none";
 		document.getElementById("quota").style.display="block";
-		res[3]=document.getElementById("travel_class").value;
-		document.getElementById("summary").innerHTML=res.join('  →  ');
+		res[3]=document.getElementById("travel_class").value+'  →  ';
+		document.getElementById("summary").innerHTML=res.join('');
 		ctr++;
 	}
 	else if(el=="prev4")
@@ -95,7 +95,7 @@ function rotate(el){
 	{
 		
 		res[4]=document.getElementById("quota").value;
-		document.getElementById("summary").innerHTML=res.join('  →  ');
+		document.getElementById("summary").innerHTML=res.join('');
 		console.log("hello");
 	}
 

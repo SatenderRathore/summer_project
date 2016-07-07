@@ -67,7 +67,7 @@
                                 <div class="details">
                                     <fieldset data-form-name="source">
                                         <legend> Enter Source</legend>
-                                        <input class="" name="source" type="text" id="src" maxlength="10" data-type="text" required >
+                                        <input class="" name="source" type="text" id="src" data-type="text" required >
                                         <label class="error-msg errsrc"></label>
                                     </fieldset>
                                 </div>
@@ -80,7 +80,7 @@
                                 <div class="details">
                                     <fieldset data-form-name="dest">
                                         <legend> Enter Destination</legend>
-                                        <input class="" name="destination" type="text" id="dest" maxlength="10" data-type="text" required>
+                                        <input class="" name="destination" type="text" id="dest" data-type="text" required>
                                         <label class="error-msg errdestn"></label>
                                     </fieldset>
                                 </div>
