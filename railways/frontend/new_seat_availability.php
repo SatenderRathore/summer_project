@@ -132,7 +132,7 @@
                                 <div class="details">
                                     <fieldset data-form-name="quota">
                                         <legend> Enter Your Preferred Quota </legend>
-                                        <select class="drop-down" name="quota" id='quotadesc'>
+                                        <select class="drop-down" name="quota" id='quota'>
                                             <option value=GN >General</option>
                                             <option value=CK >Tatkal</option>
                                             <option value=LD >Ladies</option>
