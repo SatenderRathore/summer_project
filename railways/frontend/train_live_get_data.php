@@ -8,10 +8,10 @@ include("db.php");
      // $apikey = "wqyoc1399"; //renurathorejpr@gmail.com
      // $apikey = "budyl6423";//yashagarwaljpr@gmail.com
      // $apikey = "zlzou2003";//satendersinghpalara@gmail.com
-     // $apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
+      $apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
      // $apikey = "okogk2695";//theyashagarwal21@gmail.com
      // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
-      $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
+     // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
 
      $train_num = $_REQUEST['train_num'];
 
@@ -104,10 +104,9 @@ include("db.php");
                         echo '<div id="station" class="station" ">';
                             echo'<div class="metre" ></div>';
                             echo'<div class="stationdetails" style="margin:10px 0 0 10px;">';
-
-
+                            
                                 echo'<span class="station-name" style="opacity:0.6;">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</span>';
-
+                                
                                 echo'<div class="desc">';
                                     echo'<span class="status">Est. on time arrival : </span>';
                                     echo'<span class="time">' . $station['scharr'] . ' (' . $day . ')' . '</span>';
@@ -156,9 +155,9 @@ include("db.php");
                         echo '<div id="station" class="station">';
                         echo'<div class="metre" style="background-color:#32CD32"></div>';
                         echo'<div class="stationdetails" style="margin:10px 0 0 10px;border-left:3px solid #32CD32";>';
-
+                        
                             echo'<div class="station-name">' . $station["station_"]["code"] . ' - ' . $station['station_']['name'] . '</div>';
-
+                            
                             echo'<div class="desc">';
                                 echo'<span class="status" style="color:#32CD32">Departed @ </span>';
                                 echo'<span class="time" style="color:#32CD32">' . $station['actdep'] . ' (' . $day . ')' . '</span>';

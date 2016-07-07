@@ -49,7 +49,7 @@
 
 					<div class="rightform">
 						<button id="search_train_button" name = "submit" class="booking" type="submit">Search</button>
-
+					
 					</div>
 
 				</div>

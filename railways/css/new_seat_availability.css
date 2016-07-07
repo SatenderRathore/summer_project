@@ -227,3 +227,9 @@ button{
   border: none;
   padding: 0 0;
 }
+
+.error-msg{
+  display: none;
+  color: #FF5722;
+}
+
