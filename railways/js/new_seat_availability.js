@@ -9,14 +9,15 @@ function rotate(el){
 	
 	if(el=="next2")
 	{
-		res[0]=document.getElementById("src").value+'  →  ';
-		if(res[0]=='  →  ')
+		res[0]=document.getElementById("src").value;
+		if(res[0]=='')
 		{
 			$(".errsrc").text("Please enter proper source !").fadeIn();
 			return ;
 		}
 		$(".errsrc").empty().fadeOut();
 
+		res[0]+='  →  ';
 		document.getElementById("source").style.display="none";
 		document.getElementById("destn").style.display="block";
 		//res[0]=document.getElementById("src").value + '<img src=' + img.src + '/>'    // add image instead of →
@@ -33,14 +34,15 @@ function rotate(el){
 	}
 	else if(el=="next3")
 	{
-		res[1]=document.getElementById("dest").value+'  →  ';
-		if(res[1]=='  →  ')
+		res[1]=document.getElementById("dest").value;
+		if(res[1]=='')
 		{
 			$(".errdestn").text("Please enter proper destination !").fadeIn();
 			return ;
 		}
 		$(".errdestn").empty().fadeOut();
 
+		res[1]+='  →  ';
 		document.getElementById("destn").style.display="none";
 		document.getElementById("date").style.display="block";					
 		document.getElementById("summary").innerHTML=res.join('');
@@ -56,13 +58,15 @@ function rotate(el){
 	}
 	else if(el=="next4")
 	{
-		res[2]=document.getElementById("datepicker").value+'  →  ';
-		if(res[2]=='  →  ')
+		res[2]=document.getElementById("datepicker").value;
+		if(res[2]=='')
 		{
 			$(".errdate").text("Please enter proper date !").fadeIn();
 			return ;
 		}
 		$(".errdate").empty().fadeOut();
+
+		res[2]+='  →  ';
 		document.getElementById("date").style.display="none";
 		document.getElementById("selclass").style.display="block";	
 		
@@ -93,10 +97,12 @@ function rotate(el){
 	}
 	else if(el=="final")
 	{
-		
-		res[4]=document.getElementById("quota").value;
-		document.getElementById("summary").innerHTML=res.join('');
-		console.log("hello");
+		if(ctr>4)
+		{
+			res[4]=document.getElementById("quotadesc").value;
+			document.getElementById("summary").innerHTML=res.join('');
+			console.log("hello");
+		}
 	}
 
 	document.getElementById("steps").innerHTML=ctr+'/5';
