@@ -44,7 +44,7 @@
 						<label class="icon-placed">
 							<img src="../images/train.png">
 							TRAIN</label>
-						<input type="text" name="train_num" id="train" placeholder="Enter Train No./ Name" style="margin-left:5px; margin-top:0px; font-size:14px;height: 28px; border:none;width:80%;" required>
+						<input type="text" name="train_num" id="train" placeholder="Enter Train No./ Name" onkeyup="autoSuggest(this.value)" style="margin-left:5px; margin-top:0px; font-size:14px;height: 28px; border:none;width:80%;" required>
 					</div>
 
 					<div class="rightform">
@@ -155,7 +155,23 @@ if(isset($_SESSION['submit']))
     });
 </script>
 
-
+<script>
+function autoSuggest(str) {
+    if (str.length == 0) {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("train").innerHTML = xmlhttp.responseText;
+            }
+        };
+        xmlhttp.open("GET", "test.php?q=" + str, true);
+        xmlhttp.send();
+    }
+}
+</script>
 
 
 
