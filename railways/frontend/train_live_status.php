@@ -147,7 +147,7 @@ if(isset($_SESSION['submit']))
     <?php
     $js_array = json_encode($new);
     ?>
-    $(function() {
+    $(function autoSuggest(str) {
     $( "#train" ).autocomplete({
         source: <?php echo $js_array ?>,
             minLength: 3
@@ -156,21 +156,21 @@ if(isset($_SESSION['submit']))
 </script>
 
 <script>
-function autoSuggest(str) {
-    if (str.length == 0) {
-        document.getElementById("txtHint").innerHTML = "";
-        return;
-    } else {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("train").innerHTML = xmlhttp.responseText;
-            }
-        };
-        xmlhttp.open("GET", "test.php?q=" + str, true);
-        xmlhttp.send();
-    }
-}
+// function autoSuggest(str) {
+//     if (str.length == 0) {
+//         document.getElementById("txtHint").innerHTML = "";
+//         return;
+//     } else {
+//         var xmlhttp = new XMLHttpRequest();
+//         xmlhttp.onreadystatechange = function() {
+//             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+//                 document.getElementById("train").innerHTML = xmlhttp.responseText;
+//             }
+//         };
+//         xmlhttp.open("GET", "test.php?q=" + str, true);
+//         xmlhttp.send();
+//     }
+// }
 </script>
 
 
