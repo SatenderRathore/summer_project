@@ -83,7 +83,7 @@ $passengers[0]['current_status'] = "w/L";
 					</div>
 					<table id="passengers" class="table table-hover tab" >
 						<thead>
-							<tr class="display">
+							<tr >
 								<th class="col-md-1">#</th>
 								<th class="col-md-2">Booking Status</th>
 								<th class="col-md-2">Current Status</th>
