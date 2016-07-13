@@ -90,6 +90,7 @@ $passengers[0]['current_status'] = "w/L";
 								<th class="col-md-2">SeatJugaad Status</th>
 							</tr>
 						</thead>
+							
 						<tbody>
 							<tr>
 								<td colspan="2" class="chart">Charting Status</td>

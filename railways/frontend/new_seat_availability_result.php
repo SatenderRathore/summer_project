@@ -7,9 +7,23 @@
 		<title>PNR-STATUS</title>
         <script src="../js/jquery-2.1.1.js"></script>
         <script src="../js/bootstrap.js"></script>
+
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="../css/new_seat_availability_result.css">
 
+        <!--datepicker-->
+        <link href="../datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+		<script src="../datepicker/dist/js/datepicker.min.js"></script>	
+		<script src="../datepicker/dist/js/i18n/datepicker.en.js"></script>
+
+		<script>
+			// Initialization
+			$('#date').datepicker([options])
+			// Access instance of plugin
+			$('#date').data('datepicker')
+
+		</script>
+        <!--  -->
 	</head>
 	<body>
 		<div class="top">
@@ -68,7 +82,14 @@
 							</td>
 							<td style="padding:20px 18px; border:none; width:15%;">
 								<div class="heading">DATE</div>
-								<input class="" id="date" type="text" required>
+								<input id="date" type="text"  class="datepicker-here" data-language='en'>
+								<script>
+									$('#date').datepicker({
+										language: 'en',
+										minDate: new Date()
+										//maxDate: minDate.getDate()+120
+									})
+								</script>
 							</td>
 							<td style="padding:20px 18px; border:none; width:15%;">
 								<div class="heading">QUOTA</div>
@@ -121,6 +142,7 @@
 			</div>
 
 		</div>
+	
 
 
 
