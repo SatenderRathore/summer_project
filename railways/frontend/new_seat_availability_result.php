@@ -7,9 +7,12 @@
 		<title>PNR-STATUS</title>
         <script src="../js/jquery-2.1.1.js"></script>
         <script src="../js/bootstrap.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
 
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="../css/new_seat_availability_result.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
         <!--datepicker-->
         <link href="../datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
@@ -46,13 +49,13 @@
 			</div>
 		</div>
 		<div class="contain">
-			<form action="#" class="search">
+			<form id="availability" action="#" class="search" method="POST">
 				<table class="table table-bordered">
 					<thead>
 						<tr>
 							<td style="padding:20px 18px; border:none; width:15%;">
 								<div class="heading">FROM</div>
-								<input class="" id="src" type="text" required>
+								<input class="" id="src" name="source" type="text" required>
 							</td>
 
 							<td style="padding-top:45px; border:none; width:1%;">
@@ -151,4 +154,30 @@
 
 	</body>
 	<script src="../js/new_seat_availability_result.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 </html>
+
+<!-- php code starts here -->
+
+<?php
+    $json = file_get_contents('station_list.json');
+    $data = json_decode($json,true);
+    $new = array();
+    for($i=0;$i<count($data);$i++)
+    {
+        array_push($new, strtoupper($data[$i]['station'] . " - " . $data[$i]['station_code']));
+    }
+?>
+
+<script>
+    <?php
+    $js_array = json_encode($new);
+    ?>
+    $(function() {
+    $( "#src, #dest" ).autocomplete({
+        source: <?php echo $js_array ?>,
+            minLength: 3
+        });
+    });
+</script>

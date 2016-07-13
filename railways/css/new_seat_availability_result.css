@@ -146,3 +146,10 @@ input{
   margin: 20px auto;
 
 }
+
+ul.ui-autocomplete 
+{
+    
+    box-shadow: 0 0px 2px #ccc ;
+    max-width: 180px;
+}
