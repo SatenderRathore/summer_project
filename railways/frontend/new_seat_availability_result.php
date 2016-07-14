@@ -53,7 +53,7 @@
 				<table class="table table-bordered">
 					<thead>
 						<tr>
-							<td style="padding:20px 18px; border:none; width:15%;">
+							<td style="padding:20px 18px; border:none; width:15%;margin-bottom:10px;">
 								<div class="heading">FROM</div>
 								<input class="" id="src" name="source" type="text" required>
 							</td>
@@ -71,7 +71,7 @@
 
 							<td style="padding:20px 18px; border:none; width:15%;">
 								<div class="heading">CLASS</div>
-								<select class="drop-down" name="class" id='travel_class'>
+								<select class="drop-down" name="class" id='travel_class' >
 	                                <option value=ALL  selected  >All Classes</option>
 	                                <option value=1A  >First AC</option>
 	                                <option value=2A  >Second AC</option>

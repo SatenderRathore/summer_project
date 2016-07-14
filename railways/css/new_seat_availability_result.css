@@ -91,6 +91,7 @@ input{
   box-shadow: 0 0px 2px rgba(0,0,0,0.25) inset;
 }
 
+
 .drop-down{
   padding: 5px 5px;
   border: 1px solid #d7d7d7;
@@ -149,7 +150,20 @@ input{
 
 ul.ui-autocomplete 
 {
-    
-    box-shadow: 0 0px 2px #ccc ;
     max-width: 180px;
+    
+}
+
+ul.ui-widget{
+  font-family: montserrat,Verdana;
+  font-size: 1em;
+}
+
+ul.ui-widget-content{
+   box-shadow: 0 0px 2px rgba(0,0,0,0.25) ;
+   border: 1px solid #d7d7d7;
+}
+
+ul.ui-corner-all{
+  border-radius: 0;
 }
