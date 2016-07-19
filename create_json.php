@@ -1,7 +1,7 @@
 <?php 
 
-    $apikey = "sajnq6002";//renurjpr@gmail.com
-    //$apikey = "yjfne2878";//jyopalara@gmail.com
+    // $apikey = "sajnq6002";//renurjpr@gmail.com
+    // $apikey = "yjfne2878";//jyopalara@gmail.com
      // $apikey = "hbfmx5628";//satenderjpr@gmail.com
      // $apikey = "ttemb6830";//singhpalarashakti@gmail.com
      // $apikey = "ootzm7275";//satendersvnit@gmail.com
@@ -19,7 +19,7 @@
 
 $train_numbers = array();
 $file = fopen('dynamic.txt', 'r');
-for ($i=0; $i < 100; $i++)
+for ($i=0; $i < 97; $i++)
 { 
 	$line = fgets($file);
 	$train_numb = substr($line, 0,5);
