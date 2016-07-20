@@ -183,12 +183,14 @@ if(isset($_SESSION['submit']))
     for($i=0;$i<count($data);$i++)
     {
         // array_push($new, strtoupper($data[$i]['train_name'] . " - " . $data[$i]['train_number']));
-        if($data[$i]['train_name'] != "") //if train name is alse there
-        array_push($new, $data[$i]['train_number'] . "(" . $data[$i]['train_name'] . ")");
-        else// if train name is not there
-        {
-        	array_push($new, $data[$i]['train_number']);
-        }
+        // if($data[$i]['train_name'] != "") //if train name is alse there
+        // array_push($new, $data[$i]['train_number'] . "(" . $data[$i]['train_name'] . ")");
+        // else// if train name is not there
+        // {
+        // 	array_push($new, $data[$i]['train_number']);
+        // }
+       array_push($new, $data[$i]['train_number']);//only for demo later name will also be included for which code is above in comment 
+
     }
 
 ?>
