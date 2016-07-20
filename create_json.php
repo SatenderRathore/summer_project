@@ -7,7 +7,7 @@
      // $apikey = "ootzm7275";//satendersvnit@gmail.com
      // $apikey = "eumbm2216";//singhrathoresatender@gmail.com
      // $apikey = "wqyoc1399"; //renurathorejpr@gmail.com
-     // $apikey = "budyl6423";//yashagarwaljpr@gmail.com
+     $apikey = "budyl6423";//yashagarwaljpr@gmail.com
      // $apikey = "zlzou2003";//satendersinghpalara@gmail.com
      // $apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
      // $apikey = "iyihg4653";//theyashagarwal21@gmail.com
@@ -19,7 +19,7 @@
 
 $train_numbers = array();
 $file = fopen('dynamic.txt', 'r');
-for ($i=0; $i < 97; $i++)
+for ($i=0; $i < 99; $i++)
 { 
 	$line = fgets($file);
 	$train_numb = substr($line, 0,5);
@@ -28,7 +28,7 @@ for ($i=0; $i < 97; $i++)
 // print_r($train_numbers);
 fclose($file);
 
-      for($i=0;$i<98;$i++)
+      for($i=0;$i<99;$i++)
       {
     	// $train_num = '12956';
     	$train_num = $train_numbers[$i];
