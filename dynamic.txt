@@ -1,98 +1,100 @@
-12967	Jaipur Express	Chennai Central	Jaipur
-19573	Jaipur Express	Okha	Jaipur
-12973	Jaipur Express	Indore Junction Bg	Jaipur
-12975	Jaipur Express	Mysore Junction	Jaipur
-54805	Jaipur Passenger	Ahmedabad Junction	Jaipur
-09043	Jaipur Premium	Bandra Terminus	Jaipur
-09025	Jaipur Special	Bandra Terminus	Jaipur
-09047	Jaipur Special	Bandra Terminus	Jaipur
-12979	Jaipur Superfast Fast	Bandra Terminus	Jaipur
-18104	Jalianwala B Express	Amritsar Junction	Tatanagar Junction
-12380	Jalianwala B Express	Amritsar Junction	Sealdah
-18103	Jalianwala B Express	Tatanagar Junction	Amritsar Junction
-12379	Jalianwalab Express	Sealdah	Amritsar Junction
-12477	Jam Jat Express	Jamnagar	Jammu Tawi
-12414	Jammu Aii Express	Jammu Tawi	Ajmer Junction
-12207	Jammu Garib Rat	Kathgodam	Jammu Tawi
-15654	Jammu Ghy Express	Jammu Tawi	Guwahati
-12588	Jammu Gkp Express	Jammu Tawi	Gorakhpur Junction
-14033	Jammu Mail	Delhi	Udhampur
-24033	Jammu Mail	Delhi	Hoshiarpur
-24034	Jammu Mail	Hoshiarpur	Delhi
-14034	Jammu Mail	Udhampur	Delhi
-12426	Jammu Rajdhani	Jammu Tawi	New Delhi
-12425	Jammu Rajdhani	New Delhi	Jammu Tawi
-13151	Jammu Tawi Express	Kolkata	Jammu Tawi
-11449	Jammutawi Express	Jabalpur	Jammu Tawi
-19059	Jamnagar Intcit	Surat	Jamnagar
-12082	Jan Shatabdi	Trivandrum Cntl	Kannur
-12075	Jan Shatabdi	Kozhikode	Trivandrum Cntl
-12081	Jan Shatabdi	Kannur	Trivandrum Cntl
-12078	Jan Shatabdi	Vijayawada Junction	Chennai Central
-12077	Jan Shatabdi	Chennai Central	Vijayawada Junction
-12076	Jan Shatabdi	Trivandrum Cntl	Kozhikode
-12071	Jan Shatabdi Express	Dadar	Aurangabad
-12080	Jan Shatabdi Express	Hubli Junction	Bangalore Cy Junction
-12084	Jan Shatabdi Express	Coimbatore Junction	Mayiladuturai J
-12052	Jan Shatabdi Express	Madgaon	Dadar
-12051	Jan Shatabdi Express	Dadar	Madgaon
-12067	Jan Shatabdi Express	Guwahati	Jorhat Town
-12068	Jan Shatabdi Express	Jorhat Town	Guwahati
-12083	Jan Shatabdi Express	Mayiladuturai J	Coimbatore Junction
-13419	Janasewa Express	Bhagalpur	Muzaffarpur Junction
-13205	Janhit Express	Saharsa Junction	Danapur
-13206	Janhit Express	Danapur	Saharsa Junction
-19107	Janmabhoomi Express	Ahmedabad Junction	Udhampur
-19108	Janmabhoomi Express	Udhampur	Ahmedabad Junction
-12806	Janmabhoomi Express	Secunderabad Junction	Vishakapatnam
-12805	Janmabhoomi Express	Vishakapatnam	Secunderabad Junction
-13420	Jansewa Express	Muzaffarpur Junction	Bhagalpur
-12079	Janshatabdi Express	Bangalore Cy Junction	Hubli Junction
-12023	Janshatabdi Express	Howrah Junction	Patna Junction
-12072	Janshatabdi Express	Aurangabad	Dadar
-12069	Janshatabdi Express	Raigarh	Gondia Junction
-12024	Janshatabdi Express	Patna Junction	Howrah Junction
-12070	Janshatabdi Express	Gondia Junction	Raigarh
-13039	Janta Express	Howrah Junction	Rajgir
-11450	Jat Jbp Express	Jammu Tawi	Jabalpur
-19224	Jat Adi Express	Jammu Tawi	Ahmedabad Junction
-02208	Jat Adi Gr Special	Jammu Tawi	Ahmedabad Junction
-04122	Jat Ald Ac Special	Jammu Tawi	Allahabad Junction
-04132	Jat Ald Premium	Jammu Tawi	Allahabad Junction
-14502	Jat Bti Express	Jammu Tawi	Bhatinda Junction
-19226	Jat Bti Express	Jammu Tawi	Bhatinda Junction
-12470	Jat Cnb Express	Jammu Tawi	Kanpur Central
-02452	Jat Cnb Premium	Jammu Tawi	Kanpur Central
-05144	Jat Cpr Special	Jammu Tawi	Chhapra
-02172	Jat Cstm Special	Jammu Tawi	Mumbai Cst
-04038	Jat Dli Special	Jammu Tawi	Delhi
-18216	Jat Durg Express	Jammu Tawi	Durg
-12550	Jat Durg Superfast Express	Jammu Tawi	Durg
-02530	Jat Gkp Premium	Jammu Tawi	Gorakhpur Junction
-05044	Jat Gkp Special	Jammu Tawi	Gorakhpur Junction
-12476	Jat Hapa Express	Jammu Tawi	Hapa
-03004	Jat Hwh Superfast Special	Jammu Tawi	Howrah Junction
-07022	Jat Hyb Special	Jammu Tawi	Hyderabad Decan
-22942	Jat Indb Superfast Express	Jammu Tawi	Indore Junction Bg
-09308	Jat Indb Superfast Special	Jammu Tawi	Indore Junction Bg
-12478	Jat Jamnagr Express	Jammu Tawi	Jamnagar
-19804	Jat Kota Express	Jammu Tawi	Kota Junction
-18110	Jat Muri Rou Express	Jammu Tawi	Tatanagar Junction
-02422	Jat Ned Special	Jammu Tawi	Nanded
-02445	Jat Premium Special	New Delhi	Jammu Tawi
-14714	Jat Sgnr Express	Jammu Tawi	Shri Ganganagar
-04734	Jat Sgnr Special	Jammu Tawi	Shri Ganganagar
-05720	Jbn Dli Special	Jogbani	Delhi
-13160	Jbn Kolkata Express	Jogbani	Kolkata
-22181	Jbp Nzm Express	Jabalpur	H Nizamuddin
-12160	Jbp Ami Superfast Express	Jabalpur	Amravati
-01753	Jbp Bsp Special	Jabalpur	Bilaspur Junction
-01755	Jbp Bsp Special	Jabalpur	Bilaspur Junction
-58870	Jbp Btc Passenger	Jabalpur	Balaghat Junction
-58868	Jbp Btc Passenger	Jabalpur	Balaghat Junction
-01731	Jbp Chennai Special	Jabalpur	Chennai Central
-01702	Jbp Cstm Special	Jabalpur	Mumbai Cst
-01707	Jbp Durg Special	Jabalpur	Durg
-12188	Jbp Garib Rath	Mumbai Cst	Jabalpur
-02188	Jbp Garibrath S	Mumbai Cst	Jabalpur
-01709	Jbp Gaya Special	Jabalpur	Gaya Junction
+01674	Jbp Hbj Superfast Special	Jabalpur	Habibganj
+11472	Jbp Indb Express	Jabalpur	Indore Junction Bg
+11702	Jbp Intercity	Indore Junction Bg	Jabalpur
+11652	Jbp Intercity E	Singrauli	Jabalpur
+12061	Jbp Janshatabdi	Habibganj	Jabalpur
+12192	Jbp Ndls Superfast Express	Jabalpur	New Delhi
+02160	Jbp Ngp Superfast Special	Jabalpur	Nagpur
+58840	Jbp Nir Ngp Passenger	Jabalpur	Nagpur
+02181	Jbp Nzm Superfast Special	Jabalpur	H Nizamuddin
+01656	Jbp Pune Superfast Special	Jabalpur	Pune Junction
+51701	Jbp Rewa Passenger	Jabalpur	Rewa
+01265	Jbp Rewa Special	Jabalpur	Rewa
+11466	Jbp Somnath Express	Jabalpur	Somnath
+11464	Jbp Somnath Express	Jabalpur	Somnath
+12194	Jbp Ypr Superfast Express	Jabalpur	Yesvantpur Junction
+18212	Jdb Durg Express	Jagdalpur	Durg
+08002	Jgm Kgp Special Express	Jhargram	Kharagpur Junction
+18003	Jgm Prr Express	Jhargram	Purulia Junction
+15941	Jhajha Dbrg Express	Jhajha	Dibrugarh
+12874	Jharkhand Express	Anand Vihar Trm	Hatia
+12818	Jharkhand Express	Anand Vihar Trm	Hatia
+12873	Jharkhand S J E	Hatia	Anand Vihar Trm
+12817	Jharkhand Sj Express	Hatia	Anand Vihar Trm
+11077	Jhelum Express	Pune Junction	Jammu Tawi
+11078	Jhelum Express	Jammu Tawi	Pune Junction
+12825	Jhrkhnd S Krant	Ranchi	New Delhi
+12826	Jhrkhnd S Kranti	New Delhi	Ranchi
+11103	Jhs Bdts Express	Jhansi Junction	Bandra Terminus
+11109	Jhs Ljn Intercity Express	Jhansi Junction	Lucknow Ne
+13072	Jmp Hwh Express	Jamalpur Junction	Howrah Junction
+12101	Jnaneswari Delx	Lokmanyatilak T	Howrah Junction
+12102	Jnaneswarisupdl	Howrah Junction	Lokmanyatilak T
+16508	Jodhpur Express	Bangalore Cy Junction	Jodhpur Junction
+14802	Jodhpur Express	Gandhidham Bg	Jodhpur Junction
+22484	Jodhpur Express	Gandhidham Bg	Jodhpur Junction
+52549	Joyride	Darjeeling	To Darjeeling
+52546	Joyride	Darjeeling	To Darjeeling
+52548	Joyride	Darjeeling	To Darjeeling
+52547	Joyride	Darjeeling	To Darjeeling
+52574	Joyride Diesel	Darjeeling	To Darjeeling
+12404	Jp Ald Express	Jaipur	Allahabad Junction
+54806	Jp Adi Passnger	Jaipur	Ahmedabad Junction
+09426	Jp Adi Special	Jaipur	Ahmedabad Junction
+12035	Jp Af Shatabdi	Jaipur	Agra Fort
+09719	Jp Aii Express	Jaipur	Ajmer Junction
+09622	Jp Aii Intercity	Jaipur	Ajmer Junction
+09626	Jp Aii Superfast Special	Jaipur	Ajmer Junction
+03564	Jp Asn Special	Jaipur	Asansol Junction
+19781	Jp Asr Express	Ajmer Junction	Amritsar Junction
+14807	Jp Awr Express	Jaipur	Alwar
+12240	Jp Bct Duronto	Jaipur	Mumbai Central
+12956	Jp Bct Supfast	Jaipur	Mumbai Central
+09725	Jp Bdts Premium	Jaipur	Bandra Terminus
+22934	Jp Bdts Superfast Express	Jaipur	Bandra Terminus
+09044	Jp Bdts Special	Jaipur	Bandra Terminus
+09034	Jp Bdts Special	Jaipur	Bandra Terminus
+09028	Jp Bdts Special	Jaipur	Bandra Terminus
+09731	Jp Bdts Special	Jaipur	Bandra Terminus
+09048	Jp Bdts Special	Jaipur	Bandra Terminus
+09026	Jp Bdts Special	Jaipur	Bandra Terminus
+12980	Jp Bdts Superfast Express	Jaipur	Bandra Terminus
+09643	Jp Bdts Urs Special	Jaipur	Bandra Terminus
+12468	Jp Bkn Intercity	Jaipur	Bikaner Junction
+19711	Jp Bpl Express	Jaipur	Indore Junction Bg
+59805	Jp Bxn Passenger	Jaipur	Bayana Junction
+12970	Jp Cbe Superfast Express	Jaipur	Coimbatore Junction
+19717	Jp Cdg Intercity	Jaipur	Chandigarh
+09705	Jp Dee Ac Express	Jaipur	Delhi S Rohilla
+12986	Jp Double Dcker	Delhi S Rohilla	Jaipur
+22986	Jp Double Dcker	Delhi S Rohilla	Jaipur
+18214	Jp Durg Express	Jaipur	Durg
+08214	Jp Durg Special	Jaipur	Durg
+09717	Jp Durg Special	Jaipur	Durg
+09769	Jp Fl Passenger Special	Jaipur	Phulera Junction
+54833	Jp Hsr Passenger	Jaipur	Hisar
+09703	Jp Hwh Special	Jaipur	Howrah Junction
+12974	Jp Indb Express	Jaipur	Indore Junction Bg
+22478	Jp Ju Superfast Express	Jaipur	Jodhpur Junction
+09727	Jp Koaa Premium	Jaipur	Kolkata
+09707	Jp Ljn Express	Jaipur	Lucknow Ne
+19715	Jp Ljn Express	Jaipur	Lucknow Ne
+12968	Jp Madras Express	Jaipur	Chennai Central
+02404	Jp Mtj Special	Jaipur	Mathura Junction
+12976	Jp Mysore Express	Jaipur	Mysore Junction
+11204	Jp Ngp Express	Jaipur	Nagpur
+04551	Jp Nldm Special	Jaipur	Nangal Dam
+19574	Jp Okha Express	Jaipur	Okha
+09564	Jp Okha Special	Jaipur	Okha
+12940	Jp Pune Superfast Express	Jaipur	Pune Junction
+09759	Jp Pune Special	Jaipur	Pune Junction
+59802	Jp Rtm Fastpass	Jaipur	Ratlam Junction
+09736	Jp Sc Special	Jaipur	Secunderabad Junction
+19713	Jp Sc Express	Jaipur	Secunderabad Junction
+09715	Jp Sur Special	Jaipur	Solapur Junction
+09713	Jp Sur Special	Jaipur	Solapur Junction
+22695	Jp Suvidha Express	Yesvantpur Junction	Jaipur
+09767	Jp Swm Express Special	Jaipur	Sawai Madhopur
+12992	Jp Udz Express	Jaipur	Udaipur City
+09721	Jp Udz Superfast Special	Jaipur	Udaipur City
+06512	Jp Ypr Express	Jaipur	Yesvantpur Junction
