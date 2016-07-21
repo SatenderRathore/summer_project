@@ -193,7 +193,7 @@
     $(function() {
     $( "#src, #dest" ).autocomplete({
         source: <?php echo $js_array ?>,
-            minLength: 3
+            minLength: 2
         });
     });
 </script>

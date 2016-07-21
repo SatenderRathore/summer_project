@@ -9,6 +9,22 @@
         <link rel="stylesheet" type="text/css" href="../css/train_live_status.css">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="../js/jquery-2.1.1.js"></script>
+
+<style>
+  .ui-autocomplete {
+    max-height: 150px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+  }
+  /* IE 6 doesn't support max-height
+   * we use height instead, but this forces the menu to always be this tall
+   */
+  * html .ui-autocomplete {
+    height: 150px;
+  }
+  </style>
+
         <script src="../js/bootstrap.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
