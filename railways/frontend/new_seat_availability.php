@@ -15,17 +15,15 @@
         <script src="../js/bootstrap.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
-        <!--datepicker-->
-        <link href="../datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
-        <script src="../datepicker/dist/js/datepicker.min.js"></script> 
-        <script src="../datepicker/dist/js/i18n/datepicker.en.js"></script>
 
-        <script>
-            // Initialization
-            //$('#datepicker').datepicker([options])
-            // Access instance of plugin
-            $('#datepicker').data('datepicker')
-
+         <script>
+          $(function() {
+            $( "#datepicker" ).datepicker( {
+                numberOfMonths: 2,
+                showButtonPanel: true,
+                dateFormat: 'dd-mm-yy'
+            });
+          });
         </script>
     </head>
 
@@ -96,17 +94,9 @@
                                 <div class="details">
                                     <fieldset data-form-name="date">
                                         <legend> Enter Date Of Journey</legend>
-                                        <input class="datepicker-here" name="doj" type="text" id="datepicker" data-type="text" data-language='en' required>
-
+                                        <input class="date-picker form-control" name="doj" type="text" id="datepicker" data-type="text" required>
                                         <label class="error-msg errdate"></label>
                                     </fieldset>
-                                     <script>
-                                            $('#datepicker').datepicker({
-                                                language: 'en',
-                                                minDate: new Date()
-                                                //maxDate: minDate.getDate()+120
-                                            })
-                                    </script>
                                 </div>
                                 <span class="submit">
                                     <img src="../images/prev.png" onclick="rotate('prev2');">
