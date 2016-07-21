@@ -22,7 +22,7 @@
 
         <script>
             // Initialization
-            $('#datepicker').datepicker([options])
+            //$('#datepicker').datepicker([options])
             // Access instance of plugin
             $('#datepicker').data('datepicker')
 
@@ -101,7 +101,7 @@
                                         <label class="error-msg errdate"></label>
                                     </fieldset>
                                      <script>
-                                            $('#datepickers').datepicker({
+                                            $('#datepicker').datepicker({
                                                 language: 'en',
                                                 minDate: new Date()
                                                 //maxDate: minDate.getDate()+120

@@ -21,7 +21,7 @@
 
 		<script>
 			// Initialization
-			$('#date').datepicker([options])
+			//$('#date').datepicker([options])
 			// Access instance of plugin
 			$('#date').data('datepicker')
 
