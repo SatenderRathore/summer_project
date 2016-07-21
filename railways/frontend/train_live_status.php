@@ -189,7 +189,11 @@ if(isset($_SESSION['submit']))
         // {
         // 	array_push($new, $data[$i]['train_number']);
         // }
-       array_push($new, $data[$i]['train_number']);//only for demo later name will also be included for which code is above in comment 
+        if($data[$i]['train_name'] != "")//restrict the list to only where train names are also given in json file 
+        {
+       		array_push($new, $data[$i]['train_number']);//only for demo later name will also be included for which code is above in comment  	
+        }
+       
 
     }
 

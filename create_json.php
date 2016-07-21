@@ -1,6 +1,6 @@
 <?php 
-        $apikey = "kcswl6737";//jyopalara1@gmail.com
-    // $apikey = "sajnq6002";//renurjpr@gmail.com
+        // $apikey = "kcswl6737";//jyopalara1@gmail.com
+    $apikey = "sajnq6002";//renurjpr@gmail.com
     // $apikey = "yjfne2878";//jyopalara@gmail.com
      // $apikey = "hbfmx5628";//satenderjpr@gmail.com
      // $apikey = "ttemb6830";//singhpalarashakti@gmail.com
