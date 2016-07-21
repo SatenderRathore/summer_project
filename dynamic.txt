@@ -1,0 +1,100 @@
+12415	Nizamuddin Express	Indore Junction Bg	H Nizamuddin
+12645	Nizamuddin Express	Eranakulam Junction	H Nizamuddin
+22633	Nizamuddin Express	Trivandrum Cntl	H Nizamuddin
+52541	Njp Dj Ng Train	New Jalpaiguri	Darjeeling
+22310	Njp Hwh Ac Express	New Jalpaiguri	Howrah Junction
+03060	Njp Hwh Premium	New Jalpaiguri	Howrah Junction
+12042	Njp Hwh Shatabd	New Jalpaiguri	Howrah Junction
+03064	Njp Hwh Special	New Jalpaiguri	Howrah Junction
+05710	Njp Hwh Special	New Jalpaiguri	Howrah Junction
+03130	Njp Koaa Special	New Jalpaiguri	Kolkata
+22612	Njp Mas Express	New Jalpaiguri	Chennai Central
+12754	Njp Mas Express	New Jalpaiguri	Chennai Central
+02508	Njp Mas Premium	New Jalpaiguri	Chennai Central
+12523	Njp Ndls Express	New Jalpaiguri	New Delhi
+03059	Njp Premium Special	Howrah Junction	New Jalpaiguri
+18630	Njp Rnc Express	New Jalpaiguri	Ranchi
+08630	Njp Rnc Special	New Jalpaiguri	Ranchi
+03140	Njp Sdah Special	New Jalpaiguri	Sealdah
+15723	Njp Smi Express	New Jalpaiguri	Sitamarhi
+19602	Njp Udz Express	New Jalpaiguri	Udaipur City
+04552	Nldm Jp Special	Nangal Dam	Jaipur
+12326	Nldm Koaa Express	Nangal Dam	Kolkata
+04924	Nldm Lko Special	Nangal Dam	Lucknow Nr
+07224	Nlr Kranti Special	Nellore	Kurnool Town
+07118	Nlr Sc Special	Nellore	Secunderabad Junction
+12505	North East Express	Guwahati	Anand Vihar Trm
+12506	North East Express	Anand Vihar Trm	Guwahati
+17642	Nrkr Kcg Express	Narkher	Kacheguda
+52107	Nrl Mae Passenger	Neral	Matheran
+52103	Nrl Mae Passenger	Neral	Matheran
+52105	Nrl Mae Passenger	Neral	Matheran
+52109	Nrl Mae Passenger	Neral	Matheran
+52101	Nrl/Matheranpas	Neral	Matheran
+17404	Ns Tpty Express	Narasapur	Tirupati
+17255	Ns Hydrabad Express	Narasapur	Hyderabad Decan
+17213	Ns Nsl Express	Narasapur	Nagarsol
+17231	Ns Nsl Express	Narasapur	Nagarsol
+07217	Ns Qln Special	Narasapur	Kollam Junction
+07255	Ns Sc Special	Narasapur	Secunderabad Junction
+57264	Ns Vskp Passenger	Narasapur	Vishakapatnam
+07205	Nsl Cct Special	Nagarsol	Kakinada Town
+16004	Nsl Mas Wkly Express	Nagarsol	Chennai Central
+17214	Nsl Ns Express	Nagarsol	Narasapur
+17232	Nsl Ns Express	Nagarsol	Narasapur
+07120	Nsl Sc Special	Nagarsol	Secunderabad Junction
+13281	Ntsk Rjpb Express	New Tinsukia Junction	Rjndr Ngr Bihar
+25910	Ntsk Jivachh Li	Darbhanga Junction	New Tinsukia Junction
+03281	Ntsk Rjpb Special	New Tinsukia Junction	Rjndr Ngr Bihar
+18202	Ntv Durg Express	Nautanwa	Durg
+18206	Ntv Durg Express	Nautanwa	Durg
+15019	Ntv Intercity	Gorakhpur Junction	Nautanwa
+01706	Nyn Jbp Mela Special	Naini	Jabalpur
+11206	Nzb Ltt Express	Nizamabad	Lokmanyatilak T
+51422	Nzb Pune Passenger	Nizamabad	Pune Junction
+51433	Nzb Pvr Passenger	Nizamabad	Pandharpur
+07613	Nzb Qln Special	Nizamabad	Kollam Junction
+07601	Nzb Qln Special	Nizamabad	Kollam Junction
+08566	Nzb Vskp Special	Nizamabad	Vishakapatnam
+12248	Nzm Bdts Yuva	H Nizamuddin	Bandra Terminus
+01072	Nzm Pune Special	H Nizamuddin	Pune Junction
+04091	Nzm Ac Special	Mumbai Central	H Nizamuddin
+22212	Nzm Aii Duronto	H Nizamuddin	Ajmer Junction
+04092	Nzm Bct Ac Special	H Nizamuddin	Mumbai Central
+12285	Nzm Duronto Express	Secunderabad Junction	H Nizamuddin
+12263	Nzm Duronto Express	Pune Junction	H Nizamuddin
+12284	Nzm Ers Duronto	H Nizamuddin	Eranakulam Junction
+12909	Nzm Garib Rath	Bandra Terminus	H Nizamuddin
+12611	Nzm Garib Rath	Chennai Central	H Nizamuddin
+12065	Nzm Jan Shatabd	Ajmer Junction	H Nizamuddin
+12059	Nzm Jan Shatabd	Kota Junction	H Nizamuddin
+22182	Nzm Jbp Superfast Express	H Nizamuddin	Jabalpur
+06319	Nzm Kcvl Superfast Special	H Nizamuddin	Kochuveli
+12148	Nzm Kop Express	H Nizamuddin	C Shahumharaj T
+09808	Nzm Kota Superfast Special	H Nizamuddin	Kota Junction
+09810	Nzm Kota Special	H Nizamuddin	Kota Junction
+17305	Nzm Link Express	Hubli Junction	H Nizamuddin
+22110	Nzm Ltt Ac Express	H Nizamuddin	Lokmanyatilak T
+02110	Nzm Ltt Ac Superfast	H Nizamuddin	Lokmanyatilak T
+02450	Nzm Mao Ac Express	H Nizamuddin	Madgaon
+04430	Nzm Mao Premium	H Nizamuddin	Madgaon
+22414	Nzm Mao Raj	H Nizamuddin	Madgaon
+02448	Nzm Mkp Kurj Special	H Nizamuddin	Khajuraho
+02438	Nzm Ngp Ac Special	H Nizamuddin	Nagpur
+04429	Nzm Premium Special	Madgaon	H Nizamuddin
+04013	Nzm Premium Special	Pune Junction	H Nizamuddin
+04407	Nzm Premium Special	Pune Junction	H Nizamuddin
+04408	Nzm Pune Premiu	H Nizamuddin	Pune Junction
+04014	Nzm Pune Premiu	H Nizamuddin	Pune Junction
+22413	Nzm Rajdhani	Madgaon	H Nizamuddin
+12286	Nzm Sc Duronto	H Nizamuddin	Secunderabad Junction
+12438	Nzm Sc Rajdhani	H Nizamuddin	Secunderabad Junction
+04016	Nzm Snsi Special	H Nizamuddin	Sainagar Shirdi
+22654	Nzm Tvc Superfast Express	H Nizamuddin	Trivandrum Cntl
+22634	Nzm Tvc Superfast Express	H Nizamuddin	Trivandrum Cntl
+22656	Nzm Tvc Superfast Express	H Nizamuddin	Trivandrum Cntl
+07227	Ogl Jp Special	Ongole	Ajmer Junction
+19575	Okha Ndt Express	Okha	Nathdwara
+59548	Okha Adi Passenger	Okha	Ahmedabad Junction
+09562	Okha Bdts Special	Okha	Bandra Terminus
+19569	Okha Bsb Express	Okha	Varanasi Junction

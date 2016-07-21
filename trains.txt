@@ -1,0 +1,1369 @@
+16337	Okha Ers Express	Okha	Eranakulam Junction
+16338	Okha Express	Eranakulam Junction	Okha
+22905	Okha Howrah Express	Okha	Howrah Junction
+09563	Okha Jaipur Special	Okha	Jaipur
+59547	Okha Passenger	Ahmedabad Junction	Okha
+18402	Okha Puri Express	Okha	Puri
+19252	Okha Somnath Express	Okha	Somnath
+06136	Onr Mtp Passenger	Coonoor	Metupalaiyam
+56138	Onr Uam Passenger	Coonoor	Udagamandalam
+12819	Orissa S Kranti	Bhubaneswar	New Delhi
+12820	Orissa S Kranti	New Delhi	Bhubaneswar
+12850	Pa Bilaspur Express	Pune Junction	Bilaspur Junction
+11037	Pa Gorakhpur Express	Pune Junction	Gorakhpur Junction
+12103	Pa Lucknow Express	Pune Junction	Lucknow Ne
+12378	Padatik Express	New Jalpaiguri	Sealdah
+12377	Padatik Express	Sealdah	New Jalpaiguri
+14207	Padmavat Express	Partapgarh Junction	Delhi
+14208	Padmavat Express	Delhi	Partapgarh Junction
+12763	Padmavathi Express	Tirupati	Secunderabad Junction
+12764	Padmavati Express	Secunderabad Junction	Tirupati
+15722	Paharia Express	New Jalpaiguri	Digha Flag Stn
+15721	Paharia Express	Digha Flag Stn	New Jalpaiguri
+13348	Palamou Express	Patna Junction	Barka Kana
+13347	Palamou Express	Barka Kana	Patna Junction
+22651	Palani Express	Chennai Central	Palani
+16001	Palani Express	Chennai Central	Palani
+16002	Palani Mas Express	Palani	Chennai Central
+22652	Palani Mas Express	Palani	Chennai Central
+19152	Palanpur Express	Gandhidham Bg	Palanpur Junction
+12606	Pallavan Express	Karaikkudi Junction	Chennai Egmore
+12605	Pallavan Express	Chennai Egmore	Karaikkudi Junction
+12747	Palnadu Express	Guntur Junction	Vikarabad Junction
+12748	Palnadu Express	Vikarabad Junction	Guntur Junction
+17407	Pamani Express	Tirupati	Mannargudi
+12109	Panchavati Express	Mumbai Cst	Manmad Junction
+12110	Panchavti Express	Manmad Junction	Mumbai Cst
+59386	Panchvalley Pa	Chhindwara Junction	Gorakhpur Junction
+59385	Panchvalley Passenger	Indore Junction Bg	Chhindwara Junction
+12638	Pandian Express	Madurai Junction	Chennai Egmore
+12637	Pandian Express	Chennai Egmore	Madurai Junction
+12942	Parasnath Express	Asansol Junction	Bhavnagar Trmus
+16650	Parasuram Express	Nagercoil Junction	Mangalore Cntl
+16649	Parasuram Express	Mangalore Cntl	Nagercoil Junction
+12926	Paschim Express	Amritsar Junction	Bandra Terminus
+12925	Paschim Express	Bandra Terminus	Kalka
+22926	Paschim Express	Kalka	Bandra Terminus
+14624	Patalkot Express	Delhi S Rohilla	Chhindwara Junction
+14009	Patalkot Express	Chhindwara Junction	Delhi S Rohilla
+14010	Patalkot Express	Delhi S Rohilla	Chhindwara Junction
+14623	Patalkot Express	Chhindwara Junction	Delhi S Rohilla
+18621	Patliputra Express	Patna Junction	Hatia
+18622	Patliputra Express	Hatia	Patna Junction
+22352	Patliputraexp	Yesvantpur Junction	Patliputra
+16309	Patna Express	Eranakulam Junction	Patna Junction
+22643	Patna Express	Eranakulam Junction	Patna Junction
+02354	Patna Premium S	Bangalore Cant	Patna Junction
+17610	Pau Pnbe Express	Purna Junction	Patna Junction
+12184	Pbh Bpl Express	Partapgarh Junction	Bhopal Junction
+19572	Pbr Rjt Express	Porbandar	Rajkot Junction
+19270	Pbr Express	Muzaffarpur Junction	Porbandar
+12905	Pbr Howrah Express	Porbandar	Howrah Junction
+12950	Pbr Kaviguru Express	Santragachi Junction	Porbandar
+19269	Pbr Motihari Express	Porbandar	Muzaffarpur Junction
+19202	Pbr Sc Express	Porbandar	Secunderabad Junction
+12897	Pdy Bbs Express	Puducherry	Bhubaneswar
+16861	Pdy Cape Express	Puducherry	Kanyakumari
+06861	Pdy Cape Express	Puducherry	Kanyakumari
+12868	Pdy Howrah Express	Puducherry	Howrah Junction
+22403	Pdy Ndls Express	Puducherry	New Delhi
+12693	Pearl City Express	Chennai Egmore	Tuticorin
+12694	Pearl City Express	Tuticorin	Chennai Egmore
+12711	Pinakini Express	Vijayawada Junction	Chennai Central
+12712	Pinakini Express	Chennai Central	Vijayawada Junction
+22936	Pit Bdts Superfast Express	Palitana	Bandra Terminus
+17609	Pnbe Pau Express	Patna Junction	Purna Junction
+04004	Pnbe Ac Special	New Delhi	Patna Junction
+09410	Pnbe Adi Special	Patna Junction	Ahmedabad Junction
+09412	Pnbe Adi Special	Patna Junction	Ahmedabad Junction
+02393	Pnbe Anvt Superfast Special	Patna Junction	Anand Vihar Trm
+03209	Pnbe Anvt Superfast Special	Patna Junction	Anand Vihar Trm
+03291	Pnbe Anvt Special	Patna Junction	Anand Vihar Trm
+03512	Pnbe Asn Special	Patna Junction	Asansol Junction
+03576	Pnbe Asn Special	Patna Junction	Asansol Junction
+03558	Pnbe Asn Special	Patna Junction	Asansol Junction
+03562	Pnbe Asn Special	Patna Junction	Asansol Junction
+03506	Pnbe Asn Special	Patna Junction	Asansol Junction
+03504	Pnbe Asn Special	Patna Junction	Asansol Junction
+08450	Pnbe Bbs Special	Patna Junction	Bhubaneswar
+19050	Pnbe Bdts Express	Patna Junction	Bandra Terminus
+09012	Pnbe Bdts Special	Patna Junction	Bandra Terminus
+03436	Pnbe Bgp Special	Patna Junction	Bhagalpur
+22844	Pnbe Bsp Express	Patna Junction	Bilaspur Junction
+08294	Pnbe Bsp Special	Patna Junction	Bilaspur Junction
+01711	Pnbe Chhat Special	Jabalpur	Patna Junction
+01054	Pnbe Cstm Special	Patna Junction	Mumbai Cst
+04025	Pnbe Dee Special	Patna Junction	Delhi S Rohilla
+13332	Pnbe Dhn Express	Patna Junction	Dhanbad Junction
+03211	Pnbe Dhn Special	Patna Junction	Dhanbad Junction
+13243	Pnbe Dos Intcit	Patna Junction	Dehri On Sone
+08298	Pnbe Durg Special	Patna Junction	Durg
+16360	Pnbe Ers Express	Patna Junction	Eranakulam Junction
+22644	Pnbe Ers Express	Patna Junction	Eranakulam Junction
+16310	Pnbe Ers Express	Patna Junction	Eranakulam Junction
+12359	Pnbe Garib Rath	Kolkata	Patna Junction
+18625	Pnbe Hte Express	Patna Junction	Hatia
+03288	Pnbe Hwh Special	Patna Junction	Howrah Junction
+03072	Pnbe Hwh Special	Patna Junction	Howrah Junction
+03074	Pnbe Hwh Special	Patna Junction	Howrah Junction
+03066	Pnbe Hwh Special	Patna Junction	Howrah Junction
+09306	Pnbe Indb Premi	Patna Junction	Indore Junction Bg
+12366	Pnbe Janshatabd	Ranchi	Patna Junction
+01712	Pnbe Jbp Special	Patna Junction	Jabalpur
+03134	Pnbe Koaa Special	Patna Junction	Kolkata
+13239	Pnbe Kota Express	Patna Junction	Kota Junction
+13237	Pnbe Kota Express	Patna Junction	Kota Junction
+02519	Pnbe Kyq Special	Patna Junction	Kamakhya
+02054	Pnbe Ltt Premiu	Patna Junction	Lokmanyatilak T
+13416	Pnbe Mldt Express	Patna Junction	Malda Town
+06353	Pnbe Ncj Special	Patna Junction	Nagercoil Junction
+04039	Pnbe Ndls Ac Special	Patna Junction	New Delhi
+04005	Pnbe Ndls Special	Patna Junction	New Delhi
+04003	Pnbe Ndls Special	Patna Junction	New Delhi
+02053	Pnbe Premium Special	Lokmanyatilak T	Patna Junction
+02350	Pnbe Premium Special	Pune Junction	Patna Junction
+02366	Pnbe Premium Special	Anand Vihar Trm	Patna Junction
+12150	Pnbe Pune Express	Patna Junction	Pune Junction
+03253	Pnbe Pune Holi	Patna Junction	Pune Junction
+08623	Pnbe Rnc Special	Patna Junction	Ranchi
+12792	Pnbe Sc Express	Patna Junction	Secunderabad Junction
+02792	Pnbe Sc Premium	Patna Junction	Secunderabad Junction
+23348	Pnbe Sgrl Lnk E	Patna Junction	Singrauli
+09056	Pnbe St Premium	Patna Junction	Surat
+12742	Pnbe Vsg Express	Patna Junction	Vasco Da Gama
+15280	Poorabiya Express	Adrsh Ngr Delhi	Saharsa Junction
+15279	Poorbiya Express	Saharsa Junction	Adrsh Ngr Delhi
+11097	Poorna Express	Pune Junction	Eranakulam Junction
+11098	Poorna Express	Eranakulam Junction	Pune Junction
+12303	Poorva Express	Howrah Junction	New Delhi
+12304	Poorva Express	New Delhi	Howrah Junction
+12381	Poorva Express	Howrah Junction	New Delhi
+12382	Poorva Express	New Delhi	Howrah Junction
+19261	Porbandar Express	Kochuveli	Porbandar
+12502	Porvotr S Kranti	New Delhi	Guwahati
+15601	Porvotr S Kranti	Silchar	New Delhi
+12501	Porvotr S Kranti	Guwahati	New Delhi
+12662	Pothigai Express	Sengottai	Chennai Egmore
+12661	Pothigai Express	Chennai Egmore	Sengottai
+13255	Ppta Cdg Express	Patliputra	Chandigarh
+22351	Ppta Ypr Express	Patliputra	Yesvantpur Junction
+12126	Pragati Express	Pune Junction	Mumbai Cst
+12125	Pragati Express	Mumbai Cst	Pune Junction
+18463	Prasanthi Express	Bhubaneswar	Bangalore Cy Junction
+18464	Prasanthi Express	Bangalore Cy Junction	Bhubaneswar
+12496	Pratap Express	Kolkata	Bikaner Junction
+11105	Pratham S S Express	Kolkata	Jhansi Junction
+11106	Pratham S Sngrm	Jhansi Junction	Kolkata
+12418	Prayag Raj Express	New Delhi	Allahabad Junction
+12417	Prayag Raj Express	Allahabad Junction	New Delhi
+18413	Prdp Puri Express	Paradip	Puri
+22810	Prdp Superfast Express	Vishakapatnam	Paradip
+22814	Prdp Src Superfast Express	Paradip	Santragachi Junction
+11454	Prerana Express	Nagpur	Ahmedabad Junction
+11453	Prerana Express	Ahmedabad Junction	Nagpur
+14307	Prg Be Express	Prayag	Bareilly
+22605	Prr Vm Express	Purulia Junction	Villuparam Junction
+12828	Prr Hwh Express	Purulia Junction	Howrah Junction
+18004	Prr Jgm Express	Purulia Junction	Jhargram
+12576	Prr Kgp Express	Purulia Junction	Kharagpur Junction
+22876	Prr Kgp Express	Purulia Junction	Kharagpur Junction
+14038	Ptk Dli Express	Pathankot	Delhi
+11005	Puducherry Express	Dadar	Puducherry
+12255	Puducherry Express	Yesvantpur Junction	Puducherry
+06862	Puducherry Express	Kanyakumari	Puducherry
+16862	Puducherry Express	Kanyakumari	Puducherry
+16573	Puducherry Express	Yesvantpur Junction	Puducherry
+16858	Puducherry Express	Mangalore Cntl	Puducherry
+16856	Puducherry Express	Mangalore Cntl	Puducherry
+56700	Punalur Passenger	Madurai Junction	Punalur
+01435	Pune Agc Special	Pune Junction	Agra Cantt
+11405	Pune Ami Express	Pune Junction	Amravati
+22881	Pune Bbs Express	Pune Junction	Bhubaneswar
+12581	Pune Bbs Express	Pune Junction	Bhubaneswar
+02881	Pune Bbs Premiu	Pune Junction	Bhubaneswar
+11090	Pune Bgkt Express	Pune Junction	Bhagat Ki Kothi
+11092	Pune Bhuj Express	Pune Junction	Bhuj
+08296	Pune Bilaspur S	Pune Junction	Bilaspur Junction
+51451	Pune Brmt Passenger	Pune Junction	Mumbai Cst
+11026	Pune Bsl Express	Pune Junction	Bhusaval Junction
+12297	Pune Duronto	Ahmedabad Junction	Pune Junction
+12264	Pune Duronto Express	H Nizamuddin	Pune Junction
+22150	Pune Ers Superfast Express	Pune Junction	Eranakulam Junction
+06801	Pune Express	Tiruchchirapali	Pune Junction
+12730	Pune Express	Nanded	Pune Junction
+12114	Pune Garibrath	Nagpur	Pune Junction
+15030	Pune Gkp Express	Pune Junction	Gorakhpur Junction
+05024	Pune Gkp Special	Pune Junction	Gorakhpur Junction
+06028	Pune Gr Express	Chennai Central	Pune Junction
+11101	Pune Gwalior Express	Pune Junction	Gwalior
+22845	Pune Hatia Superfast	Pune Junction	Hatia
+01651	Pune Hbj Special	Pune Junction	Habibganj
+01011	Pune Hbj Special	Pune Junction	Habibganj
+17013	Pune Hyb Express	Pune Junction	Hyderabad Decan
+22943	Pune Indore Express	Pune Junction	Indore Junction Bg
+19311	Pune Indore Express	Pune Junction	Indore Junction Bg
+01109	Pune Indore Special	Pune Junction	Indore Junction Bg
+12170	Pune Intercity	Solapur Junction	Pune Junction
+12939	Pune Jaipur Express	Pune Junction	Jaipur
+09760	Pune Jaipur Special	Pune Junction	Jaipur
+01655	Pune Jbp Superfast Special	Pune Junction	Jabalpur
+02511	Pune Kyq Special	Pune Junction	Kamakhya
+11407	Pune Ljn Express	Pune Junction	Lucknow Ne
+01451	Pune Ljn Special	Pune Junction	Lucknow Ne
+01477	Pune Ljn Special	Pune Junction	Lucknow Ne
+51401	Pune Mmr Passenger	Pune Junction	Manmad Junction
+12135	Pune Nagpur Express	Pune Junction	Nagpur
+01235	Pune Nagpur Special	Pune Junction	Nagpur
+01204	Pune Nagpur Special	Pune Junction	Nagpur
+12729	Pune Nanded Express	Pune Junction	Nanded
+17613	Pune Nanded Express	Pune Junction	Nanded
+07632	Pune Nanded Special	Pune Junction	Nanded
+07621	Pune Nanded Special	Pune Junction	Nanded
+07630	Pune Nanded Special	Pune Junction	Nanded
+01022	Pune Ngp Special	Pune Junction	Nagpur
+01237	Pune Ngp Superfast Special	Pune Junction	Nagpur
+51421	Pune Nzb Passenger	Pune Junction	Nizamabad
+04417	Pune Nzm Ac Special	Pune Junction	H Nizamuddin
+01077	Pune Nzm Special	Pune Junction	H Nizamuddin
+01071	Pune Nzm Special	Pune Junction	H Nizamuddin
+12149	Pune Patna Express	Pune Junction	Patna Junction
+03254	Pune Patna Special	Pune Junction	Patna Junction
+02349	Pune Premium Special	Patna Junction	Pune Junction
+12026	Pune Shatabdi	Secunderabad Junction	Pune Junction
+02410	Pune Shatabdi S	Udhna Junction	Pune Junction
+01219	Pune Src Special	Pune Junction	Santragachi Junction
+51455	Pune Sur Passenger	Pune Junction	Solapur Junction
+01010	Pune Sur Superfast Special	Pune Junction	Solapur Junction
+06802	Pune Tpj Special	Pune Junction	Tiruchchirapali
+02409	Pune Udn Shatabdi Special	Pune Junction	Udhna Junction
+11088	Pune Veraval Express	Pune Junction	Veraval
+12138	Punjab Mail	Firozpur Cant	Mumbai Cst
+12137	Punjab Mail	Mumbai Cst	Firozpur Cant
+15047	Purbanchal Express	Kolkata	Gorakhpur Junction
+18405	Puri Adi Express	Puri	Ahmedabad Junction
+12843	Puri Adi Express	Puri	Ahmedabad Junction
+18421	Puri Ajmer Express	Puri	Ajmer Junction
+03515	Puri Asn Special	Puri	Asansol Junction
+14710	Puri Bkn Express	Puri	Bikaner Junction
+22859	Puri Chennai Express	Puri	Chennai Central
+18419	Puri Dbg Jyg Express	Puri	Jaynagar
+22890	Puri Dgha Superfast E	Puri	Digha Flag Stn
+12580	Puri Dgha Superfast E	Puri	Digha Flag Stn
+22878	Puri Digha Express	Puri	Digha Flag Stn
+18425	Puri Durg Express	Puri	Durg
+08470	Puri Garib Rath	Bangalore Cy Junction	Puri
+22884	Puri Garib Rath	Yesvantpur Junction	Puri
+15639	Puri Ghy Express	Puri	Guwahati
+12994	Puri Gimb Express	Puri	Gandhidham Bg
+19454	Puri Gimb Express	Puri	Gandhidham Bg
+12896	Puri Hwh Express	Puri	Howrah Junction
+12888	Puri Hwh Express	Puri	Howrah Junction
+12838	Puri Hwh Express	Puri	Howrah Junction
+12882	Puri Hwh G Rath	Puri	Howrah Junction
+18473	Puri Ju Express	Puri	Jodhpur Junction
+18416	Puri Kdjr Express	Puri	Barabil
+15643	Puri Kyq Express	Puri	Kamakhya
+12746	Puri Ltt Superfast Express	Puri	Lokmanyatilak T
+22866	Puri Ltt Superfast Express	Puri	Lokmanyatilak T
+12146	Puri Ltt Superfast Express	Puri	Lokmanyatilak T
+18401	Puri Okha Express	Puri	Okha
+18414	Puri Prdp Express	Puri	Paradip
+08466	Puri Rou Special	Puri	Rourkela
+18304	Puri Sbp Intercity Express	Puri	Sambalpur
+03102	Puri Sdah Special	Puri	Sealdah
+22836	Puri Shm Superfast Express	Puri	Shalimar
+18407	Puri Snsi Express	Puri	Sainagar Shirdi
+02746	Puri Snsi Special	Puri	Sainagar Shirdi
+02838	Puri Src Premiu	Puri	Santragachi Junction
+08010	Puri Src Special	Puri	Santragachi Junction
+08014	Puri Src Special	Puri	Santragachi Junction
+08012	Puri Src Special	Puri	Santragachi Junction
+08473	Puri Src Special	Puri	Santragachi Junction
+08008	Puri Src Special	Puri	Santragachi Junction
+08410	Puri Src Special	Puri	Santragachi Junction
+08401	Puri Src Special	Puri	Santragachi Junction
+12743	Puri St Wkly Express	Puri	Surat
+22827	Puri Surat Express	Puri	Surat
+17479	Puri Tpty Express	Puri	Tirupati
+22910	Puri Valsad Express	Puri	Valsad
+22883	Puri Ypr G Rath	Puri	Yesvantpur Junction
+12802	Purshottam Express	New Delhi	Puri
+22606	Purulia Express	Villuparam Junction	Purulia Junction
+12801	Purushottam Express	Puri	New Delhi
+15048	Purvanchal Express	Gorakhpur Junction	Kolkata
+12533	Pushpak Express	Lucknow Ne	Mumbai Cst
+12534	Pushpak Express	Mumbai Cst	Lucknow Ne
+01208	Pvr Latur Special	Pandharpur	Latur
+22145	Pvr Mrj Superfast Express	Pandharpur	Miraj Junction
+07502	Pvr Nanded Special	Pandharpur	Nanded
+51434	Pvr Nzb Passenger	Pandharpur	Nizamabad
+11002	Pvr Snsi Express	Pandharpur	Sainagar Shirdi
+01038	Pvr Snsi Special	Pandharpur	Sainagar Shirdi
+18568	Qln Vskp Express	Kollam Junction	Vishakapatnam
+08570	Qln Vskp Express	Kollam Junction	Vishakapatnam
+07214	Qln Bza Express	Kollam Junction	Vijayawada Junction
+07112	Qln Sc Express	Kollam Junction	Secunderabad Junction
+18210	R Drz Express	Raipur Junction	Dalli Rajhara
+08797	R Krba Superfast Special	Raipur Junction	Korba
+08795	R Krba Superfast Special	Raipur Junction	Korba
+13146	Radhikapur Express	Radhikapur	Kolkata
+13145	Radhikapur Express	Kolkata	Radhikapur
+72452	Rail Motor	Simla	Kalka
+72451	Rail Motor	Kalka	Simla
+22693	Rajdhani Express	Bangalore Cy Junction	H Nizamuddin
+22691	Rajdhani Express	Bangalore Cy Junction	H Nizamuddin
+12437	Rajdhani Express	Secunderabad Junction	H Nizamuddin
+12493	Rajdhani Express	Bangalore Cy Junction	H Nizamuddin
+12431	Rajdhani Express	Trivandrum Cntl	H Nizamuddin
+12433	Rajdhani Express	Chennai Central	H Nizamuddin
+12141	Rajendra Ngr Express	Mumbai Cst	Rjndr Ngr Bihar
+23040	Rajgir Hwh Ch	Rajgir	Howrah Junction
+13234	Rajgriha Express	Danapur	Rajgir
+13233	Rajgriha Express	Rajgir	Danapur
+17018	Rajkot Express	Secunderabad Junction	Rajkot Junction
+16614	Rajkot Express	Coimbatore Junction	Rajkot Junction
+22937	Rajkot Rewa Express	Rajkot Junction	Rewa
+09571	Rajkot Rewa Special	Rajkot Junction	Rewa
+09567	Rajkot Superfast Special	Vadodara Junction	Rajkot Junction
+12463	Rajsthn S Krant	Delhi S Rohilla	Bikaner Junction
+22454	Rajya Rani Express	Meerut City	Lucknow Ne
+22162	Rajya Rani Express	Damoh	Bhopal Junction
+22161	Rajya Rani Express	Bhopal Junction	Damoh
+12567	Rajya Rani Express	Saharsa Junction	Patna Junction
+16349	Rajya Rani Express	Trivandrum Cntl	Nilambur Road
+22453	Rajya Rani Express	Lucknow Ne	Meerut City
+18418	Rajya Rani Express	Bhubaneswar	Rourkela
+22101	Rajya Rani Express	Lokmanyatilak T	Manmad Junction
+22102	Rajya Rani Express	Manmad Junction	Lokmanyatilak T
+12568	Rajya Rani Express	Patna Junction	Saharsa Junction
+11003	Rajya Rani Express	Dadar	Sawantwadi Road
+22861	Rajya Rani Express	Shalimar	Bankura
+22862	Rajya Rani Express	Bankura	Shalimar
+16350	Rajya Rani Express	Nilambur Road	Trivandrum Cntl
+18417	Rajya Rani Express	Rourkela	Bhubaneswar
+11004	Rajya Rani Express	Sawantwadi Road	Dadar
+16557	Rajyarani Express	Mysore Junction	Bangalore Cy Junction
+16558	Rajyarani Express	Bangalore Cy Junction	Mysore Junction
+57619	Ral Sc Fastpass	Repalle	Secunderabad Junction
+06101	Rameshwarm Express	Chennai Egmore	Rameswaram
+16713	Rameswaram Express	Chennai Egmore	Rameswaram
+16101	Rameswaram Express	Chennai Egmore	Rameswaram
+16701	Rameswaram Express	Chennai Egmore	Rameswaram
+16734	Rameswaram Express	Okha	Rameswaram
+16618	Rameswaram Express	Coimbatore Junction	Rameswaram
+19061	Ramnagar Express	Bandra Terminus	Ramnagar
+12348	Rampurhat Express	Rampur Hat	Howrah Junction
+12347	Rampurhat Express	Howrah Junction	Rampur Hat
+14707	Ranakpur Express	Bikaner Junction	Bandra Terminus
+14708	Ranakpur Express	Bandra Terminus	Bikaner Junction
+18610	Ranchi Express	Lokmanyatilak T	Ranchi
+16589	Rani Chennamma	Bangalore Cy Junction	C Shahumharaj T
+16590	Ranichennama Express	C Shahumharaj T	Bangalore Cy Junction
+15013	Ranikhet Express	Jaisalmer	Ramnagar
+15014	Ranikhet Express	Kathgodam	Jaisalmer
+12465	Ranthambore Express	Indore Junction Bg	Jodhpur Junction
+12511	Rapti Sagar Express	Gorakhpur Junction	Trivandrum Cntl
+12521	Rapti Sagar Express	Barauni Junction	Eranakulam Junction
+12512	Raptisagar Express	Trivandrum Cntl	Gorakhpur Junction
+12522	Raptisagar Express	Eranakulam Junction	Barauni Junction
+19653	Ratlam Ajmer Express	Ratlam Junction	Ajmer Junction
+12718	Ratnachal Express	Vijayawada Junction	Vishakapatnam
+12717	Ratnachalam Express	Vishakapatnam	Vijayawada Junction
+50103	Ratnagiri Passenger	Dadar	Ratnagiri
+57271	Rayagada Psgnr	Vijayawada Junction	Rayagada
+17430	Rayalaseema Express	Tirupati	Hyderabad Decan
+17429	Rayalaseema Express	Hyderabad Decan	Tirupati
+22487	Rdp Anvt Link E	Radhikapur	Anand Vihar Trm
+25715	Rdp Dli Lnk Express	Radhikapur	Delhi
+09741	Re Dee Special	Rewari	Delhi S Rohilla
+52570	Red Panda	Darjeeling	Kurseong
+12427	Rewa Anvt Express	Rewa	Anand Vihar Trm
+02184	Rewa Bpl Superfast Special	Rewa	Bhopal Junction
+58230	Rewa Bsp F Passenger	Rewa	Bilaspur Junction
+51753	Rewa Chrm Fast Passenger	Rewa	Chirmiri
+11704	Rewa Express	Indore Junction Bg	Rewa
+01266	Rewa Hbj Special	Rewa	Habibganj
+02186	Rewa Hbj Superfast Special	Rewa	Habibganj
+02192	Rewa Hbj Superfast Special	Rewa	Habibganj
+11703	Rewa Indb Express	Rewa	Indore Junction Bg
+01703	Rewa Indb Express	Rewa	Indore Junction Bg
+51702	Rewa Jbp Passenger	Rewa	Jabalpur
+01670	Rewa Kota Superfast Special	Rewa	Kota Junction
+01676	Rewa Kota Superfast Special	Rewa	Kota Junction
+11208	Rewa Nagpur Express	Rewa	Nagpur
+09572	Rewa Rjt Special	Rewa	Rajkot Junction
+22938	Rewa Rjt Superfast Express	Rewa	Rajkot Junction
+12186	Rewanchal Express	Rewa	Habibganj
+12185	Rewanchal Express	Habibganj	Rewa
+06032	Rgd Mas Special	Rajgir	Chennai Central
+57272	Rgda Bza Passenger	Rayagada	Vijayawada Junction
+18302	Rgda Sbp Express	Rayagada	Puri
+13242	Rjpb Banka Express	Rjndr Ngr Bihar	Banka
+12142	Rjpb Cstm Express	Rjndr Ngr Bihar	Mumbai Cst
+18623	Rjpb Hatia Express	Rjndr Ngr Bihar	Barka Kana
+19322	Rjpb Indb Express	Rjndr Ngr Bihar	Indore Junction Bg
+18696	Rjpb Ipr Express	Rjndr Ngr Bihar	Islampur
+13252	Rjpb Ipr Express	Rjndr Ngr Bihar	Islampur
+13201	Rjpb Ltt Express	Rjndr Ngr Bihar	Lokmanyatilak T
+13282	Rjpb Ntsk Express	Rjndr Ngr Bihar	New Tinsukia Junction
+03282	Rjpb Ntsk Special	Rjndr Ngr Bihar	New Tinsukia Junction
+12310	Rjpb Rajdhani	New Delhi	Rjndr Ngr Bihar
+12309	Rjpb Rajdhani	Rjndr Ngr Bihar	New Delhi
+22464	Rjsthn S Kranti	Bikaner Junction	Delhi S Rohilla
+12464	Rjsthn S Kranti	Jodhpur Junction	Delhi S Rohilla
+09568	Rjt Brc Superfast Special	Rajkot Junction	Vadodara Junction
+09579	Rjt Dee Express	Rajkot Junction	Delhi S Rohilla
+19579	Rjt Dee Express	Rajkot Junction	Delhi S Rohilla
+19571	Rjt Pbr Express	Rajkot Junction	Porbandar
+17017	Rjt Sc Express	Rajkot Junction	Secunderabad Junction
+08050	Rjt Src Special	Rajkot Junction	Santragachi Junction
+02850	Rjt Src Special	Rajkot Junction	Santragachi Junction
+14711	Rksh Sgnr Express	Rishikesh	Shri Ganganagar
+22621	Rmm Cape Express	Rameswaram	Kanyakumari
+12789	Rmm Cape Express	Rameswaram	Kanyakumari
+16714	Rmm Chennai Express	Rameswaram	Chennai Egmore
+06010	Rmm Mas Express	Rameswaram	Chennai Central
+06020	Rmm Mas Express	Rameswaram	Chennai Central
+15119	Rmm Muv Express	Rameswaram	Manduadih
+16733	Rmm Okha Express	Rameswaram	Okha
+16780	Rmm Tpty Express	Rameswaram	Tirupati
+14259	Rmm Varanasi Express	Rameswaram	Varanasi Junction
+15056	Rmr Af Express	Ramnagar	Agra Fort
+09062	Rmr Bdts Express	Ramnagar	Bandra Terminus
+19062	Rmr Bdts Express	Ramnagar	Bandra Terminus
+55322	Rmr Bsb Express	Ramnagar	Varanasi Junction
+15031	Rmr Cdg Express	Ramnagar	Chandigarh
+05055	Rmr Cdg Special	Ramnagar	Chandigarh
+25036	Rmr Dli Link Express	Ramnagar	Delhi
+15034	Rmr Hw Express	Ramnagar	Haridwar Junction
+05312	Rmr Ljn Special	Ramnagar	Lucknow Ne
+50104	Rn Dadar Passenger	Ratnagiri	Dadar
+00116	Rn Ltt Special	Ratnagiri	Lokmanyatilak T
+00118	Rn Vasai Rd Special	Ratnagiri	Vasai Road
+18605	Rnc Jyg Express	Ranchi	Jaynagar
+15661	Rnc Kyq Express	Ranchi	Kamakhya
+18603	Rnc Bgp Express	Ranchi	Bhagalpur
+18611	Rnc Bsb Express	Ranchi	Varanasi Junction
+18619	Rnc Dumk Express	Ranchi	Dumka
+18632	Rnc Garib Nawaz	Ajmer Junction	Ranchi
+12877	Rnc Garib Rath	Ranchi	New Delhi
+18631	Rnc Garibnwaz E	Ranchi	Ajmer Junction
+18628	Rnc Hwh Intercity Express	Ranchi	Howrah Junction
+18618	Rnc Hwh Intercity Express	Ranchi	Howrah Junction
+22892	Rnc Hwh Intercity Express	Ranchi	Howrah Junction
+12365	Rnc Janshatabdi	Patna Junction	Ranchi
+08631	Rnc Kir Special	Ranchi	Katihar Junction
+18609	Rnc Ltt Express	Ranchi	Lokmanyatilak T
+03446	Rnc Mldt Special	Ranchi	Malda Town
+12453	Rnc Ndls Raj Express	Ranchi	New Delhi
+12439	Rnc Ndls Raj Express	Ranchi	New Delhi
+18629	Rnc Njp Express	Ranchi	New Jalpaiguri
+08629	Rnc Njp Special	Ranchi	New Jalpaiguri
+08624	Rnc Pnbe Special	Ranchi	Patna Junction
+15927	Rny Dbrg Express	Rangiya Junction	Dibrugarh
+05967	Rny Dbrg Special	Rangiya Junction	Dibrugarh
+16177	Rock Fort Express	Chennai Egmore	Tiruchchirapali
+16178	Rockfort Express	Tiruchchirapali	Chennai Egmore
+14324	Rok Ndls Express	Rohtak Junction	New Delhi
+18105	Rou Bbs Intercity Express	Rourkela	Bhubaneswar
+18107	Rou Krpu Express	Rourkela	Koraput
+18109	Rou Muri Jat Express	Rourkela	Jammu Tawi
+08465	Rou Puri Special	Rourkela	Puri
+13014	Rph Bwn Express	Rampur Hat	Barddhaman Junction
+13188	Rph Sdah Express	Rampur Hat	Sealdah
+13116	Rph Sdah Intrct	Rampur Hat	Sealdah
+12374	Rph Sdah Intrct	Rampur Hat	Sealdah
+04742	Rtgh Bkn Special	Ratangarh Junction	Bikaner Junction
+19327	Rtm Udaipur Express	Ratlam Junction	Udaipur City
+08562	Ru Vskp Special	Renigunta Junction	Vishakapatnam
+17622	Ru Awb Express	Renigunta Junction	Aurangabad
+07490	Ru Gkp Special	Renigunta Junction	Gorakhpur Junction
+07430	Ru Hyb Special	Renigunta Junction	Hyderabad Decan
+12883	Rupasibangla Express	Santragachi Junction	Purulia Junction
+12884	Rupasibangla Express	Purulia Junction	Santragachi Junction
+03544	Rxl Asn Special	Raxual Junction	Asansol Junction
+13044	Rxl Hwh Express	Raxual Junction	Howrah Junction
+03044	Rxl Hwh Special	Raxual Junction	Howrah Junction
+03030	Rxl Hwh Special	Raxual Junction	Howrah Junction
+12393	S Kranti Superfast Express	Rjndr Ngr Bihar	New Delhi
+11064	Sa Chennai Express	Salem Junction	Chennai Egmore
+17230	Sabari Express	Hyderabad Decan	Trivandrum Cntl
+17229	Sabari Express	Trivandrum Cntl	Hyderabad Decan
+19165	Sabarmati Express	Ahmedabad Junction	Darbhanga Junction
+19168	Sabarmati Express	Varanasi Junction	Ahmedabad Junction
+19167	Sabarmati Express	Ahmedabad Junction	Varanasi Junction
+19166	Sabarmati Express	Darbhanga Junction	Ahmedabad Junction
+12715	Sachkhand Express	Nanded	Amritsar Junction
+14018	Sadbhavna Express	Delhi	Raxual Junction
+14017	Sadbhavna Express	Raxual Junction	Delhi
+14015	Sadbhawana Express	Raxual Junction	Delhi
+14007	Sadbhawna Express	Raxual Junction	Delhi
+14016	Sadhbhawna Express	Delhi	Raxual Junction
+14008	Sadhbhawna Express	Delhi	Raxual Junction
+11024	Sahyadri Express	C Shahumharaj T	Mumbai Cst
+11023	Sahyadri Express	Mumbai Cst	C Shahumharaj T
+12132	Sainagar Dr Express	Sainagar Shirdi	Dadar
+11068	Saket Express	Faizabad Junction	Lokmanyatilak T
+11067	Saket Express	Lokmanyatilak T	Rae Bareli Junction
+21068	Saket Link Express	Rae Bareli Junction	Lokmanyatilak T
+12152	Samarsata Express	Howrah Junction	Lokmanyatilak T
+12151	Samarsata Express	Lokmanyatilak T	Howrah Junction
+12217	Sampark Kranthi	Kochuveli	Chandigarh
+12629	Sampark Kranti	Yesvantpur Junction	H Nizamuddin
+12649	Sampark Kranti	Yesvantpur Junction	H Nizamuddin
+12651	Sampark Kranti	Madurai Junction	H Nizamuddin
+12394	Sampoorn K Express	New Delhi	Rjndr Ngr Bihar
+12807	Samta Express	Vishakapatnam	H Nizamuddin
+12808	Samta Express	H Nizamuddin	Vishakapatnam
+14164	Sangam Express	Meerut City	Allahabad Junction
+14163	Sangam Express	Allahabad Junction	Dehradun
+12296	Sangha Mitra Express	Patna Junction	Bangalore Cy Junction
+12295	Sanghamitra Express	Bangalore Cy Junction	Patna Junction
+12337	Santinikatanexp	Howrah Junction	Bolpur S Niktn
+12338	Santiniketanexp	Bolpur S Niktn	Howrah Junction
+02852	Santragachi Express	Eranakulam Junction	Santragachi Junction
+06318	Santragachi Express	Kochuveli	Santragachi Junction
+18010	Santragachi Express	Ajmer Junction	Santragachi Junction
+12557	Sapt Kranti Express	Muzaffarpur Junction	Anand Vihar Trm
+12558	Sapt Kranti Express	Anand Vihar Trm	Muzaffarpur Junction
+16058	Saptagiri Express	Tirupati	Chennai Central
+16057	Sapthagiri Express	Chennai Central	Tirupati
+12346	Saraighat Express	Guwahati	Howrah Junction
+12345	Saraighat Express	Howrah Junction	Guwahati
+15229	Sarnath Express	Chhapra	Durg
+15160	Sarnath Express	Durg	Chhapra
+15230	Sarnath Express	Gondia Junction	Chhapra
+15159	Sarnath Express	Chhapra	Durg
+12474	Sarvodaya Express	Jammu Tawi	Ahmedabad Junction
+12473	Sarvodaya Express	Ahmedabad Junction	Jammu Tawi
+14649	Saryu Yamuna Express	Jaynagar	Amritsar Junction
+14650	Saryuyamuna Express	Amritsar Junction	Jaynagar
+12277	Satabdi Express	Howrah Junction	Puri
+12278	Satabdi Express	Puri	Howrah Junction
+12714	Satavahana Express	Secunderabad Junction	Vijayawada Junction
+12713	Satavahana Express	Vijayawada Junction	Secunderabad Junction
+10001	Satpura Express	Balaghat Junction	Jabalpur
+10002	Satpura Express	Jabalpur	Balaghat Junction
+15274	Satyagrah Express	Delhi	Raxual Junction
+15273	Satyagrah Express	Raxual Junction	Delhi
+19017	Sau Janata Express	Bandra Terminus	Jamnagar
+19018	Sau Janata Express	Jamnagar	Bandra Terminus
+19215	Saurashtra Express	Mumbai Central	Porbandar
+19216	Saurashtra Express	Porbandar	Mumbai Central
+19006	Saurashtra Mail	Okha	Mumbai Central
+19005	Saurashtra Mail	Mumbai Central	Veraval
+06513	Sbc Pnbe Express	Bangalore Cy Junction	Patna Junction
+22625	Sbc Double Deck	Chennai Central	Bangalore Cy Junction
+56910	Sbc Fast Psgn	Hospet Junction	Bangalore Cy Junction
+56912	Sbc Fast Psgn	Hubli Junction	Bangalore Cy Junction
+16531	Sbc Garib Nawaj	Ajmer Junction	Bangalore Cy Junction
+16534	Sbc Jodhpur Express	Bangalore Cy Junction	Jodhpur Junction
+06030	Sbc Mas Express	Bangalore Cy Junction	Chennai Central
+16594	Sbc Nanded Express	Bangalore Cy Junction	Nanded
+16201	Sbc Smet Express	Bangalore Cy Junction	Shimoga Town
+03415	Sbg Anvt Special	Sahibganj Junction	Anand Vihar Trm
+03235	Sbg Dnr Special	Sahibganj Junction	Danapur
+04513	Sbi Bahtinda Special	Sabarmati Junction	Bhatinda Junction
+18311	Sbp Bsb Express	Sambalpur	Varanasi Junction
+12586	Sbp Hwh Superfast Express	Sambalpur	Howrah Junction
+22804	Sbp Hwh Superfast Express	Sambalpur	Howrah Junction
+18303	Sbp Puri Intercity Express	Sambalpur	Puri
+18301	Sbp Rgda Express	Sambalpur	Rayagada
+08301	Sbp Ypr Special	Sambalpur	Yesvantpur Junction
+07101	Sc Cct Special	Secunderabad Junction	Kakinada Town
+08892	Sc G Superfast Special	Secunderabad Junction	Gondia Junction
+07117	Sc Nlr Special	Secunderabad Junction	Nellore
+22850	Sc Shm Wkly Express	Secunderabad Junction	Shalimar
+17320	Sc Ubl Express	Secunderabad Junction	Hubli Junction
+07320	Sc Ubl Special	Secunderabad Junction	Hubli Junction
+12784	Sc Vskp Ac Express	Secunderabad Junction	Vishakapatnam
+02740	Sc Vskp Ac Special	Secunderabad Junction	Vishakapatnam
+02728	Sc Vskp Ac Special	Secunderabad Junction	Vishakapatnam
+07104	Sc Vskp Special	Secunderabad Junction	Vishakapatnam
+08512	Sc Vskp Special	Secunderabad Junction	Vishakapatnam
+07148	Sc Vskp Special	Secunderabad Junction	Vishakapatnam
+07018	Sc Adi Premium	Secunderabad Junction	Ahmedabad Junction
+17037	Sc Bkn Express	Secunderabad Junction	Bikaner Junction
+07203	Sc Bza Special	Secunderabad Junction	Vijayawada Junction
+07208	Sc Bza Special	Secunderabad Junction	Vijayawada Junction
+07210	Sc Bza Special	Secunderabad Junction	Vijayawada Junction
+02776	Sc Cct Superfast Special	Secunderabad Junction	Kakinada Town
+07202	Sc Cct Superfast Special	Secunderabad Junction	Kakinada Town
+02738	Sc Cct Superfast Special	Secunderabad Junction	Kakinada Town
+02701	Sc Cstm Premium	Secunderabad Junction	Mumbai Cst
+07007	Sc Dbg Special	Secunderabad Junction	Darbhanga Junction
+17007	Sc Dbg Express	Secunderabad Junction	Darbhanga Junction
+22203	Sc Duronto Express	Vishakapatnam	Secunderabad Junction
+12219	Sc Duronto Express	Lokmanyatilak T	Secunderabad Junction
+12736	Sc Garib Rath	Yesvantpur Junction	Secunderabad Junction
+02709	Sc Garibrath Special	Gudur Junction	Secunderabad Junction
+12513	Sc Ghy Express	Secunderabad Junction	Guwahati
+07149	Sc Ghy Special	Secunderabad Junction	Guwahati
+07249	Sc Ghy Special	Secunderabad Junction	Guwahati
+12706	Sc Gnt Express	Secunderabad Junction	Guntur Junction
+12795	Sc Intercity	Vijayawada Junction	Secunderabad Junction
+19714	Sc Jp Express	Secunderabad Junction	Jaipur
+09735	Sc Jp Special	Secunderabad Junction	Jaipur
+02220	Sc Ltt Special	Secunderabad Junction	Lokmanyatilak T
+07002	Sc Mmr Express	Secunderabad Junction	Manmad Junction
+07050	Sc Mtm Special	Secunderabad Junction	Machelipatnam
+12752	Sc Mugr Express	Secunderabad Junction	Manuguru
+17026	Sc Mugr Express	Secunderabad Junction	Manuguru
+12771	Sc Ngp Superfast Express	Secunderabad Junction	Nagpur
+07121	Sc Nlr Special	Secunderabad Junction	Nellore
+07119	Sc Nsl Special	Secunderabad Junction	Nagarsol
+19201	Sc Pbr Express	Secunderabad Junction	Porbandar
+09222	Sc Pbr Special	Secunderabad Junction	Porbandar
+12791	Sc Pnbe Express	Secunderabad Junction	Patna Junction
+03242	Sc Pnbe Special	Secunderabad Junction	Patna Junction
+03241	Sc Rrb Exam Special	Patna Junction	Secunderabad Junction
+12774	Sc Shm Ac Express	Secunderabad Junction	Shalimar
+17002	Sc Snsi Express	Secunderabad Junction	Sainagar Shirdi
+02770	Sc Tpty Express	Secunderabad Junction	Tirupati
+02732	Sc Tpty Express	Secunderabad Junction	Tirupati
+12732	Sc Tpty Superfast Express	Secunderabad Junction	Tirupati
+02742	Sc Vskp Superfast Special	Secunderabad Junction	Vishakapatnam
+08506	Sc Vskp Special	Secunderabad Junction	Vishakapatnam
+08502	Sc Vskp Special	Secunderabad Junction	Vishakapatnam
+08504	Sc Vskp Special	Secunderabad Junction	Vishakapatnam
+55616	Scl Ghy Passenger	Silchar	Guwahati
+13119	Sdah Dli Express	Sealdah	Delhi
+03179	Sdah Aii Special	Sealdah	Ajmer Junction
+12987	Sdah Ajmer Express	Sealdah	Ajmer Junction
+03189	Sdah Anvt Special	Sealdah	Anand Vihar Trm
+03173	Sdah Bny Special	Sealdah	Barhni
+13133	Sdah Bsb Express	Sealdah	Varanasi Junction
+13105	Sdah Bui Express	Sealdah	Ballia
+02265	Sdah Dli Premiu	Sealdah	Delhi
+12260	Sdah Duronto Express	New Delhi	Sealdah
+09310	Sdah Indb Special	Sealdah	Indore Junction Bg
+04822	Sdah Ju Premiu	Sealdah	Jodhpur Junction
+53175	Sdah Lgl Pgr	Sealdah	Lalgola
+53131	Sdah Mfp Fstpgr	Sealdah	Muzaffarpur Junction
+03139	Sdah Njp Special	Sealdah	New Jalpaiguri
+02260	Sdah Premium	New Delhi	Sealdah
+03101	Sdah Puri Special	Sealdah	Puri
+12313	Sdah Rajdhaniex	Sealdah	New Delhi
+13187	Sdah Rph Express	Sealdah	Rampur Hat
+13115	Sdah Rph Intrct	Sealdah	Rampur Hat
+12373	Sdah Rph Intrct	Sealdah	Rampur Hat
+02266	Sdah Superfast Premium	Delhi	Sealdah
+58701	Sdl Abkp Passenger	Shahdol	Ambikapur
+13152	Sealdah Express	Jammu Tawi	Kolkata
+12314	Sealdah Rjdhani	New Delhi	Sealdah
+09221	Secunderabad Special	Porbandar	Secunderabad Junction
+17319	Secundrabad Express	Hubli Junction	Secunderabad Junction
+12488	Seemanchal Express	Anand Vihar Trm	Radhikapur
+12487	Seemanchal Express	Jogbani	Anand Vihar Trm
+06193	Sengottai Express	Manamadurai Junction	Sengottai
+06803	Sengottai Express	Chennai Egmore	Sengottai
+17209	Seshadri Express	Bangalore Cy Junction	Kakinada Town
+12770	Seven Hills Express	Secunderabad Junction	Tirupati
+12769	Seven Hills Express	Tirupati	Secunderabad Junction
+12140	Sewagram Express	Nagpur	Mumbai Cst
+12139	Sewagram Express	Mumbai Cst	Balharshah
+04731	Sgnr Bkn Special	Shri Ganganagar	Bikaner Junction
+04752	Sgnr Hmh Special	Shri Ganganagar	Hanumangarh Junction
+14525	Sgnr Intercity	Ambala Cant Junction	Shri Ganganagar
+14713	Sgnr Jat Express	Shri Ganganagar	Jammu Tawi
+04733	Sgnr Jat Special	Shri Ganganagar	Jammu Tawi
+12486	Sgnr Ned Express	Shri Ganganagar	Nanded
+04721	Sgnr Ned Superfast Special	Shri Ganganagar	Nanded
+14712	Sgnr Rksh Express	Shri Ganganagar	Rishikesh
+11651	Sgrl Intercity	Jabalpur	Singrauli
+13345	Sgrl Intercity	Varanasi Junction	Shakti Nagar
+23347	Sgrl Pnbe Lnk E	Singrauli	Patna Junction
+14674	Shaheed Express	Amritsar Junction	Jaynagar
+14673	Shaheed Express	Jaynagar	Amritsar Junction
+11447	Shaktipunj Express	Jabalpur	Howrah Junction
+11448	Shaktipunj Express	Howrah Junction	Jabalpur
+01447	Shaktipunj Express	Jabalpur	Howrah Junction
+14646	Shalimar Express	Jammu Tawi	Delhi
+14645	Shalimar Express	Delhi	Jammu Tawi
+22641	Shalimar Express	Trivandrum Cntl	Shalimar
+16323	Shalimar Express	Trivandrum Cntl	Shalimar
+12498	Shane Punjab	Amritsar Junction	New Delhi
+12497	Shane Punjab	New Delhi	Amritsar Junction
+11035	Sharavathi Express	Dadar	Mysore Junction
+11036	Sharavati Express	Mysore Junction	Dadar
+12027	Shatabdi Express	Chennai Central	Bangalore Cy Junction
+12244	Shatabdi Express	Coimbatore Junction	Chennai Central
+12028	Shatabdi Express	Bangalore Cy Junction	Chennai Central
+12009	Shatabdi Express	Mumbai Central	Ahmedabad Junction
+12007	Shatabdi Express	Chennai Central	Mysore Junction
+12243	Shatabdi Express	Chennai Central	Coimbatore Junction
+12008	Shatabdi Express	Mysore Junction	Chennai Central
+12025	Shatabdi Express	Pune Junction	Secunderabad Junction
+12010	Shatabdi Express	Ahmedabad Junction	Mumbai Central
+12041	Shatabdi Express	Howrah Junction	New Jalpaiguri
+12020	Shatabdi Express	Ranchi	Howrah Junction
+12019	Shatabdi Express	Howrah Junction	Ranchi
+23225	Shc Dnr Link Express	Saharsa Junction	Danapur
+02204	Shc Garib Rath	Amritsar Junction	Saharsa Junction
+12204	Shc Garib Rath	Amritsar Junction	Saharsa Junction
+15283	Shc Jyg Jankiex	Saharsa Junction	Jaynagar
+08625	Shc Rnc Special	Saharsa Junction	Ranchi
+17210	Sheshadri Express	Kakinada Town	Bangalore Cy Junction
+16579	Shimoga Express	Yesvantpur Junction	Shimoga Town
+22912	Shipra Express	Howrah Junction	Indore Junction Bg
+19306	Shipra Express	Howrah Junction	Indore Junction Bg
+22911	Shipra Express	Indore Junction Bg	Howrah Junction
+19305	Shipra Express	Indore Junction Bg	Howrah Junction
+22601	Shirdi Express	Chennai Central	Sainagar Shirdi
+51033	Shirdi Fast Passenger	Mumbai Cst	Sainagar Shirdi
+12560	Shiv Ganga Express	New Delhi	Manduadih
+12559	Shiv Ganga Express	Manduadih	New Delhi
+52451	Shivalk Dlx Express	Kalka	Simla
+07127	Shm Hyb Special	Shalimar	Hyderabad Decan
+22830	Shm Bhuj Superfast Express	Shalimar	Bhuj
+15021	Shm Gkp Express	Shalimar	Gorakhpur Junction
+08898	Shm Gondia Special	Shalimar	Gondia Junction
+18030	Shm Ltt Express	Shalimar	Lokmanyatilak T
+22825	Shm Mas Superfast Express	Shalimar	Chennai Central
+22213	Shm Pnbe Duront	Shalimar	Patna Junction
+22835	Shm Puri Superfast Express	Shalimar	Puri
+12773	Shm Sc Ac Express	Shalimar	Secunderabad Junction
+22849	Shm Sc Wkly Express	Shalimar	Secunderabad Junction
+22642	Shm Tvc Superfast Express	Shalimar	Trivandrum Cntl
+19659	Shm Udz Express	Shalimar	Udaipur City
+22853	Shm Vskp Superfast Express	Shalimar	Vishakapatnam
+12452	Shram Shkti Express	New Delhi	Kanpur Central
+12451	Shram Shkti Express	Kanpur Central	New Delhi
+19051	Shramik Express	Valsad	Muzaffarpur Junction
+12391	Shramjeevi Express	Rajgir	New Delhi
+12392	Shramjevi N Express	New Delhi	Rajgir
+22462	Shri Shakti Express	Shmata V D Ktra	New Delhi
+22461	Shri Shakti Express	New Delhi	Shmata V D Ktra
+15818	Shtt Dbb Rr Express	Silghat Town	Dhubri
+12115	Siddheshwar Express	Mumbai Cst	Solapur Junction
+12116	Siddheswar Express	Solapur Junction	Mumbai Cst
+14811	Sikr Dee Express	Sikar Junction	Delhi S Rohilla
+16181	Silambu Express	Chennai Egmore	Manamadurai Junction
+16182	Silambu Express	Manamadurai Junction	Chennai Egmore
+17239	Simhadri Express	Guntur Junction	Vishakapatnam
+17240	Simhadri Express	Vishakapatnam	Guntur Junction
+12710	Simhapuri Express	Secunderabad Junction	Gudur Junction
+12709	Simhapuri Express	Gudur Junction	Secunderabad Junction
+18008	Simlipal Express	Baripada	Shalimar
+18007	Simlipal Express	Shalimar	Baripada
+74640	Sina Bahl	Srinagar	Banihal
+11009	Sinhagad Express	Mumbai Cst	Pune Junction
+11010	Sinhagad Express	Pune Junction	Mumbai Cst
+54076	Sitapurcity Passenger	Delhi	Sitapur City
+23346	Sktn Bsb Inter	Shakti Nagar	Varanasi Junction
+07111	Skzr Qln Special	Sirpur Kagazngr	Kollam Junction
+12144	Sln Ltt Superfast Special	Sultanpur	Lokmanyatilak T
+19404	Sln Adi Express	Sultanpur	Ahmedabad Junction
+19604	Sln Aii Express	Sultanpur	Ajmer Junction
+14013	Sln Dli Express	Sultanpur	Delhi
+16202	Smet Sbc Express	Shimoga Town	Bangalore Cy Junction
+03328	Smi Dhn Special	Sitamarhi	Dhanbad Junction
+13166	Smi Koaa Express	Sitamarhi	Kolkata
+15724	Smi Njp Express	Sitamarhi	New Jalpaiguri
+52454	Sml Klk Express	Simla	Kalka
+52458	Sml Klk Passenger	Simla	Kalka
+11465	Smnh Jbp Express	Somnath	Jabalpur
+11463	Smnh Jbp Express	Somnath	Jabalpur
+19251	Smnh Okha Express	Somnath	Okha
+17207	Snsi Bza Express	Sainagar Shirdi	Vijayawada Junction
+17205	Snsi Cct Express	Sainagar Shirdi	Kakinada Town
+22602	Snsi Chennai Express	Sainagar Shirdi	Chennai Central
+22893	Snsi Hwh Superfast Express	Sainagar Shirdi	Howrah Junction
+12573	Snsi Hwh Superfast Express	Sainagar Shirdi	Howrah Junction
+22455	Snsi Klk Superfast Express	Sainagar Shirdi	Kalka
+16218	Snsi Mys Express	Sainagar Shirdi	Mysore Junction
+04011	Snsi Ndls Special	Sainagar Shirdi	New Delhi
+04406	Snsi Premium	New Delhi	Sainagar Shirdi
+18408	Snsi Puri Express	Sainagar Shirdi	Puri
+02745	Snsi Puri Special	Sainagar Shirdi	Puri
+11001	Snsi Pvr Express	Sainagar Shirdi	Pandharpur
+01037	Snsi Pvr Special	Sainagar Shirdi	Pandharpur
+17001	Snsi Sc Express	Sainagar Shirdi	Secunderabad Junction
+06805	Snsi Tpj Special	Sainagar Shirdi	Tiruchchirapali
+18504	Snsi Vskp Express	Sainagar Shirdi	Vishakapatnam
+22802	Snsi Vskp Express	Sainagar Shirdi	Vishakapatnam
+02802	Snsi Vskp Special	Sainagar Shirdi	Vishakapatnam
+08568	Snsi Vskp Special	Sainagar Shirdi	Vishakapatnam
+11306	Solapur Cstm Express	Solapur Junction	Mumbai Cst
+22134	Solapur Express	Yesvantpur Junction	Solapur Junction
+06553	Solapur Express	Sai P Nilayam	Solapur Junction
+11424	Solapur Express	Hubli Junction	Solapur Junction
+09252	Somnath Express	Dwarka	Somnath
+19222	Somnath Express	Veraval	Ahmedabad Junction
+19221	Somnath Express	Ahmedabad Junction	Veraval
+13287	South Bihar Express	Durg	Danapur
+13288	South Bihar Express	Danapur	Durg
+54075	Spc Delhi Passenger	Sitapur City	Delhi
+08060	Src Ltt Superfast Special	Santragachi Junction	Lokmanyatilak T
+22807	Src Mas Ac Express	Santragachi Junction	Chennai Central
+22813	Src Prdp Superfast Express	Santragachi Junction	Paradip
+08409	Src Puri Special	Santragachi Junction	Puri
+02773	Src Sc Premium	Santragachi Junction	Secunderabad Junction
+02865	Src Ypr Superfast Special	Santragachi Junction	Yesvantpur Junction
+18009	Src Aii Express	Santragachi Junction	Ajmer Junction
+22857	Src Anvt Superfast Express	Santragachi Junction	Anand Vihar Trm
+08033	Src Anvt Special	Santragachi Junction	Anand Vihar Trm
+01070	Src Cstm Special	Santragachi Junction	Mumbai Cst
+08201	Src Durg Special	Santragachi Junction	Durg
+02853	Src Ers Premium	Santragachi Junction	Eranakulam Junction
+02851	Src Ers Special	Santragachi Junction	Eranakulam Junction
+08070	Src Ltt Superfast Special	Santragachi Junction	Lokmanyatilak T
+01222	Src Ltt Special	Santragachi Junction	Lokmanyatilak T
+01074	Src Ltt Special	Santragachi Junction	Lokmanyatilak T
+02807	Src Mas Special	Santragachi Junction	Chennai Central
+08041	Src Mas Superfast Special	Santragachi Junction	Chennai Central
+08053	Src Mtc Special	Santragachi Junction	Meerut City
+02704	Src Premium Special	Secunderabad Junction	Santragachi Junction
+02774	Src Premium Special	Secunderabad Junction	Santragachi Junction
+08402	Src Puri Special	Santragachi Junction	Puri
+02837	Src Puri Premiu	Santragachi Junction	Puri
+08474	Src Puri Special	Santragachi Junction	Puri
+08007	Src Puri Special	Santragachi Junction	Puri
+08013	Src Puri Special	Santragachi Junction	Puri
+08009	Src Puri Special	Santragachi Junction	Puri
+08011	Src Puri Special	Santragachi Junction	Puri
+02849	Src Rjt Special	Santragachi Junction	Rajkot Junction
+08049	Src Rjt Special	Santragachi Junction	Rajkot Junction
+02703	Src Sc Premium	Santragachi Junction	Secunderabad Junction
+22855	Src Tpty Superfast Express	Santragachi Junction	Tirupati
+22852	Src Vivek Express	Mangalore Cntl	Santragachi Junction
+04917	Sre Beas Special	Saharanpur	Beas
+18410	Srijagannath Express	Puri	Howrah Junction
+18409	Srijagannathexp	Howrah Junction	Puri
+06064	Srr Mas Superfast Express	Shoranur Junction	Chennai Central
+22410	Ssm Garib Rath	Anand Vihar Trm	Gaya Junction
+12691	Sspn Express	Chennai Central	Sai P Nilayam
+09610	St Aii Special	Surat	Ajmer Junction
+09015	St Ald Special	Surat	Allahabad Junction
+59025	St Amravati Passenger	Surat	Amravati
+19047	St Bhagalpur Express	Surat	Bhagalpur
+09051	St Cpr Premium	Surat	Chhapra
+13426	St Malda Town E	Surat	Malda Town
+19053	St Mfp Express	Surat	Muzaffarpur Junction
+07610	St Nanded Special	Surat	Nanded
+09055	St Pnbe Premium	Surat	Patna Junction
+09052	St Premium Special	Chhapra	Surat
+12814	Steel Express	Tatanagar Junction	Howrah Junction
+12813	Steel Express	Howrah Junction	Tatanagar Junction
+13301	Subarnarekha Express	Dhanbad Junction	Tatanagar Junction
+13302	Subarnarekha Express	Tatanagar Junction	Dhanbad Junction
+22420	Suhaildev Superfast Express	Anand Vihar Trm	Ghazipur City
+22419	Suhaildev Superfast Express	Ghazipur City	Anand Vihar Trm
+14706	Sujh Dee Express	Sujangarh	Delhi S Rohilla
+19403	Sultanpur Express	Ahmedabad Junction	Sultanpur
+14014	Sultanpur Express	Delhi	Sultanpur
+22208	Super Ac Express	Trivandrum Cntl	Chennai Central
+22207	Super Ac Express	Chennai Central	Trivandrum Cntl
+56903	Sur Dharwar Passenger	Solapur Junction	Dharwar
+11423	Sur Hubli Express	Solapur Junction	Hubli Junction
+12169	Sur Intercity	Pune Junction	Solapur Junction
+09716	Sur Jaipur Special	Solapur Junction	Jaipur
+09714	Sur Jaipur Special	Solapur Junction	Jaipur
+11051	Sur Kop Express	Solapur Junction	C Shahumharaj T
+01408	Sur Kop Special	Solapur Junction	C Shahumharaj T
+01302	Sur Latur Special	Solapur Junction	Latur
+51450	Sur Pune Passenger	Solapur Junction	Pune Junction
+01009	Sur Pune Superfast Special	Solapur Junction	Pune Junction
+01333	Sur Ypr Special	Solapur Junction	Yesvantpur Junction
+06552	Sur Ypr Special	Solapur Junction	Yesvantpur Junction
+22133	Sur Ypr Superfast Express	Solapur Junction	Yesvantpur Junction
+12936	Surat Bdts Express	Surat	Bandra Terminus
+12946	Surat Express	Mahuva Junction	Surat
+19026	Surat Express	Mahuva Junction	Surat
+59026	Surat Fast Passenger	Amravati	Surat
+19060	Surat Intercity	Jamnagar	Surat
+29060	Surat Intercity	Hapa	Surat
+59078	Surat Passenger	Bhusaval Junction	Surat
+59014	Surat Passenger	Bhusaval Junction	Surat
+12744	Surat Puri Express	Surat	Puri
+22828	Surat Puri Express	Surat	Puri
+13054	Suri Hwh Express	Siuri	Howrah Junction
+12479	Surya Nagri Express	Jodhpur Junction	Bandra Terminus
+12480	Suryanagari Express	Bandra Terminus	Jodhpur Junction
+22356	Suvidha Express	Mumbai Cst	Patna Junction
+22355	Suvidha Train	Patna Junction	Mumbai Cst
+19416	Svdk Adi Express	Shmata V D Ktra	Ahmedabad Junction
+09422	Svdk Adi Premiu	Shmata V D Ktra	Ahmedabad Junction
+09022	Svdk Bdts Prmiu	Shmata V D Ktra	Bandra Terminus
+14504	Svdk Klk Express	Shmata V D Ktra	Kalka
+15656	Svdk Kyq Express	Shmata V D Ktra	Kamakhya
+05656	Svdk Kyq Special	Shmata V D Ktra	Kamakhya
+04976	Svdk Mfp Special	Shmata V D Ktra	Muzaffarpur Junction
+02679	Svdk Premium Express	Yesvantpur Junction	Shmata V D Ktra
+04401	Svdk Premium Special	New Delhi	Shmata V D Ktra
+22679	Svdk Suvidha Express	Yesvantpur Junction	Shmata V D Ktra
+02680	Svdk Ypr Premiu	Shmata V D Ktra	Yesvantpur Junction
+22680	Svdk Ypr Suvdha	Shmata V D Ktra	Yesvantpur Junction
+12471	Swaraj Express	Bandra Terminus	Jammu Tawi
+12472	Swaraj Express	Jammu Tawi	Bandra Terminus
+12957	Swarna J Raj Express	Ahmedabad Junction	New Delhi
+12781	Swarna Jayanthi	Mysore Junction	H Nizamuddin
+12782	Swarna Jayanthi	H Nizamuddin	Mysore Junction
+12644	Swarna Jayanti	H Nizamuddin	Trivandrum Cntl
+12029	Swarna Shatabdi	New Delhi	Amritsar Junction
+12030	Swarna Shatabdi	Amritsar Junction	New Delhi
+12803	Swarnajayanti E	Vishakapatnam	H Nizamuddin
+12561	Swatantra S Express	Darbhanga Junction	New Delhi
+12562	Swatantrta S Express	New Delhi	Darbhanga Junction
+01004	Swv Dadar Special	Sawantwadi Road	Dadar
+50106	Swv Diva Passenger	Sawantwadi Road	Diva
+01202	Swv Ltt Special	Sawantwadi Road	Lokmanyatilak T
+12652	T N Sampark Kranti	H Nizamuddin	Madurai Junction
+12279	Taj Express	Jhansi Junction	H Nizamuddin
+12280	Taj Express	H Nizamuddin	Jhansi Junction
+07301	Talguppa Express	Mysore Junction	Talguppa
+16227	Talguppa Express	Bangalore Cy Junction	Talguppa
+16206	Talguppa Express	Mysore Junction	Talguppa
+12621	Tamil Nadu Express	Chennai Central	New Delhi
+12622	Tamil Nadu Express	New Delhi	Chennai Central
+12858	Tamralipta Express	Digha Flag Stn	Howrah Junction
+12857	Tamralipta Express	Howrah Junction	Digha Flag Stn
+18451	Tapaswini Express	Hatia	Puri
+18452	Tapaswini Express	Puri	Rayagada
+17618	Tapovan Express	Nanded	Mumbai Cst
+17617	Tapovan Express	Mumbai Cst	Nanded
+19046	Tapti Ganga Express	Chhapra	Surat
+19045	Tapti Ganga Express	Surat	Chhapra
+18183	Tata Dnr Express	Tatanagar Junction	Danapur
+18189	Tata Allp Express	Tatanagar Junction	Alleppey
+13511	Tata Asn Express	Tatanagar Junction	Asansol Junction
+08103	Tata Bgp Special	Tatanagar Junction	Bhagalpur
+58113	Tata Bsp Passenger	Tatanagar Junction	Bilaspur Junction
+18181	Tata Cpr Express	Tatanagar Junction	Katihar Junction
+08181	Tata Cpr Special	Tatanagar Junction	Chhapra
+58111	Tata Itr Passenger	Tatanagar Junction	Itwari
+18101	Tata Jat Express	Tatanagar Junction	Jammu Tawi
+18515	Tata Vskp Express	Tatanagar Junction	Vishakapatnam
+08515	Tata Vskp Special	Tatanagar Junction	Vishakapatnam
+18111	Tata Ypr Express	Tatanagar Junction	Yesvantpur Junction
+12889	Tata Ypr Express	Tatanagar Junction	Yesvantpur Junction
+13512	Tatanagar Express	Asansol Junction	Tatanagar Junction
+16106	Tcn Chennai Express	Tiruchendur	Chennai Egmore
+16736	Tcn Chennai Express	Tiruchendur	Chennai Egmore
+01092	Teachers Special	Varanasi Junction	Mumbai Cst
+01076	Teachers Special	Varanasi Junction	Mumbai Cst
+23142	Teesta Torsa Express	Haldibari	Sealdah
+17036	Telangana Express	Sirpur Kagazngr	Secunderabad Junction
+17035	Telangana Express	Secunderabad Junction	Sirpur Kagazngr
+22630	Ten Dr Express	Tirunelveli	Dadar
+06715	Ten Express	Chennai Egmore	Tirunelveli
+06709	Ten Express	Chennai Egmore	Tirunelveli
+01068	Ten Ltt Express	Tirunelveli	Lokmanyatilak T
+12788	Ten Bilaspur Express	Tirunelveli	Bilaspur Junction
+22620	Ten Bilaspur Express	Tirunelveli	Bilaspur Junction
+06752	Ten Chennai Express	Tirunelveli	Chennai Central
+16787	Ten Jammu Express	Tirunelveli	Jammu Tawi
+06716	Ten Ms Express	Tirunelveli	Chennai Egmore
+06708	Ten Ms Express	Tirunelveli	Chennai Egmore
+06714	Ten Ms Express	Tirunelveli	Chennai Egmore
+00672	Ten Ms Premium	Tirunelveli	Chennai Egmore
+00608	Ten Ms Premium	Tirunelveli	Chennai Egmore
+06746	Ten Ms Premium	Tirunelveli	Chennai Egmore
+13141	Testa Torsa Express	Sealdah	Haldibari
+13142	Testa Torsa Express	New Alipurdaur	Sealdah
+12642	Thirukkural Express	H Nizamuddin	Kanyakumari
+12613	Tippu Express	Mysore Junction	Bangalore Cy Junction
+12614	Tippu Express	Bangalore Cy Junction	Mysore Junction
+13157	Tirhut Express	Kolkata	Muzaffarpur Junction
+13158	Tirhut Express	Muzaffarpur Junction	Kolkata
+06571	Tiruchchiexp	Bangalore Cy Junction	Tiruchchirapali
+16105	Tiruchendur Express	Chennai Egmore	Tiruchendur
+16735	Tiruchendur Express	Chennai Egmore	Tiruchendur
+12654	Tiruchi Express	Mangalore Cntl	Tiruchchirapali
+06057	Tiruchi Express	Chennai Egmore	Tiruchchirapali
+12641	Tirukkural Express	Kanyakumari	H Nizamuddin
+17487	Tirumala Express	Tirupati	Vishakapatnam
+17488	Tirumala Express	Vishakapatnam	Tirupati
+06515	Tirunelveli Express	Bangalore Cy Junction	Tirunelveli
+06713	Tirunelveli Express	Chennai Egmore	Tirunelveli
+06745	Tirunelveli Express	Chennai Egmore	Tirunelveli
+06711	Tirunelveli Express	Chennai Egmore	Tirunelveli
+22627	Tirunelveli Express	Tiruchchirapali	Tirunelveli
+11021	Tirunelveli Express	Dadar	Tirunelveli
+06703	Tirunelveli Express	Chennai Egmore	Tirunelveli
+06751	Tirunelveli Express	Chennai Central	Tirunelveli
+06705	Tirunelveli Express	Chennai Egmore	Tirunelveli
+12758	Tirupathi Express	Coimbatore Junction	Tirupati
+16053	Tirupathi Express	Chennai Central	Tirupati
+12543	Tirupathi Express	Yesvantpur Junction	Banaswadi
+07506	Tirupathi Express	Kollam Junction	Tirupati
+22617	Tirupathi Express	Bangalore Cy Junction	Tirupati
+22616	Tirupathi Express	Coimbatore Junction	Tirupati
+16203	Tirupathy Express	Chennai Central	Tirupati
+17408	Tirupati Express	Mannargudi	Tirupati
+17418	Tirupati Express	Sainagar Shirdi	Tirupati
+56213	Tirupati Passenger	Chamarajanagar	Tirupati
+57258	Tirupati Psgr	Kakinada Port	Tirupati
+16611	Tn Cbe Link Express	Tuticorin	Coimbatore Junction
+16130	Tn Ms Link Express	Tuticorin	Chennai Egmore
+22628	Tpj Express	Tirunelveli	Tiruchchirapali
+12653	Tpj Maq Express	Tiruchchirapali	Mangalore Cntl
+06806	Tpj Snsi Express	Tiruchchirapali	Sainagar Shirdi
+07504	Tpty Awb Special	Tirupati	Aurangabad
+22618	Tpty Sbc Express	Tirupati	Bangalore Cy Junction
+07407	Tpty Adb Special	Tirupati	Adilabad
+12765	Tpty Ami Superfast Express	Tirupati	Amravati
+07410	Tpty Awb Special	Tirupati	Aurangabad
+07406	Tpty Awb Special	Tirupati	Aurangabad
+22872	Tpty Bbs Express	Tirupati	Bhubaneswar
+22880	Tpty Bbs Superfast Express	Tirupati	Bhubaneswar
+02872	Tpty Bbs Superfast Special	Tirupati	Bhubaneswar
+08472	Tpty Bbs Special	Tirupati	Bhubaneswar
+17482	Tpty Bsp Express	Tirupati	Bilaspur Junction
+12757	Tpty Cbe Express	Tirupati	Coimbatore Junction
+22615	Tpty Cbe Express	Tirupati	Coimbatore Junction
+56214	Tpty Cmnr Passenger	Tirupati	Chamarajanagar
+22120	Tpty Double Dec	Kacheguda	Tirupati
+07230	Tpty Gnt Special	Secunderabad Junction	Kochuveli
+57477	Tpty Gtl Passenger	Tirupati	Guntakal Junction
+07146	Tpty Kcg Special	Tirupati	Kacheguda
+12761	Tpty Krmr Express	Tirupati	Karimnagar
+02761	Tpty Krmr Special	Tirupati	Karimnagar
+16204	Tpty Mas Express	Tirupati	Chennai Central
+17401	Tpty Mtm Ns Express	Tirupati	Narasapur
+17480	Tpty Puri Express	Tirupati	Puri
+16779	Tpty Rmm Express	Tirupati	Rameswaram
+02731	Tpty Sc Express	Tirupati	Secunderabad Junction
+02769	Tpty Sc Express	Tirupati	Secunderabad Junction
+12731	Tpty Sc Express	Tirupati	Secunderabad Junction
+17417	Tpty Snsi Express	Tirupati	Sainagar Shirdi
+22856	Tpty Src Superfast Express	Tirupati	Santragachi Junction
+57274	Tpty Ubl Passenger	Tirupati	Hubli Junction
+02874	Tpty Vskp Superfast Special	Tirupati	Vishakapatnam
+12544	Tpty Ypr Express	Tirupati	Yesvantpur Junction
+52228	Tpu Ash Express	Tanakpur	Aishbagh
+84369	Tribeni Express	Barwadih Junction	Bareilly
+24369	Tribeni Express	Shakti Nagar	Bareilly
+14369	Tribeni Express	Singrauli	Bareilly
+16853	Trichy Express	Chennai Egmore	Tiruchchirapali
+06633	Trichy Express	Coimbatore Junction	Tiruchchirapali
+12913	Trishatabdi Express	Indore Junction Bg	Nagpur
+12914	Trishatabdi Express	Nagpur	Indore Junction Bg
+16331	Trivandram Express	Mumbai Cst	Trivandrum Cntl
+06301	Trivandrum Express	Vellankanni	Trivandrum Cntl
+16321	Trivandrum Express	Bangalore Cy Junction	Trivandrum Cntl
+12695	Trivandrum Express	Chennai Central	Trivandrum Cntl
+12697	Trivandrum Express	Chennai Central	Trivandrum Cntl
+16348	Trivandrum Express	Mangalore Cntl	Trivandrum Cntl
+16341	Trivandrum Express	Guruvayur	Trivandrum Cntl
+12623	Trivandrum Mail	Chennai Central	Trivandrum Cntl
+14370	Triveni Express	Bareilly	Barwadih Junction
+24370	Triveni Express	Bareilly	Barwadih Junction
+12432	Trivndrm Rajdhani	H Nizamuddin	Trivandrum Cntl
+11070	Tulsi Express	Allahabad Junction	Lokmanyatilak T
+11069	Tulsi Express	Lokmanyatilak T	Allahabad Junction
+17607	Tungabhadra Express	Secunderabad Junction	Kurnool Town
+17023	Tungabhadra Express	Secunderabad Junction	Kurnool Town
+17608	Tungabhadra Express	Kurnool Town	Secunderabad Junction
+17024	Tungabhadra Express	Kurnool Town	Secunderabad Junction
+16732	Tuticorin Express	Mysore Junction	Tuticorin
+06035	Tuticorin Express	Chennai Egmore	Tuticorin
+06007	Tuticorin Express	Chennai Central	Tuticorin
+16236	Tuticorin Express	Mysore Junction	Tuticorin
+02660	Tvc Bnc Premium	Trivandrum Cntl	Bangalore Cant
+02658	Tvc Bnc Premium	Trivandrum Cntl	Bangalore Cant
+12698	Tvc Chennai Express	Trivandrum Cntl	Chennai Central
+12696	Tvc Chennai Express	Trivandrum Cntl	Chennai Central
+06305	Tvc Hyb Express	Trivandrum Cntl	Hyderabad Decan
+00642	Tvc Kyq Premium	Trivandrum Cntl	Kamakhya
+00602	Tvc Mas Premium	Trivandrum Cntl	Chennai Central
+00601	Tvc Mas Premium	Trivandrum Cntl	Chennai Central
+00648	Tvc Mas Premium	Trivandrum Cntl	Chennai Central
+22655	Tvc Nzm Express	Trivandrum Cntl	H Nizamuddin
+06302	Tvc Vlnk Express	Trivandrum Cntl	Vellankanni
+13008	U A Toofan Express	Shri Ganganagar	Kalka
+13007	U Abhatoofan Express	Howrah Junction	Shri Ganganagar
+12448	U P Sampark Kranti	H Nizamuddin	Khajuraho
+12447	U P Sampark Kranti	Manikpur Junction	H Nizamuddin
+56137	Uam Mtp Passenger	Udagamandalam	Metupalaiyam
+56139	Uam Onr Passenger	Udagamandalam	Coonoor
+07328	Ubl Bgm Express	Hubli Junction	Belgaum
+56502	Ubl Bza Passenger	Hubli Junction	Vijayawada Junction
+17314	Ubl Chennai Express	Hubli Junction	Chennai Central
+11048	Ubl Mrj Express	Hubli Junction	Miraj Junction
+02685	Ubl Pnbe Premiu	Hubli Junction	Patna Junction
+07319	Ubl Sc Express	Hubli Junction	Secunderabad Junction
+57273	Ubl Tirupati Passenger	Hubli Junction	Tirupati
+06948	Ubl Vsg Link Express	Hubli Junction	Vasco Da Gama
+02648	Ubl Ypr Express	Hubli Junction	Yesvantpur Junction
+19657	Udaipur City Express	Indore Junction Bg	Udaipur City
+19329	Udaipur City Express	Indore Junction Bg	Udaipur City
+12944	Udhyogkarmi Express	Kanpur Central	Valsad
+09049	Udn Ami Passenger Special	Udhna Junction	Amravati
+04702	Udn Bkn Ac Special	Udhna Junction	Bikaner Junction
+01454	Udn Ngp Special	Udhna Junction	Nagpur
+19057	Udn Varanasi Express	Udhna Junction	Varanasi Junction
+11302	Udyan Express	Bangalore Cy Junction	Mumbai Cst
+16530	Udyan Express	Bangalore Cy Junction	Mumbai Cst
+11301	Udyan Express	Mumbai Cst	Bangalore Cy Junction
+16529	Udyan Express	Mumbai Cst	Bangalore Cy Junction
+12174	Udyog Nagri Express	Partapgarh Junction	Lokmanyatilak T
+12173	Udyog Nagri Express	Lokmanyatilak T	Partapgarh Junction
+12943	Udyogkarmi Express	Valsad	Kanpur Central
+19943	Udz Adi Express	Udaipur City	Ahmedabad Junction
+12996	Udz Bdts Superfast Express	Udaipur City	Bandra Terminus
+22902	Udz Bdts Superfast	Udaipur City	Bandra Terminus
+19330	Udz Indb Express	Udaipur City	Indore Junction Bg
+19658	Udz Indb Express	Udaipur City	Indore Junction Bg
+12991	Udz Jp Express	Udaipur City	Jaipur
+09722	Udz Jp Superfast Special	Udaipur City	Jaipur
+09802	Udz Kota Special	Udaipur City	Kota Junction
+19666	Udz Kurj Express	Udaipur City	Khajuraho
+12966	Udz Kurj Superfast	Udaipur City	Khajuraho
+09608	Udz Ndt Special	Udaipur City	Nathdwara
+19601	Udz Njp Express	Udaipur City	New Jalpaiguri
+19328	Udz Ratlam Express	Udaipur City	Ratlam Junction
+19660	Udz Shm Express	Udaipur City	Shalimar
+22901	Udz Super Fast	Bandra Terminus	Udaipur City
+12064	Uhl Hw Link Jsh	Una Himachal	Haridwar Junction
+12057	Uhl Janshatabdi	New Delhi	Una Himachal
+22458	Uhl Ned Superfast Express	Una Himachal	Nanded
+04114	Uhp Ald Special	Udhampur	Allahabad Junction
+04052	Uhp Anvt Special	Udhampur	Anand Vihar Trm
+04404	Uhp Anvt Special	Udhampur	Anand Vihar Trm
+04210	Uhp Bsb Special	Udhampur	Varanasi Junction
+14156	Uhp Cnb Express	Udhampur	Kanpur Central
+22402	Uhp Dee Ac Superfast	Udhampur	Delhi S Rohilla
+04036	Uhp Dee Special	Udhampur	Delhi S Rohilla
+09806	Uhp Kota Special	Udhampur	Kota Junction
+04034	Uhp Ndls Ac Special	Udhampur	New Delhi
+04056	Uhp Ndls Special	Udhampur	New Delhi
+14309	Ujjaini Express	Ujjain Junction	Dehradun
+14310	Ujjaiyani Express	Dehradun	Ujjain Junction
+52975	Ujn Ak F Passenger	Ujjain Junction	Akola Junction
+04522	Umb Dli Express	Ambala Cant Junction	Delhi
+14522	Umb Dli Express	Ambala Cant Junction	Delhi
+14526	Umb Intercity	Shri Ganganagar	Ambala Cant Junction
+14524	Umb Mfp Express	Ambala Cant Junction	Muzaffarpur Junction
+14218	Unchahar Express	Chandigarh	Allahabad Junction
+14217	Unchahar Express	Allahabad Junction	Chandigarh
+12328	Upasana Express	Dehradun	Howrah Junction
+12327	Upasana Express	Howrah Junction	Dehradun
+18477	Utkal Express	Puri	Haridwar Junction
+15036	Utr Samprk K Express	Kathgodam	Delhi
+15035	Utr Samprk K Express	Delhi	Ramnagar
+18192	Utsarg Express	Farrukhabad	Chhapra
+18191	Utsarg Express	Chhapra	Farrukhabad
+13148	Uttar Banga Express	New Cooch Behar	Sealdah
+13147	Uttar Banga Express	Sealdah	New Cooch Behar
+12446	Uttar S Kranti	Udhampur	New Delhi
+12445	Uttar S Kranti	New Delhi	Udhampur
+19566	Uttaranchal Express	Dehradun	Okha
+19565	Uttaranchal Express	Okha	Dehradun
+16184	Uzhavan Express	Thanjavur	Chennai Egmore
+16183	Uzhavan Express	Chennai Egmore	Thanjavur
+12928	Vadodara Express	Vadodara Junction	Mumbai Central
+12927	Vadodara Express	Mumbai Central	Vadodara Junction
+12635	Vaigai Express	Chennai Egmore	Madurai Junction
+12636	Vaigai Express	Madurai Junction	Chennai Egmore
+12554	Vaishali Express	New Delhi	Barauni Junction
+12553	Vaishali Express	Barauni Junction	New Delhi
+13404	Vananchal Express	Bhagalpur	Ranchi
+13403	Vananchal Express	Ranchi	Bhagalpur
+16304	Vanchinad Express	Trivandrum Cntl	Eranakulam Junction
+16303	Vanchinad Express	Eranakulam Junction	Trivandrum Cntl
+24228	Varuna Express	Kanpur Central	Varanasi Junction
+14228	Varuna Express	Lucknow Nr	Varanasi Junction
+14227	Varuna Express	Varanasi Junction	Lucknow Nr
+24227	Varuna Express	Varanasi Junction	Kanpur Central
+07315	Velankanni Express	Vasco Da Gama	Vellankanni
+17315	Velankanni Express	Vasco Da Gama	Vellankanni
+16185	Velankanni Express	Chennai Egmore	Vellankanni
+16186	Velankanni Express	Vellankanni	Chennai Egmore
+16301	Venad Express	Shoranur Junction	Trivandrum Cntl
+16302	Venad Express	Trivandrum Cntl	Shoranur Junction
+12798	Venkatadri Express	Chittor	Kacheguda
+12797	Venkatadri Express	Kacheguda	Chittor
+16334	Veraval Express	Trivandrum Cntl	Veraval
+11087	Veraval Pune Express	Veraval	Pune Junction
+12334	Vibhuti Express	Allahabad City	Howrah Junction
+12333	Vibhuti Express	Howrah Junction	Allahabad City
+12106	Vidarbha Express	Gondia Junction	Mumbai Cst
+12105	Vidarbha Express	Mumbai Cst	Gondia Junction
+07220	Vijayawada Express	Kollam Junction	Vijayawada Junction
+56503	Vijayawada Passenger	Bangalore Cant	Vijayawada Junction
+12368	Vikramshila Express	Anand Vihar Trm	Bhagalpur
+12367	Vikramshila Express	Bhagalpur	Anand Vihar Trm
+11271	Vindhyachal Express	Itarsi Junction	Bhopal Junction
+11272	Vindhyachal Express	Bhopal Junction	Itarsi Junction
+22870	Visakapatnam Express	Chennai Central	Vishakapatnam
+17016	Visakha Express	Secunderabad Junction	Bhubaneswar
+17015	Visakha Express	Bhubaneswar	Secunderabad Junction
+53048	Viswabharti Passenger	Rampur Hat	Howrah Junction
+53047	Viswavarati Passenger	Howrah Junction	Rampur Hat
+19567	Vivek Express	Tuticorin	Okha
+19568	Vivek Express	Okha	Tuticorin
+19028	Vivek Express	Jammu Tawi	Bandra Terminus
+15906	Vivek Express	Dibrugarh	Kanyakumari
+19027	Vivek Express	Bandra Terminus	Jammu Tawi
+08514	Vkb Vskp Special	Vikarabad Junction	Vishakapatnam
+02007	Vlnk Premium Special	Mumbai Cst	Vellankanni
+17316	Vlnk Vsg Express	Vellankanni	Vasco Da Gama
+07324	Vlnk Vsg Express	Vellankanni	Vasco Da Gama
+07316	Vlnk Vsg Express	Vellankanni	Vasco Da Gama
+07326	Vlnk Vsg Express	Vellankanni	Vasco Da Gama
+59460	Vrl Bct Passenger Express	Veraval	Mumbai Central
+16333	Vrl Tvc Express	Veraval	Trivandrum Cntl
+17312	Vsg Chennai Express	Vasco Da Gama	Chennai Central
+18048	Vsg Howrah Express	Vasco Da Gama	Kacheguda
+06202	Vsg Mys Express	Vasco Da Gama	Mysore Junction
+12741	Vsg Patna Express	Vasco Da Gama	Patna Junction
+02779	Vsg Sbc Link Express	Vasco Da Gama	Bangalore Cy Junction
+07323	Vsg Vlnk Express	Vasco Da Gama	Vellankanni
+07325	Vsg Vlnk Express	Vasco Da Gama	Vellankanni
+06578	Vsg Ypr Express	Vasco Da Gama	Yesvantpur Junction
+02684	Vsg Ypr Express	Vasco Da Gama	Yesvantpur Junction
+58501	Vskp Krdl Passenger	Vishakapatnam	Kirandul
+18503	Vskp Snsi Express	Vishakapatnam	Sainagar Shirdi
+08575	Vskp Ald Special	Vishakapatnam	Allahabad Junction
+18507	Vskp Asr Hkg Express	Vishakapatnam	Amritsar Junction
+18573	Vskp Bgkt Express	Vishakapatnam	Bhagat Ki Kothi
+22874	Vskp Digha Express	Vishakapatnam	Digha Flag Stn
+58530	Vskp Durg Passenger	Vishakapatnam	Durg
+22204	Vskp Duronto E	Secunderabad Junction	Vishakapatnam
+12740	Vskp Garib Rath	Secunderabad Junction	Vishakapatnam
+12739	Vskp Garib Rath	Vishakapatnam	Secunderabad Junction
+18501	Vskp Gimb Express	Vishakapatnam	Gandhidham Bg
+07027	Vskp Hyb Special	Vishakapatnam	Hyderabad Decan
+08563	Vskp Hyb Special	Vishakapatnam	Hyderabad Decan
+07015	Vskp Kcg Superfast Special	Vishakapatnam	Kacheguda
+18518	Vskp Krba Express	Vishakapatnam	Korba
+18512	Vskp Krpu Intercity E	Vishakapatnam	Koraput
+22819	Vskp Ltt Express	Vishakapatnam	Lokmanyatilak T
+22847	Vskp Ltt Express	Vishakapatnam	Lokmanyatilak T
+12749	Vskp Ltt Express	Vishakapatnam	Lokmanyatilak T
+18519	Vskp Ltt Express	Vishakapatnam	Lokmanyatilak T
+22869	Vskp Mas Superfast Express	Vishakapatnam	Chennai Central
+57230	Vskp Mtm Passenger	Vishakapatnam	Machelipatnam
+22415	Vskp Ndls Apexp	Vishakapatnam	New Delhi
+18509	Vskp Ned Express	Vishakapatnam	Nanded
+08509	Vskp Ned Special	Vishakapatnam	Nanded
+57265	Vskp Ns Passenger	Vishakapatnam	Narasapur
+08565	Vskp Nzb Special	Vishakapatnam	Nizamabad
+18567	Vskp Qln Express	Vishakapatnam	Kollam Junction
+08569	Vskp Qln Special	Vishakapatnam	Kollam Junction
+08561	Vskp Ru Special	Vishakapatnam	Renigunta Junction
+12783	Vskp Sc Ac Express	Vishakapatnam	Secunderabad Junction
+02727	Vskp Sc Ac Special	Vishakapatnam	Secunderabad Junction
+02739	Vskp Sc Ac Special	Vishakapatnam	Secunderabad Junction
+02741	Vskp Sc Superfast Special	Vishakapatnam	Secunderabad Junction
+07147	Vskp Sc Special	Vishakapatnam	Secunderabad Junction
+08503	Vskp Sc Special	Vishakapatnam	Secunderabad Junction
+07103	Vskp Sc Special	Vishakapatnam	Secunderabad Junction
+08505	Vskp Sc Special	Vishakapatnam	Secunderabad Junction
+08511	Vskp Sc Special	Vishakapatnam	Secunderabad Junction
+08501	Vskp Sc Special	Vishakapatnam	Secunderabad Junction
+22809	Vskp Superfast Express	Paradip	Vishakapatnam
+22854	Vskp Shm Superfast Express	Vishakapatnam	Shalimar
+08567	Vskp Snsi Special	Vishakapatnam	Sainagar Shirdi
+02801	Vskp Snsi Special	Vishakapatnam	Sainagar Shirdi
+22801	Vskp Snsi Superfast Express	Vishakapatnam	Sainagar Shirdi
+12804	Vskp Swrn J Express	H Nizamuddin	Vishakapatnam
+18516	Vskp Tata Express	Vishakapatnam	Tatanagar Junction
+08516	Vskp Tata Special	Vishakapatnam	Tatanagar Junction
+02873	Vskp Tpty Special	Vishakapatnam	Tirupati
+08513	Vskp Vkb Special	Vishakapatnam	Vikarabad Junction
+12329	W B Sampark Kranti	Sealdah	Delhi
+12330	W B Sampark Kranti	Delhi	Sealdah
+12251	Wainganga Express	Yesvantpur Junction	Korba
+12252	Wainganga Express	Korba	Yesvantpur Junction
+16627	West Coast Express	Chennai Central	Mangalore Cntl
+16628	West Coast Express	Mangalore Cntl	Chennai Central
+22638	West Coast Express	Mangalore Cntl	Chennai Central
+22637	West Coast Express	Chennai Central	Mangalore Cntl
+06532	Yashvantpur Special	Ahmedabad Junction	Yesvantpur Junction
+22650	Yercaud Express	Erode Junction	Chennai Central
+22649	Yercaud Express	Chennai Central	Erode Junction
+16669	Yercaud Express	Chennai Central	Erode Junction
+19301	Yeshvantpur Express	Indore Junction Bg	Yesvantpur Junction
+16580	Yesvanthpur Express	Shimoga Town	Yesvantpur Junction
+16566	Yesvantpur Express	Mangalore Cntl	Yesvantpur Junction
+12256	Yesvantpur Express	Puducherry	Yesvantpur Junction
+12258	Yesvantpur Express	Kochuveli	Yesvantpur Junction
+06550	Yesvantpur Express	Eranakulam Junction	Yesvantpur Junction
+06522	Yesvantpur Express	Tiruchchirapali	Yesvantpur Junction
+06599	Yesvantpur Express	Nagercoil Junction	Yesvantpur Junction
+06597	Yesvantpur Express	Nagercoil Junction	Yesvantpur Junction
+12292	Yesvantpur Express	Chennai Central	Yesvantpur Junction
+16528	Yesvantpur Express	Kannur	Yesvantpur Junction
+16574	Yesvantpur Express	Puducherry	Yesvantpur Junction
+06536	Yeswantpur Express	Bijapur	Yesvantpur Junction
+06543	Ypr Ers Express	Yesvantpur Junction	Eranakulam Junction
+19302	Ypr Indb Express	Yesvantpur Junction	Indore Junction Bg
+22685	Ypr Skrantiexp	Yesvantpur Junction	Chandigarh
+19406	Ypr Ac Express	Ahmedabad Junction	Yesvantpur Junction
+00852	Ypr Bbs Premium	Yesvantpur Junction	Bhubaneswar
+02687	Ypr Bgm Superfast Express	Yesvantpur Junction	Belgaum
+16571	Ypr Bidr Express	Yesvantpur Junction	Bidar
+17310	Ypr Biweekly Express	Vasco Da Gama	Yesvantpur Junction
+06587	Ypr Bkn Express	Yesvantpur Junction	Bikaner Junction
+16587	Ypr Bkn Express	Yesvantpur Junction	Bikaner Junction
+02691	Ypr Bkn Premium	Yesvantpur Junction	Bikaner Junction
+16527	Ypr Cannanore E	Yesvantpur Junction	Kannur
+12291	Ypr Chennai Express	Yesvantpur Junction	Chennai Central
+05901	Ypr Dbrg Express	Yesvantpur Junction	Dibrugarh
+12214	Ypr Duronto Express	Delhi S Rohilla	Yesvantpur Junction
+12735	Ypr Garib Rath	Secunderabad Junction	Yesvantpur Junction
+06545	Ypr Ghyspecial	Yesvantpur Junction	Guwahati
+15024	Ypr Gkp Express	Yesvantpur Junction	Gorakhpur Junction
+15016	Ypr Gorakpur Express	Yesvantpur Junction	Gorakhpur Junction
+08636	Ypr Hatia Express	Yesvantpur Junction	Hatia
+12836	Ypr Hatia Express	Yesvantpur Junction	Hatia
+18638	Ypr Hatia Express	Yesvantpur Junction	Hatia
+08048	Ypr Hatia Express	Yesvantpur Junction	Hatia
+12864	Ypr Howrah Express	Yesvantpur Junction	Howrah Junction
+22864	Ypr Hwh Ac Express	Yesvantpur Junction	Howrah Junction
+02864	Ypr Hwh Premium	Yesvantpur Junction	Howrah Junction
+12193	Ypr Jbp Express	Yesvantpur Junction	Jabalpur
+06551	Ypr Jp Express	Yesvantpur Junction	Jaipur
+06511	Ypr Jp Express	Yesvantpur Junction	Jaipur
+06573	Ypr Jp Express	Yesvantpur Junction	Jaipur
+06529	Ypr Jp Express	Yesvantpur Junction	Jaipur
+09704	Ypr Jp Express	Yesvantpur Junction	Jaipur
+02695	Ypr Jp Premium	Yesvantpur Junction	Jaipur
+02697	Ypr Jyg Premium	Yesvantpur Junction	Jaynagar
+16515	Ypr Kawr Express	Yesvantpur Junction	Karwar
+16569	Ypr Kcg Express	Yesvantpur Junction	Kacheguda
+22683	Ypr Lko Express	Yesvantpur Junction	Lucknow Nr
+12539	Ypr Lucknow Express	Yesvantpur Junction	Lucknow Nr
+06517	Ypr Miraj Express	Yesvantpur Junction	Miraj Junction
+06519	Ypr Mrj Express	Yesvantpur Junction	Miraj Junction
+06589	Ypr Mrj Express	Yesvantpur Junction	Miraj Junction
+02689	Ypr Ncj Premium	Yesvantpur Junction	Nagercoil Junction
+02213	Ypr Ndls Ac Superfast	Yesvantpur Junction	New Delhi
+02688	Ypr Premium Express	Belgaum	Yesvantpur Junction
+00851	Ypr Premium Special	Bhubaneswar	Yesvantpur Junction
+22686	Ypr S Kranti Express	Chandigarh	Yesvantpur Junction
+12630	Ypr S Kranti Express	H Nizamuddin	Yesvantpur Junction
+08302	Ypr Sbp Express	Yesvantpur Junction	Sambalpur
+06508	Ypr St Express	Yesvantpur Junction	Surat
+18112	Ypr Tata Express	Yesvantpur Junction	Tatanagar Junction
+12890	Ypr Tata Express	Yesvantpur Junction	Tatanagar Junction
+06521	Ypr Tpj Express	Yesvantpur Junction	Tiruchchirapali
+02677	Ypr Ubl Express	Yesvantpur Junction	Hubli Junction
+02647	Ypr Ubl Express	Yesvantpur Junction	Hubli Junction
+17309	Ypr Vasco Express	Yesvantpur Junction	Vasco Da Gama
+06577	Ypr Vsg Express	Yesvantpur Junction	Vasco Da Gama
+02683	Ypr Vsg Superfast Express	Yesvantpur Junction	Vasco Da Gama
+12551	Yprkyq Ac Express	Yesvantpur Junction	Kamakhya
+02651	Yprkyq Express	Yesvantpur Junction	Kamakhya
+02551	Yprkyq Express	Yesvantpur Junction	Kamakhya
+12395	Ziyarat Express	Rjndr Ngr Bihar	Ajmer Junction
+12396	Ziyarat Express	Ajmer Junction	Rjndr Ngr Bihar
+
+22904
+13410
+18235
+21126
+14155
+05288
+05736
+12050
+02710
+19011
+22185
+14502
+16523
+17606
+12322
+02421

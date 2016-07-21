@@ -9,6 +9,22 @@
         <link rel="stylesheet" type="text/css" href="../css/train_live_status.css">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="../js/jquery-2.1.1.js"></script>
+
+<style>
+  .ui-autocomplete {
+    max-height: 150px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+  }
+  /* IE 6 doesn't support max-height
+   * we use height instead, but this forces the menu to always be this tall
+   */
+  * html .ui-autocomplete {
+    height: 150px;
+  }
+  </style>
+
         <script src="../js/bootstrap.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
@@ -44,7 +60,7 @@
 						<label class="icon-placed">
 							<img src="../images/train.png">
 							TRAIN</label>
-						<input type="text" name="train_num" id="train" placeholder="Enter Train No./ Name" onkeyup="autoSuggest(this.value)" style="margin-left:5px; margin-top:0px; font-size:14px;height: 28px; border:none;width:80%;" required>
+						<input type="text" name="train_num" id="train_num" placeholder="Enter Train No./ Name"  style="margin-left:5px; margin-top:0px; font-size:14px;height: 28px; border:none;width:80%;" required>
 					</div>
 
 					<div class="rightform">
@@ -174,6 +190,41 @@ if(isset($_SESSION['submit']))
 </script>
 
 
+<!-- php code starts here -->
 
+<?php
+    $json = file_get_contents('train_number_name.json');
+    $data = json_decode($json,true);
+    $new = array();
+    for($i=0;$i<count($data);$i++)
+    {
+        // array_push($new, strtoupper($data[$i]['train_name'] . " - " . $data[$i]['train_number']));
+        // if($data[$i]['train_name'] != "") //if train name is alse there
+        // array_push($new, $data[$i]['train_number'] . "(" . $data[$i]['train_name'] . ")");
+        // else// if train name is not there
+        // {
+        // 	array_push($new, $data[$i]['train_number']);
+        // }
+        if($data[$i]['train_name'] != "")//restrict the list to only where train names are also given in json file 
+        {
+       		array_push($new, $data[$i]['train_number']);//only for demo later name will also be included for which code is above in comment  	
+        }
+       
+
+    }
+
+?>
+
+<script>
+    <?php
+    $js_array = json_encode($new);
+    ?>
+    $(function() {
+    $( "#train_num" ).autocomplete({
+        source: <?php echo $js_array ?>,
+            minLength: 3
+        });
+    });
+</script>
 
 
