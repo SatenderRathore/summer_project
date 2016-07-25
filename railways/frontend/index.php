@@ -136,7 +136,7 @@ if(isset($_SESSION['userid']))
 								</fieldset>
 							</div>
 							<div class="submit">
-							<input type="submit" src="../images/tick.png" alt="Submit" width="40" height="40" >
+							<button type="submit" name="action" style="border:none;padding:0;background:0" ><img src="../images/next.png" alt="submit"></button>
 							</div>
 						</div>
 					</form>

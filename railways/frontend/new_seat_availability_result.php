@@ -88,8 +88,9 @@
 								<input id="date" type="text"  class="datepicker-here" data-language='en'>
 								<script>
 									$('#date').datepicker({
+										dateFormat: 'dd-mm-yy',
 										language: 'en',
-										minDate: new Date()
+										minDate: new Date() ,
 										//maxDate: minDate.getDate()+120
 									})
 								</script>

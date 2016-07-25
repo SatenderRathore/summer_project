@@ -44,7 +44,7 @@
 						<label class="icon-placed">
 							<img src="../images/train.png">
 							TRAIN</label>
-						<input type="text" name="train_num" id="train_num" placeholder="Enter Train No./ Name"  style="margin-left:5px; margin-top:0px; font-size:14px;height: 28px; border:none;width:80%;" required>
+						<input type="text" name="train_num" id="train_num" placeholder="Enter Train No./ Name"  style="margin-top:0px; font-size:14px;height: 28px; border:none;width:80%;" required>
 					</div>
 
 					<div class="rightform">
