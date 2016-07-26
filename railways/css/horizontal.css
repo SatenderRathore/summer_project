@@ -1,0 +1,326 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+body{
+  font-family: montserrat,Arial,sans-serif;
+}
+
+/*................top part ...................*/
+a {
+  color: #36d8f4;
+}
+a:hover {
+    text-decoration: none;
+}
+
+.top{
+  width: 100%;
+  height: 75px;
+  background-color: #2b3643;
+}
+
+.main-header{
+  height: 75px;
+  width: 100%;
+  background-color: transparent;
+/*  opacity: 0.5;*/
+}
+
+.left-head{
+/*  background-color: green;*/
+  height: 100%;
+}
+
+.mid-head{
+/*  background-color: yellow;*/
+  height: 100%;
+}
+
+.logo {
+    font-size: 22px;
+    color: white;
+    width: auto;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: 100%;
+    margin: 20px;
+    
+}
+
+.logo a {
+    color: white;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+.features {
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+    margin-top: 28px;
+}
+
+.features li {
+    font-size: 15px;
+    color: #36d8f4;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+}
+
+/*........................*/
+
+/*................ mid part ....................*/
+
+.train-details{
+  position: absolute;
+  padding: 0;
+  display: block;
+  margin-top: 10px;
+  margin-left: 20px;
+  background-color: rgba(255,255,255,0.25);
+  float: right;
+}
+
+.row{
+  display: block;
+  margin: 0;
+  min-width: 480px;
+  padding: 15px 10px;
+  box-shadow:0 0px 4px rgba(0,0,0,0.25);
+  border-radius: 2px;
+  border-bottom: 1px solid rgba(0,0,0,0.35);
+}
+
+.searchTitle{
+  display: block;
+  padding: 0 5px 15px;
+  text-align: left;
+  color: #666;
+  font-size: 16px;
+}
+
+input:focus{
+  outline: none;
+}
+
+.icon-placed{
+  top: 8px;
+  left: 10px;
+  color: #666;
+  border-right: 1px solid #eee;
+}
+
+.formContainer{
+  font-size: 12px;
+  
+}
+
+.leftform{
+  border: 1px solid #d7d7d7;
+  box-shadow:0 0px 4px rgba(0,0,0,0.25);
+  width:78.85416667%; 
+  float: left;
+}
+
+.rightform{
+  width:19.64583333%;
+  float: right;
+}
+
+.booking{
+  width: 80%;
+  height: 33px;
+  /*border-radius: 2px;*/
+  border:none;
+  background-color: rgba(135, 121, 245, 0.76);
+  color: white;
+  font-size: 13px;
+}
+
+/*.........................train live status results....................................*/
+
+.results{
+  background: #fff;
+  left: 20px;
+  top: 155px;
+  width: 37%;
+  position: relative;
+  overflow-x:hidden;
+  overflow-y:hidden;
+  display: inline-block;
+  box-shadow: 0 0px 4px rgba(0,0,0,0.25);
+  border-bottom:1px solid rgba(0,0,0,0.35);
+
+}
+
+.traindetails{
+  
+  border-bottom: 1px solid #ccc;
+  padding: 5px 15px;
+ /* background: rgba(135, 121, 245, 0.23);*/
+  background: #b3d1ff;
+}
+
+.toppart{
+  display: block;
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+.trainno{
+  background: white;
+  padding: 2px 7px;
+  font-size: 24px;
+  color: #333;
+  border:3px solid #333;
+}
+
+.selectday{
+  float: right;
+  /*margin-top: 9px;*/
+  border-radius: 0px;
+  background: rgba(135, 121, 245, 0.76);
+  padding: 10px 15px 10px 10px;
+  font-size: 14px;
+  margin-top: -3px;
+  color: white;
+  border: none;
+
+}
+
+.trainname{
+  font-size: 24px;
+}
+
+.sourcedest{
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+.traindesc{
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/*.....................live status.......................*/
+.livestatus{
+  padding: 10px;
+}
+
+.currentsummary{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.currentposition{
+  display: inline-block;
+  position: relative;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+.currenttime{
+  display: inline-block;
+  float: right;
+  margin-right: 5px;
+  border: 2px solid green;
+  font-size: 12px;
+  padding: 2px 6px;
+
+}
+
+.runningstatus{
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: inline-block;
+  height: 125px;
+  width:95%;
+  margin-left: 2.5%
+}
+
+.inner{
+  height: 100%;
+  white-space:nowrap; 
+}
+
+.station{
+  width: 250px;
+  height: 92px; 
+  margin:10px 0px 50px 10px; 
+  display: inline-block;
+}
+.metre{
+  display: inline-block;
+  
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  background: green;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+
+
+}
+
+
+.stationdetails{
+  border-bottom: 3px solid #339933;
+  padding: 0px 10px 10px 20px;
+  margin: 0 0 0 10px;
+}
+
+.station-name{
+  font-size: 16px;
+}
+
+.desc{
+  padding: 5px 0 10px 0;
+  font-size: 12px;
+}
+
+.status{
+  font-size: 12px;
+  color: green;
+  font-weight: 300;
+}
+
+.time{
+  color: green;
+  font-weight: 400;
+}
+
+.loading {
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+    background: url('../images/loading.gif');
+}
+
+.halt{
+  padding-left: 10px;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}*/
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255,0,0,0.4); 
+}
