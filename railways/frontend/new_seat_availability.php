@@ -15,15 +15,16 @@
         <script src="../js/bootstrap.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
+        <link href="../datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+        <script src="../datepicker/dist/js/datepicker.min.js"></script> 
+        <script src="../datepicker/dist/js/i18n/datepicker.en.js"></script>
+        
+        <script>
+            // Initialization
+            //$('#date').datepicker([options])
+            // Access instance of plugin
+            $('#datepicker').data('datepicker')
 
-         <script>
-          $(function() {
-            $( "#datepicker" ).datepicker( {
-                numberOfMonths: 2,
-                showButtonPanel: true,
-                dateFormat: 'dd-mm-yy'
-            });
-          });
         </script>
     </head>
 
@@ -95,6 +96,14 @@
                                     <fieldset data-form-name="date">
                                         <legend> Enter Date Of Journey</legend>
                                         <input class="date-picker form-control" name="doj" type="text" id="datepicker" data-type="text" required>
+                                        <script>
+                                            $('#datepicker').datepicker({
+                                                dateFormat: 'dd-mm-yy',
+                                                language: 'en',
+                                                minDate: new Date() ,
+                                                //maxDate: minDate.getDate()+120
+                                            })
+                                        </script>
                                         <label class="error-msg errdate"></label>
                                     </fieldset>
                                 </div>
