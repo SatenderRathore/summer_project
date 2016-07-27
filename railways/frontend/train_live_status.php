@@ -81,12 +81,10 @@ session_start();
 if(isset($_SESSION['submit']))
 {
 	$train_num = $_SESSION['train_num'];
-	?>
-	<script>
-	submitForm();
-
+?>
+<script>
 	var trainNum = '<?php echo $train_num ?>';
-
+	submitForm(trainNum);
 ////////////////////////ajax////////////////////////////////////////////////////////
 // function loadDoc(trainNum)
 // 	{

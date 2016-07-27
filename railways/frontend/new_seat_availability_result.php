@@ -1,51 +1,51 @@
 <?php
 
-	// $apikey = "uucxi9379";//satenderjpr@gmail.com
-	$apikey = "ttemb6830";//singhpalarashakti@gmail.com
-	// $apikey = "ootzm7275";//satendersvnit@gmail.com
+// 	// $apikey = "uucxi9379";//satenderjpr@gmail.com
+// 	$apikey = "ttemb6830";//singhpalarashakti@gmail.com
+// 	// $apikey = "ootzm7275";//satendersvnit@gmail.com
 
-	//$apikey = "eumbm2216";//singhrathoresatender@gmail.com
+// 	//$apikey = "eumbm2216";//singhrathoresatender@gmail.com
 
-	//$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
-	//$apikey = "budyl6423";//yashagarwaljpr@gmail.com
-	//$apikey = "zlzou2003";//satendersinghpalara@gmail.com
-	//$apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
+// 	//$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
+// 	//$apikey = "budyl6423";//yashagarwaljpr@gmail.com
+// 	//$apikey = "zlzou2003";//satendersinghpalara@gmail.com
+// 	//$apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
 
-	//$apikey = "okogk2695";//theyashagarwal21@gmail.com
+// 	//$apikey = "okogk2695";//theyashagarwal21@gmail.com
 
-    // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
-    // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
-
-
-
-    $source = strtoupper($_POST['source']);
-    $destination = strtoupper($_POST['destination']);
-    $doj = $_POST['doj'];
-    $user_class = $_POST['class'];
-    $user_class_copy = $user_class;
-    $user_quota = $_POST['quota'];
-    $source = station_code($source);
-    $destination = station_code($destination);
+//     // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
+//     // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
 
 
-/////////////////////function for default class/////////////////
-    function default_class($classes)
-    {
-        foreach ($classes as $class)
-        {
-            if($class['available'] == "Y")
-            {
-                $default_class = $class['class-code'];
-                break;
-            }
-        }
-        return $default_class;
-    }
-///////////////////////////////////////////////////////////
-//http://api.railwayapi.com/between/source/jp/dest/st/date/15-07-2016/apikey/uucxi9379/
-    $trains_bw_stations_api = "http://api.railwayapi.com/between/source/" . $source . "/dest/" . $destination . "/date/" . $doj . "/apikey/" . $apikey ;
-    $trains_bw_stations_api_call = file_get_contents($trains_bw_stations_api);
-    $trains_bw_stations_api_data = json_decode($trains_bw_stations_api_call, true);
+
+//     $source = strtoupper($_POST['source']);
+//     $destination = strtoupper($_POST['destination']);
+//     $doj = $_POST['doj'];
+//     $user_class = $_POST['class'];
+//     $user_class_copy = $user_class;
+//     $user_quota = $_POST['quota'];
+//     $source = station_code($source);
+//     $destination = station_code($destination);
+
+
+// /////////////////////function for default class/////////////////
+//     function default_class($classes)
+//     {
+//         foreach ($classes as $class)
+//         {
+//             if($class['available'] == "Y")
+//             {
+//                 $default_class = $class['class-code'];
+//                 break;
+//             }
+//         }
+//         return $default_class;
+//     }
+// ///////////////////////////////////////////////////////////
+// //http://api.railwayapi.com/between/source/jp/dest/st/date/15-07-2016/apikey/uucxi9379/
+//     $trains_bw_stations_api = "http://api.railwayapi.com/between/source/" . $source . "/dest/" . $destination . "/date/" . $doj . "/apikey/" . $apikey ;
+//     $trains_bw_stations_api_call = file_get_contents($trains_bw_stations_api);
+//     $trains_bw_stations_api_data = json_decode($trains_bw_stations_api_call, true);
 
 
 

@@ -138,7 +138,8 @@ $passengers[0]['current_status'] = "w/L";
 
 
 //----------------------------code to display the passengers list--------------------------------
-	function update_passenger_list(){
+function update_passenger_list()
+{
 	var table = document.getElementById("passengers");
 	var srno=[1,2,3,4];
 	var totalPassengers = '<?php echo count($passengers)?>';
