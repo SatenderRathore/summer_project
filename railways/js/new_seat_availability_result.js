@@ -1,13 +1,14 @@
-function swap(){
+function swap()
+{
 	var src=document.getElementById('src').value;
 	var dest=document.getElementById('dest').value;
 	document.getElementById('src').value=dest;
 	document.getElementById('dest').value=src;
 
-
 }
 
-function update_pnr_details(){
+function update_pnr_details()
+{
 	var table = document.getElementById("trains_list");
 	var train_details="DHN ANVT SPL( 02395)";
 	// var train_num = '<?php echo $trainnum ?>';
