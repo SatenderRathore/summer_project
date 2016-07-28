@@ -31,21 +31,22 @@ if(isset($_SESSION['userid']))
 	<body >
 		<div class="top">
 			<div class="main-header">
-				<div class="left-head col-md-2">
+				<div class="left-head col-sm-2 col-lg-2" style="padding-left:0;padding-right:0">
                     <div class="logo"><a href="index.php">Seat Jugaad</a></div>
 
 				</div>
-				<div class="mid-head col-md-8">
+				<div class="mid-head col-md-8 col-lg-9" style="padding-left:0;padding-right:0">
 					<ul class="features">
 
-                        <li><a href="./new_seat_availability.php">SEAT AVAILABILITY</a></li>
-                        <li><a href="index.php">PNR STATUS</a></li>
-                        <li>FAIR ENQUIRY</li>
-                        <li><a href="train_live_status.php">LIVE TRAIN STATUS</a></li>
-                        <li>CANCELLED TRAINS</li>
+                        <li class="list1"><a href="./new_seat_availability.php">SEAT AVAILABILITY</a></li>
+                        <li class="list2"><a href="index.php">PNR STATUS</a></li>
+                        <li class="list2">FAIR ENQUIRY</li>
+                        <li class="list1"><a href="train_live_status.php">LIVE TRAIN STATUS</a></li>
+                        <li class="list1">CANCELLED TRAINS</li>
                     </ul>
 
 				</div>
+                <!-- 
 				<div class="right-head col-md-2">
 					<a href="#" class="login-link" role="button" data-toggle="modal" data-target="#loginbox">Login</a>
 
@@ -110,9 +111,9 @@ if(isset($_SESSION['userid']))
                            </div>
                         </div>
 		          </div>
-                </div>
+                </div>-->
 			</div>
-
+            
 
 			<div class="middle ">
 				<div class="mid-first">
