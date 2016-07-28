@@ -38,7 +38,6 @@ a:hover {
   height: 100%;
 }
 
-
 .mid-first{
   display: inline-block;
   position: relative;
@@ -154,14 +153,7 @@ input[type="password"]{
   border-bottom: 1px solid rgba(255,255,255,.4);
 }
 
-.submit{
-  top: 60px;
-  width: 40px;
-  height: 400px;
-  position: relative;
-  display: inline-block;
-  float: right;
-}
+
 
 #loginbox, #signupbox, #forgotpassbox {
     margin-top: 40px;
@@ -317,62 +309,94 @@ a{
     text-decoration: none;
 }
 
-.features {
-    text-align: center;
-    list-style-type: none;
-    /*margin-top: 28px;*/
-    padding: 28px 0 0 0;
-    height: inherit;
-    display: inline-block;
 
-    white-space: nowrap;
-}
-
-.features li a{
-  padding: none;
-}
-
-/*@media (max-width: 768px){
+@media (max-width: 768px){
   .logo{
-    font-size: 18px;
     letter-spacing: 1px;
     color: white;
     width: auto;
-    letter-spacing: 2px;
     text-transform: uppercase;
+    font-size: 16px;
   }
+
+  .middle{
+  padding-top: 40px;
+  width: 95%;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto; 
+  }
+
   .mid-first{
     display: none;
   }
 
   .mid-second{
-    width: 90%;
-    display: inline-block;
-    position: relative;
-    margin-left: 5%;
-  }
-  .middle{
-  margin-top: 60px;
-  width: 100%;
+  display: inline-block;
+  position: absolute;
+  background-color: rgba(0,0,0,.6);
   height: 200px;
-  margin-left: auto;
-  margin-right: auto; 
+  width:95%;
+  padding:0;
   }
-}*/
 
-@media (max-width: 768px) and (max-width: 991px) {
+  .nav li{
+    font-size: 13px;
+
+  }
+
+  .nav li a{
+    padding:15px 5px;
+  }
+  .navbar{
+    background: #3db2e1;
+  }
+
+  .submit{
+  top: 60px;
+  width: 40px;
+  height: 400px;
+  position: relative;
+  display: inline-block;
+  float: right;
+  margin-right: 0px;
+  }
+
+  .mid-content{
+    padding: 0px 20px;
+  }
+  .details{
+    width: 90%;
+  }
+  input[type="text"]{
+    font-size: :25px;
+    width: 80%;
+  }
+
+  #pnrcheckform{
+  position: relative;
+  display: block;
+  top:50px;
+  width: auto;
+  height: 125px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 842px) {
   .logo{
-    font-size: 18px;
     letter-spacing: 1px;
     color: white;
     width: auto;
-    letter-spacing: 2px;
     text-transform: uppercase;
+    font-size: 16px;
   }
 
   .middle{
   margin-top: 60px;
-  width: 100%;
+  width: 700px;
   height: 200px;
   margin-left: auto;
   margin-right: auto; 
@@ -383,10 +407,111 @@ a{
   position: absolute;
   background-color: rgba(0,0,0,.6);
   height: 200px;
-  max-width: 500px;
+  width: 500px;
   padding:0;
   }
+
+  .nav li{
+    font-size: 11px;
+
+  }
+
+  .nav li a{
+    padding:15px 5px;
+  }
+
+  .submit{
+  top: 60px;
+  width: 40px;
+  height: 400px;
+  position: relative;
+  display: inline-block;
+  float: right;
+  margin-right: 0px;
+  }
+
+  .mid-content{
+    padding: 0px 20px;
+  }
+  input[type="text"]{
+    font-size: :25px;
+    width: 80%;
+  }
+
+  #pnrcheckform{
+  position: relative;
+  display: block;
+  top:50px;
+  width: auto;
+  height: 125px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+  .login-link{
+    margin-right: -2px;
+    font-size: 15px;
+  }
 }
+
+
+@media (min-width: 843px) and (max-width: 991px) {
+  .logo{
+    letter-spacing: 1px;
+    color: white;
+    width: auto;
+    text-transform: uppercase;
+  }
+
+  .middle{
+  margin-top: 60px;
+  width: 800px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto; 
+  }
+
+  .mid-second{
+  display: inline-block;
+  position: absolute;
+  background-color: rgba(0,0,0,.6);
+  height: 200px;
+  width: 600px;
+  padding:0;
+  }
+
+  .navbar-nav{
+    margin-left: -5px;
+  }
+  .nav li{
+    font-size: 12px;
+
+  }
+
+  .nav li a{
+    padding:13px 10px;
+  }
+
+  .submit{
+  top: 60px;
+  width: 40px;
+  height: 400px;
+  position: relative;
+  display: inline-block;
+  float: right;
+  margin-right: 0px;
+  }
+
+  .mid-content{
+    padding: 0px 20px;
+  }
+
+  .login-link{
+    font-size: 15px;
+  }
+}
+
+
 
 @media (min-width: 992px) {
   .logo {
@@ -396,34 +521,10 @@ a{
   letter-spacing: 1px;
   text-transform: uppercase;
   width: 100%;
-  margin: 25px 0px 20px 10%;
+  /*margin: 25px 0px 20px 10%;*/
   }
 
-  .list1{
-    width: 20%;
-    display: inline-block;
-    margin-left: 5px;
-    margin-right: 2px;
-
-  }
-
-  .list2{
-    width: 15%;
-    display: inline-block;
-    margin-left: 5px;
-    margin-right: 1%;
-  }
   
-  .features li{
-    font-size: 13px;
-    color: green;
-    padding: 0;
-  }
-
-  .features{
-    width: 100%;
-  }
-
   .middle{
   margin-top: 60px;
   width: 840px;
@@ -439,6 +540,15 @@ a{
   height: 200px;
   width: 640px;
   padding:0;
+  }
+  .submit{
+  top: 60px;
+  width: 40px;
+  height: 400px;
+  position: relative;
+  display: inline-block;
+  float: right;
+  margin-right: 0px;
   }
 }
 
@@ -451,35 +561,10 @@ a{
   letter-spacing: 1px;
   text-transform: uppercase;
   width: 100%;
-  margin: 20px 0px 20px 10%;
+  /*margin: 20px 0px 20px 10%;*/
   }
 
-  .list1{
-    width: 20%;
-    display: inline-block;
-    margin-right: 2px;
-    margin-left: 5px;
-  }
-
-  .list2{
-    width: 15%;
-    display: inline-block;
-    margin-right: 2px;
-    margin-left: 5px;
-  }
-
-  .features li {
-    font-size: 15px;
-    color: green;
-    padding: 0;
-    margin-left: -10px;
-  }
-
-  .features{
-    width: 95%;
-    margin-left: -3%;
-  }
-
+  
   .middle{
   margin-top: 60px;
   width: 840px;
@@ -495,6 +580,19 @@ a{
   height: 200px;
   width: 640px;
   padding:0;
+  }
+
+  .navbar-nav{
+    padding-left: 5%;
+  }
+  .submit{
+  top: 60px;
+  width: 40px;
+  height: 400px;
+  position: relative;
+  display: inline-block;
+  float: right;
+  margin-right: 0px;
   }
 
 }
