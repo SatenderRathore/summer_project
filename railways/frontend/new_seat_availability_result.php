@@ -302,12 +302,14 @@ function trainDetails()
 // echo count($all_trains);
 	?>
 	var total = '<?php echo count($all_trains)?>'; 
-	<?php $i = 0;?>
+	<?php 
+	$i = 0;
+	$raw_data = json_encode((array)$days_of_run);
+	?>
 
 	for(var i=0;i<total;i++)
 	{
 		<?php
-print_r($i);
 		$train_name = $all_trains[$i]['name'];
         $train_num = $all_trains[$i]['number'];
         $days_of_run = $all_trains[$i]['days'];
