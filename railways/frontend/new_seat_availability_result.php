@@ -1,54 +1,89 @@
 <?php
 
-// 	// $apikey = "uucxi9379";//satenderjpr@gmail.com
-// 	$apikey = "ttemb6830";//singhpalarashakti@gmail.com
-// 	// $apikey = "ootzm7275";//satendersvnit@gmail.com
+	// $apikey = "uucxi9379";//satenderjpr@gmail.com
+	$apikey = "ttemb6830";//singhpalarashakti@gmail.com
+	// $apikey = "ootzm7275";//satendersvnit@gmail.com
 
-// 	//$apikey = "eumbm2216";//singhrathoresatender@gmail.com
+	//$apikey = "eumbm2216";//singhrathoresatender@gmail.com
 
-// 	//$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
-// 	//$apikey = "budyl6423";//yashagarwaljpr@gmail.com
-// 	//$apikey = "zlzou2003";//satendersinghpalara@gmail.com
-// 	//$apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
+	//$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
+	//$apikey = "budyl6423";//yashagarwaljpr@gmail.com
+	//$apikey = "zlzou2003";//satendersinghpalara@gmail.com
+	//$apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
 
-// 	//$apikey = "okogk2695";//theyashagarwal21@gmail.com
+	//$apikey = "okogk2695";//theyashagarwal21@gmail.com
 
-//     // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
-//     // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
-
-
-
-//     $source = strtoupper($_POST['source']);
-//     $destination = strtoupper($_POST['destination']);
-//     $doj = $_POST['doj'];
-//     $user_class = $_POST['class'];
-//     $user_class_copy = $user_class;
-//     $user_quota = $_POST['quota'];
-//     $source = station_code($source);
-//     $destination = station_code($destination);
-
-
-// /////////////////////function for default class/////////////////
-//     function default_class($classes)
-//     {
-//         foreach ($classes as $class)
-//         {
-//             if($class['available'] == "Y")
-//             {
-//                 $default_class = $class['class-code'];
-//                 break;
-//             }
-//         }
-//         return $default_class;
-//     }
-// ///////////////////////////////////////////////////////////
-// //http://api.railwayapi.com/between/source/jp/dest/st/date/15-07-2016/apikey/uucxi9379/
-//     $trains_bw_stations_api = "http://api.railwayapi.com/between/source/" . $source . "/dest/" . $destination . "/date/" . $doj . "/apikey/" . $apikey ;
-//     $trains_bw_stations_api_call = file_get_contents($trains_bw_stations_api);
-//     $trains_bw_stations_api_data = json_decode($trains_bw_stations_api_call, true);
+    // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
+    // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
 
 
 
+    $source = strtoupper($_POST['source']);
+    $destination = strtoupper($_POST['destination']);
+    $doj = $_POST['doj'];
+    $user_class = $_POST['class'];
+    $user_class_copy = $user_class;
+    $user_quota = $_POST['quota'];
+    $source = station_code($source);
+    $destination = station_code($destination);
+
+
+/////////////////////function for default class/////////////////
+    function default_class($classes)
+    {
+        foreach ($classes as $class)
+        {
+            if($class['available'] == "Y")
+            {
+                $default_class = $class['class-code'];
+                break;
+            }
+        }
+        return $default_class;
+    }
+///////////////////////////////////////////////////////////
+
+/////////////////////function for staton code//////////////////////////////////////
+function station_code($station_name)
+{
+    $json = file_get_contents('station_list.json');
+    $data = json_decode($json, true);
+    $new = array();
+    for($i=0;$i<count($data);$i++)
+    {
+        array_push($new, strtoupper($data[$i]['station'] . " - " . $data[$i]['station_code']));
+    }
+    $count = 0;
+    foreach ($new as $station)
+    {
+        if($station_name == $station)
+        {
+            break;
+        }
+        $count++;
+    }
+    return $data[$count]['station_code'];
+}
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//http://api.railwayapi.com/between/source/jp/dest/st/date/15-07-2016/apikey/uucxi9379/
+    $trains_bw_stations_api = "http://api.railwayapi.com/between/source/" . $source . "/dest/" . $destination . "/date/" . $doj . "/apikey/" . $apikey ;
+    $trains_bw_stations_api_call = file_get_contents($trains_bw_stations_api);
+    $trains_bw_stations_api_data = json_decode($trains_bw_stations_api_call, true);
+
+
+	$all_trains = array();
+    $trains = $trains_bw_stations_api_data['train'];
+
+    foreach ($trains as $train_details)
+    {
+        array_push($all_trains, $train_details);
+    }
+
+// $days_of_run = $all_trains[0]['days'];
+// print_r($days_of_run);
 ?>
 
 <!doctype html>
@@ -236,13 +271,9 @@
     });
 </script>
 
-<?php
-$a='12345';
-?>
-
 <script>
 	
-	function swap()
+function swap()
 {
 	var src=document.getElementById('src').value;
 	var dest=document.getElementById('dest').value;
@@ -253,52 +284,139 @@ $a='12345';
 
 function trainDetails()
 {
-	var table = document.getElementById("trains_list");
-	var train_details="DHN ANVT SPL( 02395)";
-	// var train_num = '<?php //echo $trainnum ?>';
-	var dept='<?php echo $a ?>';
-	var arr="15:00";
-	var durr="17:25 hr";
-	var days="M T W T F S S";
-	var classes="2A 3A SL";
-	var cstatus="GNWL603/WL400";
-	var sjstatus="No more booking";
-	var row1=table.insertRow(1);
-	var cell11=row1.insertCell(0);
-	var cell12=row1.insertCell(1);
-	var cell13=row1.insertCell(2);
-	var cell14=row1.insertCell(3);
-	var cell15=row1.insertCell(4);
-	var cell16=row1.insertCell(5);
-	var cell17=row1.insertCell(6);
-	var cell18=row1.insertCell(7);
-	cell11.innerHTML=train_details;
-	cell12.innerHTML=dept;
-	cell13.innerHTML=arr;
-	cell14.innerHTML=durr;
-	cell15.innerHTML=days;
-	cell16.innerHTML=classes;
-	cell17.innerHTML=cstatus;
-	cell18.innerHTML=sjstatus;
+	<?php 
+	for($i = 0; $i < count($all_trains); $i++)
+    {
 
-	var row2=table.insertRow(2);
-	var cell21=row2.insertCell(0);
-	var cell22=row2.insertCell(1);
-	var cell23=row2.insertCell(2);
-	var cell24=row2.insertCell(3);
-	var cell25=row2.insertCell(4);
-	var cell26=row2.insertCell(5);
-	var cell27=row2.insertCell(6);
-	var cell28=row2.insertCell(7);
-	cell21.innerHTML=train_details;
-	cell22.innerHTML=dept;
-	cell23.innerHTML=arr;
-	cell24.innerHTML=durr;
-	cell25.innerHTML=days;
-	cell26.innerHTML=classes;
-	cell27.innerHTML=cstatus;
-	cell28.innerHTML=sjstatus;
+        $train_name = $all_trains[$i]['name'];
+        $train_num = $all_trains[$i]['number'];
+        $days_of_run = $all_trains[$i]['days'];
+        $departure_time = $all_trains[$i]['src_departure_time'];
+        $arrival_time = $all_trains[$i]['dest_arrival_time'];
+        $travel_time = $all_trains[$i]['travel_time'];
+        $source = $all_trains[$i]['from'];
+        $destination =$all_trains[$i]['to'];
+        $class = $all_trains[$i]['classes'];
+     // print_r($all_train2s[$i]['src_departure_time']);
+    }  
+// echo count($all_trains);
+	?>
+	var total = '<?php echo count($all_trains)?>'; 
+	<?php $i = 0;?>
 
+	for(var i=0;i<total;i++)
+	{
+		<?php
+print_r($i);
+		$train_name = $all_trains[$i]['name'];
+        $train_num = $all_trains[$i]['number'];
+        $days_of_run = $all_trains[$i]['days'];
+        $departure_time = $all_trains[$i]['src_departure_time'];
+        $arrival_time = $all_trains[$i]['dest_arrival_time'];
+        $travel_time = $all_trains[$i]['travel_time'];
+        $source = $all_trains[$i]['from'];
+        $destination =$all_trains[$i]['to'];
+        $class = $all_trains[$i]['classes'];
+
+ 		////////////for days of run
+		$days_of_run = $all_trains[$i]['days'];
+		$d = '';
+		foreach($days_of_run as $days)
+		{
+            if($days['runs'] === 'Y')
+            {
+               $day = "b".$days['day-code'][0]."b";
+
+               //echo '<li class="available"><strong>'.$days['day-code'][0].' </strong></li>';
+            }
+            else
+            {
+            	$day = $days['day-code'][0];
+
+                //echo '<li class="not-available">'.$days['day-code'][0].' </li>';
+            }
+            $d = $d.$day ;
+        }
+        
+        ?>
+
+// foreach($days_of_run as $days) {
+//             if($days['runs'] === 'Y') {
+//                 echo '<li class="available"><strong>'.$days['day-code'][0].' </strong></li>';
+//             }
+//             else {
+//                 echo '<li class="not-available">'.$days['day-code'][0].' </li>';
+//             }
+//         }
+		
+		var table = document.getElementById("trains_list");
+		// var train_num = '<?php //echo $trainnum ?>';
+		var train_details='<?php echo $train_name ?>';
+		var dept='<?php echo $departure_time ?>';
+		var arr='<?php echo $arrival_time ?>';
+		var durr='<?php echo $travel_time ?>';
+		var days = '<?php echo $d ?>';
+		// var days='<?php //echo $days_of_run?>';
+		var classes = '1';
+		// var classes='<?php //echo $class ?>';
+		var cstatus="GNWL603/WL400";
+		var sjstatus="No more booking";
+		var row1=table.insertRow(i+1);
+		var cell11=row1.insertCell(0);
+		var cell12=row1.insertCell(1);
+		var cell13=row1.insertCell(2);
+		var cell14=row1.insertCell(3);
+		var cell15=row1.insertCell(4);
+		var cell16=row1.insertCell(5);
+		var cell17=row1.insertCell(6);
+		var cell18=row1.insertCell(7);
+		cell11.innerHTML=train_details;
+		cell12.innerHTML=dept;
+		cell13.innerHTML=arr;
+		cell14.innerHTML=durr;
+		cell15.innerHTML=days;
+		cell16.innerHTML=classes;
+		cell17.innerHTML=cstatus;
+		cell18.innerHTML=sjstatus;
+
+		<?php $i = $i +1?>
+	// var row2=table.insertRow(2);
+	// var cell21=row2.insertCell(0);
+	// var cell22=row2.insertCell(1);
+	// var cell23=row2.insertCell(2);
+	// var cell24=row2.insertCell(3);
+	// var cell25=row2.insertCell(4);
+	// var cell26=row2.insertCell(5);
+	// var cell27=row2.insertCell(6);
+	// var cell28=row2.insertCell(7);
+	// cell21.innerHTML=train_details;
+	// cell22.innerHTML=dept;
+	// cell23.innerHTML=arr;
+	// cell24.innerHTML=durr;
+	// cell25.innerHTML=days;
+	// cell26.innerHTML=classes;
+	// cell27.innerHTML=cstatus;
+	// cell28.innerHTML=sjstatus;
+	}
 }
 trainDetails(); 
+</script>
+
+<script>
+
+<?php 
+$j=0; 
+$j++;
+$j++;
+?>
+for(var i=0;i<10;i++)
+{
+	<?php
+	print_r($j);
+	$j++;
+	print_r($j);
+
+	?>
+}
+
 </script>
