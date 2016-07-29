@@ -68,9 +68,9 @@
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
         <!--datepicker-->
-        <link href="../datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
-		<script src="../datepicker/dist/js/datepicker.min.js"></script>	
-		<script src="../datepicker/dist/js/i18n/datepicker.en.js"></script>
+        <link href="../css/datepicker.min.css" rel="stylesheet" type="text/css">
+		<script src="../js/datepicker.min.js"></script>	
+		<script src="../js/datepicker.en.js"></script>
 
 		<script>
 			// Initialization
