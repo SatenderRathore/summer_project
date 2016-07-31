@@ -1,5 +1,5 @@
 <?php
-
+//-----------------------api keys----------------------------
 	// $apikey = "uucxi9379";//satenderjpr@gmail.com
 	$apikey = "ttemb6830";//singhpalarashakti@gmail.com
 	// $apikey = "ootzm7275";//satendersvnit@gmail.com
@@ -15,7 +15,7 @@
 
     // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
     // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
-
+//-----------------------------------------------------------------
 
 
     $source = strtoupper($_POST['source']);
@@ -28,7 +28,7 @@
     $destination = station_code($destination);
 
 
-/////////////////////function for default class/////////////////
+//------------------------function for default class-----------------------
     function default_class($classes)
     {
         foreach ($classes as $class)
@@ -41,9 +41,9 @@
         }
         return $default_class;
     }
-///////////////////////////////////////////////////////////
+//--------------------------------------------------------------------------
 
-/////////////////////function for staton code//////////////////////////////////////
+//----------------------------function for staton code----------------------------------------------
 function station_code($station_name)
 {
     $json = file_get_contents('station_list.json');
@@ -64,14 +64,22 @@ function station_code($station_name)
     }
     return $data[$count]['station_code'];
 }
-//////////////////////////////////////////////////////////////////////////////////////
+//--------------------------------------------------------------------------------------------------
 
 
-
+//------------------------------------------------------------------------------------------------------------------------------------------------------
 //http://api.railwayapi.com/between/source/jp/dest/st/date/15-07-2016/apikey/uucxi9379/
     $trains_bw_stations_api = "http://api.railwayapi.com/between/source/" . $source . "/dest/" . $destination . "/date/" . $doj . "/apikey/" . $apikey ;
     $trains_bw_stations_api_call = file_get_contents($trains_bw_stations_api);
     $trains_bw_stations_api_data = json_decode($trains_bw_stations_api_call, true);
+$json = json_encode($trains_bw_stations_api_data);
+?>
+<script>var j = <?php echo $json?>;
+	var k = <?php echo $trains_bw_stations_api_call?>;
+	// console.log(k);
+	// console.log(k['train'][0]['name']);
+</script>
+<?php
 
 
 	$all_trains = array();
@@ -283,11 +291,10 @@ function swap()
 }
 
 function trainDetails()
-{
+{console.log("hello world");
 	<?php 
 	for($i = 0; $i < count($all_trains); $i++)
     {
-
         $train_name = $all_trains[$i]['name'];
         $train_num = $all_trains[$i]['number'];
         $days_of_run = $all_trains[$i]['days'];
@@ -301,46 +308,51 @@ function trainDetails()
     }  
 // echo count($all_trains);
 	?>
-	var total = '<?php echo count($all_trains)?>'; 
+ //--------------------------------------------------------------------------------------------
+	
 	<?php 
-	$i = 0;
-	$raw_data = json_encode((array)$days_of_run);
+		$all_trains_in_json = json_encode((array)$all_trains);
 	?>
-
+	var all_trains_js = <?php echo $all_trains_in_json ?>;
+	var total = '<?php echo count($all_trains)?>'; 
+	console.log(all_trains_js[0]['name']);
 	for(var i=0;i<total;i++)
 	{
-		<?php
-		$train_name = $all_trains[$i]['name'];
-        $train_num = $all_trains[$i]['number'];
-        $days_of_run = $all_trains[$i]['days'];
-        $departure_time = $all_trains[$i]['src_departure_time'];
-        $arrival_time = $all_trains[$i]['dest_arrival_time'];
-        $travel_time = $all_trains[$i]['travel_time'];
-        $source = $all_trains[$i]['from'];
-        $destination =$all_trains[$i]['to'];
-        $class = $all_trains[$i]['classes'];
-
+		// <?php
+		// $train_name = $all_trains[$i]['name'];
+  //       $train_num = $all_trains[$i]['number'];
+  //       $days_of_run = $all_trains[$i]['days'];
+  //       $departure_time = $all_trains[$i]['src_departure_time'];
+  //       $arrival_time = $all_trains[$i]['dest_arrival_time'];
+  //       $travel_time = $all_trains[$i]['travel_time'];
+  //       $source = $all_trains[$i]['from'];
+  //       $destination =$all_trains[$i]['to'];
+  //       $class = $all_trains[$i]['classes'];
+  //       ?>
  		////////////for days of run
-		$days_of_run = $all_trains[$i]['days'];
-		$d = '';
-		foreach($days_of_run as $days)
+		days_of_run = all_trains_js[i]['days'];
+		len = days_of_run.length;
+		// console.log(len);
+		d = '';
+		for(var j=0;j<len;j++)
 		{
-            if($days['runs'] === 'Y')
+            if(days_of_run[j]['runs'] === 'Y')
             {
-               $day = "b".$days['day-code'][0]."b";
-
+               // day = "b".days['day-code'][0]."b";
+               day = days_of_run[j]['day-code'];
                //echo '<li class="available"><strong>'.$days['day-code'][0].' </strong></li>';
             }
             else
             {
-            	$day = $days['day-code'][0];
+            	day = days_of_run[j]['day-code'][0];
 
                 //echo '<li class="not-available">'.$days['day-code'][0].' </li>';
             }
-            $d = $d.$day ;
+            // $d = $d.$day ;
+            d = d.concat(day);
         }
-        
-        ?>
+        // console.log(d);
+        //?>
 
 // foreach($days_of_run as $days) {
 //             if($days['runs'] === 'Y') {
@@ -353,11 +365,12 @@ function trainDetails()
 		
 		var table = document.getElementById("trains_list");
 		// var train_num = '<?php //echo $trainnum ?>';
-		var train_details='<?php echo $train_name ?>';
-		var dept='<?php echo $departure_time ?>';
-		var arr='<?php echo $arrival_time ?>';
-		var durr='<?php echo $travel_time ?>';
-		var days = '<?php echo $d ?>';
+		var train_details=all_trains_js[i]['name'];
+		console.log(train_details);2
+		var dept=all_trains_js[i]['src_departure_time'];
+		var arr=all_trains_js[i]['dest_arrival_time'];
+		var durr=all_trains_js[i]['travel_time'];
+		var days = d;
 		// var days='<?php //echo $days_of_run?>';
 		var classes = '1';
 		// var classes='<?php //echo $class ?>';

@@ -144,7 +144,7 @@ $reservation_upto = $_SESSION['reservation_upto'];
         var totalPassengers = '<?php echo count($passengers)?>';
         
         <?php 
-        $raw_data = json_encode((array)$passengers);
+        	$raw_data = json_encode((array)$passengers);
         ?>
         var passengers_js = <?php echo $raw_data?>;
         for(var i=0;i<totalPassengers;i++)
