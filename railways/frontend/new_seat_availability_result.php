@@ -1,8 +1,8 @@
 <?php
 //-----------------------api keys----------------------------
 	// $apikey = "uucxi9379";//satenderjpr@gmail.com
-	$apikey = "ttemb6830";//singhpalarashakti@gmail.com
-	// $apikey = "ootzm7275";//satendersvnit@gmail.com
+	// $apikey = "ttemb6830";//singhpalarashakti@gmail.com
+	$apikey = "ootzm7275";//satendersvnit@gmail.com
 
 	//$apikey = "eumbm2216";//singhrathoresatender@gmail.com
 
@@ -72,27 +72,16 @@ function station_code($station_name)
     $trains_bw_stations_api = "http://api.railwayapi.com/between/source/" . $source . "/dest/" . $destination . "/date/" . $doj . "/apikey/" . $apikey ;
     $trains_bw_stations_api_call = file_get_contents($trains_bw_stations_api);
     $trains_bw_stations_api_data = json_decode($trains_bw_stations_api_call, true);
-$json = json_encode($trains_bw_stations_api_data);
+//-------------------------------------------------------------------------------------------------------------------------------------------------------    
+// $json = json_encode($trains_bw_stations_api_data);
+   $json = $trains_bw_stations_api_call;
+ //--------------------------above both two things are same----------------------------------------------------------------------------------------------
 ?>
-<script>var j = <?php echo $json?>;
-	var k = <?php echo $trains_bw_stations_api_call?>;
-	// console.log(k);
-	// console.log(k['train'][0]['name']);
+
+<script>
+	var json_js = <?php echo $json?>;
+	var all_trains_js = json_js['train'];
 </script>
-<?php
-
-
-	$all_trains = array();
-    $trains = $trains_bw_stations_api_data['train'];
-
-    foreach ($trains as $train_details)
-    {
-        array_push($all_trains, $train_details);
-    }
-
-// $days_of_run = $all_trains[0]['days'];
-// print_r($days_of_run);
-?>
 
 <!doctype html>
 <html lang="en">
@@ -287,93 +276,105 @@ function swap()
 	var dest=document.getElementById('dest').value;
 	document.getElementById('src').value=dest;
 	document.getElementById('dest').value=src;
-
 }
 
 function trainDetails()
-{console.log("hello world");
-	<?php 
-	for($i = 0; $i < count($all_trains); $i++)
-    {
-        $train_name = $all_trains[$i]['name'];
-        $train_num = $all_trains[$i]['number'];
-        $days_of_run = $all_trains[$i]['days'];
-        $departure_time = $all_trains[$i]['src_departure_time'];
-        $arrival_time = $all_trains[$i]['dest_arrival_time'];
-        $travel_time = $all_trains[$i]['travel_time'];
-        $source = $all_trains[$i]['from'];
-        $destination =$all_trains[$i]['to'];
-        $class = $all_trains[$i]['classes'];
-     // print_r($all_train2s[$i]['src_departure_time']);
-    }  
-// echo count($all_trains);
-	?>
+{
+	// <?php 
+	// for($i = 0; $i < count($all_trains); $i++)
+ //    {
+ //        $train_name = $all_trains[$i]['name'];
+ //        $train_num = $all_trains[$i]['number'];
+ //        $days_of_run = $all_trains[$i]['days'];
+ //        $departure_time = $all_trains[$i]['src_departure_time'];
+ //        $arrival_time = $all_trains[$i]['dest_arrival_time'];
+ //        $travel_time = $all_trains[$i]['travel_time'];
+ //        $source = $all_trains[$i]['from'];
+ //        $destination =$all_trains[$i]['to'];
+ //        $class = $all_trains[$i]['classes'];
+ //    }  
+	// ?>
  //--------------------------------------------------------------------------------------------
-	
-	<?php 
-		$all_trains_in_json = json_encode((array)$all_trains);
-	?>
-	var all_trains_js = <?php echo $all_trains_in_json ?>;
-	var total = '<?php echo count($all_trains)?>'; 
-	console.log(all_trains_js[0]['name']);
-	for(var i=0;i<total;i++)
+	var total_trains = all_trains_js.length;
+	for(var i=0;i<total_trains;i++)
 	{
-		// <?php
-		// $train_name = $all_trains[$i]['name'];
-  //       $train_num = $all_trains[$i]['number'];
-  //       $days_of_run = $all_trains[$i]['days'];
-  //       $departure_time = $all_trains[$i]['src_departure_time'];
-  //       $arrival_time = $all_trains[$i]['dest_arrival_time'];
-  //       $travel_time = $all_trains[$i]['travel_time'];
-  //       $source = $all_trains[$i]['from'];
-  //       $destination =$all_trains[$i]['to'];
-  //       $class = $all_trains[$i]['classes'];
-  //       ?>
- 		////////////for days of run
+		//------------------------------------------------
 		days_of_run = all_trains_js[i]['days'];
 		len = days_of_run.length;
-		// console.log(len);
-		d = '';
+		var days = '';
 		for(var j=0;j<len;j++)
 		{
             if(days_of_run[j]['runs'] === 'Y')
             {
-               // day = "b".days['day-code'][0]."b";
                day = days_of_run[j]['day-code'];
-               //echo '<li class="available"><strong>'.$days['day-code'][0].' </strong></li>';
             }
             else
             {
             	day = days_of_run[j]['day-code'][0];
-
-                //echo '<li class="not-available">'.$days['day-code'][0].' </li>';
             }
-            // $d = $d.$day ;
-            d = d.concat(day);
+            days = days.concat(day);
         }
-        // console.log(d);
-        //?>
+        //----------------------------------------------------
+    // function default_class($classes)
+    // {
+    //     foreach ($classes as $class)
+    //     {
+    //         if($class['available'] == "Y")
+    //         {
+    //             $default_class = $class['class-code'];
+    //             break;
+    //         }
+    //     }
+    //     return $default_class;
+    // }
+        //----------------------------------------------------
+        function defaultClass(classes)
+        {
+        	var totalClasses = classes.length;
+        //	console.log(totalClasses);
+        	for(k=0;k<totalClasses;k++)
+        	{
+        		if(classes[k]['available'] == "Y")
+        		{
+        			var defaultClass = classes[k]['class-code'];
+        			break;
+        		}
+        	}
+        	return defaultClass;
+        };
+        //-----------------------------------------------------
+        var class_array = all_trains_js[i]['classes'];
+        var defaultClasss = defaultClass(class_array);
 
-// foreach($days_of_run as $days) {
-//             if($days['runs'] === 'Y') {
-//                 echo '<li class="available"><strong>'.$days['day-code'][0].' </strong></li>';
-//             }
-//             else {
-//                 echo '<li class="not-available">'.$days['day-code'][0].' </li>';
-//             }
-//         }
-		
+        var total_classes = class_array.length;
+        var classess = '';
+        for(l=0;l<total_classes;l++)
+        {
+        	if(class_array[l]['available'] == "Y")
+			{
+				if(class_array[l]['class-code'] == defaultClasss)
+				{
+					var c = 'b';
+
+					c = c.concat(class_array[l]['class-code']);
+					c = c.concat('b');
+					classess = c;
+				}
+				else
+				{
+					classess = classess.concat(class_array[l]['class-code']);
+				}
+			}
+		}
+        
+//---------------------------------------------------------------------------------------------------------------------------------------
 		var table = document.getElementById("trains_list");
-		// var train_num = '<?php //echo $trainnum ?>';
+
 		var train_details=all_trains_js[i]['name'];
-		console.log(train_details);2
 		var dept=all_trains_js[i]['src_departure_time'];
 		var arr=all_trains_js[i]['dest_arrival_time'];
 		var durr=all_trains_js[i]['travel_time'];
-		var days = d;
-		// var days='<?php //echo $days_of_run?>';
-		var classes = '1';
-		// var classes='<?php //echo $class ?>';
+		var classes = classess;
 		var cstatus="GNWL603/WL400";
 		var sjstatus="No more booking";
 		var row1=table.insertRow(i+1);
@@ -393,45 +394,7 @@ function trainDetails()
 		cell16.innerHTML=classes;
 		cell17.innerHTML=cstatus;
 		cell18.innerHTML=sjstatus;
-
-		<?php $i = $i +1?>
-	// var row2=table.insertRow(2);
-	// var cell21=row2.insertCell(0);
-	// var cell22=row2.insertCell(1);
-	// var cell23=row2.insertCell(2);
-	// var cell24=row2.insertCell(3);
-	// var cell25=row2.insertCell(4);
-	// var cell26=row2.insertCell(5);
-	// var cell27=row2.insertCell(6);
-	// var cell28=row2.insertCell(7);
-	// cell21.innerHTML=train_details;
-	// cell22.innerHTML=dept;
-	// cell23.innerHTML=arr;
-	// cell24.innerHTML=durr;
-	// cell25.innerHTML=days;
-	// cell26.innerHTML=classes;
-	// cell27.innerHTML=cstatus;
-	// cell28.innerHTML=sjstatus;
 	}
 }
 trainDetails(); 
-</script>
-
-<script>
-
-<?php 
-$j=0; 
-$j++;
-$j++;
-?>
-for(var i=0;i<10;i++)
-{
-	<?php
-	print_r($j);
-	$j++;
-	print_r($j);
-
-	?>
-}
-
 </script>
