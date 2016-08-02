@@ -27,14 +27,14 @@ if(isset($_SESSION['userid']))
 
         <script>
             function resize(){
-                if($(window).width() < '768px')
+                if($(window).width() < 750)
                 {
-                    $('.navbar').addClass('navbar-fixed-top');
+                    $('#newnavbar').addClass('navbar-fixed-top');
                     console.log('hello');
                 }
                 else
                 {
-                    $('.navbar').removeClass('navbar-fixed-top');
+                    $('#newnavbar').removeClass('navbar-fixed-top');
                     console.log('bye');                    
                 }
             }
@@ -61,7 +61,7 @@ if(isset($_SESSION['userid']))
 
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar" >
-                        <ul class="nav navbar-nav" >
+                        <ul class="nav navbar-nav menu" >
 
                             <li><a href="./new_seat_availability.php">SEAT AVAILABILITY</a></li>
                             <li><a href="index.php">PNR STATUS</a></li>

@@ -120,7 +120,7 @@ $passengers[0]['current_status'] = "w/L";
 		var current_status;
         var totalPassengers = '<?php echo count($passengers)?>';
         <?php $i = 0;?>
-        for(var i=0;i<totalPassengers;i++)
+        for(var j=0;j<totalPassengers;j++)
         {
         	current_status = '<?php echo $passengers[$i]['current_status']?>';
         	if(current_status !== "CNF")
@@ -158,6 +158,7 @@ function update_passenger_list()
 		cell3.innerHTML='<?php echo $passengers[$i]['current_status'] ?>';
 		cell4.innerHTML=seatjugaad_status[i];
 		console.log(cell1.innerHTML);
+		
 		<?php $i++;?>
 	}
 }
