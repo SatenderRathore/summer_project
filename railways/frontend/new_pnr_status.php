@@ -18,7 +18,7 @@ $class            = $_SESSION['class'];
 $error            = $_SESSION['error'];
 $doj              = $_SESSION['doj'];
 $reservation_upto = $_SESSION['reservation_upto'];
-$passengers[0]['current_status'] = "w/L";
+// $passengers[0]['current_status'] = "w/L";2
 
 ?>
 
@@ -116,18 +116,49 @@ $passengers[0]['current_status'] = "w/L";
 
 
 <script>
+// //------------------------------code to display alternate option button in any of current status in not confirm------------
+// 		   var current_status;
+//         var totalPassengers = '<?php //echo count($passengers)?>';
+//         <?php //$i = 0;?>
+//         for(var i=0;i<totalPassengers;i++)
+//         {
+//         	current_status = '<?php //echo $passengers[$i]['current_status']?>';
+//         	if(current_status !== "CNF")
+//         	{
+//         		break;
+//         	}
+//         		<?php 
+//               		$i++;
+//         		?>
+//         }
+// 		if (current_status === "CNF")
+// 		{
+//     		var button = document.getElementById("buttonn");
+//     		button.style.display = "none";
+// 		}
+// //-----------------------------------------------------------------------------------------------------------
+
+
 //------------------------------code to display alternate option button in any of current status in not confirm------------
 		var current_status;
         var totalPassengers = '<?php echo count($passengers)?>';
-        <?php $i = 0;?>
-        for(var j=0;j<totalPassengers;j++)
+        
+        <?php 
+        	$raw_data = json_encode((array)$passengers);
+        ?>
+        var passengers_js = <?php echo $raw_data?>;
+        for(var i=0;i<totalPassengers;i++)
         {
-        	current_status = '<?php echo $passengers[$i]['current_status']?>';
+        	// current_status = '<?php //echo $passengers[$i]['current_status']?>';
+        	current_status = passengers_js[i]['current_status'];
+        	
         	if(current_status !== "CNF")
         	{
         		break;
         	}
-        		<?php $i++; ?>
+        		<?php 
+              		$i++;
+        		?>
         }
 		if (current_status === "CNF")
 		{
@@ -144,7 +175,10 @@ function update_passenger_list()
 	var srno=[1,2,3,4];
 	var totalPassengers = '<?php echo count($passengers)?>';
 	var seatjugaad_status=[4,5,6,7];
-	<?php $i = 0;?>
+	<?php 
+		$raw_data = json_encode((array)$passengers);
+	?>
+	var passengers_js = <?php echo $raw_data?>;
 
 	for(var i=0;i<totalPassengers;i++)
 	{
@@ -154,11 +188,12 @@ function update_passenger_list()
 		var cell3=row.insertCell(2);
 		var cell4=row.insertCell(3);
 		cell1.innerHTML=i+1;
-		cell2.innerHTML='<?php echo $passengers[$i]['booking_status'] ?>';
-		cell3.innerHTML='<?php echo $passengers[$i]['current_status'] ?>';
+		// cell2.innerHTML='<?php //echo $passengers[$i]['booking_status'] ?>';
+		// cell3.innerHTML='<?php //echo $passengers[$i]['current_status'] ?>';
+			cell2.innerHTML = passengers_js[i]['booking_status'];
+			cell3.innerHTML = passengers_js[i]['current_status'];
 		cell4.innerHTML=seatjugaad_status[i];
-		console.log(cell1.innerHTML);
-		
+		// console.log(cell1.innerHTML);
 		<?php $i++;?>
 	}
 }
@@ -200,7 +235,7 @@ function update_pnr_details(){
 
 }
 update_pnr_details();
-//---------------------------------------------------
+//-----------------------------------------------------------------------------------------
 
 
 
@@ -260,3 +295,4 @@ function loadDoc(train_num,from_station,to_station,doj,classs) {
 
 
 </script>
+

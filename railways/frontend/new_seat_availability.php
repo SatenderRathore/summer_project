@@ -63,7 +63,8 @@
                         <span class="summary" id="summary"></span>
                         <span class="steps" id="steps"><b></b></span>
                     </div>
-                    <form id="availability" action="../backend/algo/check_seat_availability.php" method="POST">
+                    <!-- <form id="availability" action="../backend/algo/check_seat_availability.php" method="POST"> -->
+                    <form id="availability" action="new_seat_availability_result.php" method="POST">
                         <div class="mid-content">
                             <div class="source " id="source">
                                 <div class="details">

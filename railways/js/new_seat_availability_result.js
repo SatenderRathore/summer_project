@@ -1,13 +1,14 @@
-function swap(){
+function swap()
+{
 	var src=document.getElementById('src').value;
 	var dest=document.getElementById('dest').value;
 	document.getElementById('src').value=dest;
 	document.getElementById('dest').value=src;
 
-
 }
 
-function update_pnr_details(){
+function trainDetails()
+{
 	var table = document.getElementById("trains_list");
 	var train_details="DHN ANVT SPL( 02395)";
 	// var train_num = '<?php echo $trainnum ?>';
@@ -36,7 +37,7 @@ function update_pnr_details(){
 	cell17.innerHTML=cstatus;
 	cell18.innerHTML=sjstatus;
 
-	/*var row2=table.insertRow(2);
+	var row2=table.insertRow(2);
 	var cell21=row2.insertCell(0);
 	var cell22=row2.insertCell(1);
 	var cell23=row2.insertCell(2);
@@ -52,7 +53,7 @@ function update_pnr_details(){
 	cell25.innerHTML=days;
 	cell26.innerHTML=classes;
 	cell27.innerHTML=cstatus;
-	cell28.innerHTML=sjstatus;*/
+	cell28.innerHTML=sjstatus;
 
 }
-update_pnr_details();
+trainDetails(); 

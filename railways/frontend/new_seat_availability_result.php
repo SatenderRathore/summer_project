@@ -1,55 +1,87 @@
 <?php
+//-----------------------api keys----------------------------
+	// $apikey = "uucxi9379";//satenderjpr@gmail.com
+	// $apikey = "ttemb6830";//singhpalarashakti@gmail.com
+	$apikey = "ootzm7275";//satendersvnit@gmail.com
 
-// 	// $apikey = "uucxi9379";//satenderjpr@gmail.com
-// 	$apikey = "ttemb6830";//singhpalarashakti@gmail.com
-// 	// $apikey = "ootzm7275";//satendersvnit@gmail.com
+	//$apikey = "eumbm2216";//singhrathoresatender@gmail.com
 
-// 	//$apikey = "eumbm2216";//singhrathoresatender@gmail.com
+	//$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
+	//$apikey = "budyl6423";//yashagarwaljpr@gmail.com
+	//$apikey = "zlzou2003";//satendersinghpalara@gmail.com
+	//$apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
 
-// 	//$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
-// 	//$apikey = "budyl6423";//yashagarwaljpr@gmail.com
-// 	//$apikey = "zlzou2003";//satendersinghpalara@gmail.com
-// 	//$apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
+	//$apikey = "okogk2695";//theyashagarwal21@gmail.com
 
-// 	//$apikey = "okogk2695";//theyashagarwal21@gmail.com
-
-//     // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
-//     // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
-
-
-
-//     $source = strtoupper($_POST['source']);
-//     $destination = strtoupper($_POST['destination']);
-//     $doj = $_POST['doj'];
-//     $user_class = $_POST['class'];
-//     $user_class_copy = $user_class;
-//     $user_quota = $_POST['quota'];
-//     $source = station_code($source);
-//     $destination = station_code($destination);
+    // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
+    // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
+//-----------------------------------------------------------------
 
 
-// /////////////////////function for default class/////////////////
-//     function default_class($classes)
-//     {
-//         foreach ($classes as $class)
-//         {
-//             if($class['available'] == "Y")
-//             {
-//                 $default_class = $class['class-code'];
-//                 break;
-//             }
-//         }
-//         return $default_class;
-//     }
-// ///////////////////////////////////////////////////////////
-// //http://api.railwayapi.com/between/source/jp/dest/st/date/15-07-2016/apikey/uucxi9379/
-//     $trains_bw_stations_api = "http://api.railwayapi.com/between/source/" . $source . "/dest/" . $destination . "/date/" . $doj . "/apikey/" . $apikey ;
-//     $trains_bw_stations_api_call = file_get_contents($trains_bw_stations_api);
-//     $trains_bw_stations_api_data = json_decode($trains_bw_stations_api_call, true);
+    $source = strtoupper($_POST['source']);
+    $destination = strtoupper($_POST['destination']);
+    $doj = $_POST['doj'];
+    $user_class = $_POST['class'];
+    $user_class_copy = $user_class;
+    $user_quota = $_POST['quota'];
+    $source = station_code($source);
+    $destination = station_code($destination);
 
 
+//------------------------function for default class-----------------------
+    function default_class($classes)
+    {
+        foreach ($classes as $class)
+        {
+            if($class['available'] == "Y")
+            {
+                $default_class = $class['class-code'];
+                break;
+            }
+        }
+        return $default_class;
+    }
+//--------------------------------------------------------------------------
 
+//----------------------------function for staton code----------------------------------------------
+function station_code($station_name)
+{
+    $json = file_get_contents('station_list.json');
+    $data = json_decode($json, true);
+    $new = array();
+    for($i=0;$i<count($data);$i++)
+    {
+        array_push($new, strtoupper($data[$i]['station'] . " - " . $data[$i]['station_code']));
+    }
+    $count = 0;
+    foreach ($new as $station)
+    {
+        if($station_name == $station)
+        {
+            break;
+        }
+        $count++;
+    }
+    return $data[$count]['station_code'];
+}
+//--------------------------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------
+//http://api.railwayapi.com/between/source/jp/dest/st/date/15-07-2016/apikey/uucxi9379/
+    $trains_bw_stations_api = "http://api.railwayapi.com/between/source/" . $source . "/dest/" . $destination . "/date/" . $doj . "/apikey/" . $apikey ;
+    $trains_bw_stations_api_call = file_get_contents($trains_bw_stations_api);
+    $trains_bw_stations_api_data = json_decode($trains_bw_stations_api_call, true);
+//-------------------------------------------------------------------------------------------------------------------------------------------------------    
+// $json = json_encode($trains_bw_stations_api_data);
+   $json = $trains_bw_stations_api_call;
+ //--------------------------above both two things are same----------------------------------------------------------------------------------------------
 ?>
+
+<script>
+	var json_js = <?php echo $json?>;
+	var all_trains_js = json_js['train'];
+</script>
 
 <!doctype html>
 <html lang="en">
@@ -207,7 +239,7 @@
 
 
 	</body>
-	<script src="../js/new_seat_availability_result.js"></script>
+	<!-- <script src="../js/new_seat_availability_result.js"></script> -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 </html>
@@ -234,4 +266,135 @@
             minLength: 3
         });
     });
+</script>
+
+<script>
+	
+function swap()
+{
+	var src=document.getElementById('src').value;
+	var dest=document.getElementById('dest').value;
+	document.getElementById('src').value=dest;
+	document.getElementById('dest').value=src;
+}
+
+function trainDetails()
+{
+	// <?php 
+	// for($i = 0; $i < count($all_trains); $i++)
+ //    {
+ //        $train_name = $all_trains[$i]['name'];
+ //        $train_num = $all_trains[$i]['number'];
+ //        $days_of_run = $all_trains[$i]['days'];
+ //        $departure_time = $all_trains[$i]['src_departure_time'];
+ //        $arrival_time = $all_trains[$i]['dest_arrival_time'];
+ //        $travel_time = $all_trains[$i]['travel_time'];
+ //        $source = $all_trains[$i]['from'];
+ //        $destination =$all_trains[$i]['to'];
+ //        $class = $all_trains[$i]['classes'];
+ //    }  
+	// ?>
+ //--------------------------------------------------------------------------------------------
+	var total_trains = all_trains_js.length;
+	for(var i=0;i<total_trains;i++)
+	{
+		//------------------------------------------------
+		days_of_run = all_trains_js[i]['days'];
+		len = days_of_run.length;
+		var days = '';
+		for(var j=0;j<len;j++)
+		{
+            if(days_of_run[j]['runs'] === 'Y')
+            {
+               day = days_of_run[j]['day-code'];
+            }
+            else
+            {
+            	day = days_of_run[j]['day-code'][0];
+            }
+            days = days.concat(day);
+        }
+        //----------------------------------------------------
+    // function default_class($classes)
+    // {
+    //     foreach ($classes as $class)
+    //     {
+    //         if($class['available'] == "Y")
+    //         {
+    //             $default_class = $class['class-code'];
+    //             break;
+    //         }
+    //     }
+    //     return $default_class;
+    // }
+        //----------------------------------------------------
+        function defaultClass(classes)
+        {
+        	var totalClasses = classes.length;
+        //	console.log(totalClasses);
+        	for(k=0;k<totalClasses;k++)
+        	{
+        		if(classes[k]['available'] == "Y")
+        		{
+        			var defaultClass = classes[k]['class-code'];
+        			break;
+        		}
+        	}
+        	return defaultClass;
+        };
+        //-----------------------------------------------------
+        var class_array = all_trains_js[i]['classes'];
+        var defaultClasss = defaultClass(class_array);
+
+        var total_classes = class_array.length;
+        var classess = '';
+        for(l=0;l<total_classes;l++)
+        {
+        	if(class_array[l]['available'] == "Y")
+			{
+				if(class_array[l]['class-code'] == defaultClasss)
+				{
+					var c = 'b';
+
+					c = c.concat(class_array[l]['class-code']);
+					c = c.concat('b');
+					classess = c;
+				}
+				else
+				{
+					classess = classess.concat(class_array[l]['class-code']);
+				}
+			}
+		}
+        
+//---------------------------------------------------------------------------------------------------------------------------------------
+		var table = document.getElementById("trains_list");
+
+		var train_details=all_trains_js[i]['name'];
+		var dept=all_trains_js[i]['src_departure_time'];
+		var arr=all_trains_js[i]['dest_arrival_time'];
+		var durr=all_trains_js[i]['travel_time'];
+		var classes = classess;
+		var cstatus="GNWL603/WL400";
+		var sjstatus="No more booking";
+		var row1=table.insertRow(i+1);
+		var cell11=row1.insertCell(0);
+		var cell12=row1.insertCell(1);
+		var cell13=row1.insertCell(2);
+		var cell14=row1.insertCell(3);
+		var cell15=row1.insertCell(4);
+		var cell16=row1.insertCell(5);
+		var cell17=row1.insertCell(6);
+		var cell18=row1.insertCell(7);
+		cell11.innerHTML=train_details;
+		cell12.innerHTML=dept;
+		cell13.innerHTML=arr;
+		cell14.innerHTML=durr;
+		cell15.innerHTML=days;
+		cell16.innerHTML=classes;
+		cell17.innerHTML=cstatus;
+		cell18.innerHTML=sjstatus;
+	}
+}
+trainDetails(); 
 </script>
