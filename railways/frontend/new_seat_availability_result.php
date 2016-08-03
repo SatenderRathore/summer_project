@@ -354,11 +354,9 @@ function trainDetails()
 			{
 				if(class_array[l]['class-code'] == defaultClasss)
 				{
-					var c = 'b';
-
-					c = c.concat(class_array[l]['class-code']);
-					c = c.concat('b');
-					classess = c;
+					c = class_array[l]['class-code'];
+					classess = c.bold();
+					// document.write("<h1>Hello member</h1>");
 				}
 				else
 				{
