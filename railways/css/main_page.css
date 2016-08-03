@@ -320,7 +320,7 @@ a{
   }
 
   .middle{
-  padding-top: 40px;
+  padding-top: 120px;
   width: 95%;
   height: 200px;
   margin-left: auto;
@@ -593,6 +593,11 @@ a{
   display: inline-block;
   float: right;
   margin-right: 0px;
+  }
+
+  .menu{
+    margin-left: auto;
+    margin-right: auto;
   }
 
 }
