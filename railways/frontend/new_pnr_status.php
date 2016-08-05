@@ -147,7 +147,7 @@ $reservation_upto = $_SESSION['reservation_upto'];
         	$raw_data = json_encode((array)$passengers);
         ?>
         var passengers_js = <?php echo $raw_data?>;
-        console.log(passengers_js);
+        
         for(var i=0;i<totalPassengers;i++)
         {
         	// current_status = '<?php //echo $passengers[$i]['current_status']?>';

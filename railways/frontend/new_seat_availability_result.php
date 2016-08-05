@@ -306,11 +306,13 @@ function trainDetails()
 		{
             if(days_of_run[j]['runs'] === 'Y')
             {
-               day = days_of_run[j]['day-code'];
+               day = days_of_run[j]['day-code'][0].fontcolor("green") + ' ';
+               // day.concat(' ');
             }
             else
             {
-            	day = days_of_run[j]['day-code'][0];
+            	day = days_of_run[j]['day-code'][0].fontcolor("red") + ' ';
+            	// day.concat(' ');
             }
             days = days.concat(day);
         }
