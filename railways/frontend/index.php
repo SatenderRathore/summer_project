@@ -29,7 +29,7 @@ if(isset($_SESSION['userid']))
             function resize(){
                 if($(window).width() < 750)
                 {
-                    $('#newnavbar').addClass('navbar-fixed-top');
+                    $('#newnavbar').addClass('navbar-fixed-top navbar-inverse');
                     console.log('hello');
                 }
                 else

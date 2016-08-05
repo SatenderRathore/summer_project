@@ -26,29 +26,52 @@
             // Access instance of plugin
             $('#datepicker').data('datepicker')
 
+            function resize(){
+                if($(window).width() < 768)
+                {
+                    $('#newnavbar').addClass('navbar-fixed-top navbar-inverse');
+                    console.log('hello');
+                }
+                else
+                {
+                    $('#newnavbar').removeClass('navbar-fixed-top').removeClass('navbar-inverse');
+                    console.log('bye');                    
+                }
+
+                //console.log($(window).width());
+            }
+            $(document).ready( function() {
+                $(window).resize(resize);
+                resize();
+            });
         </script>
     </head>
 
     <body >
         <div class="top">
-            <div class="main-header">
-                <div class="left-head col-md-2">
-                    <div class="logo">
-                        <a href="index.php">Seat Jugaad</a>
+            <nav class="navbar" id="newnavbar" style="padding-top:10px;">
+                <div class="container-fluid">
+                    <div class=" navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" >
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>                    
+                        <div class="navbar-brand logo" style="width:auto;"><a href="index.php">Seat Jugaad</a></div>
+
                     </div>
+                    <div class="collapse navbar-collapse" id="myNavbar" >
+                        <ul class="nav navbar-nav menu" >
 
+                            <li><a href="./new_seat_availability.php">SEAT AVAILABILITY</a></li>
+                            <li><a href="index.php">PNR STATUS</a></li>
+                            <li><a href="#">FAIR ENQUIRY</a></li>
+                            <li><a href="train_live_status.php">LIVE TRAIN STATUS</a></li>
+                            <li><a href="#">CANCELLED TRAINS</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="mid-head col-md-8">
-                    <ul class="features">
-
-                        <li><a href="./seat_availability.php">SEAT AVAILABILITY</a></li>
-                        <li><a href="index.php">PNR STATUS</a></li>
-                        <li>FAIR ENQUIRY</li>
-                        <li><a href="train_live_status.php">LIVE TRAIN STATUS</a></li>
-                        <li>CANCELLED TRAINS</li>
-                    </ul>
-                </div>
-            </div>
+            </nav>
 
 
             <div class="middle ">
