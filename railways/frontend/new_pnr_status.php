@@ -147,6 +147,7 @@ $reservation_upto = $_SESSION['reservation_upto'];
         	$raw_data = json_encode((array)$passengers);
         ?>
         var passengers_js = <?php echo $raw_data?>;
+        console.log(passengers_js);
         for(var i=0;i<totalPassengers;i++)
         {
         	// current_status = '<?php //echo $passengers[$i]['current_status']?>';
@@ -156,9 +157,7 @@ $reservation_upto = $_SESSION['reservation_upto'];
         	{
         		break;
         	}
-        		<?php 
-              		$i++;
-        		?>
+        		
         }
 		if (current_status === "CNF")
 		{
@@ -194,7 +193,7 @@ function update_passenger_list()
 			cell3.innerHTML = passengers_js[i]['current_status'];
 		cell4.innerHTML=seatjugaad_status[i];
 		// console.log(cell1.innerHTML);
-		<?php $i++;?>
+		
 	}
 }
 
