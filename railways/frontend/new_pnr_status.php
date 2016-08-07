@@ -18,7 +18,7 @@ $class            = $_SESSION['class'];
 $error            = $_SESSION['error'];
 $doj              = $_SESSION['doj'];
 $reservation_upto = $_SESSION['reservation_upto'];
-// $passengers[0]['current_status'] = "w/L";2
+$passengers[0]['current_status'] = "w/L";
 
 ?>
 
@@ -103,7 +103,7 @@ $reservation_upto = $_SESSION['reservation_upto'];
 					<input type="email" class="mail" id="email" placeholder="Email Address">
 					<button type="submit" class="btn btn-default confirm-mail" onclick="sendmail()">Notify On Confirm</button>
 				</div>
-				<div id="loading" class="loading" ></div>
+				<div id="loading" class="loading" style="display:none;"></div>
 				<button type = "submit" id="buttonn" onclick = "loadDoc('<?php echo $train_num ?>','<?php echo $from_station_code?>','<?Php echo $to_station_code?>','<?php echo $doj?>','<?php echo $class?>')">Show Alternate</button>
 			</div>
 			<div id="alternate"></div>
@@ -277,7 +277,7 @@ charting_status(<?php printf("%d",$chart_prepared == "Y"); ?>); //send the messa
 //--------------------------------------------------------------------------------------------//
 
 
-function loadDoc(train_num,from_station,to_station,doj,classs) {
+ function loadDoc(train_num,from_station,to_station,doj,classs) {
     var loading = $('#loading');
     loading.show();
     $.ajax( {

@@ -410,7 +410,7 @@ function trainDetails()
 		var arr=all_trains_js[i]['dest_arrival_time'];
 		var durr=all_trains_js[i]['travel_time'];
 		var classes = classess;
-		var cstatus=getData(train_num,source,dest,doj,user_class,user_quota,i);
+		var cstatus=loadDoc(train_num,source,dest,doj,user_class,user_quota,i);
 		var sjstatus="No more booking";
 		var row=table.insertRow(i+1);
 		var cell11=row.insertCell(0);
@@ -429,7 +429,7 @@ function trainDetails()
 		cell16.innerHTML=classes;
 		cell17.setAttribute("id", i);
 		cell17.innerHTML='h';
-		cell18.innerHTML=sjstatus;
+		cell18.setAttribute("id", "image"+i);
 	}
 }
 trainDetails(); 
@@ -442,11 +442,11 @@ function test(a,b,c,d,e,f)
 
 function loadDoc(train_num,source,destination,doj,user_class,quota,id)
 {
-    var loading = $('#loading' + id);
+    var loading = $('#image' + id);
     loading.show();
     $.ajax( {
         async: true,
-        url: "test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj + "&user_class=" + user_class + "&quota=" + quota,
+        url: "../backend/algo/test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj + "&user_class=" + user_class + "&quota=" + quota,
         type: "GET",
         dataType: "html",
         success:function(data){
@@ -456,12 +456,12 @@ function loadDoc(train_num,source,destination,doj,user_class,quota,id)
     });
 }
 
-function getData(train_num, source, destination, doj, user_class, quota,i)
+function getData(train_num, source, destination, doj, user_class, quota,id)
 	{
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function(){
 			if(xhttp.readyState == 4 && xhttp.status == 200){
-				document.getElementById(i).innerHTML = xhttp.responseText;
+				document.getElementById(id).innerHTML = xhttp.responseText;
 				// return xhttp.responseText;
 				// cell17.innerHTML = xhttp.responseText;
 				// returnedData = xhttp.responseText;
@@ -475,7 +475,7 @@ function getData(train_num, source, destination, doj, user_class, quota,i)
 
 			}
 		};
-		xhttp.open("GET", "../backend/algo/test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj +"&user_class=" + user_class, true);
+		xhttp.open("GET", "../backend/algo/test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj +"&user_class=" + user_class + "&quota=" + quota, true);
 		xhttp.send();
 	}
 
