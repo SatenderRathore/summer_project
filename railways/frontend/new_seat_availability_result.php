@@ -1,4 +1,5 @@
 <?php
+session_start();
 //-----------------------api keys----------------------------
 	// $apikey = "uucxi9379";//satenderjpr@gmail.com
 	// $apikey = "ttemb6830";//singhpalarashakti@gmail.com
@@ -18,15 +19,26 @@
 //-----------------------------------------------------------------
 
 
-    $source = strtoupper($_POST['source']);
-    $destination = strtoupper($_POST['destination']);
-    $doj = $_POST['doj'];
-    $user_class = $_POST['class'];
-    $user_class_copy = $user_class;
-    $user_quota = $_POST['quota'];
-    $source = station_code($source);
-    $destination = station_code($destination);
+    // $source = strtoupper($_POST['source']);
+    // $destination = strtoupper($_POST['destination']);
+    // $doj = $_POST['doj'];
+    // $user_class = $_POST['class'];
+    // $user_class_copy = $user_class;
+    // $user_quota = $_POST['quota'];
+    // $source = station_code($source);
+    // $destination = station_code($destination);
 
+
+
+    $source = $_SESSION['source'] ;
+    $destination = $_SESSION['destination'];
+    $doj = $_SESSION['doj'];
+    $user_class = $_SESSION['user_class'];
+    $user_class_copy = $_SESSION['user_class_copy'];
+    $user_quota = $_SESSION['user_quota'];
+    $source = $_SESSION['source'];
+    $destination = $_SESSION['destination'];
+    print_r($user_class);
 
 //------------------------function for default class-----------------------
     function default_class($classes)
@@ -81,6 +93,7 @@ function station_code($station_name)
 <script>
 	var json_js = <?php echo $json?>;
 	var all_trains_js = json_js['train'];
+	console.log(all_trains_js[0]['classes']);
 </script>
 
 <!doctype html>
@@ -219,7 +232,7 @@ function station_code($station_name)
 							<th class="col-md-1">Duration</th>
 							<th class="col-md-2">Days Of Run</th>
 							<th class="col-md-1">Classes</th>
-							<th class="col-md-2">Current Status</th>
+							<th id = "cstatus" class="col-md-2">Current Status</th>
 							<th class="col-md-2">SeatJugaad Status</th>
 							<th class="col-md-1">Alternates</th>
 						</tr>
@@ -280,6 +293,7 @@ function swap()
 
 function trainDetails()
 {
+	// console.log('<?php //echo $_SESSION['source']?>');
 	// <?php 
 	// for($i = 0; $i < count($all_trains); $i++)
  //    {
@@ -295,6 +309,11 @@ function trainDetails()
  //    }  
 	// ?>
  //--------------------------------------------------------------------------------------------
+ 	<?php 
+ 		// session_start();
+ 		// $_SESSION['a'] = "hello";
+ 	?>
+ 	
 	var total_trains = all_trains_js.length;
 	for(var i=0;i<total_trains;i++)
 	{
@@ -357,16 +376,32 @@ function trainDetails()
 				if(class_array[l]['class-code'] == defaultClasss)
 				{
 					c = class_array[l]['class-code'];
-					classess = c.bold();
+					classess = classess.concat(c.fontcolor("green").bold().link("google.com") + ' ');
+					// classess = classess.concat(c.fontcolor("black").bold() + ' ');
 					// document.write("<h1>Hello member</h1>");
 				}
 				else
 				{
-					classess = classess.concat(class_array[l]['class-code']);
+					c = class_array[l]['class-code'];
+					classess = classess.concat(c.link("google.com") + ' ');
+					// classess = classess.concat(c.fontcolor("gray") + ' ');
 				}
 			}
 		}
         
+
+        var train_num = all_trains_js[i]['number'];
+        var source = all_trains_js[i]['from']['code'];
+        var dest = all_trains_js[i]['to']['code'];
+        var doj = '<?php echo $doj ?>';
+        var user_class = '<?php echo $user_class?>';
+
+        if(user_class=='ALL')
+        {
+        	user_class = defaultClass(all_trains_js[i]['classes']);
+        }
+
+        var user_quota = '<?php echo $user_quota?>';
 //---------------------------------------------------------------------------------------------------------------------------------------
 		var table = document.getElementById("trains_list");
 
@@ -375,26 +410,73 @@ function trainDetails()
 		var arr=all_trains_js[i]['dest_arrival_time'];
 		var durr=all_trains_js[i]['travel_time'];
 		var classes = classess;
-		var cstatus="GNWL603/WL400";
+		var cstatus=getData(train_num,source,dest,doj,user_class,user_quota,i);
 		var sjstatus="No more booking";
-		var row1=table.insertRow(i+1);
-		var cell11=row1.insertCell(0);
-		var cell12=row1.insertCell(1);
-		var cell13=row1.insertCell(2);
-		var cell14=row1.insertCell(3);
-		var cell15=row1.insertCell(4);
-		var cell16=row1.insertCell(5);
-		var cell17=row1.insertCell(6);
-		var cell18=row1.insertCell(7);
+		var row=table.insertRow(i+1);
+		var cell11=row.insertCell(0);
+		var cell12=row.insertCell(1);
+		var cell13=row.insertCell(2);
+		var cell14=row.insertCell(3);
+		var cell15=row.insertCell(4);
+		var cell16=row.insertCell(5);
+		var cell17=row.insertCell(6);
+		var cell18=row.insertCell(7);
 		cell11.innerHTML=train_details;
 		cell12.innerHTML=dept;
 		cell13.innerHTML=arr;
 		cell14.innerHTML=durr;
 		cell15.innerHTML=days;
 		cell16.innerHTML=classes;
-		cell17.innerHTML=cstatus;
+		cell17.setAttribute("id", i);
+		cell17.innerHTML='h';
 		cell18.innerHTML=sjstatus;
 	}
 }
 trainDetails(); 
+
+function test(a,b,c,d,e,f)
+{
+	console.log(e);
+	return f;
+}
+
+function loadDoc(train_num,source,destination,doj,user_class,quota,id)
+{
+    var loading = $('#loading' + id);
+    loading.show();
+    $.ajax( {
+        async: true,
+        url: "test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj + "&user_class=" + user_class + "&quota=" + quota,
+        type: "GET",
+        dataType: "html",
+        success:function(data){
+            loading.hide();
+            $('#' + id).text(data);
+        }
+    });
+}
+
+function getData(train_num, source, destination, doj, user_class, quota,i)
+	{
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+			if(xhttp.readyState == 4 && xhttp.status == 200){
+				document.getElementById(i).innerHTML = xhttp.responseText;
+				// return xhttp.responseText;
+				// cell17.innerHTML = xhttp.responseText;
+				// returnedData = xhttp.responseText;
+				// callback.apply(this,[returnedData]);
+				// var table = document.getElementById("cstatus");
+				// var row=table.insertRow(i+1);
+				// cell17=row.insertCell(0);
+				// cell17.innerHTML = xhttp.responseText;
+
+
+
+			}
+		};
+		xhttp.open("GET", "../backend/algo/test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj +"&user_class=" + user_class, true);
+		xhttp.send();
+	}
+
 </script>
