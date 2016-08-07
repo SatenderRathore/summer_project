@@ -3,14 +3,14 @@ session_start();
 //-----------------------api keys----------------------------
 	// $apikey = "uucxi9379";//satenderjpr@gmail.com
 	// $apikey = "ttemb6830";//singhpalarashakti@gmail.com
-	$apikey = "ootzm7275";//satendersvnit@gmail.com
+	// $apikey = "ootzm7275";//satendersvnit@gmail.com
 
-	//$apikey = "eumbm2216";//singhrathoresatender@gmail.com
+	// $apikey = "eumbm2216";//singhrathoresatender@gmail.com
 
-	//$apikey = "wqyoc1399"; //renurathorejpr@gmail.com
+	// $apikey = "wqyoc1399"; //renurathorejpr@gmail.com
 	//$apikey = "budyl6423";//yashagarwaljpr@gmail.com
-	//$apikey = "zlzou2003";//satendersinghpalara@gmail.com
-	//$apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
+	// $apikey = "zlzou2003";//satendersinghpalara@gmail.com
+	$apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
 
 	//$apikey = "okogk2695";//theyashagarwal21@gmail.com
 
@@ -410,7 +410,7 @@ function trainDetails()
 		var arr=all_trains_js[i]['dest_arrival_time'];
 		var durr=all_trains_js[i]['travel_time'];
 		var classes = classess;
-		var cstatus=loadDoc(train_num,source,dest,doj,user_class,user_quota,i);
+		var cstatus=1;
 		var sjstatus="No more booking";
 		var row=table.insertRow(i+1);
 		var cell11=row.insertCell(0);
@@ -428,12 +428,24 @@ function trainDetails()
 		cell15.innerHTML=days;
 		cell16.innerHTML=classes;
 		cell17.setAttribute("id", i);
-		cell17.innerHTML='status';
-		cell18.innerHTML='a';
-		// cell18.setAttribute("id", "image"+i);
-		// var imageShow = document.getElementById("image"+i);
-		// imageShow.style.backgroundImage = "url('../images/loading.gif')";
+		// cell17.innerHTML='status';
+		// cell18.innerHTML='a';
+		// cell18.setAttribute("id","image" + i);
+		// cell18.innerHTML = 'a';
+		var imageShow = document.getElementById(i);
+		imageShow.style.backgroundRepeat = "no-repeat";
+		imageShow.style.backgroundImage = "url('../images/loading.gif')";
+		
 		// imageShow.style.display = "none";
+
+		loadDoc(train_num,source,dest,doj,user_class,user_quota,i);
+
+		// width: 16px;
+		// imageShow.style.width = "1px";
+		// imageShow.style.height = "1px";
+    	// height: 16px;
+
+		// imageShow.innerHTML = 'ab';
 	}
 }
 trainDetails(); 
@@ -446,7 +458,8 @@ function test(a,b,c,d,e,f)
 
 function loadDoc(train_num,source,destination,doj,user_class,quota,id)
 {
-    var loading = $('#image' + id);
+    var loading = $('#'+id);
+    // alert(loading);
     loading.show();
     $.ajax( {
         async: true,
@@ -454,7 +467,7 @@ function loadDoc(train_num,source,destination,doj,user_class,quota,id)
         type: "GET",
         dataType: "html",
         success:function(data){
-            loading.hide();
+            // loading.hide();
             $('#' + id).text(data);
         }
     });
