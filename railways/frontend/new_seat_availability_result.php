@@ -428,8 +428,12 @@ function trainDetails()
 		cell15.innerHTML=days;
 		cell16.innerHTML=classes;
 		cell17.setAttribute("id", i);
-		cell17.innerHTML='h';
-		cell18.setAttribute("id", "image"+i);
+		cell17.innerHTML='status';
+		cell18.innerHTML='a';
+		// cell18.setAttribute("id", "image"+i);
+		// var imageShow = document.getElementById("image"+i);
+		// imageShow.style.backgroundImage = "url('../images/loading.gif')";
+		// imageShow.style.display = "none";
 	}
 }
 trainDetails(); 
@@ -462,6 +466,9 @@ function getData(train_num, source, destination, doj, user_class, quota,id)
 		xhttp.onreadystatechange = function(){
 			if(xhttp.readyState == 4 && xhttp.status == 200){
 				document.getElementById(id).innerHTML = xhttp.responseText;
+				
+				//---------------- below are faliures---------------
+
 				// return xhttp.responseText;
 				// cell17.innerHTML = xhttp.responseText;
 				// returnedData = xhttp.responseText;
@@ -470,7 +477,7 @@ function getData(train_num, source, destination, doj, user_class, quota,id)
 				// var row=table.insertRow(i+1);
 				// cell17=row.insertCell(0);
 				// cell17.innerHTML = xhttp.responseText;
-
+				//---------------------------------------------------
 
 
 			}
