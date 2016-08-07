@@ -10,11 +10,11 @@ session_start();
 	// $apikey = "wqyoc1399"; //renurathorejpr@gmail.com
 	//$apikey = "budyl6423";//yashagarwaljpr@gmail.com
 	// $apikey = "zlzou2003";//satendersinghpalara@gmail.com
-	$apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
+	// $apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
 
 	//$apikey = "okogk2695";//theyashagarwal21@gmail.com
 
-    // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
+    $apikey = "ccjee6917";//sagarkeshri26@gmail.com
     // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
 //-----------------------------------------------------------------
 
@@ -430,13 +430,13 @@ function trainDetails()
 		cell17.setAttribute("id", i);
 		// cell17.innerHTML='status';
 		// cell18.innerHTML='a';
-		// cell18.setAttribute("id","image" + i);
+		cell18.setAttribute("id","image" + i);
 		// cell18.innerHTML = 'a';
-		var imageShow = document.getElementById(i);
+		var imageShow = document.getElementById("image"+i);
 		imageShow.style.backgroundRepeat = "no-repeat";
 		imageShow.style.backgroundImage = "url('../images/loading.gif')";
 		
-		// imageShow.style.display = "none";
+		imageShow.style.display = "none";
 
 		loadDoc(train_num,source,dest,doj,user_class,user_quota,i);
 
@@ -458,7 +458,7 @@ function test(a,b,c,d,e,f)
 
 function loadDoc(train_num,source,destination,doj,user_class,quota,id)
 {
-    var loading = $('#'+id);
+    var loading = $('#image'+id);
     // alert(loading);
     loading.show();
     $.ajax( {
@@ -467,7 +467,7 @@ function loadDoc(train_num,source,destination,doj,user_class,quota,id)
         type: "GET",
         dataType: "html",
         success:function(data){
-            // loading.hide();
+            loading.hide();
             $('#' + id).text(data);
         }
     });
