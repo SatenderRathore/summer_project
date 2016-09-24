@@ -1,17 +1,18 @@
 <?php
 	session_start();
 
-	$source = strtoupper($_POST['source']);
-    $destination = strtoupper($_POST['destination']);
+	$full_source = strtoupper($_POST['source']);
+    $full_destination = strtoupper($_POST['destination']);
     $doj = $_POST['doj'];
     $user_class = $_POST['class'];
     $user_class_copy = $user_class;
     $user_quota = $_POST['quota'];
-    $source = station_code($source);
-    $destination = station_code($destination);
+    $source = station_code($full_source);
+    $destination = station_code($full_destination);
 
-    
 
+    $_SESSION['full_source'] = $full_source;
+    $_SESSION['full_destination'] = $full_destination;
     $_SESSION['source'] = $source;
     $_SESSION['destination'] = $destination;
     $_SESSION['doj'] = $doj;

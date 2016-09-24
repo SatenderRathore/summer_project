@@ -1,11 +1,12 @@
 <?php
 
     include("db.php");
+    include("function.php");
     $pnr = $_POST['pnr'];
     ////$pnr = "2418566933";
 
 //    $apikey = "uucxi9379";//satenderjpr@gmail.com
-    $apikey = "ttemb6830";//singhpalarashakti@gmail.com
+    // $apikey = "ttemb6830";//singhpalarashakti@gmail.com
    // $apikey = "ootzm7275";//satendersvnit@gmail.com
     // $apikey = "eumbm2216";//singhrathoresatender@gmail.com
     // $apikey = "wqyoc1399"; //renurathorejpr@gmail.com
@@ -16,12 +17,14 @@
     // $apikey = "okogk2695";//theyashagarwal21@gmail.com
 
 
-    $pnr_status_api = "http://api.railwayapi.com/pnr_status/pnr/" . $pnr . "/apikey/" . $apikey ;
-    $pnr_status_api_call = file_get_contents($pnr_status_api);
+    // $pnr_status_api = "http://api.railwayapi.com/pnr_status/pnr/" . $pnr . "/apikey/" . $apikey ;
+    // $pnr_status_api_call = file_get_contents($pnr_status_api);
 
-    $pnr_status_api_data= json_decode($pnr_status_api_call, true);
+    // $pnr_status_api_data= json_decode($pnr_status_api_call, true);
+    $pnr_status_api_data = get_pnr_status($pnr);
+    // print_r($pnr_status_api_data);
+        session_start();
 
-    session_start();
     $_SESSION['train_name']       = $pnr_status_api_data['train_name'];
     $_SESSION['chart_prepared']   = $pnr_status_api_data['chart_prepared'];
     $_SESSION["to_station"]       = $pnr_status_api_data['reservation_upto'];

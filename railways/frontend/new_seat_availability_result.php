@@ -14,8 +14,10 @@ session_start();
 
 	//$apikey = "okogk2695";//theyashagarwal21@gmail.com
 
-    $apikey = "ccjee6917";//sagarkeshri26@gmail.com
+    // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
     // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
+$apikey = "fvatr8579";//railwayapi1@gmail.com
+
 //-----------------------------------------------------------------
 
 
@@ -29,7 +31,8 @@ session_start();
     // $destination = station_code($destination);
 
 
-
+    $full_source = $_SESSION['full_source'];
+    $full_destination = $_SESSION['full_destination'];
     $source = $_SESSION['source'] ;
     $destination = $_SESSION['destination'];
     $doj = $_SESSION['doj'];
@@ -38,7 +41,7 @@ session_start();
     $user_quota = $_SESSION['user_quota'];
     $source = $_SESSION['source'];
     $destination = $_SESSION['destination'];
-    print_r($user_class);
+    // print_r($user_class);
 
 //------------------------function for default class-----------------------
     function default_class($classes)
@@ -83,7 +86,7 @@ function station_code($station_name)
 //http://api.railwayapi.com/between/source/jp/dest/st/date/15-07-2016/apikey/uucxi9379/
     $trains_bw_stations_api = "http://api.railwayapi.com/between/source/" . $source . "/dest/" . $destination . "/date/" . $doj . "/apikey/" . $apikey ;
     $trains_bw_stations_api_call = file_get_contents($trains_bw_stations_api);
-    $trains_bw_stations_api_data = json_decode($trains_bw_stations_api_call, true);
+    // $trains_bw_stations_api_data = json_decode($trains_bw_stations_api_call, true);
 //-------------------------------------------------------------------------------------------------------------------------------------------------------    
 // $json = json_encode($trains_bw_stations_api_data);
    $json = $trains_bw_stations_api_call;
@@ -285,11 +288,24 @@ function station_code($station_name)
 	
 function swap()
 {
-	var src=document.getElementById('src').value;
-	var dest=document.getElementById('dest').value;
+	var src = document.getElementById('src').value;
+	var dest = document.getElementById('dest').value;
+
 	document.getElementById('src').value=dest;
 	document.getElementById('dest').value=src;
 }
+
+
+function showDetails()
+{
+	document.getElementById('src').value = '<?php echo $full_source ?>';
+	document.getElementById('dest').value = '<?php echo $full_destination ?>';
+	document.getElementById('travel_class').value = "First Ac";
+	document.getElementById('date').value = "2014-02-09";
+	$("#datepicker").val("China");
+}
+showDetails();
+
 
 function trainDetails()
 {
@@ -421,7 +437,7 @@ function trainDetails()
 		var cell16=row.insertCell(5);
 		var cell17=row.insertCell(6);
 		var cell18=row.insertCell(7);
-		cell11.innerHTML=train_details;
+		cell11.innerHTML=train_details + '(' + train_num + ')';
 		cell12.innerHTML=dept;
 		cell13.innerHTML=arr;
 		cell14.innerHTML=durr;
@@ -436,7 +452,7 @@ function trainDetails()
 		imageShow.style.backgroundRepeat = "no-repeat";
 		imageShow.style.backgroundImage = "url('../images/loading.gif')";
 		
-		imageShow.style.display = "none";
+//		imageShow.style.display = "none";
 
 		loadDoc(train_num,source,dest,doj,user_class,user_quota,i);
 
@@ -467,7 +483,8 @@ function loadDoc(train_num,source,destination,doj,user_class,quota,id)
         type: "GET",
         dataType: "html",
         success:function(data){
-            loading.hide();
+            // loading.hide();
+            loading.css('background','');
             $('#' + id).text(data);
         }
     });
