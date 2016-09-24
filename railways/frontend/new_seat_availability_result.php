@@ -12,9 +12,13 @@ session_start();
 	// $apikey = "zlzou2003";//satendersinghpalara@gmail.com
 	// $apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
 
-	//$apikey = "okogk2695";//theyashagarwal21@gmail.com
+	$apikey = "okogk2695";//theyashagarwal21@gmail.com
 
+<<<<<<< HEAD
     // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
+=======
+    //$apikey = "ccjee6917";//sagarkeshri26@gmail.com
+>>>>>>> 90d8b239161f936c54219d8bc9b9b7f1e76391e4
     // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
 $apikey = "fvatr8579";//railwayapi1@gmail.com
 
@@ -443,17 +447,25 @@ function trainDetails()
 		cell14.innerHTML=durr;
 		cell15.innerHTML=days;
 		cell16.innerHTML=classes;
-		cell17.setAttribute("id", i);
+		//cell17.setAttribute("id", i);
 		// cell17.innerHTML='status';
 		// cell18.innerHTML='a';
-		cell18.setAttribute("id","image" + i);
+		cell17.setAttribute("id","image" + i);
+
+		
 		// cell18.innerHTML = 'a';
+
 		var imageShow = document.getElementById("image"+i);
+		console.log(imageShow.innerHTML);
 		imageShow.style.backgroundRepeat = "no-repeat";
 		imageShow.style.backgroundImage = "url('../images/loading.gif')";
 		
+<<<<<<< HEAD
 //		imageShow.style.display = "none";
 
+=======
+		//imageShow.style.display = "none";
+>>>>>>> 90d8b239161f936c54219d8bc9b9b7f1e76391e4
 		loadDoc(train_num,source,dest,doj,user_class,user_quota,i);
 
 		// width: 16px;
@@ -483,9 +495,15 @@ function loadDoc(train_num,source,destination,doj,user_class,quota,id)
         type: "GET",
         dataType: "html",
         success:function(data){
+<<<<<<< HEAD
             // loading.hide();
             loading.css('background','');
             $('#' + id).text(data);
+=======
+        	//loading.hide();
+            loading.css('background','');
+            $('#image' +id).text(data);
+>>>>>>> 90d8b239161f936c54219d8bc9b9b7f1e76391e4
         }
     });
 }
