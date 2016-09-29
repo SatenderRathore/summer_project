@@ -49,3 +49,35 @@ print_r($to_station);
 print_r($current_status);
 print_r($train_start_date);
 ?>
+
+
+
+
+
+
+<?php
+include("db.php");
+include("../function.php");
+
+$train_name       = $pnr_status_api_data['train_name'];
+$chart_prepared   = $pnr_status_api_data['chart_prepared'];
+$to_station       = $pnr_status_api_data['reservation_upto'];
+$to_station_code  = $to_station['code'];
+$passengers       = $pnr_status_api_data['passengers'];
+$boarding_point   = $pnr_status_api_data['boarding_point'];
+$pnr              = $pnr_status_api_data['pnr'];
+$response_code    = $pnr_status_api_data['response_code'];
+$train_start_date = $pnr_status_api_data['train_start_date'];
+$total_passengers = $pnr_status_api_data['total_passengers'];
+$train_num        = $pnr_status_api_data['train_num'];
+$from_station     = $pnr_status_api_data['from_station'];
+$from_station_code= $from_station['code'];
+$class            = $pnr_status_api_data['class'];
+$error            = $pnr_status_api_data['error'];
+$doj              = $pnr_status_api_data['doj'];
+$reservation_upto = $pnr_status_api_data['reservation_upto'];
+$passengers[0]['current_status'] = "w/L";
+?>
+
+
+

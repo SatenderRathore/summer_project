@@ -22,8 +22,7 @@
 
     // $pnr_status_api_data= json_decode($pnr_status_api_call, true);
     $pnr_status_api_data = get_pnr_status($pnr);
-    // print_r($pnr_status_api_data);
-        session_start();
+    session_start();
 
     $_SESSION['train_name']       = $pnr_status_api_data['train_name'];
     $_SESSION['chart_prepared']   = $pnr_status_api_data['chart_prepared'];

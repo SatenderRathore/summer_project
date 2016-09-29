@@ -5,6 +5,7 @@ $apikey = "fvatr8579";//railwayapi1@gmail.com
 function get_pnr_status($pnr)
 {
 	$apikey = "fvatr8579";//railwayapi1@gmail.com
+	// $apikey = "uucxi9379";//for check error
 
 	$pnr_status_api = "http://api.railwayapi.com/pnr_status/pnr/" . $pnr . "/apikey/" . $apikey ;
     $pnr_status_api_call = file_get_contents($pnr_status_api);
