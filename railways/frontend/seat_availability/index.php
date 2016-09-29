@@ -8,17 +8,17 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="http://gregfranko.com/jquery.selectBoxIt.js/css/jquery.selectBoxIt.css" />
-        <link rel="stylesheet" type="text/css" href="../css/new_seat_availability.css">
+        <link rel="stylesheet" type="text/css" href="../../css/seat_availability.css">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="../js/bootstrap.js"></script>
+        <script src="../../js/bootstrap.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
         <!--datepicker-->
-        <link href="../css/datepicker.min.css" rel="stylesheet" type="text/css">
-        <script src="../js/datepicker.min.js"></script> 
-        <script src="../js/datepicker.en.js"></script>
+        <link href="../../css/datepicker.min.css" rel="stylesheet" type="text/css">
+        <script src="../../js/datepicker.min.js"></script> 
+        <script src="../../js/datepicker.en.js"></script>
         
         <script>
             // Initialization
@@ -86,7 +86,7 @@
                         <span class="summary" id="summary"></span>
                         <span class="steps" id="steps"><b></b></span>
                     </div>
-                    <form id="availability" action="../backend/algo/t.php" method="POST">
+                    <form id="availability" action="../../backend/algo/seat_availability.php" method="POST">
                     <!-- <form id="availability" action="../backend/algo/check_seat_availability.php" method="POST"> -->
                     <!-- <form id="availability" action="new_seat_availability_result.php" method="POST"> -->
                         <div class="mid-content">
@@ -99,7 +99,7 @@
                                     </fieldset>
                                 </div>
                                 <span class="submit">
-                                    <img src="../images/next.png" class="next2" onclick="rotate('next2'); ">
+                                    <img src="../../images/next.png" class="next2" onclick="rotate('next2'); ">
                                 </span>
                             </div>
 
@@ -112,8 +112,8 @@
                                     </fieldset>
                                 </div>
                                 <span class="submit">
-                                    <img src="../images/prev.png" onclick="rotate('prev1');">
-                                    <img src="../images/next.png" onclick="rotate('next3');">
+                                    <img src="../../images/prev.png" onclick="rotate('prev1');">
+                                    <img src="../../images/next.png" onclick="rotate('next3');">
                                 </span>
                             </div>
 
@@ -134,8 +134,8 @@
                                     </fieldset>
                                 </div>
                                 <span class="submit">
-                                    <img src="../images/prev.png" onclick="rotate('prev2');">
-                                    <img src="../images/next.png" onclick="rotate('next4');">
+                                    <img src="../../images/prev.png" onclick="rotate('prev2');">
+                                    <img src="../../images/next.png" onclick="rotate('next4');">
                                 </span>
                             </div>
 
@@ -158,8 +158,8 @@
                                     </fieldset>
                                 </div>
                                 <span class="submit">
-                                    <img src="../images/prev.png" onclick="rotate('prev3');">
-                                    <img src="../images/next.png" onclick="rotate('next5');">
+                                    <img src="../../images/prev.png" onclick="rotate('prev3');">
+                                    <img src="../../images/next.png" onclick="rotate('next5');">
                                 </span>
                             </div>
 
@@ -184,8 +184,8 @@
                                     </fieldset>
                                 </div>
                                 <span class="submit">
-                                    <img src="../images/prev.png" onclick="rotate('prev4');">
-                                    <button name="action" value="Find Trains" onclick="rotate('final');"><img src="../images/next.png" alt="Submit"></button>
+                                    <img src="../../images/prev.png" onclick="rotate('prev4');">
+                                    <button name="action" value="Find Trains" onclick="rotate('final');"><img src="../../images/next.png" alt="Submit"></button>
                                 </span>
                             </div>
 
@@ -198,7 +198,7 @@
         </div>
 
     </body>
-    <script src="../js/new_seat_availability.js"></script>
+    <script src="../../js/seat_availability.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
         <script src="http://gregfranko.com/jquery.selectBoxIt.js/js/jquery.selectBoxIt.min.js"></script>
@@ -210,7 +210,6 @@
 </html>
 
 <!-- php code starts here -->
-
 <?php
     $json = file_get_contents('station_list.json');
     $data = json_decode($json,true);

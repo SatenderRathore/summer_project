@@ -7,7 +7,16 @@ $pnr_status_api_data = get_pnr_status($pnr);
 
 $error            = $pnr_status_api_data['error'];
 $response_code    = $pnr_status_api_data['response_code'];
-if($error)
+
+if($response_code == "410")//if pnr is flushed or not yet generated
+{
+?>
+<script> alert('Flushed PNR / PNR not yet generated'); window.location.href = "../";</script>';
+<?php
+}
+
+
+if($error)//if some error occured
 {
 ?>
 <script> alert('Some error occured, this maybe due to invalid pnr number. Please try again'); window.location.href = "../";</script>';

@@ -63,8 +63,8 @@ if(isset($_SESSION['userid']))
                     <div class="collapse navbar-collapse" id="myNavbar" >
                         <ul class="nav navbar-nav menu" >
 
-                            <li><a href="./new_seat_availability.php">SEAT AVAILABILITY</a></li>
-                            <li><a href="index.php">PNR STATUS</a></li>
+                            <li><a href="seat_availability/">SEAT AVAILABILITY</a></li>
+                            <li><a href="/">PNR STATUS</a></li>
                             <li><a href="#">FAIR ENQUIRY</a></li>
                             <li><a href="train_live_status.php">LIVE TRAIN STATUS</a></li>
                             <li><a href="#">CANCELLED TRAINS</a></li>

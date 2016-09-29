@@ -13,7 +13,7 @@ function get_pnr_status($pnr)
     return $pnr_status_api_data;
 }
 
-function trains_bw_station($source,$dest,$doj)
+function trains_bw_station($source,$destination,$doj)
 {
 	$apikey = "fvatr8579";//railwayapi1@gmail.com
 
@@ -49,4 +49,32 @@ function train_number_to_name($train_num)
 }
 
 
+?>
+
+
+
+
+
+
+
+
+<?php
+//-----------------------api keys----------------------------
+	// $apikey = "uucxi9379";//satenderjpr@gmail.com
+	// $apikey = "ttemb6830";//singhpalarashakti@gmail.com
+	// $apikey = "ootzm7275";//satendersvnit@gmail.com
+
+	// $apikey = "eumbm2216";//singhrathoresatender@gmail.com
+
+	// $apikey = "wqyoc1399"; //renurathorejpr@gmail.com
+	//$apikey = "budyl6423";//yashagarwaljpr@gmail.com
+	// $apikey = "zlzou2003";//satendersinghpalara@gmail.com
+	// $apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
+
+	// $apikey = "okogk2695";//theyashagarwal21@gmail.com
+
+
+    //$apikey = "ccjee6917";//sagarkeshri26@gmail.com
+    // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
+// $apikey = "fvatr8579";//railwayapi1@gmail.com
 ?>

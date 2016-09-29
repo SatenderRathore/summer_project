@@ -23,7 +23,7 @@
     $_SESSION['destination'] = $destination;
 // print_r($user_class);
 // echo $_SESSION['source'];
-    header('Location: ../../frontend/new_seat_availability_result.php');
+    header('Location: ../../frontend/trains/');
 
 function station_code($station_name)
 {
@@ -47,17 +47,17 @@ function station_code($station_name)
 }
 
 
-	function default_class($classes)
+function default_class($classes)
+{
+    foreach ($classes as $class)
     {
-        foreach ($classes as $class)
+        if($class['available'] == "Y")
         {
-            if($class['available'] == "Y")
-            {
-                $default_class = $class['class-code'];
-                break;
-            }
+            $default_class = $class['class-code'];
+            break;
         }
-        return $default_class;
     }
+    return $default_class;
+}
 
 ?>

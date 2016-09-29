@@ -1,29 +1,6 @@
 <?php
+include("../../backend/algo/function.php");
 session_start();
-//-----------------------api keys----------------------------
-	// $apikey = "uucxi9379";//satenderjpr@gmail.com
-	// $apikey = "ttemb6830";//singhpalarashakti@gmail.com
-	// $apikey = "ootzm7275";//satendersvnit@gmail.com
-
-	// $apikey = "eumbm2216";//singhrathoresatender@gmail.com
-
-	// $apikey = "wqyoc1399"; //renurathorejpr@gmail.com
-	//$apikey = "budyl6423";//yashagarwaljpr@gmail.com
-	// $apikey = "zlzou2003";//satendersinghpalara@gmail.com
-	// $apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
-
-	$apikey = "okogk2695";//theyashagarwal21@gmail.com
-
-<<<<<<< HEAD
-    // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
-=======
-    //$apikey = "ccjee6917";//sagarkeshri26@gmail.com
->>>>>>> 90d8b239161f936c54219d8bc9b9b7f1e76391e4
-    // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
-$apikey = "fvatr8579";//railwayapi1@gmail.com
-
-//-----------------------------------------------------------------
-
 
     // $source = strtoupper($_POST['source']);
     // $destination = strtoupper($_POST['destination']);
@@ -84,24 +61,27 @@ function station_code($station_name)
     return $data[$count]['station_code'];
 }
 //--------------------------------------------------------------------------------------------------
+$station_list_json = file_get_contents('station_list.json');
+$data = json_decode($station_list_json,true);
+$new = array();
+for($i=0;$i<count($data);$i++)
+{
+    array_push($new, strtoupper($data[$i]['station'] . " - " . $data[$i]['station_code']));
+}
 
 
-//------------------------------------------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
 //http://api.railwayapi.com/between/source/jp/dest/st/date/15-07-2016/apikey/uucxi9379/
-    $trains_bw_stations_api = "http://api.railwayapi.com/between/source/" . $source . "/dest/" . $destination . "/date/" . $doj . "/apikey/" . $apikey ;
-    $trains_bw_stations_api_call = file_get_contents($trains_bw_stations_api);
+    // $trains_bw_stations_api = "http://api.railwayapi.com/between/source/" . $source . "/dest/" . $destination . "/date/" . $doj . "/apikey/" . $apikey ;
+    // $trains_bw_stations_api_call = file_get_contents($trains_bw_stations_api);
     // $trains_bw_stations_api_data = json_decode($trains_bw_stations_api_call, true);
-//-------------------------------------------------------------------------------------------------------------------------------------------------------    
-// $json = json_encode($trains_bw_stations_api_data);
-   $json = $trains_bw_stations_api_call;
- //--------------------------above both two things are same----------------------------------------------------------------------------------------------
-?>
+$trains_bw_stations_api_data = trains_bw_station($source,$destination,$doj);
+$trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
+   // $json = $trains_bw_stations_api_call;
+ //--------------------------above both two things are same------------------------------------------
 
-<script>
-	var json_js = <?php echo $json?>;
-	var all_trains_js = json_js['train'];
-	console.log(all_trains_js[0]['classes']);
-</script>
+
+?>
 
 <!doctype html>
 <html lang="en">
@@ -110,19 +90,19 @@ function station_code($station_name)
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>PNR-STATUS</title>
-        <script src="../js/jquery-2.1.1.js"></script>
-        <script src="../js/bootstrap.js"></script>
+        <script src="../../js/jquery-2.1.1.js"></script>
+        <script src="../../js/bootstrap.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
 
-        <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="../css/new_seat_availability_result.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="../../css/new_seat_availability_result.css">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
         <!--datepicker-->
-        <link href="../css/datepicker.min.css" rel="stylesheet" type="text/css">
-		<script src="../js/datepicker.min.js"></script>	
-		<script src="../js/datepicker.en.js"></script>
+        <link href="../../css/datepicker.min.css" rel="stylesheet" type="text/css">
+		<script src="../../js/datepicker.min.js"></script>	
+		<script src="../../js/datepicker.en.js"></script>
 
 		<script>
 			// Initialization
@@ -252,31 +232,18 @@ function station_code($station_name)
 
 		</div>
 	
-
-
-
-
-
-
 	</body>
 	<!-- <script src="../js/new_seat_availability_result.js"></script> -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 </html>
 
-<!-- php code starts here -->
-
-<?php
-    $json = file_get_contents('station_list.json');
-    $data = json_decode($json,true);
-    $new = array();
-    for($i=0;$i<count($data);$i++)
-    {
-        array_push($new, strtoupper($data[$i]['station'] . " - " . $data[$i]['station_code']));
-    }
-?>
-
+<!-- javascript code starts here -->
 <script>
+	var trains_bw_stations_json_js = <?php echo $trains_bw_stations_json?>;
+	var all_trains_js = trains_bw_stations_json_js['train'];
+	// console.log(all_trains_js[0]['classes']);
+
     <?php
     $js_array = json_encode($new);
     ?>
@@ -286,9 +253,7 @@ function station_code($station_name)
             minLength: 3
         });
     });
-</script>
 
-<script>
 	
 function swap()
 {
@@ -313,6 +278,7 @@ showDetails();
 
 function trainDetails()
 {
+	//wrong meathod
 	// console.log('<?php //echo $_SESSION['source']?>');
 	// <?php 
 	// for($i = 0; $i < count($all_trains); $i++)
@@ -328,12 +294,7 @@ function trainDetails()
  //        $class = $all_trains[$i]['classes'];
  //    }  
 	// ?>
- //--------------------------------------------------------------------------------------------
- 	<?php 
- 		// session_start();
- 		// $_SESSION['a'] = "hello";
- 	?>
- 	
+ //-------------------------------------------------------------------------------------------- 	
 	var total_trains = all_trains_js.length;
 	for(var i=0;i<total_trains;i++)
 	{
@@ -460,12 +421,8 @@ function trainDetails()
 		imageShow.style.backgroundRepeat = "no-repeat";
 		imageShow.style.backgroundImage = "url('../images/loading.gif')";
 		
-<<<<<<< HEAD
-//		imageShow.style.display = "none";
 
-=======
 		//imageShow.style.display = "none";
->>>>>>> 90d8b239161f936c54219d8bc9b9b7f1e76391e4
 		loadDoc(train_num,source,dest,doj,user_class,user_quota,i);
 
 		// width: 16px;
@@ -495,15 +452,14 @@ function loadDoc(train_num,source,destination,doj,user_class,quota,id)
         type: "GET",
         dataType: "html",
         success:function(data){
-<<<<<<< HEAD
+
             // loading.hide();
-            loading.css('background','');
-            $('#' + id).text(data);
-=======
+            // loading.css('background','');
+            // $('#' + id).text(data);
+
         	//loading.hide();
             loading.css('background','');
             $('#image' +id).text(data);
->>>>>>> 90d8b239161f936c54219d8bc9b9b7f1e76391e4
         }
     });
 }
