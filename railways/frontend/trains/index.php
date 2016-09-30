@@ -22,7 +22,6 @@ session_start();
     $user_quota = $_SESSION['user_quota'];
     $source = $_SESSION['source'];
     $destination = $_SESSION['destination'];
-    // print_r($user_class);
 
 //------------------------function for default class-----------------------
     function default_class($classes)
@@ -357,7 +356,7 @@ function trainDetails()
 				if(class_array[l]['class-code'] == defaultClasss)
 				{
 					c = class_array[l]['class-code'];
-					classess = classess.concat(c.fontcolor("green").bold().link("google.com") + ' ');
+					classess = classess.concat(c.fontcolor("green").bold() + ' ');
 					// classess = classess.concat(c.fontcolor("black").bold() + ' ');
 					// document.write("<h1>Hello member</h1>");
 				}
@@ -417,7 +416,7 @@ function trainDetails()
 		// cell18.innerHTML = 'a';
 
 		var imageShow = document.getElementById("image"+i);
-		console.log(imageShow.innerHTML);
+		// console.log(imageShow.innerHTML);
 		imageShow.style.backgroundRepeat = "no-repeat";
 		imageShow.style.backgroundImage = "url('../../images/loading.gif')";
 		
@@ -435,10 +434,10 @@ function trainDetails()
 }
 trainDetails(); 
 
-function test(a,b,c,d,e,f)
+function test(e)
 {
 	console.log(e);
-	return f;
+	// return f;
 }
 
 function loadDoc(train_num,source,destination,doj,user_class,quota,id)
