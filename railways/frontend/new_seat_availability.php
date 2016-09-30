@@ -82,10 +82,9 @@
 
                 </div>
                 <div class="mid-second">
-                    <div class="form-top">
-                        <span class="summary" id="summary"></span>
-                        <span class="steps" id="steps"><b></b></span>
-                    </div>
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"></li>
+                    </ol>
                     <form id="availability" action="../backend/algo/t.php" method="POST">
                     <!-- <form id="availability" action="../backend/algo/check_seat_availability.php" method="POST"> -->
                     <!-- <form id="availability" action="new_seat_availability_result.php" method="POST"> -->
