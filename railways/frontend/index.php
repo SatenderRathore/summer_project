@@ -63,8 +63,8 @@ if(isset($_SESSION['userid']))
                     <div class="collapse navbar-collapse" id="myNavbar" >
                         <ul class="nav navbar-nav menu" >
 
-                            <li><a href="./new_seat_availability.php">SEAT AVAILABILITY</a></li>
-                            <li><a href="index.php">PNR STATUS</a></li>
+                            <li><a href="seat_availability/">SEAT AVAILABILITY</a></li>
+                            <li><a href="/">PNR STATUS</a></li>
                             <li><a href="#">FAIR ENQUIRY</a></li>
                             <li><a href="train_live_status.php">LIVE TRAIN STATUS</a></li>
                             <li><a href="#">CANCELLED TRAINS</a></li>
@@ -153,12 +153,12 @@ if(isset($_SESSION['userid']))
                     <!-- <div class="form-top">
                         <div class="steps"><b>1/4</b></div>
                     </div> -->
-                    <form id="pnrcheckform" action="../backend/algo/check_pnr_status.php" method="POST">
+                    <form id="pnrcheckform" action="pnr_status/" method="POST">
                         <div class="mid-content">
                             <div class="details">
                                 <fieldset data-form-name="pnrno" lass="current">
                                     <legend> Enter your pnr number</legend>
-                                    <input class="" name="pnr" type="text" id="" maxlength="10" data-type="digits" data-required="true" data-error-container=".number-error">
+                                    <input class="" name='pnr' type="text" id="" maxlength="10" data-type="digits" data-required="true" data-error-container=".number-error">
                                     <label class="number-error error-msg"></label>
 
                                 </fieldset>

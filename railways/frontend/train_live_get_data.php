@@ -1,5 +1,6 @@
 <?php
 include("db.php");
+include("../backend/algo/function.php");
 
      // $apikey = "uucxi9379";//satenderjpr@gmail.com
      // $apikey = "ttemb6830";//singhpalarashakti@gmail.com
@@ -15,11 +16,13 @@ include("db.php");
 
      $train_num = $_REQUEST['train_num'];
 
-     $doj = "20" . date('ymd');
+     // $doj = "20" . date('ymd');
 
-     $train_live_status_api = 'http://api.railwayapi.com/live/train/' . $train_num . '/doj/' . $doj . '/apikey/' . $apikey;
-     $train_live_status_api_call = file_get_contents($train_live_status_api);
-     $train_live_status_api_data = json_decode($train_live_status_api_call,true);
+     // $train_live_status_api = 'http://api.railwayapi.com/live/train/' . $train_num . '/doj/' . $doj . '/apikey/' . $apikey;
+     // $train_live_status_api_call = file_get_contents($train_live_status_api);
+     // $train_live_status_api_data = json_decode($train_live_status_api_call,true);
+     $train_live_status_api_data = train_live_status($train_num);
+
 
      $start_station = $train_live_status_api_data['route'][0]['station_']['name'];
      $total_stations = 0;
@@ -29,10 +32,13 @@ include("db.php");
      }
      $end_station = $train_live_status_api_data['route'][$total_stations-1]['station_']['name'];
 
-     $train_name_api = 'http://api.railwayapi.com/name_number/train/' . $train_num. '/apikey/' . $apikey ;
-     $train_name_api_call = file_get_contents($train_name_api);
-     $train_name_api_data = json_decode($train_name_api_call, true);
-// print_r($train_name_api_data);
+     // $train_name_api = 'http://api.railwayapi.com/name_number/train/' . $train_num. '/apikey/' . $apikey ;
+     // $train_name_api_call = file_get_contents($train_name_api);
+     // $train_name_api_data = json_decode($train_name_api_call, true);
+
+     $train_name_api_data = train_number_to_name($train_num);
+
+     // print_r($train_name_api_data);
      $train_name = $train_name_api_data['train']['name'];
 
      $train_status = $train_live_status_api_data['position'];
