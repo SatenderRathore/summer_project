@@ -24,6 +24,18 @@ function trains_bw_station($source,$destination,$doj)
     return $trains_bw_stations_api_data;
 }
 
+function seat_availability($train_num,$source_code,$dest_code,$doj,$class,$quota)
+{
+	$apikey = "fvatr8579";//railwayapi1@gmail.com
+
+	$seat_availability_api = "http://api.railwayapi.com/check_seat/train/" . $train_num . "/source/" . $source_code . "/dest/" . $dest_code . "/date/" . $doj . "/class/" . $class . "/quota/" . $quota . "/apikey/" . $apikey ;
+    $seat_availability_api_call = file_get_contents($seat_availability_api);
+    $seat_availability_api_data = json_decode($seat_availability_api_call, true);
+
+    return $seat_availability_api_data;
+
+}
+
 function train_live_status($train_num)
 {
 	 $apikey = "fvatr8579";//railwayapi1@gmail.com

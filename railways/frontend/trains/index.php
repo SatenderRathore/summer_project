@@ -419,7 +419,7 @@ function trainDetails()
 		var imageShow = document.getElementById("image"+i);
 		console.log(imageShow.innerHTML);
 		imageShow.style.backgroundRepeat = "no-repeat";
-		imageShow.style.backgroundImage = "url('../images/loading.gif')";
+		imageShow.style.backgroundImage = "url('../../images/loading.gif')";
 		
 
 		//imageShow.style.display = "none";
@@ -448,7 +448,7 @@ function loadDoc(train_num,source,destination,doj,user_class,quota,id)
     loading.show();
     $.ajax( {
         async: true,
-        url: "../backend/algo/test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj + "&user_class=" + user_class + "&quota=" + quota,
+        url: "../../backend/algo/test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj + "&user_class=" + user_class + "&quota=" + quota,
         type: "GET",
         dataType: "html",
         success:function(data){
@@ -486,7 +486,7 @@ function getData(train_num, source, destination, doj, user_class, quota,id)
 
 			}
 		};
-		xhttp.open("GET", "../backend/algo/test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj +"&user_class=" + user_class + "&quota=" + quota, true);
+		xhttp.open("GET", "../../backend/algo/test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj +"&user_class=" + user_class + "&quota=" + quota, true);
 		xhttp.send();
 	}
 
