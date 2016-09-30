@@ -82,6 +82,7 @@
 
                 </div>
                 <div class="mid-second">
+
                     <div class="form-top">
                         <span class="summary" id="summary"></span>
                         <span class="steps" id="steps"><b></b></span>
