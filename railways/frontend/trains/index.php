@@ -349,25 +349,42 @@ function trainDetails()
 
         var total_classes = class_array.length;
         var classess = '';
+        var classlist = document.createElement("div");
         for(l=0;l<total_classes;l++)
         {
+        	var idd = (10*i) +l;
         	if(class_array[l]['available'] == "Y")
 			{
 				if(class_array[l]['class-code'] == defaultClasss)
 				{
 					c = class_array[l]['class-code'];
-					classess = classess.concat(c.fontcolor("green").bold() + ' ');
+// 					// classess = classess.concat(c.fontcolor("green").bold() + ' ');
+
+					var span = document.createElement("span");
+					var node = document.createTextNode(c);
+					span.appendChild(node);
+					span.setAttribute("id", idd);
+					//document.getElementById(idd).addEventListener("click",sagarfunc);
+					//classess = classess.concat(c.fontcolor("green").bold().link("google.com") + ' ');
 					// classess = classess.concat(c.fontcolor("black").bold() + ' ');
 					// document.write("<h1>Hello member</h1>");
 				}
 				else
 				{
 					c = class_array[l]['class-code'];
-					classess = classess.concat(c.link("google.com") + ' ');
+					var span = document.createElement("span");
+					var node = document.createTextNode(c);
+					span.appendChild(node);
+					span.setAttribute("id", idd);
+					//classess = classess.concat(c.link("google.com") + ' ');
 					// classess = classess.concat(c.fontcolor("gray") + ' ');
 				}
+				
+
+				classlist.appendChild(span);
 			}
 		}
+		console.log(classlist);
         
 
         var train_num = all_trains_js[i]['number'];
@@ -406,12 +423,13 @@ function trainDetails()
 		cell13.innerHTML=arr;
 		cell14.innerHTML=durr;
 		cell15.innerHTML=days;
-		cell16.innerHTML=classes;
+		//cell16.innerHTML=classes;
+		cell16.setAttribute("id","classesss"+i);
 		//cell17.setAttribute("id", i);
 		// cell17.innerHTML='status';
 		// cell18.innerHTML='a';
 		cell17.setAttribute("id","image" + i);
-
+		document.getElementById("classesss"+i).appendChild(classlist);
 		
 		// cell18.innerHTML = 'a';
 
@@ -433,6 +451,10 @@ function trainDetails()
 	}
 }
 trainDetails(); 
+function sagarfunc()
+{
+	console.log("hello");
+}
 
 function test(e)
 {
