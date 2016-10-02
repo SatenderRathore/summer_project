@@ -293,7 +293,9 @@ function trainDetails()
  //        $class = $all_trains[$i]['classes'];
  //    }  
 	// ?>
- //-------------------------------------------------------------------------------------------- 	
+ //-------------------------------------------------------------------------------------------- 
+ 	var all_class_ids = new Array();
+        		
 	var total_trains = all_trains_js.length;
 	for(var i=0;i<total_trains;i++)
 	{
@@ -353,8 +355,11 @@ function trainDetails()
         for(l=0;l<total_classes;l++)
         {
         	var idd = (10*i) +l;
+        	
+
         	if(class_array[l]['available'] == "Y")
 			{
+				all_class_ids.push(idd);
 				if(class_array[l]['class-code'] == defaultClasss)
 				{
 					c = class_array[l]['class-code'];
@@ -364,7 +369,7 @@ function trainDetails()
 					var node = document.createTextNode(c);
 					span.appendChild(node);
 					span.setAttribute("id", idd);
-					//document.getElementById(idd).addEventListener("click",sagarfunc);
+					// document.getElementById(idd).addEventListener("click",sagarfunc,false);
 					//classess = classess.concat(c.fontcolor("green").bold().link("google.com") + ' ');
 					// classess = classess.concat(c.fontcolor("black").bold() + ' ');
 					// document.write("<h1>Hello member</h1>");
@@ -376,6 +381,8 @@ function trainDetails()
 					var node = document.createTextNode(c);
 					span.appendChild(node);
 					span.setAttribute("id", idd);
+       				// document.getElementById(idd).addEventListener("click",sagarfunc,false);
+
 					//classess = classess.concat(c.link("google.com") + ' ');
 					// classess = classess.concat(c.fontcolor("gray") + ' ');
 				}
@@ -430,6 +437,8 @@ function trainDetails()
 		// cell18.innerHTML='a';
 		cell17.setAttribute("id","image" + i);
 		document.getElementById("classesss"+i).appendChild(classlist);
+    	document.getElementById(0).addEventListener("click",sagarfunc,false);
+
 		
 		// cell18.innerHTML = 'a';
 
@@ -448,12 +457,20 @@ function trainDetails()
     	// height: 16px;
 
 		// imageShow.innerHTML = 'ab';
+	}    	
+	// console.log(all_class_ids);
+
+	var class_ids_length = all_class_ids.length;
+	for(k=0;k<class_ids_length;k++)
+	{	var span_id = all_class_ids[k];
+    	document.getElementById(span_id).addEventListener("click",sagarfunc(k),false);
 	}
+
 }
 trainDetails(); 
-function sagarfunc()
+function sagarfunc(a)
 {
-	console.log("hello");
+	console.log(a);
 }
 
 function test(e)
