@@ -294,11 +294,12 @@ function trainDetails()
  //    }  
 	// ?>
  //-------------------------------------------------------------------------------------------- 
- 	var all_class_ids = new Array();
         		
 	var total_trains = all_trains_js.length;
 	for(var i=0;i<total_trains;i++)
 	{
+		var all_class_ids = new Array();
+
 		//------------------------------------------------
 		days_of_run = all_trains_js[i]['days'];
 		len = days_of_run.length;
@@ -437,7 +438,7 @@ function trainDetails()
 		// cell18.innerHTML='a';
 		cell17.setAttribute("id","image" + i);
 		document.getElementById("classesss"+i).appendChild(classlist);
-    	document.getElementById(0).addEventListener("click",sagarfunc,false);
+    	// document.getElementById(0).addEventListener("click",sagarfunc,false);
 
 		
 		// cell18.innerHTML = 'a';
@@ -457,22 +458,36 @@ function trainDetails()
     	// height: 16px;
 
 		// imageShow.innerHTML = 'ab';
-	}    	
+
+		var class_ids_length = all_class_ids.length;
+	
+		for(k=0;k<class_ids_length;k++)
+		{	
+			var span_id = all_class_ids[k];
+	    	document.getElementById(span_id).addEventListener("click",function(){
+	    	// console.log(this.innerHTML);
+	    	console.log(train_num + source + dest + doj + this.innerHTML + user_quota + i);
+	    	loadDocCopy(train_num,source,dest,doj,this.innerHTML,user_quota,i);});
+		}
+
+
+	}
+
 	// console.log(all_class_ids);
 
-	var class_ids_length = all_class_ids.length;
-	for(k=0;k<class_ids_length;k++)
-	{	var span_id = all_class_ids[k];
-    	document.getElementById(span_id).addEventListener("click",sagarfunc(k),false);
-	}
+
 
 }
 trainDetails(); 
-function sagarfunc(a)
+/*function sagarfunc()
 {
-	console.log(a);
-}
+	//console.log(this.innerHTML);
+	var user_class = this.innerHTML;
+	loadDoc(train_num,source,dest,doj,user_class,user_quota,i);
 
+
+}
+*/
 function test(e)
 {
 	console.log(e);
@@ -482,6 +497,10 @@ function test(e)
 function loadDoc(train_num,source,destination,doj,user_class,quota,id)
 {
     var loading = $('#image'+id);
+    $(loading).on("click",function(){
+    	loading.show();
+    });
+    // console.log(loading);
     // alert(loading);
     loading.show();
     $.ajax( {
@@ -490,17 +509,50 @@ function loadDoc(train_num,source,destination,doj,user_class,quota,id)
         type: "GET",
         dataType: "html",
         success:function(data){
-
+console.log(data);
             // loading.hide();
-            // loading.css('background','');
             // $('#' + id).text(data);
 
-        	//loading.hide();
             loading.css('background','');
             $('#image' +id).text(data);
         }
     });
 }
+
+
+function loadDocCopy(train_num,source,destination,doj,user_class,quota,id)
+{
+	console.log("image"+id);
+	var imageShow = document.getElementById("image"+id);
+	console.log(imageShow);
+	imageShow.style.backgroundRepeat = "no-repeat";
+	imageShow.style.backgroundImage = "url('../../images/loading.gif')";
+	
+    var loading = $('#image'+id);
+    // $(loading).on("click",function(){
+    // 	loading.show();
+    // });
+    // console.log(loading);
+    // alert(loading);
+    loading.show();
+    $.ajax( {
+        async: true,
+        url: "../../backend/algo/test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj + "&user_class=" + user_class + "&quota=" + quota,
+        type: "GET",
+        dataType: "html",
+        success:function(data){
+console.log(data);
+            // loading.hide();
+            // $('#' + id).text(data);
+
+            loading.css('background','');
+            $('#image' +id).text(data);
+        }
+    });
+}
+
+
+
 
 function getData(train_num, source, destination, doj, user_class, quota,id)
 	{
