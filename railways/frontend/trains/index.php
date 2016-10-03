@@ -294,12 +294,11 @@ function trainDetails()
  //    }  
 	// ?>
  //-------------------------------------------------------------------------------------------- 
+ 	var all_class_ids = new Array();
         		
 	var total_trains = all_trains_js.length;
 	for(var i=0;i<total_trains;i++)
 	{
-		var all_class_ids = new Array();
-
 		//------------------------------------------------
 		days_of_run = all_trains_js[i]['days'];
 		len = days_of_run.length;
@@ -364,16 +363,12 @@ function trainDetails()
 				if(class_array[l]['class-code'] == defaultClasss)
 				{
 					c = class_array[l]['class-code'];
-// 					// classess = classess.concat(c.fontcolor("green").bold() + ' ');
 
 					var span = document.createElement("span");
 					var node = document.createTextNode(c);
 					span.appendChild(node);
 					span.setAttribute("id", idd);
-					// document.getElementById(idd).addEventListener("click",sagarfunc,false);
-					//classess = classess.concat(c.fontcolor("green").bold().link("google.com") + ' ');
-					// classess = classess.concat(c.fontcolor("black").bold() + ' ');
-					// document.write("<h1>Hello member</h1>");
+					
 				}
 				else
 				{
@@ -382,10 +377,7 @@ function trainDetails()
 					var node = document.createTextNode(c);
 					span.appendChild(node);
 					span.setAttribute("id", idd);
-       				// document.getElementById(idd).addEventListener("click",sagarfunc,false);
-
-					//classess = classess.concat(c.link("google.com") + ' ');
-					// classess = classess.concat(c.fontcolor("gray") + ' ');
+       				
 				}
 				
 
@@ -438,101 +430,50 @@ function trainDetails()
 		// cell18.innerHTML='a';
 		cell17.setAttribute("id","image" + i);
 		document.getElementById("classesss"+i).appendChild(classlist);
-    	// document.getElementById(0).addEventListener("click",sagarfunc,false);
 
-		// cell18.innerHTML = 'a';
-
-		var imageShow = document.getElementById("image"+i);
-		// console.log(imageShow.innerHTML);
-		imageShow.style.backgroundRepeat = "no-repeat";
-		imageShow.style.backgroundImage = "url('../../images/loading.gif')";
-		
-
-		//imageShow.style.display = "none";
 		loadDoc(train_num,source,dest,doj,user_class,user_quota,i);
 
-		// width: 16px;
-		// imageShow.style.width = "1px";
-		// imageShow.style.height = "1px";
-    	// height: 16px;
-
-		// imageShow.innerHTML = 'ab';
-
+		
 		var class_ids_length = all_class_ids.length;
 	
 		for(k=0;k<class_ids_length;k++)
 		{	
 			var span_id = all_class_ids[k];
-	    	document.getElementById(span_id).addEventListener("click",function(){
-	    	// console.log(this.innerHTML);
-	    	console.log(train_num + source + dest + doj + this.innerHTML + user_quota + i);
-	    	loadDocCopy(train_num,source,dest,doj,this.innerHTML,user_quota,i);});
+			document.getElementById(span_id).addEventListener("click",printData);	    	
 		}
-
-
 	}
-
-	// console.log(all_class_ids);
-
-
 
 }
 trainDetails(); 
-/*function sagarfunc()
+
+function printData()
 {
-	//console.log(this.innerHTML);
+	// console.log(this);
+	train_index = parseInt(this.id/10);
+
+	var train_num = all_trains_js[train_index]['number'];
+    var source = all_trains_js[train_index]['from']['code'];
+    var dest = all_trains_js[train_index]['to']['code'];
+    var doj = '<?php echo $doj ?>';
 	var user_class = this.innerHTML;
-	loadDoc(train_num,source,dest,doj,user_class,user_quota,i);
+    var user_quota = '<?php echo $user_quota?>';
 
 
-}
-*/
-function test(e)
-{
-	console.log(e);
-	// return f;
+	console.log(train_num +source +dest+doj+ user_class+user_quota +train_index);
+
+	loadDoc(train_num,source,dest,doj,user_class,user_quota,train_index);
+
 }
 
 function loadDoc(train_num,source,destination,doj,user_class,quota,id)
-{
-    var loading = $('#image'+id);
-    $(loading).on("click",function(){
-    	loading.show();
-    });
-    // console.log(loading);
-    // alert(loading);
-    loading.show();
-    $.ajax( {
-        async: true,
-        url: "../../backend/algo/test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj + "&user_class=" + user_class + "&quota=" + quota,
-        type: "GET",
-        dataType: "html",
-        success:function(data){
-console.log(data);
-            // loading.hide();
-            // $('#' + id).text(data);
+{    
+	var loading = $('#image'+id);
+    loading.html('');
 
-            loading.css('background','');
-            $('#image' +id).text(data);
-        }
-    });
-}
-
-
-function loadDocCopy(train_num,source,destination,doj,user_class,quota,id)
-{
-	console.log("image"+id);
 	var imageShow = document.getElementById("image"+id);
-	console.log(imageShow);
 	imageShow.style.backgroundRepeat = "no-repeat";
 	imageShow.style.backgroundImage = "url('../../images/loading.gif')";
-	
-    var loading = $('#image'+id);
-    // $(loading).on("click",function(){
-    // 	loading.show();
-    // });
-    // console.log(loading);
-    // alert(loading);
+
     loading.show();
     $.ajax( {
         async: true,
@@ -540,43 +481,38 @@ function loadDocCopy(train_num,source,destination,doj,user_class,quota,id)
         type: "GET",
         dataType: "html",
         success:function(data){
-console.log(data);
-            // loading.hide();
-            // $('#' + id).text(data);
 
-            loading.css('background','');
-            $('#image' +id).text(data);
+        //loading.hide();
+        loading.css('background','');
+        $('#image' +id).text(data);
         }
     });
 }
 
-
-
-
-function getData(train_num, source, destination, doj, user_class, quota,id)
-	{
-		var xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function(){
-			if(xhttp.readyState == 4 && xhttp.status == 200){
-				document.getElementById(id).innerHTML = xhttp.responseText;
+// function getData(train_num, source, destination, doj, user_class, quota,id)
+// 	{
+// 		var xhttp = new XMLHttpRequest();
+// 		xhttp.onreadystatechange = function(){
+// 			if(xhttp.readyState == 4 && xhttp.status == 200){
+// 				document.getElementById(id).innerHTML = xhttp.responseText;
 				
-				//---------------- below are faliures---------------
+// 				//---------------- below are faliures---------------
 
-				// return xhttp.responseText;
-				// cell17.innerHTML = xhttp.responseText;
-				// returnedData = xhttp.responseText;
-				// callback.apply(this,[returnedData]);
-				// var table = document.getElementById("cstatus");
-				// var row=table.insertRow(i+1);
-				// cell17=row.insertCell(0);
-				// cell17.innerHTML = xhttp.responseText;
-				//---------------------------------------------------
+// 				// return xhttp.responseText;
+// 				// cell17.innerHTML = xhttp.responseText;
+// 				// returnedData = xhttp.responseText;
+// 				// callback.apply(this,[returnedData]);
+// 				// var table = document.getElementById("cstatus");
+// 				// var row=table.insertRow(i+1);
+// 				// cell17=row.insertCell(0);
+// 				// cell17.innerHTML = xhttp.responseText;
+// 				//---------------------------------------------------
 
 
-			}
-		};
-		xhttp.open("GET", "../../backend/algo/test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj +"&user_class=" + user_class + "&quota=" + quota, true);
-		xhttp.send();
-	}
+// 			}
+// 		};
+// 		xhttp.open("GET", "../../backend/algo/test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj +"&user_class=" + user_class + "&quota=" + quota, true);
+// 		xhttp.send();
+// 	}
 
 </script>
