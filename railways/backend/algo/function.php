@@ -1,11 +1,15 @@
 <?php 
 
 $apikey = "fvatr8579";//railwayapi1@gmail.com
+$apikey = "dpijp9267";//railwayapi2@gmail.com
+$apikey = "zqdor3834";//12sagskr@gmail.com
 
 function get_pnr_status($pnr)
 {
 	$apikey = "fvatr8579";//railwayapi1@gmail.com
 	// $apikey = "uucxi9379";//for check error
+	$apikey = "zqdor3834";//12sagskr@gmail.com
+
 
 	$pnr_status_api = "http://api.railwayapi.com/pnr_status/pnr/" . $pnr . "/apikey/" . $apikey ;
     $pnr_status_api_call = file_get_contents($pnr_status_api);
@@ -16,7 +20,8 @@ function get_pnr_status($pnr)
 function trains_bw_station($source,$destination,$doj)
 {
 	$apikey = "fvatr8579";//railwayapi1@gmail.com
-	$apikey = "zqdor3834";
+	// $apikey = "zqdor3834";//12sagskr@gmail.com
+$apikey = "dpijp9267";//railwayapi2@gmail.com
 
 	$trains_bw_stations_api = "http://api.railwayapi.com/between/source/" . $source . "/dest/" . $destination . "/date/" . $doj . "/apikey/" . $apikey ;
     $trains_bw_stations_api_call = file_get_contents($trains_bw_stations_api);
@@ -28,7 +33,8 @@ function trains_bw_station($source,$destination,$doj)
 function seat_availability($train_num,$source_code,$dest_code,$doj,$class,$quota)
 {
 	$apikey = "fvatr8579";//railwayapi1@gmail.com
-	$apikey = "zqdor3834";
+	$apikey = "zqdor3834";//12sagskr@gmail.com
+// $apikey = "dpijp9267";//railwayapi2@gmail.com
 	$seat_availability_api = "http://api.railwayapi.com/check_seat/train/" . $train_num . "/source/" . $source_code . "/dest/" . $dest_code . "/date/" . $doj . "/class/" . $class . "/quota/" . $quota . "/apikey/" . $apikey ;
     $seat_availability_api_call = file_get_contents($seat_availability_api);
     $seat_availability_api_data = json_decode($seat_availability_api_call, true);
