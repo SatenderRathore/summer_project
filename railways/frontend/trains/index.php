@@ -440,7 +440,6 @@ function trainDetails()
 		document.getElementById("classesss"+i).appendChild(classlist);
     	// document.getElementById(0).addEventListener("click",sagarfunc,false);
 
-		
 		// cell18.innerHTML = 'a';
 
 		var imageShow = document.getElementById("image"+i);
