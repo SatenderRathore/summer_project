@@ -429,7 +429,7 @@ function trainDetails()
 		// cell17.innerHTML='status';
 		// cell18.innerHTML='a';
 		cell17.setAttribute("id","image" + i);
-		document.getElementById("classesss"+i).appendChild(classlist);
+		document.getElementById("classesss" + i).appendChild(classlist);
 		
 		// cell18.innerHTML = 'a';
 
