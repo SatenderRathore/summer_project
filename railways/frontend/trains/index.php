@@ -212,7 +212,7 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 				<table class="table table-hover tab" id="trains_list">
 					<thead>
 						<tr>
-							<th class="col-md-2">Train Details</th>
+							<th class="col-md-3">Train Details</th>
 							<th class="col-md-1">Departure</th>
 							<th class="col-md-1">Arrival</th>
 							<th class="col-md-1">Duration</th>
@@ -364,7 +364,7 @@ function trainDetails()
 					c = class_array[l]['class-code'];
 
 					var span = document.createElement("span");
-					var node = document.createTextNode(c);
+					var node = document.createTextNode("        " + c + "        ");
 					span.appendChild(node);
 					span.setAttribute("id", idd);
 					
@@ -373,12 +373,11 @@ function trainDetails()
 				{
 					c = class_array[l]['class-code'];
 					var span = document.createElement("span");
-					var node = document.createTextNode(c);
+					var node = document.createTextNode("        " + c + "        ");
 					span.appendChild(node);
 					span.setAttribute("id", idd);
        				
 				}
-				
 
 				classlist.appendChild(span);
 			}
@@ -430,7 +429,7 @@ function trainDetails()
 		cell17.setAttribute("id","image" + i);
 		document.getElementById("classesss"+i).appendChild(classlist);
 
-
+		
 		loadDoc(train_num,source,dest,doj,user_class,user_quota,i);
 
 		var class_ids_length = all_class_ids.length;
@@ -438,6 +437,7 @@ function trainDetails()
 		for(k=0;k<class_ids_length;k++)
 		{	
 			var span_id = all_class_ids[k];
+			document.getElementById(span_id).style.cursor = "pointer";
 			document.getElementById(span_id).addEventListener("click",printData);	    	
 		}
 
@@ -458,6 +458,9 @@ function printData()
 	var user_class = this.innerHTML;
     var user_quota = '<?php echo $user_quota?>';
 
+    document.getElementById(this.id).style.opacity = "0.5";
+    document.getElementById(this.id).style.pointer-events = "none";
+	document.getElementById(this.id).style.cursor = "default";
 
 	console.log(train_num +source +dest+doj+ user_class+user_quota +train_index);
 
@@ -470,9 +473,19 @@ function loadDoc(train_num,source,destination,doj,user_class,quota,id)
 	var loading = $('#image'+id);
     loading.html('');
 
-	var imageShow = document.getElementById("image"+id);
-	imageShow.style.backgroundRepeat = "no-repeat";
-	imageShow.style.backgroundImage = "url('../../images/loading.gif')";
+	// var imageShow = document.getElementById("image"+id);
+	// imageShow.style.backgroundRepeat = "no-repeat";
+	// imageShow.style.backgroundImage = "url('../../images/loading.gif')";
+	
+	var bar =document.createElement("div");
+	bar.setAttribute("class",  "progress");
+	bar.style.width = "80%";
+	var inbar = document.createElement("div");
+	inbar.setAttribute("class",  "progress-bar progress-bar-striped active");
+	inbar.style.width = "100%";
+	bar.appendChild(inbar);
+	document.getElementById("image"+id).appendChild(bar);
+
 
     loading.show();
     $.ajax( {

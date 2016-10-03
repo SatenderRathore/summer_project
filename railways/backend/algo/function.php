@@ -49,7 +49,6 @@ function seat_availability($train_num,$source_code,$dest_code,$doj,$class,$quota
 	$apikey = "tdxvp5433";//narram96@gmail.com
 
 
-
 	$seat_availability_api = "http://api.railwayapi.com/check_seat/train/" . $train_num . "/source/" . $source_code . "/dest/" . $dest_code . "/date/" . $doj . "/class/" . $class . "/quota/" . $quota . "/apikey/" . $apikey ;
     $seat_availability_api_call = file_get_contents($seat_availability_api);
     $seat_availability_api_data = json_decode($seat_availability_api_call, true);
