@@ -20,8 +20,8 @@ function get_pnr_status($pnr)
 function trains_bw_station($source,$destination,$doj)
 {
 	$apikey = "fvatr8579";//railwayapi1@gmail.com
-	// $apikey = "zqdor3834";//12sagskr@gmail.com
-$apikey = "dpijp9267";//railwayapi2@gmail.com
+	$apikey = "zqdor3834";//12sagskr@gmail.com
+// $apikey = "dpijp9267";//railwayapi2@gmail.com
 
 	$trains_bw_stations_api = "http://api.railwayapi.com/between/source/" . $source . "/dest/" . $destination . "/date/" . $doj . "/apikey/" . $apikey ;
     $trains_bw_stations_api_call = file_get_contents($trains_bw_stations_api);

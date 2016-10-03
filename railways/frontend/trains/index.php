@@ -437,7 +437,7 @@ function trainDetails()
 		// cell18.innerHTML='a';
 		cell17.setAttribute("id","image" + i);
 		document.getElementById("classesss"+i).appendChild(classlist);
-    	document.getElementById(0).addEventListener("click",sagarfunc,false);
+    	//document.getElementById(0).addEventListener("click",sagarfunc,false);
 
 		// cell18.innerHTML = 'a';
 
@@ -462,14 +462,15 @@ function trainDetails()
 	var class_ids_length = all_class_ids.length;
 	for(k=0;k<class_ids_length;k++)
 	{	var span_id = all_class_ids[k];
-    	document.getElementById(span_id).addEventListener("click",sagarfunc(k),false);
+		console.log(span_id);
+    	document.getElementById(span_id).addEventListener("click",sagarfunc,false);
 	}
 
 }
 trainDetails(); 
-function sagarfunc(a)
+function sagarfunc()
 {
-	console.log(a);
+	console.log(this.innerHTML);
 }
 
 function test(e)
