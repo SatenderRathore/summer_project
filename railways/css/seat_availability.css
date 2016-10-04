@@ -181,6 +181,15 @@ a{
 
 
 @media (max-width: 768px){
+  #availability{
+  position: relative;
+  display: block;
+  top:50px;
+  width: initial;
+  height: 125px;
+  margin-left: auto;
+  margin-right: auto;
+}
   .logo{
     letter-spacing: 1px;
     color: white;
@@ -221,7 +230,7 @@ a{
 
   .submit{
   top: 60px;
-  width: 40px;
+  width: 84px;
   height: 400px;
   position: relative;
   display: inline-block;
@@ -253,6 +262,15 @@ a{
 }
 
 @media (min-width: 768px) and (max-width: 842px) {
+  #availability{
+  position: relative;
+  display: block;
+  top:50px;
+  width: auto;
+  height: 125px;
+  margin-left: auto;
+  margin-right: auto;
+}
   .logo{
     letter-spacing: 1px;
     color: white;
@@ -277,7 +295,9 @@ a{
   width: 500px;
   padding:0;
   }
-
+  .details{
+    width: 70%;
+  }
   .nav li{
     font-size: 11px;
 
@@ -289,7 +309,7 @@ a{
 
   .submit{
   top: 60px;
-  width: 40px;
+  width: 84px;
   height: 400px;
   position: relative;
   display: inline-block;
@@ -302,7 +322,6 @@ a{
   }
   input[type="text"]{
     font-size: :25px;
-    width: 80%;
   }
 
   #pnrcheckform{
@@ -323,6 +342,15 @@ a{
 
 
 @media (min-width: 843px) and (max-width: 991px) {
+  #availability{
+  position: relative;
+  display: block;
+  top:50px;
+  width: 585px;
+  height: 125px;
+  margin-left: auto;
+  margin-right: auto;
+}
   .logo{
     letter-spacing: 1px;
     color: white;
@@ -347,6 +375,9 @@ a{
   padding:0;
   }
 
+  .details{
+    width: 75%;
+  }
   .navbar-nav{
     margin-left: -5px;
   }
@@ -361,7 +392,7 @@ a{
 
   .submit{
   top: 60px;
-  width: 40px;
+  width: 84px;
   height: 400px;
   position: relative;
   display: inline-block;
@@ -381,6 +412,15 @@ a{
 
 
 @media (min-width: 992px) {
+  #availability{
+  position: relative;
+  display: block;
+  top:50px;
+  width: 585px;
+  height: 125px;
+  margin-left: auto;
+  margin-right: auto;
+}
   .logo {
   font-size: 18px;
   color: white;
@@ -410,7 +450,7 @@ a{
   }
   .submit{
   top: 60px;
-  width: 40px;
+  width: 84px;
   height: 400px;
   position: relative;
   display: inline-block;
@@ -421,6 +461,15 @@ a{
 
 
 @media (min-width: 1200px) {
+  #availability{
+  position: relative;
+  display: block;
+  top:50px;
+  width: 585px;
+  height: 125px;
+  margin-left: auto;
+  margin-right: auto;
+}
   .logo {
   font-size: 21px;
   color: white;
@@ -454,7 +503,7 @@ a{
   }
   .submit{
   top: 60px;
-  width: 40px;
+  width: 84px;
   height: 400px;
   position: relative;
   display: inline-block;
@@ -494,10 +543,5 @@ button{
 }
 
 .submit{
-  top: 60px;
-  height: 40px;
-  position: relative;
-  display: inline-block;
-  float: right;
   cursor: pointer;
 }
