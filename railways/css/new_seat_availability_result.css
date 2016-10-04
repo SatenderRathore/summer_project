@@ -76,12 +76,14 @@ span {
 /*........................*/
 
 .contain{
-  max-width: 98%;
+  max-width: 95%;
   margin: 50px auto;
+  margin-left: 2%;
 }
 
 .search{
   width: 100%;
+  margin-left: 1.2%;
 }
 
 .heading{
