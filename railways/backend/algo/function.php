@@ -30,9 +30,9 @@ function trains_bw_station($source,$destination,$doj)
 	// $apikey = "dpijp9267";//railwayapi2@gmail.com
 
 	// $apikey = "viykd6034";//railwayapi3@gmail.com
-	// $apikey = "peoac9899";//railwayapi5@gmail.com
+	$apikey = "peoac9899";//railwayapi5@gmail.com
 	// $apikey = "tdxvp5433";//narram96@gmail.com
-	$apikey = "hgceh7052";//railwayapi6@gmail.com
+	// $apikey = "hgceh7052";//railwayapi6@gmail.com
 
 
 
@@ -51,9 +51,9 @@ function seat_availability($train_num,$source_code,$dest_code,$doj,$class,$quota
 	// $apikey = "dpijp9267";//railwayapi2@gmail.com
 
 	// $apikey = "viykd6034";//railwayapi3@gmail.com
-	// $apikey = "peoac9899";//railwayapi5@gmail.com
+	$apikey = "peoac9899";//railwayapi5@gmail.com
 	// $apikey = "tdxvp5433";//narram96@gmail.com
-	$apikey = "hgceh7052";//railwayapi6@gmail.com
+	// $apikey = "hgceh7052";//railwayapi6@gmail.com
 
 	$seat_availability_api = "http://api.railwayapi.com/check_seat/train/" . $train_num . "/source/" . $source_code . "/dest/" . $dest_code . "/date/" . $doj . "/class/" . $class . "/quota/" . $quota . "/apikey/" . $apikey ;
     $seat_availability_api_call = file_get_contents($seat_availability_api);
