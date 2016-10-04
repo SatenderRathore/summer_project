@@ -273,7 +273,7 @@ function showDetails()
 }
 showDetails();
 
-
+var total_prev_class;
 function trainDetails()
 {
 	//wrong meathod
@@ -296,6 +296,8 @@ function trainDetails()
  	var all_class_ids = new Array();
         		
 	var total_trains = all_trains_js.length;
+	// to store prev class selected
+	total_prev_class = total_trains;
 	for(var i=0;i<total_trains;i++)
 	{
 		//------------------------------------------------
@@ -311,24 +313,24 @@ function trainDetails()
             }
             else
             {
-            	day = days_of_run[j]['day-code'][0].fontcolor("red") + ' ';
+            	day = days_of_run[j]['day-code'][0].fontcolor("#bbb") + ' ';
             	// day.concat(' ');
             }
             days = days.concat(day);
         }
         //----------------------------------------------------
-    // function default_class($classes)
-    // {
-    //     foreach ($classes as $class)
-    //     {
-    //         if($class['available'] == "Y")
-    //         {
-    //             $default_class = $class['class-code'];
-    //             break;
-    //         }
-    //     }
-    //     return $default_class;
-    // }
+	    // function default_class($classes)
+	    // {
+	    //     foreach ($classes as $class)
+	    //     {
+	    //         if($class['available'] == "Y")
+	    //         {
+	    //             $default_class = $class['class-code'];
+	    //             break;
+	    //         }
+	    //     }
+	    //     return $default_class;
+	    // }
         //----------------------------------------------------
         function defaultClass(classes)
         {
@@ -353,9 +355,7 @@ function trainDetails()
         var classlist = document.createElement("div");
         for(l=0;l<total_classes;l++)
         {
-        	var idd = (10*i) +l;
-        	
-
+        	var idd = (10*i) +l;        	
         	if(class_array[l]['available'] == "Y")
 			{
 				all_class_ids.push(idd);
@@ -397,7 +397,9 @@ function trainDetails()
         }
 
         var user_quota = '<?php echo $user_quota?>';
-//---------------------------------------------------------------------------------------------------------------------------------------
+
+		//---------------------------------------------------------------------------------------------------------------------------------------
+		
 		var table = document.getElementById("trains_list");
 
 		var train_details=all_trains_js[i]['name'];
@@ -445,7 +447,9 @@ function trainDetails()
 
 }
 trainDetails(); 
-
+// to store prev class selected
+var prev_class=[];
+console.log(total_prev_class);
 function printData()
 {
 	// console.log(this);
@@ -458,13 +462,23 @@ function printData()
 	var user_class = this.innerHTML;
     var user_quota = '<?php echo $user_quota?>';
 
-    document.getElementById(this.id).style.opacity = "0.5";
-    document.getElementById(this.id).style.pointer-events = "none";
-	document.getElementById(this.id).style.cursor = "default";
-
+ 	if(prev_class[train_index])
+ 	{
+ 		document.getElementById(prev_class[train_index]).style.color = "#36d8f4";
+ 	}
+ 	else
+ 	{
+ 		document.getElementById(train_index*10).style.color = "#36d8f4";
+ 	}
+ 	document.getElementById(this.id).style.color = "blue";
+    
 	console.log(train_num +source +dest+doj+ user_class+user_quota +train_index);
 
+	prev_class[train_index]=this.id;
+	console.log(prev_class[train_index]);
+
 	loadDoc(train_num,source,dest,doj,user_class,user_quota,train_index);
+
 
 }
 
@@ -473,9 +487,12 @@ function loadDoc(train_num,source,destination,doj,user_class,quota,id)
 	var loading = $('#image'+id);
     loading.html('');
 
-	// var imageShow = document.getElementById("image"+id);
-	// imageShow.style.backgroundRepeat = "no-repeat";
-	// imageShow.style.backgroundImage = "url('../../images/loading.gif')";
+    // to mark starting class of each row
+	arguments.callee.val = arguments.callee.val+10 || 0;
+    if(arguments.callee.val <= 10*id)
+    {
+	    document.getElementById(arguments.callee.val).style.color = "blue";
+	}
 	
 	var bar =document.createElement("div");
 	bar.setAttribute("class",  "progress");
@@ -500,6 +517,7 @@ function loadDoc(train_num,source,destination,doj,user_class,quota,id)
         $('#image' +id).text(data);
         }
     });
+    return function() {return val=val+10;};
 }
 
 // function getData(train_num, source, destination, doj, user_class, quota,id)
