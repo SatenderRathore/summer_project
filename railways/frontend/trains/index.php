@@ -364,7 +364,7 @@ function trainDetails()
 					c = class_array[l]['class-code'];
 
 					var span = document.createElement("span");
-					var node = document.createTextNode("        " + c + "        ");
+					var node = document.createTextNode(c);
 					span.appendChild(node);
 					span.setAttribute("id", idd);
 					
@@ -373,7 +373,7 @@ function trainDetails()
 				{
 					c = class_array[l]['class-code'];
 					var span = document.createElement("span");
-					var node = document.createTextNode("        " + c + "        ");
+					var node = document.createTextNode(c);
 					span.appendChild(node);
 					span.setAttribute("id", idd);
        				
