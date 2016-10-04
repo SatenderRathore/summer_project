@@ -21,14 +21,31 @@ $doj = $_REQUEST['doj'];
 $class = $_REQUEST['user_class'];
 $quota = $_REQUEST['quota'];
 
+
+print_r($train_num);
+print_r($source_code);
+print_r($dest_code);
+print_r($doj);
+print_r($class);
+print_r($quota);
+
 // $current_status_api = "http://api.railwayapi.com/check_seat/train/" . $train_num . "/source/" . $source_code . "/dest/" . $dest_code . "/date/" . $doj . "/class/" . $class . "/quota/" . $quota . "/apikey/" . $apikey ;
 // $current_status_api_call = file_get_contents($current_status_api);
 // $current_status_api_data = json_decode($current_status_api_call, true);
 
 $current_status_api_data = seat_availability($train_num,$source_code,$dest_code,$doj,$class,$quota);
-
-$current_status = $current_status_api_data['availability'][0]['status'];
-print_r($current_status);
+// print_r($current_status_api_data);
+$error = $current_status_api_data['error'];
+if($error == "")
+{
+	$current_status = $current_status_api_data['availability'][0]['status'];	
+	print_r($current_status);
+}
+else
+{
+	print_r("some error occured");
+}
+// print_r($current_status);
 
 
 //$q = $_GET['q'];

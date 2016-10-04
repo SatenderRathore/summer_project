@@ -449,7 +449,9 @@ function trainDetails()
 trainDetails(); 
 // to store prev class selected
 var prev_class=[];
+console.log("hello world!");
 console.log(total_prev_class);
+console.log(prev_class);
 function printData()
 {
 	// console.log(this);
@@ -507,7 +509,7 @@ function loadDoc(train_num,source,destination,doj,user_class,quota,id)
     loading.show();
     $.ajax( {
         async: true,
-        url: "../../backend/algo/test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj + "&user_class=" + user_class + "&quota=" + quota,
+        url: "../../backend/algo/seat_availability_ajax.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj + "&user_class=" + user_class + "&quota=" + quota,
         type: "GET",
         dataType: "html",
         success:function(data){
