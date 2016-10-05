@@ -350,11 +350,13 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 		        var total_classes = class_array.length;
 		        var classess = '';
 		        var classlist = document.createElement("div");
+		        var x=0;
 		        for(l=0;l<total_classes;l++)
 		        {
-		        	var idd = (10*i) +l;        	
+		        	       	
 		        	if(class_array[l]['available'] == "Y")
 					{
+						var idd = (10*i) + x; 
 						all_class_ids.push(idd);
 						if(class_array[l]['class-code'] == defaultClasss)
 						{
@@ -375,11 +377,12 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 							span.setAttribute("id", idd);
 		       				
 						}
-
+						x++;
 						classlist.appendChild(span);
 					}
+
 				}
-				console.log(classlist);
+				// console.log(classlist);
 		        
 
 		        var train_num = all_trains_js[i]['number'];
@@ -446,7 +449,7 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 	trainDetails(); 
 	// to store prev class selected
 	var prev_class=[];
-	console.log(total_prev_class);
+	// console.log(total_prev_class);
 	function printData()
 		{
 			// console.log(this);
@@ -466,14 +469,15 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 		 	}
 		 	else
 		 	{
+		 		//console.log(train_index);
 		 		document.getElementById(train_index*10).style.color = "#36d8f4";
 		 	}
 		 	document.getElementById(this.id).style.color = "blue";
 		    
-			console.log(train_num +source +dest+doj+ user_class+user_quota +train_index);
+			//console.log(train_num +source +dest+doj+ user_class+user_quota +train_index);
 
 			prev_class[train_index]=this.id;
-			console.log(prev_class[train_index]);
+			// console.log(prev_class[train_index]);
 
 			loadDoc(train_num,source,dest,doj,user_class,user_quota,train_index);
 
@@ -486,20 +490,23 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 		    loading.html('');
 
 		    // to mark starting class of each row
-			if(arguments.callee.val)
+			// var arguments.callee.val = arguments.callee.val || -10;
+			
+		    /*if(arguments.callee.val)
 			{
 				arguments.callee.val=0;
 			}
 			else
 			{
 				arguments.callee.val=arguments.callee.val+10;
-			}
+			}*/
 			
+			arguments.callee.val = arguments.callee.val+10 || 0;			
 		    if(arguments.callee.val <= 10*id)
 		    {
 			    document.getElementById(arguments.callee.val).style.color = "blue";
 			}
-			
+
 			var bar =document.createElement("div");
 			bar.setAttribute("class",  "progress");
 			bar.style.width = "80%";
@@ -517,13 +524,11 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 		        type: "GET",
 		        dataType: "html",
 		        success:function(data){
-
 		        //loading.hide();
 		        loading.css('background','');
 		        $('#image' +id).text(data);
 		        }
 		    });
-		    return function() {return val=val+10;};
 		}
 
 	// function getData(train_num, source, destination, doj, user_class, quota,id)
