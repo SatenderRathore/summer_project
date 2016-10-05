@@ -520,7 +520,7 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 		    loading.show();
 		    $.ajax( {
 		        async: true,
-		        url: "../../backend/algo/test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj + "&user_class=" + user_class + "&quota=" + quota,
+		        url: "../../backend/algo/seat_availability_ajax.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj + "&user_class=" + user_class + "&quota=" + quota,
 		        type: "GET",
 		        dataType: "html",
 		        success:function(data){
