@@ -100,14 +100,16 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 
         <!--datepicker-->
         <link href="../../css/datepicker.min.css" rel="stylesheet" type="text/css">
-		<script src="../../js/datepicker.min.js"></script>	
+		<script src="../../js/datepicker.js"></script>	
 		<script src="../../js/datepicker.en.js"></script>
 
 		<script>
 			// Initialization
 			//$('#date').datepicker([options])
 			// Access instance of plugin
-			$('#date').data('datepicker')
+			// $('#date').data('datepicker')
+			
+								
 
 		</script>
         <!--  -->
@@ -133,27 +135,28 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 			</div>
 		</div>
 		<div class="contain">
+			<div class="row">
 			<form id="availability" action="#" class="search" method="POST">
-				<table class="table table-bordered">
+				<table class="table borderless">
 					<thead>
 						<tr>
-							<td style="padding:20px 18px; border:none; width:15%;margin-bottom:10px;">
+							<td class="col-md-2 col-lg-2 col-sm-2" style=" border:none; margin-bottom:10px;">
 								<div class="heading">FROM</div>
 								<input class="" id="src" name="source" type="text" required>
 							</td>
 
-							<td style="padding-top:45px; border:none; width:1%;">
-								<div class="swap" onclick="swap();">
+							<td style=" border:none; padding-top:2.7%; padding-right:1%;">
+								<div class="swap" onclick="swap(); ">
 									
 								</div>
 							</td>
 
-							<td style="padding:20px 18px; border:none; width:15%;">
+							<td class="col-md-2 col-lg-2 col-sm-2" style=" border:none; ">
 								<div class="heading">TO</div>
 								<input class="" id="dest" type="text" required>
 							</td>
 
-							<td style="padding:20px 18px; border:none; width:15%;">
+							<td class="col-md-2 col-lg-2 col-sm-2" style=" border:none;">
 								<div class="heading">CLASS</div>
 								<select class="drop-down" name="class" id='travel_class' >
 	                                <option value=ALL  selected  >All Classes</option>
@@ -167,19 +170,12 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 	                                <option value=2S  >Second Seater</option>
 	                            </select>
 							</td>
-							<td style="padding:20px 18px; border:none; width:15%;">
+							<td class="col-md-1 col-lg-2 col-sm-2" style=" border:none; ">
 								<div class="heading">DATE</div>
 								<input id="date" type="text"  class="datepicker-here" data-language='en'>
-								<script>
-									$('#date').datepicker({
-										dateFormat: 'dd-mm-yy',
-										language: 'en',
-										minDate: new Date() ,
-										//maxDate: minDate.getDate()+120
-									})
-								</script>
+								
 							</td>
-							<td style="padding:20px 18px; border:none; width:15%;">
+							<td class="col-md-2 col-lg-2 col-sm-2" style=" border:none; ">
 								<div class="heading">QUOTA</div>
 								<select class="drop-down" name="quota" id='quotadesc'>
                                     <option value=GN >General</option>
@@ -195,7 +191,7 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
                                     <option value=PH >Parliament House</option>
                                 </select>
 							</td>
-							<td style="padding:20px 18px; border:none; width:15%;">
+							<td class="col-md-2 col-lg-2 col-sm-2" style=" border:none;">
 								<button id="search_train_button" name = "submit" class="submit" type="submit">SEARCH</button>
 								<button id="search_train_button" value="reset" class="clear" type="reset">CLEAR</button>
 							</td>
@@ -227,8 +223,9 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 
 
 			</div>
-
+			</div>
 		</div>
+
 	
 	</body>
 	<!-- <script src="../js/new_seat_availability_result.js"></script> -->
@@ -253,323 +250,335 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
     });
 
 	
-function swap()
-{
-	var src = document.getElementById('src').value;
-	var dest = document.getElementById('dest').value;
-
-	document.getElementById('src').value=dest;
-	document.getElementById('dest').value=src;
-}
-
-
-function showDetails()
-{
-	document.getElementById('src').value = '<?php echo $full_source ?>';
-	document.getElementById('dest').value = '<?php echo $full_destination ?>';
-	document.getElementById('travel_class').value = "First Ac";
-	document.getElementById('date').value = "2014-02-09";
-	$("#datepicker").val("China");
-}
-showDetails();
-
-var total_prev_class;
-function trainDetails()
-{
-	//wrong meathod
-	// console.log('<?php //echo $_SESSION['source']?>');
-	// <?php 
-	// for($i = 0; $i < count($all_trains); $i++)
- //    {
- //        $train_name = $all_trains[$i]['name'];
- //        $train_num = $all_trains[$i]['number'];
- //        $days_of_run = $all_trains[$i]['days'];
- //        $departure_time = $all_trains[$i]['src_departure_time'];
- //        $arrival_time = $all_trains[$i]['dest_arrival_time'];
- //        $travel_time = $all_trains[$i]['travel_time'];
- //        $source = $all_trains[$i]['from'];
- //        $destination =$all_trains[$i]['to'];
- //        $class = $all_trains[$i]['classes'];
- //    }  
-	// ?>
- //-------------------------------------------------------------------------------------------- 
- 	var all_class_ids = new Array();
-        		
-	var total_trains = all_trains_js.length;
-	// to store prev class selected
-	total_prev_class = total_trains;
-	for(var i=0;i<total_trains;i++)
-	{
-		//------------------------------------------------
-		days_of_run = all_trains_js[i]['days'];
-		len = days_of_run.length;
-		var days = '';
-		for(var j=0;j<len;j++)
+	function swap()
 		{
-            if(days_of_run[j]['runs'] === 'Y')
-            {
-               day = days_of_run[j]['day-code'][0].fontcolor("green") + ' ';
-               // day.concat(' ');
-            }
-            else
-            {
-            	day = days_of_run[j]['day-code'][0].fontcolor("#bbb") + ' ';
-            	// day.concat(' ');
-            }
-            days = days.concat(day);
-        }
-        //----------------------------------------------------
-	    // function default_class($classes)
-	    // {
-	    //     foreach ($classes as $class)
-	    //     {
-	    //         if($class['available'] == "Y")
-	    //         {
-	    //             $default_class = $class['class-code'];
-	    //             break;
-	    //         }
-	    //     }
-	    //     return $default_class;
-	    // }
-        //----------------------------------------------------
-        function defaultClass(classes)
-        {
-        	var totalClasses = classes.length;
-        //	console.log(totalClasses);
-        	for(k=0;k<totalClasses;k++)
-        	{
-        		if(classes[k]['available'] == "Y")
-        		{
-        			var defaultClass = classes[k]['class-code'];
-        			break;
-        		}
-        	}
-        	return defaultClass;
-        };
-        //-----------------------------------------------------
-        var class_array = all_trains_js[i]['classes'];
-        var defaultClasss = defaultClass(class_array);
+			var src = document.getElementById('src').value;
+			var dest = document.getElementById('dest').value;
 
-        var total_classes = class_array.length;
-        var classess = '';
-        var classlist = document.createElement("div");
-        for(l=0;l<total_classes;l++)
-        {
-        	var idd = (10*i) +l;        	
-        	if(class_array[l]['available'] == "Y")
+			document.getElementById('src').value=dest;
+			document.getElementById('dest').value=src;
+		}
+
+
+	function showDetails()
+		{
+			document.getElementById('src').value = '<?php echo $full_source ?>';
+			document.getElementById('dest').value = '<?php echo $full_destination ?>';
+			
+			document.getElementById('date').setAttribute('value','<?php echo $doj ?>');
+			
+		}
+	showDetails();
+
+	var total_prev_class;
+	function trainDetails()
+		{
+			//wrong meathod
+			// console.log('<?php //echo $_SESSION['source']?>');
+			// <?php 
+			// for($i = 0; $i < count($all_trains); $i++)
+		 //    {
+		 //        $train_name = $all_trains[$i]['name'];
+		 //        $train_num = $all_trains[$i]['number'];
+		 //        $days_of_run = $all_trains[$i]['days'];
+		 //        $departure_time = $all_trains[$i]['src_departure_time'];
+		 //        $arrival_time = $all_trains[$i]['dest_arrival_time'];
+		 //        $travel_time = $all_trains[$i]['travel_time'];
+		 //        $source = $all_trains[$i]['from'];
+		 //        $destination =$all_trains[$i]['to'];
+		 //        $class = $all_trains[$i]['classes'];
+		 //    }  
+			// ?>
+		 //-------------------------------------------------------------------------------------------- 
+		 	var all_class_ids = new Array();
+		        		
+			var total_trains = all_trains_js.length;
+			// to store prev class selected
+			total_prev_class = total_trains;
+			for(var i=0;i<total_trains;i++)
 			{
-				all_class_ids.push(idd);
-				if(class_array[l]['class-code'] == defaultClasss)
+				//------------------------------------------------
+				days_of_run = all_trains_js[i]['days'];
+				len = days_of_run.length;
+				var days = '';
+				for(var j=0;j<len;j++)
 				{
-					c = class_array[l]['class-code'];
+		            if(days_of_run[j]['runs'] === 'Y')
+		            {
+		               day = days_of_run[j]['day-code'][0].fontcolor("green") + ' ';
+		               // day.concat(' ');
+		            }
+		            else
+		            {
+		            	day = days_of_run[j]['day-code'][0].fontcolor("#bbb") + ' ';
+		            	// day.concat(' ');
+		            }
+		            days = days.concat(day);
+		        }
+		        //----------------------------------------------------
+			    // function default_class($classes)
+			    // {
+			    //     foreach ($classes as $class)
+			    //     {
+			    //         if($class['available'] == "Y")
+			    //         {
+			    //             $default_class = $class['class-code'];
+			    //             break;
+			    //         }
+			    //     }
+			    //     return $default_class;
+			    // }
+		        //----------------------------------------------------
+		        function defaultClass(classes)
+		        {
+		        	var totalClasses = classes.length;
+		        //	console.log(totalClasses);
+		        	for(k=0;k<totalClasses;k++)
+		        	{
+		        		if(classes[k]['available'] == "Y")
+		        		{
+		        			var defaultClass = classes[k]['class-code'];
+		        			break;
+		        		}
+		        	}
+		        	return defaultClass;
+		        };
+		        //-----------------------------------------------------
+		        var class_array = all_trains_js[i]['classes'];
 
-					var span = document.createElement("span");
-					var node = document.createTextNode(c);
-					span.appendChild(node);
-					span.setAttribute("id", idd);
-					
+		        var user_class = '<?php echo $user_class?>';
+
+		        if(user_class=='ALL')
+		        {
+		        	user_class = defaultClass(class_array);
+		        }
+
+
+		        var defaultClasss = user_class;
+		        console.log(defaultClasss);
+		        var total_classes = class_array.length;
+		        var classess = '';
+		        var classlist = document.createElement("div");
+		        var x=0;
+		        for(l=0;l<total_classes;l++)
+		        {
+		        	       	
+		        	if(class_array[l]['available'] == "Y")
+					{
+						var idd = (10*i) + x; 
+						all_class_ids.push(idd);
+						if(class_array[l]['class-code'] == defaultClasss)
+						{
+							c = class_array[l]['class-code'];
+							var default_class_id = idd;
+							var span = document.createElement("span");
+							var node = document.createTextNode(c);
+							span.appendChild(node);
+							span.setAttribute("id", idd);
+							
+						}
+						else
+						{
+							c = class_array[l]['class-code'];
+							var span = document.createElement("span");
+							var node = document.createTextNode(c);
+							span.appendChild(node);
+							span.setAttribute("id", idd);
+		       				
+						}
+						x++;
+						classlist.appendChild(span);
+					}
+
 				}
-				else
-				{
-					c = class_array[l]['class-code'];
-					var span = document.createElement("span");
-					var node = document.createTextNode(c);
-					span.appendChild(node);
-					span.setAttribute("id", idd);
-       				
+				// console.log(classlist);
+		        
+
+		        var train_num = all_trains_js[i]['number'];
+		        var source = all_trains_js[i]['from']['code'];
+		        var dest = all_trains_js[i]['to']['code'];
+		        var doj = '<?php echo $doj ?>';
+		        var user_class = '<?php echo $user_class?>';
+
+		        if(user_class=='ALL')
+		        {
+		        	user_class = defaultClass(all_trains_js[i]['classes']);
+		        }
+
+		        var user_quota = '<?php echo $user_quota?>';
+
+				//---------------------------------------------------------------------------------------------------------------------------------------
+				
+				var table = document.getElementById("trains_list");
+
+				var train_details=all_trains_js[i]['name'];
+				var dept=all_trains_js[i]['src_departure_time'];
+				var arr=all_trains_js[i]['dest_arrival_time'];
+				var durr=all_trains_js[i]['travel_time'];
+				var classes = classess;
+				var cstatus=1;
+				var sjstatus="No more booking";
+				var row=table.insertRow(i+1);
+				var cell11=row.insertCell(0);
+				var cell12=row.insertCell(1);
+				var cell13=row.insertCell(2);
+				var cell14=row.insertCell(3);
+				var cell15=row.insertCell(4);
+				var cell16=row.insertCell(5);
+				var cell17=row.insertCell(6);
+				var cell18=row.insertCell(7);
+				cell11.innerHTML=train_details + '(' + train_num + ')';
+				cell12.innerHTML=dept;
+				cell13.innerHTML=arr;
+				cell14.innerHTML=durr;
+				cell15.innerHTML=days;
+				//cell16.innerHTML=classes;
+				cell16.setAttribute("id","classesss"+i);
+				//cell17.setAttribute("id", i);
+				// cell17.innerHTML='status';
+				// cell18.innerHTML='a';
+				cell17.setAttribute("id","image" + i);
+				document.getElementById("classesss"+i).appendChild(classlist);
+
+				
+				loadDoc(train_num,source,dest,doj,user_class,user_quota,i,0,default_class_id);
+
+				var class_ids_length = all_class_ids.length;
+			
+				for(k=0;k<class_ids_length;k++)
+				{	
+					var span_id = all_class_ids[k];
+					document.getElementById(span_id).style.cursor = "pointer";
+					document.getElementById(span_id).addEventListener("click",printData);	    	
 				}
 
-				classlist.appendChild(span);
 			}
+
 		}
-		// console.log(classlist);
-        
+	trainDetails(); 
+	// to store prev class selected
+	var prev_class=[];
+	// console.log(total_prev_class);
+	function printData()
+		{
+			// console.log(this);
+			train_index = parseInt(this.id/10);
 
-        var train_num = all_trains_js[i]['number'];
-        var source = all_trains_js[i]['from']['code'];
-        var dest = all_trains_js[i]['to']['code'];
-        var doj = '<?php echo $doj ?>';
-        var user_class = '<?php echo $user_class?>';
+			var train_num = all_trains_js[train_index]['number'];
+		    var source = all_trains_js[train_index]['from']['code'];
+		    var dest = all_trains_js[train_index]['to']['code'];
+		    var doj = '<?php echo $doj ?>';
+			var user_class = this.innerHTML;
+		    var user_quota = '<?php echo $user_quota?>';
 
-        if(user_class=='ALL')
-        {
-        	user_class = defaultClass(all_trains_js[i]['classes']);
-        }
+		 	var class_array = all_trains_js[train_index]['classes'];
+	 		var class_array_length = class_array.length;
+	 		 		console.log(class_array_length);
 
-        var user_quota = '<?php echo $user_quota?>';
+	 		var class_ids_array = new Array();
+	        // var idd = (10*i) +l; 
+	        var x = 0;
+	        for(l=0;l<class_array_length;l++)
+	        {
+	        	var idd = 10*train_index + x;
+	        	if(class_array[l]['available'] == "Y")
+	        	{
+	        		class_ids_array.push(idd);
+	        		x++;
+	        	}
 
-		//---------------------------------------------------------------------------------------------------------------------------------------
-		
-		var table = document.getElementById("trains_list");
+	        }      	
 
-		var train_details=all_trains_js[i]['name'];
-		var dept=all_trains_js[i]['src_departure_time'];
-		var arr=all_trains_js[i]['dest_arrival_time'];
-		var durr=all_trains_js[i]['travel_time'];
-		var classes = classess;
-		var cstatus=1;
-		var sjstatus="No more booking";
-		var row=table.insertRow(i+1);
-		var cell11=row.insertCell(0);
-		var cell12=row.insertCell(1);
-		var cell13=row.insertCell(2);
-		var cell14=row.insertCell(3);
-		var cell15=row.insertCell(4);
-		var cell16=row.insertCell(5);
-		var cell17=row.insertCell(6);
-		var cell18=row.insertCell(7);
-		cell11.innerHTML=train_details + '(' + train_num + ')';
-		cell12.innerHTML=dept;
-		cell13.innerHTML=arr;
-		cell14.innerHTML=durr;
-		cell15.innerHTML=days;
-		//cell16.innerHTML=classes;
-		cell16.setAttribute("id","classesss"+i);
-		//cell17.setAttribute("id", i);
-		// cell17.innerHTML='status';
-		// cell18.innerHTML='a';
-		cell17.setAttribute("id","image" + i);
-		document.getElementById("classesss"+i).appendChild(classlist);
-
-		
-		loadDoc(train_num,source,dest,doj,user_class,user_quota,i);
-
-		var class_ids_length = all_class_ids.length;
-	
-		for(k=0;k<class_ids_length;k++)
-		{	
-			var span_id = all_class_ids[k];
-			document.getElementById(span_id).style.cursor = "pointer";
-			document.getElementById(span_id).addEventListener("click",printData);	    	
-		}
-
-	}
-
-}
-trainDetails(); 
-// to store prev class selected
-var prev_class=[];
-console.log("hello world!");
-console.log(total_prev_class);
-console.log(prev_class);
-function printData()
-{
-	// console.log(this);
-	train_index = parseInt(this.id/10);
-
-	var train_num = all_trains_js[train_index]['number'];
-    var source = all_trains_js[train_index]['from']['code'];
-    var dest = all_trains_js[train_index]['to']['code'];
-    var doj = '<?php echo $doj ?>';
-	var user_class = this.innerHTML;
-    var user_quota = '<?php echo $user_quota?>';
-
- 	// if(prev_class[train_index])
- 	// {
- 		var class_array = all_trains_js[train_index]['classes'];
- 		var class_array_length = class_array.length;
- 		 		console.log(class_array_length);
-
- 		var class_ids_array = new Array();
-        // var idd = (10*i) +l; 
-        for(l=0;l<class_array_length;l++)
-        {
-        	var idd = 10*train_index+l;
-        	if(class_array[l]['available'] == "Y")
-        	{
-        		class_ids_array.push(idd);
-        	}
-        }      	
-
-        for(j=0;j<class_ids_array.length;j++)
-        {
-        	console.log("hello world!");
-        	document.getElementById(class_ids_array[j]).style.color = "red";
-        }
+	        for(j=0;j<class_ids_array.length;j++)
+	        {
+	        	console.log("hello world!");
+	        	console.log(class_ids_array[j]);
+	        	class_ids = class_ids_array[j];
+	        	document.getElementById(class_ids).style.color = "red";
+	        }
 
 
 
  		class_id = this.id;
  		document.getElementById(class_id).style.color = "green";
- 	// }
- // 	else
- // 	{
- // 		document.getElementById(train_index*10).style.color = "#36d8f4";
- // 	}
- // 	document.getElementById(this.id).style.color = "blue";
-    
-	// console.log(train_num +source +dest+doj+ user_class+user_quota +train_index);
 
-	// prev_class[train_index]=this.id;
-	// console.log(prev_class[train_index]);
-
-	loadDoc(train_num,source,dest,doj,user_class,user_quota,train_index);
+			loadDoc(train_num,source,dest,doj,user_class,user_quota,train_index,1,0);
 
 
-}
+		}
 
-function loadDoc(train_num,source,destination,doj,user_class,quota,id)
-{    
-	var loading = $('#image'+id);
-    loading.html('');
+	function loadDoc(train_num,source,destination,doj,user_class,quota,id,value,defaultClassId)
+		{    
+			var loading = $('#image'+id);
+		    loading.html('');
 
-    // to mark starting class of each row
-	// arguments.callee.val = arguments.callee.val+10 || 0;
- //    if(arguments.callee.val <= 10*id)
- //    {
-	//     document.getElementById(arguments.callee.val).style.color = "blue";
-	// }
+		    // to mark starting class of each row
+			// var arguments.callee.val = arguments.callee.val || -10;
+			
+		    /*if(arguments.callee.val)
+			{
+				arguments.callee.val=0;
+			}
+			else
+			{
+				arguments.callee.val=arguments.callee.val+10;
+			}*/
+			var val = defaultClassId;
+			// console.log(val);
+			if(document.getElementById(val)&&(value==0))
+			{
+				document.getElementById(val).style.color = "blue";
+			}
+			
+
+			var bar =document.createElement("div");
+			bar.setAttribute("class",  "progress");
+			bar.style.width = "80%";
+			var inbar = document.createElement("div");
+			inbar.setAttribute("class",  "progress-bar progress-bar-striped active");
+			inbar.style.width = "100%";
+			bar.appendChild(inbar);
+			document.getElementById("image"+id).appendChild(bar);
+
+
+		    loading.show();
+		    $.ajax( {
+		        async: true,
+		        url: "../../backend/algo/seat_availability_ajax.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj + "&user_class=" + user_class + "&quota=" + quota,
+		        type: "GET",
+		        dataType: "html",
+		        success:function(data){
+		        //loading.hide();
+		        loading.css('background','');
+		        $('#image' +id).text(data);
+		        }
+		    });
+		}
+
+	// function getData(train_num, source, destination, doj, user_class, quota,id)
+	// 	{
+	// 		var xhttp = new XMLHttpRequest();
+	// 		xhttp.onreadystatechange = function(){
+	// 			if(xhttp.readyState == 4 && xhttp.status == 200){
+	// 				document.getElementById(id).innerHTML = xhttp.responseText;
+					
+	// 				//---------------- below are faliures---------------
+
+	// 				// return xhttp.responseText;
+	// 				// cell17.innerHTML = xhttp.responseText;
+	// 				// returnedData = xhttp.responseText;
+	// 				// callback.apply(this,[returnedData]);
+	// 				// var table = document.getElementById("cstatus");
+	// 				// var row=table.insertRow(i+1);
+	// 				// cell17=row.insertCell(0);
+	// 				// cell17.innerHTML = xhttp.responseText;
+	// 				//---------------------------------------------------
+
+
+	// 			}
+	// 		};
+	// 		xhttp.open("GET", "../../backend/algo/test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj +"&user_class=" + user_class + "&quota=" + quota, true);
+	// 		xhttp.send();
+	// 	}
 	
-	var bar =document.createElement("div");
-	bar.setAttribute("class",  "progress");
-	bar.style.width = "80%";
-	var inbar = document.createElement("div");
-	inbar.setAttribute("class",  "progress-bar progress-bar-striped active");
-	inbar.style.width = "100%";
-	bar.appendChild(inbar);
-	document.getElementById("image"+id).appendChild(bar);
-
-
-    loading.show();
-    $.ajax( {
-        async: true,
-        url: "../../backend/algo/seat_availability_ajax.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj + "&user_class=" + user_class + "&quota=" + quota,
-        type: "GET",
-        dataType: "html",
-        success:function(data){
-
-        //loading.hide();
-        loading.css('background','');
-        $('#image' +id).text(data);
-        }
-    });
-    return function() {return val=val+10;};
-}
-
-// function getData(train_num, source, destination, doj, user_class, quota,id)
-// 	{
-// 		var xhttp = new XMLHttpRequest();
-// 		xhttp.onreadystatechange = function(){
-// 			if(xhttp.readyState == 4 && xhttp.status == 200){
-// 				document.getElementById(id).innerHTML = xhttp.responseText;
-				
-// 				//---------------- below are faliures---------------
-
-// 				// return xhttp.responseText;
-// 				// cell17.innerHTML = xhttp.responseText;
-// 				// returnedData = xhttp.responseText;
-// 				// callback.apply(this,[returnedData]);
-// 				// var table = document.getElementById("cstatus");
-// 				// var row=table.insertRow(i+1);
-// 				// cell17=row.insertCell(0);
-// 				// cell17.innerHTML = xhttp.responseText;
-// 				//---------------------------------------------------
-
-
-// 			}
-// 		};
-// 		xhttp.open("GET", "../../backend/algo/test.php?train_num=" + train_num + "&source=" + source + "&destination=" + destination + "&doj=" + doj +"&user_class=" + user_class + "&quota=" + quota, true);
-// 		xhttp.send();
-// 	}
-
 </script>
