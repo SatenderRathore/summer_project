@@ -1,7 +1,7 @@
 var res=[];
-var img=new Image();
-img.src="train.png";
-console.log(img);
+// var img=new Image();
+// img.src="train.png";
+// console.log(img);
 var ctr=1;
 var flag=0;
 

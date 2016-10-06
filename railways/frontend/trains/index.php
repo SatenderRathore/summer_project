@@ -501,7 +501,7 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 				arguments.callee.val=arguments.callee.val+10;
 			}*/
 			var val = id*10;
-			// console.log(val);
+			 console.log(val);
 			if(document.getElementById(val)&&(value==0))
 			{
 				document.getElementById(val).style.color = "blue";
