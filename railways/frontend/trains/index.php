@@ -432,7 +432,7 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 				document.getElementById("classesss"+i).appendChild(classlist);
 
 				
-				loadDoc(train_num,source,dest,doj,user_class,user_quota,i);
+				loadDoc(train_num,source,dest,doj,user_class,user_quota,i,0);
 
 				var class_ids_length = all_class_ids.length;
 			
@@ -479,12 +479,12 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 			prev_class[train_index]=this.id;
 			// console.log(prev_class[train_index]);
 
-			loadDoc(train_num,source,dest,doj,user_class,user_quota,train_index);
+			loadDoc(train_num,source,dest,doj,user_class,user_quota,train_index,1);
 
 
 		}
 
-	function loadDoc(train_num,source,destination,doj,user_class,quota,id)
+	function loadDoc(train_num,source,destination,doj,user_class,quota,id,value)
 		{    
 			var loading = $('#image'+id);
 		    loading.html('');
@@ -500,12 +500,13 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 			{
 				arguments.callee.val=arguments.callee.val+10;
 			}*/
-			
-			arguments.callee.val = arguments.callee.val+10 || 0;			
-		    if(arguments.callee.val <= 10*id)
-		    {
-			    document.getElementById(arguments.callee.val).style.color = "blue";
+			var val = id*10;
+			// console.log(val);
+			if(document.getElementById(val)&&(value==0))
+			{
+				document.getElementById(val).style.color = "blue";
 			}
+			
 
 			var bar =document.createElement("div");
 			bar.setAttribute("class",  "progress");
