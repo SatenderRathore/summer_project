@@ -345,8 +345,17 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 		        };
 		        //-----------------------------------------------------
 		        var class_array = all_trains_js[i]['classes'];
-		        var defaultClasss = defaultClass(class_array);
 
+		        var user_class = '<?php echo $user_class?>';
+
+		        if(user_class=='ALL')
+		        {
+		        	user_class = defaultClass(class_array);
+		        }
+
+
+		        var defaultClasss = user_class;
+		        console.log(defaultClasss);
 		        var total_classes = class_array.length;
 		        var classess = '';
 		        var classlist = document.createElement("div");
@@ -361,7 +370,7 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 						if(class_array[l]['class-code'] == defaultClasss)
 						{
 							c = class_array[l]['class-code'];
-
+							var default_class_id = idd;
 							var span = document.createElement("span");
 							var node = document.createTextNode(c);
 							span.appendChild(node);
@@ -432,7 +441,7 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 				document.getElementById("classesss"+i).appendChild(classlist);
 
 				
-				loadDoc(train_num,source,dest,doj,user_class,user_quota,i,0);
+				loadDoc(train_num,source,dest,doj,user_class,user_quota,i,0,default_class_id);
 
 				var class_ids_length = all_class_ids.length;
 			
@@ -484,7 +493,7 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 
 		}
 
-	function loadDoc(train_num,source,destination,doj,user_class,quota,id,value)
+	function loadDoc(train_num,source,destination,doj,user_class,quota,id,value,defaultClassId)
 		{    
 			var loading = $('#image'+id);
 		    loading.html('');
@@ -500,7 +509,7 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 			{
 				arguments.callee.val=arguments.callee.val+10;
 			}*/
-			var val = id*10;
+			var val = defaultClassId;
 			// console.log(val);
 			if(document.getElementById(val)&&(value==0))
 			{
