@@ -471,24 +471,40 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 			var user_class = this.innerHTML;
 		    var user_quota = '<?php echo $user_quota?>';
 
-		 	if(prev_class[train_index])
-		 	{
-		 		// console.log(prev_class[train_index]);
-		 		document.getElementById(prev_class[train_index]).style.color = "#36d8f4";
-		 	}
-		 	else
-		 	{
-		 		//console.log(train_index);
-		 		document.getElementById(train_index*10).style.color = "#36d8f4";
-		 	}
-		 	document.getElementById(this.id).style.color = "blue";
-		    
-			//console.log(train_num +source +dest+doj+ user_class+user_quota +train_index);
 
-			prev_class[train_index]=this.id;
-			// console.log(prev_class[train_index]);
+//sagar check from here----------------------------------------
+		 	var class_array = all_trains_js[train_index]['classes'];
+	 		var class_array_length = class_array.length;
+	 		 		console.log(class_array_length);
 
-			loadDoc(train_num,source,dest,doj,user_class,user_quota,train_index,1);
+	 		var class_ids_array = new Array();
+	        // var idd = (10*i) +l; 
+	        var x = 0;
+	        for(l=0;l<class_array_length;l++)
+	        {
+	        	var idd = 10*train_index + x;
+	        	if(class_array[l]['available'] == "Y")
+	        	{
+	        		class_ids_array.push(idd);
+	        		x++;
+	        	}
+
+	        }      	
+
+	        for(j=0;j<class_ids_array.length;j++)
+	        {
+	        	console.log("hello world!");
+	        	console.log(class_ids_array[j]);
+	        	class_ids = class_ids_array[j];
+	        	document.getElementById(class_ids).style.color = "red";
+	        }
+
+
+
+ 		class_id = this.id;
+ 		document.getElementById(class_id).style.color = "green";
+//till here----------------------------------------------
+			loadDoc(train_num,source,dest,doj,user_class,user_quota,train_index,1,0);
 
 
 		}

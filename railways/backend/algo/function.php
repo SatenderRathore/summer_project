@@ -25,7 +25,7 @@ function trains_bw_station($source,$destination,$doj)
 {
 
 	// $apikey = "fvatr8579";//railwayapi1@gmail.com
-	// $apikey = "zqdor3834";//12sagskr@gmail.com
+	$apikey = "zqdor3834";//12sagskr@gmail.com
 
 	// $apikey = "dpijp9267";//railwayapi2@gmail.com
 
@@ -46,7 +46,7 @@ function trains_bw_station($source,$destination,$doj)
 function seat_availability($train_num,$source_code,$dest_code,$doj,$class,$quota)
 {
 	// $apikey = "fvatr8579";//railwayapi1@gmail.com
-	// $apikey = "zqdor3834";//12sagskr@gmail.com
+	$apikey = "zqdor3834";//12sagskr@gmail.com
 
 	// $apikey = "dpijp9267";//railwayapi2@gmail.com
 
