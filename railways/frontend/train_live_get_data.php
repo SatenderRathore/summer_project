@@ -9,10 +9,11 @@ include("../backend/algo/function.php");
      // $apikey = "wqyoc1399"; //renurathorejpr@gmail.com
      // $apikey = "budyl6423";//yashagarwaljpr@gmail.com
      // $apikey = "zlzou2003";//satendersinghpalara@gmail.com
-      $apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
+      // $apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
      // $apikey = "okogk2695";//theyashagarwal21@gmail.com
      // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
      // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
+     $apikey = "viykd6034";//railwayapi3@gmail.com
 
      $train_num = $_REQUEST['train_num'];
 
@@ -63,7 +64,7 @@ include("../backend/algo/function.php");
         <div class="traindetails" id="traindetail">
             <div class="toppart">
                 <span class="trainno"><?php echo $train_num?></span>
-                <select id="selectday" class="selectday" onchange="dayofstart"();>
+                <select id="selectday" class="selectday" onchange="dayofstart();">
                     <option value="0">Today</option>
                     <option value="1">Yesterday</option>
                     <option value="2">2 days ago</option>
