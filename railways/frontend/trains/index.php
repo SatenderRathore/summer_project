@@ -297,6 +297,27 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 			total_prev_class = total_trains;
 			for(var i=0;i<total_trains;i++)
 			{
+				//code to check if selected class is available for the train if not then it will not consider the train--------
+				$flag = 0;
+				var class_array = all_trains_js[i]['classes'];
+				var totalClasses = class_array.length;
+		        var user_class = '<?php echo $user_class?>';
+
+	        	for(k=0;k<totalClasses;k++)
+	        	{
+	        		if((class_array[k]['class-code'] == user_class  &&  class_array[k]['available']=='Y') || user_class == 'ALL')
+	        		{
+	        			$flag = 1;
+	        			break;
+	        		}
+	        	}
+	        	if($flag == 0)
+	        	{
+	        		continue;
+	        	}
+	        	//-------------------------------------------
+
+
 				//------------------------------------------------
 				days_of_run = all_trains_js[i]['days'];
 				len = days_of_run.length;
