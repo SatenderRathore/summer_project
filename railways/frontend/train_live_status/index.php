@@ -5,11 +5,11 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>LIVE-TRAIN-STATUS</title>
-        <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="../css/train_live_status.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="../../css/train_live_status.css">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-        <script src="../js/jquery-2.1.1.js"></script>
-        <script src="../js/bootstrap.js"></script>
+        <script src="../../js/jquery-2.1.1.js"></script>
+        <script src="../../js/bootstrap.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 	</head>
@@ -42,7 +42,7 @@
 				<div class="formContainer">
 					<div class="leftform">
 						<label class="icon-placed">
-							<img src="../images/train.png">
+							<img src="../../images/train.png">
 							TRAIN</label>
 						<input type="text" name="train_num" id="train_num" placeholder="Enter Train No./ Name"  style="margin-top:0px; font-size:14px;height: 28px; border:none;width:80%;" required>
 					</div>
@@ -71,7 +71,7 @@
 <!-- <div>hello</div> -->
 
 	</body>
-	        <script src="../js/train_live_status.js"></script>
+	        <script src="../../js/train_live_status.js"></script>
 
 </html>
 

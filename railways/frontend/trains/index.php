@@ -496,13 +496,13 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 	        	console.log("hello world!");
 	        	console.log(class_ids_array[j]);
 	        	class_ids = class_ids_array[j];
-	        	document.getElementById(class_ids).style.color = "red";
+	        	document.getElementById(class_ids).style.color = "#36d8f4";
 	        }
 
 
 
  		class_id = this.id;
- 		document.getElementById(class_id).style.color = "green";
+ 		document.getElementById(class_id).style.color = "blue";
 //till here----------------------------------------------
 			loadDoc(train_num,source,dest,doj,user_class,user_quota,train_index,1,0);
 
