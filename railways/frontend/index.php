@@ -64,9 +64,9 @@ if(isset($_SESSION['userid']))
                         <ul class="nav navbar-nav menu" >
 
                             <li><a href="seat_availability/">SEAT AVAILABILITY</a></li>
-                            <li><a href="/">PNR STATUS</a></li>
+                            <li><a href="">PNR STATUS</a></li>
                             <li><a href="#">FAIR ENQUIRY</a></li>
-                            <li><a href="train_live_status.php">LIVE TRAIN STATUS</a></li>
+                            <li><a href="train_live_status/">LIVE TRAIN STATUS</a></li>
                             <li><a href="#">CANCELLED TRAINS</a></li>
                         </ul>
 
