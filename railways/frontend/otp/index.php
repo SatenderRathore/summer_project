@@ -24,7 +24,7 @@
 
       <!--form starts here-->
 
-      <form class="form-horizontal" action="../backend/signUp/otp_verify.php" method="post">
+      <form class="form-horizontal" action="../../backend/signUp/otp_verify.php" method="post">
 
 
         <div class="form-group ">

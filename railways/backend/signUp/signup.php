@@ -13,9 +13,6 @@
             $email = strtolower($email);
             $contact = mysqli_escape_string($conn, $_POST['contact']);
 
-            if(eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", $email))//some formate for email
-            {
-
                 //check if user already has an account
                 $query = "SELECT email,contact FROM user_details";
                 $query_exec = mysqli_query($conn, $query);
@@ -51,13 +48,13 @@
 
                 require "/opt/lampp/htdocs/summer_project/railways/backend/signUp/otp/twilio-php-master/Services/Twilio.php";
 
-                $AccountSid = "AC036372247a2645bed9718f3e419d9428"; // Your Account SID from www.twilio.com/console
-                $AuthToken = "5dddaea85bba10598a743096b51dad87";   // Your Auth Token from www.twilio.com/console
+                $AccountSid = "AC0ec90fb788db699871cdde4d39fa3001"; // Your Account SID from www.twilio.com/console
+                $AuthToken = "f30345f6ec37380ad2ea5fd4914e1bad";   // Your Auth Token from www.twilio.com/console
 
                 $client = new Services_Twilio($AccountSid, $AuthToken);
 
                 $message = $client->account->messages->create(array(
-                "From" => "+12055820411", // From a valid Twilio number
+                "From" => "+14242816416", // From a valid Twilio number
                 "To" => "+91" . $contact,   // Text this number
                 "Body" => "Your OTP(One Time Password) is:" . $otp,
                 ));
@@ -78,8 +75,8 @@
                 $_SESSION['contact'] = $contact;
                 $_SESSION['email'] = $email;
                 $_SESSION['password'] = $password;
-                header("Location:../../frontend/otp.php");
-            }
+                header("Location:../../frontend/otp/");
+            
         }
     }
 ?>

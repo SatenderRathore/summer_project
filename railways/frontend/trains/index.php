@@ -136,7 +136,7 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 		</div>
 		<div class="contain">
 			<div class="row">
-			<form id="availability" action="#" class="search" method="POST">
+			<form id="availability" action="../../backend/algo/seat_availability.php" class="search" method="POST">
 				<table class="table borderless">
 					<thead>
 						<tr>
@@ -153,7 +153,7 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 
 							<td class="col-md-2 col-lg-2 col-sm-2" style=" border:none; ">
 								<div class="heading">TO</div>
-								<input class="" id="dest" type="text" required>
+								<input class="" id="dest" name="destination" type="text" required>
 							</td>
 
 							<td class="col-md-2 col-lg-2 col-sm-2" style=" border:none;">
@@ -172,7 +172,7 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 							</td>
 							<td class="col-md-1 col-lg-2 col-sm-2" style=" border:none; ">
 								<div class="heading">DATE</div>
-								<input id="date" type="text"  class="datepicker-here" data-language='en'>
+								<input id="date" type="text" name="doj" class="datepicker-here" data-language='en'>
 								
 							</td>
 							<td class="col-md-2 col-lg-2 col-sm-2" style=" border:none; ">
@@ -353,7 +353,6 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 		        function defaultClass(classes)
 		        {
 		        	var totalClasses = classes.length;
-		        //	console.log(totalClasses);
 		        	for(k=0;k<totalClasses;k++)
 		        	{
 		        		if(classes[k]['available'] == "Y")
@@ -376,7 +375,6 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 
 
 		        var defaultClasss = user_class;
-		        console.log(defaultClasss);
 		        var total_classes = class_array.length;
 		        var classess = '';
 		        var classlist = document.createElement("div");
@@ -412,7 +410,6 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 					}
 
 				}
-				// console.log(classlist);
 		        
 
 		        var train_num = all_trains_js[i]['number'];
@@ -478,11 +475,8 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 		}
 	trainDetails(); 
 	// to store prev class selected
-	var prev_class=[];
-	// console.log(total_prev_class);
 	function printData()
 		{
-			// console.log(this);
 			train_index = parseInt(this.id/10);
 
 			var train_num = all_trains_js[train_index]['number'];
@@ -492,14 +486,10 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 			var user_class = this.innerHTML;
 		    var user_quota = '<?php echo $user_quota?>';
 
-
-//sagar check from here----------------------------------------
 		 	var class_array = all_trains_js[train_index]['classes'];
 	 		var class_array_length = class_array.length;
-	 		 		console.log(class_array_length);
 
 	 		var class_ids_array = new Array();
-	        // var idd = (10*i) +l; 
 	        var x = 0;
 	        for(l=0;l<class_array_length;l++)
 	        {
@@ -514,20 +504,13 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 
 	        for(j=0;j<class_ids_array.length;j++)
 	        {
-	        	console.log("hello world!");
-	        	console.log(class_ids_array[j]);
 	        	class_ids = class_ids_array[j];
 	        	document.getElementById(class_ids).style.color = "#36d8f4";
 	        }
 
-
-
- 		class_id = this.id;
- 		document.getElementById(class_id).style.color = "blue";
-//till here----------------------------------------------
+	 		class_id = this.id;
+	 		document.getElementById(class_id).style.color = "blue";
 			loadDoc(train_num,source,dest,doj,user_class,user_quota,train_index,1,0);
-
-
 		}
 
 	function loadDoc(train_num,source,destination,doj,user_class,quota,id,value,defaultClassId)
@@ -535,19 +518,6 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 			var loading = $('#image'+id);
 		    loading.html('');
 
-		    // to mark starting class of each row
-			// var arguments.callee.val = arguments.callee.val || -10;
-			
-		    /*if(arguments.callee.val)
-			{
-				arguments.callee.val=0;
-			}
-			else
-			{
-				arguments.callee.val=arguments.callee.val+10;
-			}*/
-			// var val = id*10;
-			// console.log(val);
 			var val = defaultClassId;
 			console.log(defaultClassId);
 			if(document.getElementById(val)&&(value==0))

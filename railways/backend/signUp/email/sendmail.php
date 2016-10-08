@@ -4,7 +4,7 @@
     Blog  : http://codeforgeek.com
     */
     require_once('php_mailer/PHPMailerAutoload.php');
-    //require_once('class.phpmailer.php');
+    // require_once('class.phpmailer.php');
     function sendmail($to,$subject,$message,$name)
     {
                   $mail             = new PHPMailer();
@@ -13,9 +13,10 @@
                   $mail->IsSMTP();
                   $mail->Host       = "smtp.gmail.com";
                   $mail->SMTPAuth   = true;
-                  $mail->Port       = 465;
-                  $mail->Username   = "roomjugaad@gmail.com";
-                  $mail->Password   = "roomjuga@d@395007";
+                  $mail->Port       = 254;
+                  $mail->SMTPDebug = 1;
+                  $mail->Username   = "satenderjpr@gmail.com";
+                  $mail->Password   = "satender@123R";
                   $mail->SMTPSecure = 'ssl';
                   $mail->SetFrom('roomjugaad@gmail.com', 'Seat Jugaad');
                   $mail->AddReplyTo("roomjugaad@gmail.com","Information");
