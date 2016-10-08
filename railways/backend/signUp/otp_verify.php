@@ -11,15 +11,12 @@ $user_otp = md5($user_otp);
 $query = "SELECT otp FROM otp WHERE contact = '$contact'";
 $exec = mysqli_query($conn, $query);
 $output = mysqli_fetch_array($exec,MYSQLI_ASSOC);
-//echo $output['otp'];
 $otp = $output['otp'] ;
 
-//echo $otp;
-//echo $user_otp;
 if($otp === $user_otp)
 {
     //otp matched
-    echo "otp matched";
+    // echo "otp matched";
 
     //send verification link to email id
     $hash = md5( rand(0,1000) ); // Generate random 32 character hash and assign it to a local variable.
@@ -50,10 +47,15 @@ if($otp === $user_otp)
       $message  =   $message_to_send;
       $name     =   $email;
       $mailsend =   sendmail($to,$subject,$message,$name);
+      // print_r($mailsend);
 ////////////////////////////////send email
       if($mailsend === 1)
       {
-        //
+        echo "success";
+      }
+      else
+      {
+        echo "hello";
       }
 
 ?>
@@ -61,8 +63,8 @@ if($otp === $user_otp)
 
 
     <script>
-       var message = "contact no verified successfully, please verify your email id by clicking the link send to you";
-       alert(message);window.location.href = "../../frontend/main.php";
+       // var message = "contact no verified successfully, please verify your email id by clicking the link send to you";
+       // alert(message);window.location.href = "../../frontend/main.php";
     </script>
 <?php
 }
