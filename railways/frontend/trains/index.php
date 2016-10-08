@@ -413,6 +413,10 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 
 				}
 				// console.log(classlist);
+				var alternate = document.createElement("button");
+				var valuee = document.createTextNode("Alternates");
+				alternate.setAttribute("class", "button");
+				alternate.appendChild(valuee);
 		        
 
 		        var train_num = all_trains_js[i]['number'];
@@ -459,6 +463,8 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 				// cell17.innerHTML='status';
 				// cell18.innerHTML='a';
 				cell17.setAttribute("id","image" + i);
+				cell18.setAttribute("id","alt" + i);
+				document.getElementById("alt" + i).appendChild(alternate);
 				document.getElementById("classesss"+i).appendChild(classlist);
 
 				
