@@ -461,23 +461,23 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 			document.getElementById("classesss"+i).appendChild(classlist);
 //----------------loadDoc functioncall start here-------------------------
 			loadDoc(function(status,i){
-			var substring = status.substring(1,10);
-			//----------button defination--------------------------------
-			var alternate = document.createElement("button");
-			var valuee = document.createTextNode("Alternates");
-			alternate.setAttribute("id", "button"+i);
-			alternate.appendChild(valuee);
-			//-----------------------------------------------------------
-			if(substring === "AVAILABLE")//no need of alternate button
-			{
+				var substring = status.substring(1,10);
+				//----------button defination--------------------------------
+				var alternate = document.createElement("button");
+				var valuee = document.createTextNode("Alternates");
+				alternate.setAttribute("id", "button"+i);
+				alternate.appendChild(valuee);
+				//-----------------------------------------------------------
+				if(substring === "AVAILABLE")//no need of alternate button
+				{
 
-			}
-			else//here show alternate button
-			{
-			document.getElementById("alt" + i).appendChild(alternate);
-			document.getElementById("button" + i).addEventListener("click",printAlternate);
+				}
+				else//here show alternate button
+				{
+				document.getElementById("alt" + i).appendChild(alternate);
+				document.getElementById("button" + i).addEventListener("click",printAlternate);
 
-			}
+				}
 
 				
 			},train_num,source,dest,doj,user_class,user_quota,i,0,default_class_id);
@@ -517,12 +517,12 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 
 	    getAlternate(train_num,source,dest,doj,user_class,user_quota);
 
-	    console.log(train_num);
-	    console.log(source);
-	    console.log(dest);
-	    console.log(doj);
-	    console.log(user_class);
-	    console.log(user_quota);
+	    // console.log(train_num);
+	    // console.log(source);
+	    // console.log(dest);
+	    // console.log(doj);
+	    // console.log(user_class);
+	    // console.log(user_quota);
 
 
 	}
@@ -562,7 +562,23 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 
  		class_id = this.id;
  		document.getElementById(class_id).style.color = "blue";
-		loadDoc(function(status,i){},train_num,source,dest,doj,user_class,user_quota,train_index,1,0);
+//----------------loadDoc functioncall start here-------------------------
+
+		loadDoc(function(status,i){
+			var substring = status.substring(1,10);
+			
+			if(substring === "AVAILABLE")//no need of alternate button
+			{
+            	document.getElementById("button" + i).style.visibility = 'hidden';
+			}
+			else//here show alternate button
+			{
+				document.getElementById("button" + i).addEventListener("click",printAlternate);
+			}
+
+		},train_num,source,dest,doj,user_class,user_quota,train_index,1,0);
+//---------------loadDoc functoin call end here---------------------------
+
 	}
 
 	function loadDoc(handleData,train_num,source,destination,doj,user_class,quota,id,value,defaultClassId)
