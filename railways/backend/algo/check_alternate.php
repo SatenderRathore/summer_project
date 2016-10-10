@@ -1,25 +1,43 @@
 <?php
+// $string = "NOT AVAILABLE 18";
+// $pos = strpos($string, 'AVAILABLE');
+// print_r($pos);
+// printf("%d",$pos);
+// if($pos == 4)
+// {
+//     print_r("hello");
+
+// }
+// else
+// {
+//     print_r("hello world");
+// }
+
+
+// print_r($string);
+// print_r(strlen($string));
+// $string = substr($string, 0,9);
+// print_r($string);
+// print_r(strlen($string));
+// strpos($status, 'AVAILABLE');
     include("db.php");
     include("function.php");
     // session_start();
-     // $apikey = "uucxi9379";//satenderjpr@gmail.com
-     // $apikey = "ttemb6830";//singhpalarashakti@gmail.com
-     //$apikey = "ootzm7275";//satendersvnit@gmail.com
-     // $apikey = "eumbm2216";//singhrathoresatender@gmail.com
-     // $apikey = "wqyoc1399"; //renurathorejpr@gmail.com
-     // $apikey = "budyl6423";//yashagarwaljpr@gmail.com
-     // $apikey = "zlzou2003";//satendersinghpalara@gmail.com
-     // $apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
-     // $apikey = "okogk2695";//theyashagarwal21@gmail.com
-     // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
-     // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
-
+     
 //-------------------------------------------------------------
-     $train_num = $_REQUEST['train_num'];
-     $from_station_code = $_REQUEST['from_station_code'];
-     $to_station_code = $_REQUEST['to_station_code'];
-     $doj = $_REQUEST['doj'];
-     $class = $_REQUEST['class'];
+     // $train_num = $_REQUEST['train_num'];
+     // $from_station_code = $_REQUEST['source'];
+     // $to_station_code = $_REQUEST['destination'];
+     // $doj = $_REQUEST['doj'];
+     // $class = $_REQUEST['user_class'];
+     $train_num = '12956';
+     $from_station_code = 'JP';
+     $to_station_code = 'ST';
+     $doj = '27-10-2016';
+     $class = "SL";
+     $quota = "GN";
+
+
 //--------------------------------------------------------------
      $train_route_api_data = train_route($train_num);
 
@@ -62,17 +80,22 @@
         $var_dest_code = $station_codes[$j];
 
         $check_seat_api_data = seat_availability($train_num,$var_source_code,$var_dest_code,$doj,$class,$quota);
-
-        if($check_seat_api_data['response_code'] == "200")//if everything went fine
+        $response_code = $check_seat_api_data['response_code'];
+        if($response_code == "200")//if everything went fine
         {
             $status = $check_seat_api_data['availability'][0]['status'];
-
-            if(strpos($status, 'AVAILABLE') !== false)
+            $pos = strpos($status,'AVAILABLE');//for abailable and not available
+            $rac = strpos($status, 'RAC');
+            if($pos == 0 || $pos == 4 || $rac == 0)
             {
-                if($j == $dest_index)
+                if($j == $dest_index )
                 {
-                    array_push($avail_source, $station_codes[$i]);
-                    array_push($avail_dest, $station_codes[$j]);
+                    if($pos == 0 || $rav == 0)
+                    {
+                        array_push($avail_source, $station_codes[$i]);
+                        array_push($avail_dest, $station_codes[$j]);
+                    }
+                    break;
                 }
 
                 $j = $j + 1 ;
@@ -80,7 +103,7 @@
             }
             else
             {
-                if($i != $j - 1)///////////remove 200 condition form this line
+                if($i != $j - 1)
                 {
                     array_push($avail_source, $station_codes[$i]);
                     array_push($avail_dest, $station_codes[$j-1]);
@@ -90,6 +113,12 @@
                 {
                     $j = $j +1;
                 }
+                if($i == $source_index && $j == $i+1)
+                {
+                    $i = $j;
+                    $j = $j + 1;
+                    continue;
+                }
                 $i = $j - 1 ;
                 $k = $j;
             }
@@ -98,9 +127,10 @@
 
 
 
-        }
+    }
     for ($k = 0; $k < count($avail_source); $k++)
     {
+        echo "hello";
         echo $avail_source[$k];
         echo " to ";
         echo $avail_dest[$k];
