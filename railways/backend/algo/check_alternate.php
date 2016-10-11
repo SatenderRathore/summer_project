@@ -39,7 +39,29 @@
 
 
 //--------------------------------------------------------------
-     $train_route_api_data = train_route($train_num);
+     $api_key_flag = 0;
+
+     while(1)
+     {
+        $train_route_api_data = train_route($train_num);
+        $response_code = $train_route_api_data['response_code'];
+        if($response_code == 403)
+        {
+            $api_key_flag = 1;
+            break;
+        }
+        if($response_code == 200)
+        {
+            break;
+        }
+     }
+
+     if($api_key_flag == 1)
+     {
+        // print_r("change api key");
+        die("change api key");
+     }
+     
 
      $stations = $train_route_api_data['route'];//all the stations for train
 
@@ -79,10 +101,32 @@
         $var_source_code = $station_codes[$i];
         $var_dest_code = $station_codes[$j];
 
-        $check_seat_api_data = seat_availability($train_num,$var_source_code,$var_dest_code,$doj,$class,$quota);
-        $response_code = $check_seat_api_data['response_code'];
-        if($response_code == "200")//if everything went fine
+        while(1)
         {
+            $api_key_flag = 0;
+
+            $check_seat_api_data = seat_availability($train_num,$var_source_code,$var_dest_code,$doj,$class,$quota);
+            $response_code = $check_seat_api_data['response_code'];
+
+            if($response_code == 403)
+            {
+                $api_key_flag = 1;
+                break;
+            }
+            if($response_code == 200)
+            {
+                break;
+            }
+        }
+        if($api_key_flag == 1)
+        {
+            // break;
+            die("change api key");
+        }
+        
+
+        // if($response_code == "200")//if everything went fine
+        // {
             $status = $check_seat_api_data['availability'][0]['status'];
             $pos = strpos($status,'AVAILABLE');//for abailable and not available
             $rac = strpos($status, 'RAC');
@@ -123,10 +167,22 @@
                 $k = $j;
             }
 
-        }
+        // }
 
 
 
+    }
+
+    if($api_key_flag == 1)
+    {   
+        // print_r("change api key");
+        // die("change api key");
+    }
+
+
+    if(sizeof($avail_source) == 0)
+    {
+        print_r("no alternate found");
     }
     for ($k = 0; $k < count($avail_source); $k++)
     {

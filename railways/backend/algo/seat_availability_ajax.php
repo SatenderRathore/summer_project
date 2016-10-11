@@ -10,11 +10,17 @@ $class = $_REQUEST['user_class'];
 $quota = $_REQUEST['quota'];
 
 $i = 1;
+$api_key_flag = 0;
 while(1)
 {
 	$current_status_api_data = seat_availability($train_num,$source_code,$dest_code,$doj,$class,$quota);
 	$response_code = $current_status_api_data['response_code'];
-	if(1)
+	if($response_code == 403)
+	{
+		$api_key_flag = 1;
+		break;
+	}
+	if($response_code == 200)
 	{
 		$current_status = $current_status_api_data['availability'][0]['status'];
 		print_r($current_status);
@@ -24,7 +30,11 @@ while(1)
 	$i++;
 }
 // print_r("attempt = ");
-// print_r($i);
+if($api_key_flag == 1)
+{
+	print_r("change api key");
+}
+print_r($i);
 
 // $current_status_api_data = seat_availability($train_num,$source_code,$dest_code,$doj,$class,$quota);
 // print_r($current_status_api_data);
