@@ -293,8 +293,10 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 		var total_trains = all_trains_js.length;
 		// to store prev class selected
 		// total_prev_class = total_trains;
+		var rowCount = 0;
 		for(var i=0;i<total_trains;i++)
 		{
+			console.log("in");
 			//code to check if selected class is available for the train if not then it will not consider the train--------
 			$flag = 0;
 			var class_array = all_trains_js[i]['classes'];
@@ -303,18 +305,28 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 
         	for(k=0;k<totalClasses;k++)
         	{
-        		if((class_array[k]['class-code'] == user_class  &&  class_array[k]['available']=='Y') || user_class == 'ALL')
+        		if(class_array[k]['available'] == '-')
         		{
-        			$flag = 1;
+        			console.log("hello world");
         			break;
         		}
+
+        		if((class_array[k]['class-code'] == user_class  &&  class_array[k]['available']=='Y') || user_class == "ALL")
+        		{	
+        			$flag = 1;
+        			console.log("hello");
+        			break;
+        		}
+
+        		
+
         	}
         	if($flag == 0)
         	{
         		continue;
         	}
         	//-------------------------------------------
-
+        	console.log("inside in");
 
 			//------------------------------------------------
 			days_of_run = all_trains_js[i]['days'];
@@ -429,7 +441,7 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 
 	        var user_quota = '<?php echo $user_quota?>';
 
-			//---------------------------------------------------------------------------------------------------------------------------------------
+			//----------------------------------------------------------------------------------------------
 			
 			var table = document.getElementById("trains_list");
 
@@ -440,7 +452,7 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 			var classes = classess;
 			var cstatus=1;
 			var sjstatus="No more booking";
-			var row=table.insertRow(i+1);
+			var row=table.insertRow(rowCount+1);
 			var cell11=row.insertCell(0);
 			var cell12=row.insertCell(1);
 			var cell13=row.insertCell(2);
@@ -463,8 +475,7 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 			loadDoc(function(status,i){
 				var substring1 = status.substring(1,10);
 				var substring2 = status.substring(1,4);
-				console.log(substring1);
-				console.log(substring2);
+				
 				//----------button defination--------------------------------
 				var alternate = document.createElement("button");
 				var valuee = document.createTextNode("Alternates");
@@ -479,14 +490,17 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 				{
 				document.getElementById("alt" + i).appendChild(alternate);
 				document.getElementById("button" + i).addEventListener("click",printAlternate);
-
 				}
 
 				
 			},train_num,source,dest,doj,user_class,user_quota,i,0,default_class_id);
 //---------------loadDoc functoin call end here---------------------------
+			// var row=table.insertRow(2*i+2);
+			// row.setAttribute("id","alternate" + i);
 
-			var class_ids_length = all_class_ids.length;	
+			var class_ids_length = all_class_ids.length;
+			rowCount++;
+	
 		
 		}
 		for(k=0;k<class_ids_length;k++)
@@ -570,8 +584,6 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 		loadDoc(function(status,i){
 			var substring1 = status.substring(1,10);
 			var substring2 = status.substring(1,4);
-			console.log(substring1);
-			console.log(substring2);
 			
 			if(substring1 === "AVAILABLE" || substring2 == "RAC")//no need of alternate button
 			{

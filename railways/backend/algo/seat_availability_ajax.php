@@ -14,7 +14,7 @@ while(1)
 {
 	$current_status_api_data = seat_availability($train_num,$source_code,$dest_code,$doj,$class,$quota);
 	$response_code = $current_status_api_data['response_code'];
-	if($response_code == 200)
+	if(1)
 	{
 		$current_status = $current_status_api_data['availability'][0]['status'];
 		print_r($current_status);
