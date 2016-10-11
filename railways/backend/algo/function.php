@@ -23,13 +23,13 @@ function get_pnr_status($pnr)
 
 function trains_bw_station($source,$destination,$doj)
 {
-	$apikey = "fvatr8579";//railwayapi1@gmail.com
+	// $apikey = "fvatr8579";//railwayapi1@gmail.com
 	// $apikey = "zqdor3834";//12sagskr@gmail.com
 
 	// $apikey = "dpijp9267";//railwayapi2@gmail.com
 	// $apikey = "viykd6034";//railwayapi3@gmail.com
 	// $apikey = "peoac9899";//railwayapi5@gmail.com
-	// $apikey = "tdxvp5433";//narram96@gmail.com
+	$apikey = "tdxvp5433";//narram96@gmail.com
 	// $apikey = "hgceh7052";//railwayapi6@gmail.com
 	// $apikey = "gb489dj5"; //railwayapi7@gmail.com
 
@@ -49,10 +49,10 @@ function seat_availability($train_num,$source_code,$dest_code,$doj,$class,$quota
 
 
 	// $apikey = "dpijp9267";//railwayapi2@gmail.com
-	$apikey = "viykd6034";//railwayapi3@gmail.com
+	// $apikey = "viykd6034";//railwayapi3@gmail.com
 	// $apikey = "peoac9899";//railwayapi5@gmail.com
 	// $apikey = "tdxvp5433";//narram96@gmail.com
-	// $apikey = "hgceh7052";//railwayapi6@gmail.com
+	$apikey = "hgceh7052";//railwayapi6@gmail.com
 	// $apikey = "gb489dj5"; //railwayapi7@gmail.com
 
 
@@ -115,8 +115,8 @@ function train_route($train_num)
 	// $apikey = "dpijp9267";//railwayapi2@gmail.com
 	// $apikey = "viykd6034";//railwayapi3@gmail.com
 	// $apikey = "peoac9899";//railwayapi5@gmail.com
-	// $apikey = "tdxvp5433";//narram96@gmail.com
-	$apikey = "hgceh7052";//railwayapi6@gmail.com
+	$apikey = "tdxvp5433";//narram96@gmail.com
+	// $apikey = "hgceh7052";//railwayapi6@gmail.com
 	// $apikey = "gb489dj5"; //railwayapi7@gmail.com
 
 
