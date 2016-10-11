@@ -461,14 +461,17 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 			document.getElementById("classesss"+i).appendChild(classlist);
 //----------------loadDoc functioncall start here-------------------------
 			loadDoc(function(status,i){
-				var substring = status.substring(1,10);
+				var substring1 = status.substring(1,10);
+				var substring2 = status.substring(1,4);
+				console.log(substring1);
+				console.log(substring2);
 				//----------button defination--------------------------------
 				var alternate = document.createElement("button");
 				var valuee = document.createTextNode("Alternates");
 				alternate.setAttribute("id", "button"+i);
 				alternate.appendChild(valuee);
 				//-----------------------------------------------------------
-				if(substring === "AVAILABLE")//no need of alternate button
+				if(substring1 == "AVAILABLE" || substring2 == "RAC")//no need of alternate button
 				{
 
 				}
@@ -565,9 +568,12 @@ $trains_bw_stations_json = json_encode($trains_bw_stations_api_data);
 //----------------loadDoc functioncall start here-------------------------
 
 		loadDoc(function(status,i){
-			var substring = status.substring(1,10);
+			var substring1 = status.substring(1,10);
+			var substring2 = status.substring(1,4);
+			console.log(substring1);
+			console.log(substring2);
 			
-			if(substring === "AVAILABLE")//no need of alternate button
+			if(substring1 === "AVAILABLE" || substring2 == "RAC")//no need of alternate button
 			{
             	document.getElementById("button" + i).style.visibility = 'hidden';
 			}
