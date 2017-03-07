@@ -33,7 +33,7 @@
      $train_num = '12956';
      $from_station_code = 'JP';
      $to_station_code = 'ST';
-     $doj = '27-10-2016';
+     $doj = '14-10-2016';
      $class = "SL";
      $quota = "GN";
 

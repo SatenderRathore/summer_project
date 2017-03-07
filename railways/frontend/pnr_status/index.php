@@ -41,7 +41,7 @@ $reservation_upto = $pnr_status_api_data['reservation_upto'];
 
 // printf("%d",$error);
 
-$passengers[0]['current_status'] = "w/L";//this is intentionally to check alternate option button
+// $passengers[0]['current_status'] = "w/L";//this is intentionally to check alternate option button
 
 
 
