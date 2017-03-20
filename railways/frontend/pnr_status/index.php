@@ -47,6 +47,8 @@ $reservation_upto = $pnr_status_api_data['reservation_upto'];
 
 ?>
 
+
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -126,7 +128,8 @@ $reservation_upto = $pnr_status_api_data['reservation_upto'];
 				</div>
 			    <div class="notify">
 					<input type="email" class="mail" id="email" placeholder="Email Address">
-					<button type="submit" class="btn btn-default confirm-mail" onclick="sendmail()">Notify On Confirm</button>
+					<!-- <button class="btn btn-default confirm-mail"><a href="summary.php" >Generate pdf</a></button> -->
+					<a href="summary.php" >Generate pdf</a>
 				</div>
 				<div id="loading" class="loading" style="display:none;"></div>
 				<button type = "submit" id="buttonn" onclick = "loadDoc('<?php echo $train_num ?>','<?php echo $from_station_code?>','<?Php echo $to_station_code?>','<?php echo $doj?>','<?php echo $class?>')">Show Alternate</button>
