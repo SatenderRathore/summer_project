@@ -34,7 +34,7 @@ if($api_key_flag == 1)
 {
 	print_r("change api key");
 }
-print_r($i);
+// print_r($i);
 
 // $current_status_api_data = seat_availability($train_num,$source_code,$dest_code,$doj,$class,$quota);
 // print_r($current_status_api_data);
