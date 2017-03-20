@@ -9,7 +9,8 @@ include("../../backend/algo/function.php");
      // $apikey = "wqyoc1399"; //renurathorejpr@gmail.com
      // $apikey = "budyl6423";//yashagarwaljpr@gmail.com
      // $apikey = "zlzou2003";//satendersinghpalara@gmail.com
-      $apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
+      // $apikey = "iyihg4653";//jagdishsinghrjpr@gmail.com
+$apikey = "yndr3ycc";//renurjpr@gmail.com
      // $apikey = "okogk2695";//theyashagarwal21@gmail.com
      // $apikey = "ccjee6917";//sagarkeshri26@gmail.com
      // $apikey = "dwmbs3983";//sagarkeshri@rocketmail.com
