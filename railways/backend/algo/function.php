@@ -10,7 +10,8 @@
 // $apikey = "gb489dj5"; //railwayapi7@gmail.com
 // $apikey = "wd6onb7i";//railwayapi8@gmail.com
 // $apikey = "4xcf77p5";//satendersrathore@gmail.com
-$apikey = "yndr3ycc";//renurjpr@gmail.com
+// $apikey = "yndr3ycc";//renurjpr@gmail.com
+$apikey = "n4ph2p9v";//narram96@gmail.com
 
 function get_pnr_status($pnr)
 {
