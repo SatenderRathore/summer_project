@@ -1,12 +1,16 @@
 <?php
 require('fpdf/fpdf.php');
-include('index.php');
+// include('index.php');
+session_start();
+$pnr = $_SESSION['pnr'];
+// print_r($_SESSOIN['pnr']);
+// echo $_SESSION['pnr'];
 $name = 'raja';
-print_r($train_num);
+// print_r($train_num);
 $pdf=new FPDF();
 $pdf->AddPage();
 $pdf->SetFont('Arial','B',16);
-$pdf->Cell(0,10,"Train No : ",0,0);
+$pdf->Cell(0,10,$pnr,0,0);
 $pdf->Cell(0,10,"Train Name : ",0,1);
 // $pdf->Cell(0,10,$train_num,0,1);
 //$pdf->Cell(60,10,"Hello {$name}",1,1,'C');
