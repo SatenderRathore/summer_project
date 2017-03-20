@@ -45,7 +45,7 @@ $_SESSION['train_num'] = $train_num;
 $_SESSION['chart_prepared'] = $chart_prepared;
 $_SESSION['to_station'] = $to_station;
 $_SESSION['to_station_code'] = $to_station_code;
-$_SESSION['passengers'] = $Passengers;
+$_SESSION['passengers'] = $passengers;
 $_SESSION['boarding_point'] = $boarding_point;
 $_SESSION['train_start_date'] = $train_start_date;
 $_SESSION['total_passengers'] = $total_passengers;
@@ -54,6 +54,7 @@ $_SESSION['from_station_code'] = $from_station_code;
 $_SESSION['class'] = $class;
 $_SESSION['doj'] = $doj;
 $_SESSION['response_upto'] = $reservation_upto;
+$_SESSION['train_name'] = $train_name;
 // printf("%d",$error);
 
 // $passengers[0]['current_status'] = "w/L";//this is intentionally to check alternate option button

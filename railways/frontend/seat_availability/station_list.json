@@ -3647,4 +3647,5 @@
 {"station":"Zahirabad","station_code":"ZB","state":"Andhra Pradesh","railway_zone":""},
 {"station":"Zamania","station_code":"ZNA","state":"Uttar Pradesh","railway_zone":""},
 {"station":"Zampini","station_code":"ZPI","state":"Andhra Pradesh","railway_zone":""},
-{"station":"Zawar","station_code":"ZW","state":"Rajasthan","railway_zone":""}]
+{"station":"Zawar","station_code":"ZW","state":"Rajasthan","railway_zone":""},
+{"station":"SVNIT","station_code":"SV","state":"Gujarat","railway_Zone":"NW"}]
